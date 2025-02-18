@@ -1,0 +1,237 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Menú lateral izquierdo */
+.menu {
+    width: 24%;
+    background-color: #20354b;
+    color: #fff;
+    overflow-y: auto;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out; /* Animación suave */
+    transform: translateX(-100%); /* Inicialmente oculto */
+    position: fixed; /* Fijo para no interferir con el contenido */
+    top: 0;
+    bottom: 0;
+    z-index: 999; /* Asegurarse de que esté sobre el contenido */
+}
+
+.menu.active {
+    transform: translateX(0); /* Visible */
+}
+
+.menu h2 {
+    margin-top: 38px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    cursor: default;
+}
+
+.menu ul {
+    list-style:inside;
+}
+
+.menu ul li {
+    margin-bottom: 10px;
+}
+
+.menu ul li a {
+    color: #ecf0f1;
+    text-decoration:solid;
+    font-size: 1rem;
+}
+
+.menu ul li a:hover {
+    text-decoration: solid;
+    color: #4a82bd;
+}
+
+.menu ul ul {
+    margin-left: 20px;
+}
+
+.menu ul ul li a {
+    color: #899db3;
+    font-size: 0.9rem;
+}
+
+/* Estilo del botón para alternar el menú */
+.menu-toggle {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background-color: #0d2641;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu-toggle:hover {
+    background-color: #244e7a;
+}
+
+/* Contenido principal */
+.content {
+    width: 76%; /* Ancho inicial */
+    background-color: #dfdfdf;
+    padding: 20px;
+    overflow-y: auto; /* Habilita el scroll interno */
+    transition: width 0.3s ease-in-out, margin-left 0.3s ease-in-out; /* Animación suave */
+    margin-left: 24%; /* Espacio para el menú */
+    position: absolute; /* Permite el desplazamiento */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 60px;
+    height: 100vh; /* Asegura que ocupe toda la pantalla */
+}
+
+/* Cuando el menú está oculto */
+.menu.hidden + .content {
+    width: 100%; /* Ocupa todo el ancho */
+}
+
+section {
+    box-shadow: 6px 5px 12px 15px rgba(71, 71, 71, 0.16);
+    background-color: #f2f2f2;
+    padding: 6px;
+    margin: 12px 0;
+}
+
+.content h1,
+.content h2,
+.content h3 {
+    color: #1f61a7;
+    font-size: 2.6rem;
+    margin-bottom: 15px;
+}
+
+.content h1:hover,
+.content h2:hover,
+.content h3:hover {
+    color: #2381e6;
+    cursor: default;
+}
+
+.content p {
+    margin-left: 24px;
+    margin-bottom: 15px;
+}
+
+.content img.responsive-image {
+    margin-left: 24px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    box-shadow: 0 12px 15px rgba(0, 0, 0, 0.26);
+}
+
+
+
+.content img:hover {
+transform:scale(1.02);
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.content table th,
+.content table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.content table th {
+    background-color: #f2f2f2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .menu {
+        width: 100%; /* Menú ocupa todo el ancho en pantallas pequeñas */
+    }
+
+    .content {
+        width: 100%; /* Contenido también ocupa todo el ancho */
+        margin-left: 0; /* Sin margen izquierdo */
+        top: 0; /* Sin margen superior */
+    }
+}
+
+/* Scrollbar para el menú lateral */
+.menu::-webkit-scrollbar {
+    width: 18px; /* Ancho más pequeño para el menú */
+}
+
+.menu::-webkit-scrollbar-track {
+    background: #2c3e50; /* Color de fondo igual al menú */
+}
+
+.menu::-webkit-scrollbar-thumb {
+    background: #ecf0f1; /* Color claro para contrastar */
+    border-radius: 15px;
+}
+
+.menu::-webkit-scrollbar-thumb:hover {
+    background: #bdc3c7; /* Cambio de color al pasar el mouse */
+}
+
+/* Scrollbar para el contenido principal */
+.content::-webkit-scrollbar {
+    width: 20px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: #f9f9f9; /* Color de fondo igual al contenido */
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: #34495e; /* Color oscuro para contrastar */
+    border-radius: 15px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background: #2c3e50; /* Cambio de color al pasar el mouse */
+}
+
+/* Estilo para Firefox */
+.menu,
+.content {
+    scrollbar-width: thin;
+    scrollbar-color: #ecf0f1 #2c3e50; /* Thumb y track para el menú */
+}
+
+.content {
+    scrollbar-color: #34495e #f9f9f9; /* Thumb y track para el contenido */
+}

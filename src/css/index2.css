@@ -1,0 +1,80 @@
+/* Estilos específicos para la sección de introducción */
+section {
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.content {
+    background-color: #8492a0;
+}
+
+/* Estilos específicos para la sección de introducción */
+.intro-container {
+    text-align: center; /* Centrar el contenido */
+    padding: 0px 10px; /* Espaciado interno */
+    max-width: 800px; /* Ancho máximo para centrar el contenido */
+    margin: 0 auto; /* Centrar horizontalmente */
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    overflow: hidden; /* Asegurar que el contenido no se desborde */
+}
+
+.responsive-image {
+    width: calc(100% - 40px); /* Ancho del 100% menos un margen de 20px a cada lado */
+    height: auto; /* Mantener proporción */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 0 auto 30px; /* Centrado horizontal y espaciado inferior */
+    display: block; /* Asegurar que la imagen esté centrada */
+    box-sizing: border-box; /* Incluir padding y border en el cálculo del ancho */
+}
+.intro-container h1 {
+    font-size: 2.5rem; /* Tamaño grande para el título */
+    color: #2c3e50; /* Color oscuro para el texto */
+}
+
+.intro-container p {
+    font-size: 1.2rem; /* Tamaño mediano para el párrafo */
+    color: #555; /* Color gris oscuro para el texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin-bottom: 30px; /* Espaciado inferior */
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center; /* Centrar botones horizontalmente */
+    gap: 15px; /* Espacio entre botones */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+.btn-primary {
+    background-color: #2c3e50; /* Color primario */
+    color: #fff; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño del texto */
+    cursor: pointer; /* Cursor al pasar el mouse */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.btn-primary:hover {
+    background-color: #34495e; /* Cambio de color al pasar el mouse */
+}
+
+.btn-secondary {
+    background-color: #ecf0f1; /* Color secundario */
+    color: #2c3e50; /* Texto oscuro */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño del texto */
+    cursor: pointer; /* Cursor al pasar el mouse */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.btn-secondary:hover {
+    background-color: #bdc3c7; /* Cambio de color al pasar el mouse */
+}
