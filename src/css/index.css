@@ -6,6 +6,10 @@
     --light-color: #EAF6FF;
 }
 
+body{
+ background-color: #dddddd;
+}
+
 .content {
     position: relative; /* Para poder usar 'top' */
 }
@@ -153,8 +157,10 @@
 
 .intro-section {
     padding: 4rem 2rem;
-    background-color: var(--light-color);
+    background-color: #f6f9fc;
     color: var(--dark-color);
+    border-radius: 12px;
+    margin: 12px;
 }
 
 .cards-container {
@@ -178,7 +184,7 @@
 }
 
 .info-card i {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
 }
