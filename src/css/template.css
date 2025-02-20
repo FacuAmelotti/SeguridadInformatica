@@ -17,6 +17,7 @@ body {
     height: 100vh;
 }
 
+
 /* Menú lateral izquierdo */
 .menu {
     width: 24%;
@@ -75,28 +76,39 @@ body {
 /* Estilo del botón para alternar el menú */
 .menu-toggle {
     position: fixed;
-    top: 10px;
-    left: 10px;
+    top: 12px;
+    left: 20px;
     z-index: 1000;
-    background-color: #0d2641;
+    background-color: #1359a3;
     color: #fff;
     border: none;
     padding: 10px 15px;
     font-size: 1.2rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 7px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 56px;
 }
 
 .menu-toggle:hover {
-    background-color: #244e7a;
+    background-color: #2d81da;
 }
+
+.submenu {
+    display: none;
+    margin-left: 15px;
+}
+
+.desplegable.open > .submenu {
+    display: block;
+}
+
 
 /* Contenido principal */
 .content {
     width: 76%; /* Ancho inicial */
     background-color: #dfdfdf;
-    padding: 20px;
+    padding: 0 20px;
     overflow-y: auto; /* Habilita el scroll interno */
     transition: width 0.3s ease-in-out, margin-left 0.3s ease-in-out; /* Animación suave */
     margin-left: 24%; /* Espacio para el menú */
@@ -105,7 +117,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    padding-top: 60px;
+
     height: 100vh; /* Asegura que ocupe toda la pantalla */
 }
 
@@ -155,6 +167,19 @@ section {
     background-color: #f2f2f2;
     padding: 6px;
     margin: 12px 0;
+}
+
+#sub-panel {
+    margin: 0 12px;
+    background-color: #d5d6d8;
+    box-shadow: 1px 1px 2px 2px rgba(71, 71, 71, 0.16);
+    border-radius: 12px;
+    margin: 20px;
+}
+
+#sub-panel p {
+    font-size: 0.8rem;
+    padding-left: 22px;
 }
 
 .content h1,
@@ -396,4 +421,31 @@ i {
 .close-btn:hover {
     background: rgb(179, 17, 17);
     transform: scale(1.1);
+}
+
+.content {
+    transform: translateX(50px); /* Pequeño desplazamiento inicial */
+    opacity: 0;
+    animation: fadeSlide 0.16s ease-out forwards;
+    overflow: hidden; /* Oculta el scrollbar temporalmente */
+}
+
+/* Restaurar el scroll cuando termina la animación */
+.content.animated {
+    overflow: auto; /* Reactiva el scrollbar */
+}
+
+@keyframes fadeSlide {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.menu-btn-next-sect {
+    color: #000;
 }

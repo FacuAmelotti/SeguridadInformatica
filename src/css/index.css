@@ -4,14 +4,18 @@
     --accent-color: #FFA400;
     --dark-color: #232528;
     --light-color: #EAF6FF;
+    --back-color: #dfdfdf;
 }
 
 body{
- background-color: #dddddd;
+ background-color: var(--back-color);
 }
 
 .content {
     position: relative; /* Para poder usar 'top' */
+    background-color: var(--back-color);
+    opacity: 0.5;
+    padding-top: 0;
 }
 
 .image-overlay {
@@ -41,8 +45,10 @@ body{
 
 .hero {
     position: relative;
-    height: 80vh;
+    height: 95vh;
     overflow: hidden;
+    border-radius: 7px;
+    margin-bottom: 20px;
 }
 
 .hero-container {
@@ -74,11 +80,15 @@ body{
 }
 
 .hero-title {
-    font-size: 4rem;
+    font-size: 8rem;
+    background-color: #181818;
+    padding: 12px;
     margin-bottom: 1.5rem;
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 0.8s 0.2s forwards;
+    border: 2px solid #fff;
+    border-radius: 12px;
 }
 
 .hero-subtitle {
@@ -140,34 +150,18 @@ body{
     60% { transform: translateY(-15px); }
 }
 
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-    
-    .cta-button {
-        padding: 1rem 2rem;
-        font-size: 1rem;
-    }
-}
-
 .intro-section {
     padding: 4rem 2rem;
-    background-color: #f6f9fc;
-    color: var(--dark-color);
-    border-radius: 12px;
     margin: 12px;
+    background-color: rgb(240, 240, 240);
 }
 
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
     cursor: default;
+    text-align: center;
 }
 
 .info-card {
@@ -197,15 +191,15 @@ body{
 }
 
 @media (max-width: 768px) {
-
-    .content {
-        height: 500px;
-    }
-    .hero {
-        flex-direction: column;
-        height: auto;
-    }
     
+    .content {
+        position: absolute;
+    }
+
+    #introduccion {
+        visibility: hidden;
+    }
+
     .hero-image {
         position: relative;
         width: 100%;
@@ -218,5 +212,18 @@ body{
 
     .menu {
         width: 46%;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .cta-button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
     }
 }

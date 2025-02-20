@@ -19,13 +19,13 @@
         <button id="menu-toggle" class="menu-toggle">☰ Menú</button>
         <!-- Menú lateral izquierdo -->
         <aside class="menu" id="menu">
-            <h2>Navegación</h2>
+            <h2>Introducción a la Informática</h2>
             <ul>
-                <li><a href="./general.html"><i class="fas fa-arrow-left"></i> Atras</a>
+                <li><a href="./general.html"><i class="fas fa-home"></i> General</a>
                 <li><a href="#p1">Historia de la Informatica</a></li>
                 <li><a href="#p2">¿Qué es una computadora?</a></li>
-                <li><a href="#p3">Generaciónes de Computadoras</a></li>
-            </ul>
+                <li><a href="#p3">Tipos de Computadoras</a></li>
+                <li><a href="#next-section">Siguiente Seccion</a></li>
         </aside>
         </main>
 
@@ -33,10 +33,7 @@
         <main class="content">
         <section>
             <h1 id="p1">🖥️ Historia de la computación</h1>
-        </section>    
-        <section id="next-section">
-            <i class="fas fa-arrow-left"></i><a href="./general.html">Seccion Anterior</a>
-        </section>   
+        </section>     
 
         <section id="historia-informatica">
             <h2>📜 Historia de la Informática</h2>
@@ -44,12 +41,17 @@
         </section>
 
         <section>
-            <h3>Revoluciones de la Computacion</h3>
+            <h3>Evolucion de la Computacion</h3>
             <p>Desde la antigüedad, el ser humano ha buscado formas de facilitar los cálculos.</p>
+
             <ul>
                 <li><strong>Ábaco (3000 a.C.)</strong>: Uno de los primeros dispositivos de cálculo, utilizado en diversas civilizaciones.</li>
+                <img src="../img/U1_img0.jpg" alt="Ábaco" style="height: 200px;" onclick="ampliarImagen(this)">
                 <li><strong>Máquina de Pascal (1642)</strong>: Inventada por Blaise Pascal, permitía realizar sumas y restas mecánicamente.</li>
+                <img src="../img/U1_img0_1.jpg" alt="Máquina de Pascal" style="height: 200px;" onclick="ampliarImagen(this)">
+                <img src="../img/U1_img0_2.jpg" alt="Máquina de Pascal" style="height: 200px;" onclick="ampliarImagen(this)">
                 <li><strong>Máquina Analítica de Babbage (1837)</strong>: Diseñada por Charles Babbage, sentó las bases de los computadores modernos.</li>
+                <img src="../img/U1_img0_3.jpg" alt="Máquina Analítica de Babbage" style="height: 200px;" onclick="ampliarImagen(this)">
             </ul>
         </section>
 
@@ -72,8 +74,7 @@
                 </div>
         </section>
 
-        <section>
-            <h3 id="p3">🔹 Primera Generación de Computadoras (1940-1956) - Computadoras con Tubos de Vacío</h3>
+        <section>            
             <p>Las primeras computadoras electrónicas surgieron en la Segunda Guerra Mundial, utilizadas principalmente para cálculos militares.</p>
             <ul>
                 <li><strong>ENIAC (1946)</strong>: La primera computadora electrónica de propósito general.</li>
@@ -96,28 +97,49 @@
              </section>
             </section>
 
-             <section>
-            <h3>🔹 Segunda Generación (1956-1963) - Transistores</h3>
-            <p>El uso de transistores reemplazó los tubos de vacío, haciendo las computadoras más pequeñas y eficientes.</p>
-        </section>
-        <section >
-            <h3>🔹 Tercera Generación (1964-1971) - Circuitos Integrados</h3>
-            <p>La invención de los circuitos integrados permitió la creación de computadoras más rápidas y accesibles.</p>
-        </section>
         <section>
-            <h3>🔹 Cuarta Generación (1971-presente) - Microprocesadores</h3>
-            <p>La llegada del microprocesador revolucionó la informática, dando paso a computadoras personales y dispositivos móviles.</p>
+            <h3 id="p3">Tipos de computadoras:</h3>
+            <p>Las computadoras se pueden clasificar en distintos tipos según su tamaño, capacidad de procesamiento y propósito</p>
+            <div id="sub-panel">
+                <h1> ● Supercomputadoras</h1>
+                <p>Son usadas para cálculos extremadamente complejos.</p>
+                <p>Se encuentran en centros de investigación, meteorología y simulaciones científicas..</p>
+            </div>
+            <div id="sub-panel">
+                <h1> ● Mainframes</h1>
+                <p>Grandes sistemas utilizados por bancos, gobiernos y empresas para procesar enormes volúmenes de datos.</p>
+                <p>Son altamente confiables y capaces de manejar miles de usuarios simultáneamente.</p>
+                <p>Ej: IBM Z Series.</p>
+            </div>
+            <div id="sub-panel">
+                <h1> ● Servidores</h1>
+                <p>Computadoras diseñadas para gestionar redes y servicios como bases de datos, sitios web o almacenamiento en la nube.</p>
+                <p>Se caracterizan por su alta disponibilidad y rendimiento continuo.</p>
+            </div>
+            <div id="sub-panel">
+                <h1> ● Computadoras de escritorio (PCs)</h1>
+                <p>Usadas en hogares y oficinas para tareas generales como navegación web, diseño, programación o videojuegos.</p>
+                <p>Se pueden personalizar con diferentes componentes de hardware.</p>
+                <p>Ejemplo: PCs con Windows, Mac, Linux.</p>
+            </div>
+            <div id="sub-panel">
+                <h1> ● Computadoras portátiles (Laptops, Notebooks, Ultrabooks)</h1>
+                <p>Dispositivos compactos y portátiles con batería integrada.</p>
+                <p>Las Ultrabooks son versiones más ligeras y delgadas con alto rendimiento.</p>
+            </div>
+            <div id="sub-panel">
+                <h1> ● Mini-PCs y computadoras de placa única</h1>
+                <p>Dispositivos pequeños con bajo consumo de energía.</p>
+                <p>Usados para proyectos de IoT, servidores caseros o emulación de videojuegos.</p>
+            </div>
         </section>
-            <section >
-            <h3>🔹 Quinta Generación y el Futuro</h3>
-            <p>La computación actual está marcada por la inteligencia artificial, la computación cuántica y la interconectividad global.</p>
-        </section>
+
         <section>
             <p>📌 <strong>Conclusión:</strong> La informática ha evolucionado enormemente, pasando de simples herramientas de cálculo a sistemas avanzados que transforman nuestra vida diaria.</p>
         </section>
                 
         <section id="next-section">
-            <a href="./U1-Historia-computacion.html">Siguiente Seccion</a><i class="fas fa-arrow-right"></i>
+            <a href="./U1-Conceptos-Basicos.html">Siguiente Seccion</a><i class="fas fa-arrow-right"></i>
         </section>  
         </main>        
     </div>
