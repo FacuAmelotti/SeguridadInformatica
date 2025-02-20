@@ -31,14 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const content = document.querySelector(".content");
-
-    content.addEventListener("animationend", () => {
-        content.classList.add("animated"); // Activa el scroll después de la animación
-    });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".desplegable > a").forEach(item => {
         item.addEventListener("click", (event) => {
             event.preventDefault(); // Evita que el enlace recargue la página
