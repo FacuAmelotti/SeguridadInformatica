@@ -1,0 +1,18 @@
+#info-section-desplegable {
+    background-color: #375070;
+    padding: 12px;
+    margin: 12px 32px;
+    box-shadow: 6px 5px 12px 15px rgba(71, 71, 71, 0.16);
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#info-section-desplegable h2{
+color: #e6e5e5;
+}
+
+#info-section-desplegable p{
+    color: #bbbbbb;
+    }
+    

@@ -23,7 +23,8 @@
             <ul>
                 <li><a href="./general.html"><i class="fas fa-home"></i> General</a>
                 <li><a href="#p1">Conceptos basicos</a></li>
-                <li><a href="#next-section">Siguiente Seccion</a></li>
+                <li><a id="btn-menu-Sect" href="#back-section">Seccion anterior</a></li>
+                <li><a id="btn-menu-Sect" href="#next-section">Siguiente Seccion</a></li>
         </aside>
         </main>
 
@@ -32,12 +33,17 @@
         <section>
             <h1 id="p1">🖥️ Conceptos basicos</h1>
         </section>    
-        <section id="next-section">
-            <i class="fas fa-arrow-left"></i><a href="./U1-Historia-computacion.html">Seccion Anterior</a>
+        <section id="nextBack-section">
+            <i class="fas fa-arrow-left"></i><a id="#back-section" href="./U1-Introduccion.html">Seccion Anterior</a>
         </section>   
-
+        <section id="nextBack-section">
+            <a href="#">Siguiente Seccion</a><i class="fas fa-arrow-right"></i>
+        </section>  
+        </main>    
     
-
+        </main>
+        
+    </div>
     <div class="overlay" id="overlay">
         <button class="close-btn" onclick="cerrarImagen()">X</button>
         <img id="imagenAmpliada" src="" alt="Imagen Ampliada">

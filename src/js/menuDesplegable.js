@@ -28,6 +28,13 @@ function desplegarAction() {
 // Iniciar con el menú desplegado
 document.addEventListener('DOMContentLoaded', () => {
     desplegarAction();
+    
+    if (window.innerWidth <= 768) {
+        menu.classList.toggle('active');
+        content.style.width = '100%'; // Expandir al 100%
+        content.style.marginLeft = '0'; // Eliminar margen izquierdo
+        menuToggle.textContent = '☰ '; // Cambiar texto del botón  
+    }
 });
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -22,22 +22,43 @@
             <h2>Introducción a la Informática</h2>
             <ul>
                 <li><a href="./general.html"><i class="fas fa-home"></i> General</a>
-                <li><a href="#p1">Historia de la Informatica</a></li>
+                <li><a href="#p1">Introduccion</a></li>
                 <li><a href="#p2">¿Qué es una computadora?</a></li>
                 <li><a href="#p3">Tipos de Computadoras</a></li>
-                <li><a href="#next-section">Siguiente Seccion</a></li>
+                <li><a id="btn-menu-Sect" href="#next-section">Siguiente Seccion</a></li>
         </aside>
         </main>
 
         <!-- Contenido principal -->
-        <main class="content">
-        <section>
-            <h1 id="p1">🖥️ Historia de la computación</h1>
-        </section>     
+        <main class="content">  
 
         <section id="historia-informatica">
-            <h2>📜 Historia de la Informática</h2>
+            <h2>📜 Introduccion</h2>
             <p>La informática, como la conocemos hoy, ha evolucionado a lo largo de siglos. Su desarrollo ha estado marcado por avances en matemáticas, ingeniería y tecnología, permitiendo la creación de máquinas capaces de procesar información de manera automática.</p>
+        </section>
+
+        <section id="nextBack-section">
+            <i class="fas fa-arrow-left"></i><a id="#back-section" href="./general.html">Seccion Anterior</a>
+        </section>
+
+        <section>
+            <h1 id="p1">🖥️ Historia de la computación</h1>
+        </section>   
+
+        <section id="info-section-desplegable" class="desplegable-info">
+            <h2 href="#" class="toggle-btn">¿Qué es la informática?</h2>
+            <div class="submenu-info">
+                <p>La informática es la ciencia que estudia el procesamiento, almacenamiento y transmisión de información mediante computadoras y sistemas digitales.</p>
+                <p>Se enfoca en el desarrollo de software, hardware y algoritmos para resolver problemas y optimizar procesos.</p>
+            </div>
+        </section>
+
+        <section id="info-section-desplegable" class="desplegable-info">
+            <h2 href="#" class="toggle-btn">¿Y la Computacion? ¿Que es?</h2>
+            <div class="submenu-info">
+                <p>La computación es el estudio de los sistemas de procesamiento de datos y los principios matemáticos y lógicos que los sustentan.</p>
+                <p>Abarca áreas como la programación, la teoría de la computación y la inteligencia artificial, centrándose en cómo resolver problemas mediante cálculos y procesamiento de información.</p>
+            </div>
         </section>
 
         <section>
@@ -138,8 +159,8 @@
             <p>📌 <strong>Conclusión:</strong> La informática ha evolucionado enormemente, pasando de simples herramientas de cálculo a sistemas avanzados que transforman nuestra vida diaria.</p>
         </section>
                 
-        <section id="next-section">
-            <a href="./U1-Conceptos-Basicos.html">Siguiente Seccion</a><i class="fas fa-arrow-right"></i>
+        <section id="nextBack-section">
+            <a id="next-section" href="./U1-Conceptos-Basicos.html">Siguiente Seccion</a><i class="fas fa-arrow-right"></i>
         </section>  
         </main>        
     </div>
@@ -151,7 +172,8 @@
         <img id="imagenAmpliada" src="" alt="Imagen Ampliada">
     </div>
 
-    <script src="./../js/menuDesplegable.js"></script>
+    <script src="./../js/menuDesplegable.js"></script>    
+    <script src="./../js/divInfoDesplegable.js"></script>
     <script src="./../js/ampliarImg.js"></script>
 </body>
 </html>

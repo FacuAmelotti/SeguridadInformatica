@@ -2,7 +2,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     const menu = document.getElementById('menu');
     const content = document.querySelector('.content');
-
         desplegarAction();
-
 });

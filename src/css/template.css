@@ -104,6 +104,34 @@ body {
     display: block;
 }
 
+/* Contenido desplegable (oculto por defecto) */
+.submenu-info {
+    display: none;
+    padding: 10px;
+    color: #ecf0f1;
+    text-decoration:solid;
+    font-size: 1rem;
+}
+
+.submenu-info h2 {
+    cursor: pointer;
+    display: none;
+    padding: 10px;
+    color: #ecf0f1;
+    text-decoration:solid;
+    font-size: 1rem;
+}
+
+.desplegable-info {
+    background-color: #b4b4b4;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Cuando la sección está activa, se muestra el contenido */
+.desplegable-info.open .submenu-info {
+    display: block;
+}
 
 /* Contenido principal */
 .content {
@@ -167,6 +195,7 @@ section {
     background-color: #f2f2f2;
     padding: 6px;
     margin: 12px 0;
+    border-radius: 7px;
 }
 
 #sub-panel {
@@ -257,42 +286,6 @@ transform:scale(1.02);
     background-color: #f2f2f2;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .menu {
-        width: 100%; /* Menú ocupa todo el ancho en pantallas pequeñas */
-    }
-
-    .content,  .overlay {
-        width: 100%; /* Contenido también ocupa todo el ancho */
-        margin-left: 0; /* Sin margen izquierdo */
-        top: 0; /* Sin margen superior */
-        text-align: center;
-    }
-
-    .content img.responsive-image {
-        margin-left: 24px;
-        max-width: 70%;
-        height: auto;
-        margin-bottom: 20px;
-        border-radius: 16px;
-        box-shadow: 0 12px 15px rgba(0, 0, 0, 0.26);
-    }
-
-    .overlay img.responsive-image {
-        margin-left: 24px;
-        max-width: 70%;
-        height: auto;
-        margin-bottom: 20px;
-        border-radius: 16px;
-        box-shadow: 0 12px 15px rgba(0, 0, 0, 0.26);
-    }
-}
-
 /* Scrollbar para el menú lateral */
 .menu::-webkit-scrollbar {
     width: 18px; /* Ancho más pequeño para el menú */
@@ -340,7 +333,7 @@ transform:scale(1.02);
     scrollbar-color: #34495e #f9f9f9; /* Thumb y track para el contenido */
 }
 
-#next-section {
+#nextBack-section {
     box-shadow: 6px 5px 12px 15px rgba(71, 71, 71, 0.16);
     background-color: #dee6f5;
     padding: 6px;
@@ -348,11 +341,11 @@ transform:scale(1.02);
     border-radius: 38px;
 }
 
-#next-section:hover {
+#nextBack-section:hover {
     background-color: #cbd6e9;
 }
 
-#next-section a,
+#nextBack-section a,
 i {
     text-decoration: none;
     color: #3d82cc;
@@ -434,6 +427,12 @@ i {
     overflow: auto; /* Reactiva el scrollbar */
 }
 
+#btn-menu-Sect {
+    color: #8399d4;
+    font-size: 0.78rem;
+    margin-left: 12px;
+}
+
 @keyframes fadeSlide {
     0% {
         transform: translateX(100px);
@@ -445,6 +444,59 @@ i {
     }
 }
 
-.menu-btn-next-sect {
-    color: #000;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .menu {
+        width: 100%; /* Menú ocupa todo el ancho en pantallas pequeñas */
+    }
+
+    .content,  .overlay {
+        width: 100%; /* Contenido también ocupa todo el ancho */
+        margin-left: 0; /* Sin margen izquierdo */
+        top: 0; /* Sin margen superior */
+        text-align: center;
+    }
+
+    .content img.responsive-image {
+        margin-left: 24px;
+        max-width: 70%;
+        height: auto;
+        margin-bottom: 20px;
+        border-radius: 16px;
+        box-shadow: 0 12px 15px rgba(0, 0, 0, 0.26);
+    }
+
+    .overlay img.responsive-image {
+        margin-left: 24px;
+        max-width: 70%;
+        height: auto;
+        margin-bottom: 20px;
+        border-radius: 16px;
+        box-shadow: 0 12px 15px rgba(0, 0, 0, 0.26);
+    }
+
+    #info-section {
+        flex-direction: column; /* Apila los elementos */
+        text-align: center;
+        padding: 16px;
+    }
+
+    #info-section img {
+        width: 100%; /* Imagen toma todo el ancho */
+        max-width: 300px; /* Tamaño máximo para no exagerar */
+        margin-bottom: 16px;
+    }
+
+    #info-section .info-text {
+        width: 100%;
+        font-size: 0.9rem; /* Reduce el tamaño de fuente */
+    }
+
+    #info-section ul {
+        font-size: 0.8rem;
+    }
 }
