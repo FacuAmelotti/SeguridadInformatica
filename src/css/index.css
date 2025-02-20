@@ -196,9 +196,6 @@ body{
         position: absolute;
     }
 
-    #introduccion {
-        visibility: hidden;
-    }
 
     .hero-image {
         position: relative;
