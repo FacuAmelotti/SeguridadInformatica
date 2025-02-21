@@ -19,12 +19,19 @@
         <button id="menu-toggle" class="menu-toggle">☰ Menú</button>
         <!-- Menú lateral izquierdo -->
         <aside class="menu" id="menu">
-            <h2>Introducción a la Informática</h2>
+            <h2>1) Introducción a la Informática</h2>
             <ul>
                 <li><a href="./general.html"><i class="fas fa-home"></i> General</a>
-                <li><a href="#p1">Conceptos basicos</a></li>
                 <li><a id="btn-menu-Sect" href="#back-section">Seccion anterior</a></li>
+                <li><a href="#p1">Conceptos basicos</a></li>
+                <ul>
+                    <li><a href="#p1">¿Que es la informatica?</a></li>
+                    <ul>
+                        <li><a href="#p1">¿Que es la informatica?</a></li>
+                    </ul>
+                </ul>
                 <li><a id="btn-menu-Sect" href="#next-section">Siguiente Seccion</a></li>
+                
         </aside>
         </main>
 
@@ -36,6 +43,15 @@
         <section id="nextBack-section">
             <i class="fas fa-arrow-left"></i><a id="#back-section" href="./U1-Introduccion.html">Seccion Anterior</a>
         </section>   
+
+        <section id="info-section-desplegable" class="desplegable-info">
+            <h2 href="#" class="toggle-btn">¿Qué es la informática?</h2>
+            <div class="submenu-info">
+                <p>La informática es la ciencia que estudia el procesamiento, almacenamiento y transmisión de información mediante computadoras y sistemas digitales.</p>
+                <p>Se enfoca en el desarrollo de software, hardware y algoritmos para resolver problemas y optimizar procesos.</p>
+            </div>
+        </section>
+
         <section id="nextBack-section">
             <a href="#">Siguiente Seccion</a><i class="fas fa-arrow-right"></i>
         </section>  
@@ -44,12 +60,14 @@
         </main>
         
     </div>
+
     <div class="overlay" id="overlay">
         <button class="close-btn" onclick="cerrarImagen()">X</button>
         <img id="imagenAmpliada" src="" alt="Imagen Ampliada">
     </div>
 
-    <script src="./../js/menuDesplegable.js"></script>
+    <script src="./../js/menuDesplegable.js"></script>    
+    <script src="./../js/divInfoDesplegable.js"></script>
     <script src="./../js/ampliarImg.js"></script>
 </body>
 </html>

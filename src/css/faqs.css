@@ -16,3 +16,14 @@ color: #e6e5e5;
     color: #bbbbbb;
     }
     
+    
+#general-section {
+    background-color: transparent;
+}
+
+
+#general-section img {
+    height: 332px;
+    background-size: cover;
+    background-position: center;
+}

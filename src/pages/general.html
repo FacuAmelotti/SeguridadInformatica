@@ -73,29 +73,27 @@
                         <li><a href="#legislacion-privacidad">Legislación, privacidad y regulaciones</a></li>
                     </ul>
                 </li>
+                <li><a id="tester" href="#"><i class="fas fa-question-circle"></i> Evaluador</a></li>
             </ul>
         </aside>
 
         <!-- Contenido principal -->
         <main class="content">
-            <section id="introduccion">
-                <h1>👋 ¡Hola Cibernauta!</h1> 
-                <p>🔹 Si llegaste a esta página, es probable que te interese el mundo de la seguridad informática...</p>
-                <p>¡Y te entiendo! ¡Es un área fascinante! aunque desconocida para muchos...</p>
-                <p>🔹 Sin embargo, hoy más que nunca, la ciberseguridad es fundamental para proteger la vida de las personas, las operaciones de las empresas e incluso la estabilidad de los países.  En un mundo cada vez más digitalizado, entender y aplicar medidas de seguridad se ha vuelto crítico para todos.</p>
-            </section>  
+
+            <section id="general-section">
+                <img id="imgEffect" src="../img/no-user.png" onclick="ampliarImagen(this)">
+                <div class="info-text">
+                 <h1>👋 ¡Hola Cibernauta!</h1> 
+                    <p>🔹 Si llegaste a esta página, es probable que te interese el mundo de la seguridad informática...</p>
+                    <p>¡Y te entiendo! ¡Es un área fascinante! aunque desconocida para muchos...</p>
+                    <p>🔹 Sin embargo, hoy más que nunca, la ciberseguridad es fundamental para proteger la vida de las personas, las operaciones de las empresas e incluso la estabilidad de los países.  En un mundo cada vez más digitalizado, entender y aplicar medidas de seguridad se ha vuelto crítico para todos.</p>
+                </div>
+            </section>
+            
             <section id="introduccion">
                 <h1>💡 Objetivo</h1>
                 <p>Brindar los conocimientos necesarios para comprender y aplicar buenas prácticas de seguridad informática, protegiendo datos y sistemas en un mundo digital cada vez más desafiante.</p>
-            </section>  
-            <section id="introduccion">
-                <h1>🔒 ¿Qué encontrarás en esta página?</h1>
-                <ul>
-                    <li>🔹 Introducción a la Informática: Daremos una vuelta por la Historia de la computacion para comprender las bases y fundamentos, para poco a poco ir entrando en detalle a temas mas complejos... hardware, software, representación de datos y sistemas operativos, bases de datos, redes, seguridad, privacidad...</li>
-                    <li>🔹 Redes y Comunicación: Es fundamental tener una buena base de cómo funcionan las redes, protocolos esenciales y seguridad en la conectividad.</li>
-                    <li>🔹 Seguridad Informática: Estudiaremos los principios clave (Confidencialidad, Integridad, Disponibilidad), tipos de ataques, criptografía, regulaciones y mucho mas...</li>
-                </ul>
-            </section>  
+            </section>   
             <section id="nextBack-section">
                 <a href="./U1-Introduccion.html">Siguiente Seccion</a><i class="fas fa-arrow-right"></i>
             </section>  
@@ -106,6 +104,9 @@
         <button class="close-btn" onclick="cerrarImagen()">X</button>
         <img id="imagenAmpliada" src="" alt="Imagen Ampliada">
     </div>
+
     <script src="./../js/menuDesplegable.js"></script>
+    <script src="./../js/imgChangeMouseOver.js"></script>
+    <script src="./../js/ampliarImg.js"></script>
 </body>
 </html>

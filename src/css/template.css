@@ -74,6 +74,15 @@ body {
     font-size: 0.9rem;
 }
 
+#tester {
+       color: #6e9bf0;
+    font-size: 1.1rem; 
+}
+
+#tester:hover {
+    color: #0084ff;
+}
+
 /* Estilo del botón para alternar el menú */
 .menu-toggle {
     position: fixed;
@@ -356,6 +365,24 @@ i {
     cursor:pointer;
 }
 
+#general-section {
+    background-color: #e2e3e6;
+    box-shadow: 6px 5px 12px 15px rgba(71, 71, 71, 0.16);
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#general-section img {
+    height: 332px;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(28%) brightness(0.4);
+    animation: backgroundPan 20s linear infinite;
+}
+
+
 #info-section {
     background-color: #a8aaad;
     padding: 24px 32px;
@@ -433,6 +460,10 @@ i {
     margin-left: 12px;
 }
 
+#btn-menu-Sect:hover {
+    color: #bfcef7;
+}
+
 @keyframes fadeSlide {
     0% {
         transform: translateX(100px);
@@ -479,19 +510,19 @@ i {
         box-shadow: 0 12px 15px rgba(0, 0, 0, 0.26);
     }
 
-    #info-section {
+    #info-section, #general-section {
         flex-direction: column; /* Apila los elementos */
         text-align: center;
         padding: 16px;
     }
 
-    #info-section img {
+    #info-section img, #general-section img {
         width: 100%; /* Imagen toma todo el ancho */
         max-width: 300px; /* Tamaño máximo para no exagerar */
         margin-bottom: 16px;
     }
 
-    #info-section .info-text {
+    #info-section .info-text, #general-section .info-text {
         width: 100%;
         font-size: 0.9rem; /* Reduce el tamaño de fuente */
     }

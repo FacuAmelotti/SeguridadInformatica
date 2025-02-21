@@ -19,12 +19,16 @@
         <button id="menu-toggle" class="menu-toggle">☰ Menú</button>
         <!-- Menú lateral izquierdo -->
         <aside class="menu" id="menu">
-            <h2>Introducción a la Informática</h2>
+            <h2>1) Introducción a la Informática</h2>
             <ul>
                 <li><a href="./general.html"><i class="fas fa-home"></i> General</a>
+                    
                 <li><a href="#p1">Introduccion</a></li>
-                <li><a href="#p2">¿Qué es una computadora?</a></li>
-                <li><a href="#p3">Tipos de Computadoras</a></li>
+                <li><a id="btn-menu-Sect" href="#back-section">Seccion anterior</a></li>
+                <ul>
+                    <li><a href="#p2">¿Qué es una computadora?</a></li>
+                    <li><a href="#p3">Tipos de Computadoras</a></li>
+                </ul>
                 <li><a id="btn-menu-Sect" href="#next-section">Siguiente Seccion</a></li>
         </aside>
         </main>
@@ -32,39 +36,34 @@
         <!-- Contenido principal -->
         <main class="content">  
 
-        <section id="historia-informatica">
-            <h2>📜 Introduccion</h2>
+        <!-- Introduccion -->
+        <section>
+            <h2 id="p1">📜 Introduccion</h2>
             <p>La informática, como la conocemos hoy, ha evolucionado a lo largo de siglos. Su desarrollo ha estado marcado por avances en matemáticas, ingeniería y tecnología, permitiendo la creación de máquinas capaces de procesar información de manera automática.</p>
         </section>
 
+        <!-- Seccion anterior -->
         <section id="nextBack-section">
-            <i class="fas fa-arrow-left"></i><a id="#back-section" href="./general.html">Seccion Anterior</a>
+            <i class="fas fa-arrow-left"></i><a id="back-section" href="./general.html">Seccion Anterior</a>
         </section>
 
+        <!-- Seccion anterior -->
         <section>
-            <h1 id="p1">🖥️ Historia de la computación</h1>
-        </section>   
-
+            <h1>🖥️ Historia de la computación</h1>
+        </section>  
+        
         <section id="info-section-desplegable" class="desplegable-info">
-            <h2 href="#" class="toggle-btn">¿Qué es la informática?</h2>
-            <div class="submenu-info">
-                <p>La informática es la ciencia que estudia el procesamiento, almacenamiento y transmisión de información mediante computadoras y sistemas digitales.</p>
-                <p>Se enfoca en el desarrollo de software, hardware y algoritmos para resolver problemas y optimizar procesos.</p>
-            </div>
-        </section>
-
-        <section id="info-section-desplegable" class="desplegable-info">
-            <h2 href="#" class="toggle-btn">¿Y la Computacion? ¿Que es?</h2>
+            <h2 href="#" class="toggle-btn">¿Que es la computación?</h2>
             <div class="submenu-info">
                 <p>La computación es el estudio de los sistemas de procesamiento de datos y los principios matemáticos y lógicos que los sustentan.</p>
                 <p>Abarca áreas como la programación, la teoría de la computación y la inteligencia artificial, centrándose en cómo resolver problemas mediante cálculos y procesamiento de información.</p>
             </div>
         </section>
 
+        <!-- Evolucion de la computacion -->
         <section>
             <h3>Evolucion de la Computacion</h3>
             <p>Desde la antigüedad, el ser humano ha buscado formas de facilitar los cálculos.</p>
-
             <ul>
                 <li><strong>Ábaco (3000 a.C.)</strong>: Uno de los primeros dispositivos de cálculo, utilizado en diversas civilizaciones.</li>
                 <img src="../img/U1_img0.jpg" alt="Ábaco" style="height: 200px;" onclick="ampliarImagen(this)">
@@ -76,26 +75,39 @@
             </ul>
         </section>
 
-        <section id="info-section">
-            <div class="info-text">
-                <h2 id="p2">¿Que es una Computadora?</h2>
-                <p>Una computadora es un <strong> dispositivo electrónico programable que recibe, procesa, almacena y emite información mediante el uso de hardware y software</strong>. Su principal característica es la capacidad de ejecutar una variedad de programas y realizar múltiples tareas, desde cálculos matemáticos hasta inteligencia artificial y gráficos avanzados.</p>
+        <!-- Computadora -->
+        <section id="info-section-desplegable" class="desplegable-info">
+            <h2 id="p2" href="#" class="toggle-btn">¿Que es una Computadora?</h2>
+            <div class="submenu-info">
+                <section id="info-section">
+                    <div class="info-text">
+                        <p>Una computadora es un <strong> dispositivo electrónico programable que recibe, procesa, almacena y emite información mediante el uso de hardware y software</strong>. Su principal característica es la capacidad de ejecutar una variedad de programas y realizar múltiples tareas, desde cálculos matemáticos hasta inteligencia artificial y gráficos avanzados.</p>
+                    </div>
+                    <img src="../img/computadora.jpg" onclick="ampliarImagen(this)">
+                </section>
             </div>
-            <img src="../img/computadora.jpg" onclick="ampliarImagen(this)">
         </section>
 
-        <section id="info-section">
-            <img src="../img/computadora_partes.jpg" onclick="ampliarImagen(this)">
-            <div class="info-text">
-                <p><strong>Unidad Central de Procesamiento (CPU)</strong> El cerebro de la computadora, que ejecuta instrucciones y procesos.</p>
-                <p><strong>Memoria RAM</strong>: Permite almacenar temporalmente datos y ejecutar programas con fluidez.</p>
-                <p><strong>Disco Duro o SSD</strong>: Almacena datos de forma permanente.</p>
-                <p><strong>Sistema Operativo</strong>: Software base que gestiona los recursos del hardware y permite la interacción con el usuario.</p>
-                <p><strong>Periféricos</strong>: Dispositivos de entrada y salida como teclado, mouse, pantalla e impresoras.</p>
-                </div>
+        <section id="info-section-desplegable" class="desplegable-info">
+            <h2 href="#" class="toggle-btn">¿Como se compone una computadora?</h2>
+            <div class="submenu-info">
+                <section id="info-section">
+                        <img src="../img/computadora_partes.jpg" onclick="ampliarImagen(this)">
+                    <div class="info-text">
+                        <p><strong>Unidad Central de Procesamiento (CPU)</strong> El cerebro de la computadora, que ejecuta instrucciones y procesos.</p>
+                        <p><strong>Memoria RAM</strong>: Permite almacenar temporalmente datos y ejecutar programas con fluidez.</p>
+                        <p><strong>Disco Duro o SSD</strong>: Almacena datos de forma permanente.</p>
+                        <p><strong>Sistema Operativo</strong>: Software base que gestiona los recursos del hardware y permite la interacción con el usuario.</p>
+                        <p><strong>Periféricos</strong>: Dispositivos de entrada y salida como teclado, mouse, pantalla e impresoras.</p>
+                        </div>
+                </section>
+            </div>
         </section>
 
-        <section>            
+
+
+        <section>   
+            <h1>Primeras computadoras modernas</h1>         
             <p>Las primeras computadoras electrónicas surgieron en la Segunda Guerra Mundial, utilizadas principalmente para cálculos militares.</p>
             <ul>
                 <li><strong>ENIAC (1946)</strong>: La primera computadora electrónica de propósito general.</li>
@@ -104,20 +116,28 @@
  
             <section id="info-section">
                 <div class="info-text">
-                <p>El ENIAC (Computador e Integrador Numérico Electrónico) fue la primera computadora electrónica de propósito general. Fue diseñada en la Universidad de Pensilvania y se completó en 1945. </p>
-                <h3>Características:</h3>
-                <ul>
-                    <li>● Fue diseñada por John Presper Eckert y John William Mauchly</li>
-                    <li>● Fue utilizada por el Laboratorio de Investigación Balística del ejército de los EEUU</li>
-                    <li>● Medía 167 metros cuadrados y pesaba 27 toneladas</li>
-                    <li>● Era capaz de realizar 5.000 sumas y 300 multiplicaciones por segundo</li>                   
-                </ul>             
-            </div>
-            <img src="../img/U1_img1.jpg" onclick="ampliarImagen(this)" alt="El ENIAC (Computador e Integrador Numérico Electrónico) fue la primera computadora electrónica de propósito general.">        
-
-             </section>
+                    <p>El ENIAC (Computador e Integrador Numérico Electrónico) fue la primera computadora electrónica de propósito general. Fue diseñada en la Universidad de Pensilvania y se completó en 1945. </p>
+                    <h3>Características:</h3>
+                    <ul>
+                        <li>● Fue diseñada por John Presper Eckert y John William Mauchly</li>
+                        <li>● Fue utilizada por el Laboratorio de Investigación Balística del ejército de los EEUU</li>
+                        <li>● Medía 167 metros cuadrados y pesaba 27 toneladas</li>
+                        <li>● Era capaz de realizar 5.000 sumas y 300 multiplicaciones por segundo</li>                   
+                    </ul>             
+                </div>
+                <img src="../img/U1_img1.jpg" onclick="ampliarImagen(this)" alt="El ENIAC (Computador e Integrador Numérico Electrónico) fue la primera computadora electrónica de propósito general.">        
             </section>
 
+            <section id="info-section">
+                <h1>Comparación:</h1>
+                <ul>
+                    <li>● <strong>UNIVAC I</strong>: Hacía 1,000 operaciones por segundo. (1951)</li>
+                    <li>● <strong>Intel Core i3</strong>: Un Intel Core i3 moderno a 3.3 GHz puede ejecutar aproximadamente 3.300 millones de operaciones por segundo. (Super normal y de bajo rendimiento - 2025)</li>
+                </ul>
+            </section>
+            
+        </section>
+        
         <section>
             <h3 id="p3">Tipos de computadoras:</h3>
             <p>Las computadoras se pueden clasificar en distintos tipos según su tamaño, capacidad de procesamiento y propósito</p>

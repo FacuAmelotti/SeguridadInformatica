@@ -224,3 +224,12 @@ body{
         font-size: 1rem;
     }
 }
+
+
+
+
+#general-section img {
+    height: 332px;
+    background-size: cover;
+    background-position: center;
+}
