@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principios de Bases de Datos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/template.css">
+        <!--FONT-->
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <button id="menu-toggle" class="menu-toggle">☰ Menú</button>
+        <!-- Menú lateral izquierdo -->
+        <aside class="menu" id="menu">
+            <h2>Bases de Datos I</h2>
+            <ul>
+                <li><a href="../../pages/general.html"><i class="fas fa-home"></i> General</a>                    
+                <li><a href="#p1">Principios de Bases de Datos</a></li>            
+                <ul>
+                        <li><a href="#que-es-bd">¿Qué es una base de datos?</a></li>
+                        <ul>
+                            <li><a href="#tipos-bd">Tipos de bases de datos</a></li>
+                            <li><a href="#modelos-bd">Modelos de datos</a></li>  
+                            <li><a href="#dbms">Sistemas gestores</a></li>  
+                        </ul>
+                        <li><a href="#datos-vs-informacion">Datos vs Información</a></li>
+                        <li><a href="#lenguaje-sql">¿Qué es SQL?</a></li>  
+                        <li><a href="#clave-primaria">Claves primarias</a></li>  
+                        <ul>
+                            <li><a href="#relacion-tablas">Relaciones entre tablas</a></li>
+                            <li><a href="#integridad">Integridad referencial</a></li>
+                            <li><a href="#normalizacion">Normalización</a></li>
+                        </ul>      
+                        <li><a href="#consultas">Consultas básicas</a></li>  
+                        <li><a href="#sgbd-populares">SGBD populares</a></li>         
+                </ul>
+                <li><a id="btn-menu-Sect" href="#next-section">Siguiente Sección</a></li> <!--BASES DE DATOS RELACIONALES-->
+        </aside>
+        </main>
+
+        <!-- Contenido principal -->
+        <main class="content">  
+
+
+            <!-- Seccion anterior -->
+            <section id="nextBack-section">
+                <i class="fas fa-arrow-left"></i><a id="back-section" href="../general.html">General</a>
+            </section>
+
+            <!-- Seccion anterior -->
+            <section>
+                <h1>💾 Principios de Bases de Datos</h1>
+            </section>  
+
+            <section class="tags-topics">
+                <ul>
+                    <li>#BASESDEDATOS</li>
+                    <li>#SQL</li><li>#DBMS</li><li>#DATOS</li>
+                    <li>#TABLAS</li>
+                </ul>
+            </section>  
+            
+            <section id="que-es-bd">   
+                <h1>¿Qué es una Base de Datos?</h1>
+                <ul>
+                    <li>● Una <strong>BASE DE DATOS</strong> es una colección organizada de datos relacionados entre sí, almacenados de forma estructurada para facilitar su acceso, gestión y actualización.</li>                
+                    <li>● Las bases de datos permiten almacenar, recuperar, actualizar y eliminar información de manera eficiente. 💾</li>
+                </ul>
+                <h3 id="tipos-bd">Existen diferentes tipos de bases de datos:</h3>
+                <ul>
+                    <li>● <strong>Relacionales</strong> → Organizadas en tablas con filas y columnas (MySQL, PostgreSQL).</li>   
+                    <li>● <strong>NoSQL</strong> → No utilizan el modelo relacional (MongoDB, Cassandra).</li>
+                    <li>● <strong>En memoria</strong> → Almacenan datos en la memoria principal (Redis).</li>       
+                    <li>● <strong>Orientadas a objetos</strong> → Almacenan objetos completos.</li>      
+                </ul>
+            </section>
+
+            <section id="modelos-bd">   
+                <h1>Modelos de Datos</h1>
+                <p>Un modelo de datos es una descripción de cómo se organizan y relacionan los datos en una base de datos.</p>
+                <ul>
+                    <li>● <strong>Modelo relacional</strong>: Datos organizados en tablas relacionadas entre sí.</li>                
+                    <li>● <strong>Modelo jerárquico</strong>: Datos organizados en estructuras tipo árbol.</li>
+                    <li>● <strong>Modelo en red</strong>: Similar al jerárquico pero permite más conexiones.</li>
+                    <li>● <strong>Modelo documental</strong>: Almacena documentos completos (JSON, XML).</li>
+                    <li>● <strong>Modelo clave-valor</strong>: Almacena pares de clave y valor.</li>
+                </ul>
+            </section>
+
+            <section id="info-section-desplegable" class="desplegable-info">
+                <h2 href="#" class="toggle-btn">📊 Ejemplo de Modelo Relacional 🔽</h2>
+                <div class="submenu-info">
+                    <ul>
+                        <li>1. <strong>Tabla Clientes</strong>: id_cliente, nombre, email, teléfono</li>
+                        <li>2. <strong>Tabla Productos</strong>: id_producto, nombre, precio, stock</li>
+                        <li>3. <strong>Tabla Pedidos</strong>: id_pedido, id_cliente, fecha, total</li>
+                        <li>4. <strong>Tabla Detalle_Pedido</strong>: id_pedido, id_producto, cantidad, precio_unitario</li>
+                    </ul>
+                    <p>Las tablas se relacionan entre sí mediante claves primarias y foráneas. Por ejemplo, id_cliente en la tabla Pedidos es una clave foránea que referencia a id_cliente en la tabla Clientes.</p>              
+                </div>
+            </section>
+
+            <section id="datos-vs-informacion">   
+                <h1>Datos vs Información</h1>
+                <p>🔍 Es importante entender la diferencia entre datos e información en el contexto de bases de datos.</p>
+                
+                <h3>Definiciones</h3>
+                <ul>
+                    <li>● <strong>Datos</strong> → Valores crudos y sin procesar (números, texto, fechas).</li>
+                    <li>● <strong>Información</strong> → Datos procesados y contextualizados con significado.</li>
+                </ul>                      
+                <p>Por ejemplo, "25" es un dato, pero "La temperatura es de 25°C" es información.</p>
+            </section>
+
+            <section id="info-section-desplegable" class="desplegable-info">
+                <h2 href="#" class="toggle-btn">Ejemplo práctico de Datos vs Información: 🔽</h2>
+                <div class="submenu-info">
+                <ul>
+                    <li>
+                        1. <strong>Datos en una tabla de ventas</strong>:
+                        <ul>
+                            <li>ID: 1042</li>
+                            <li>Fecha: 2025-04-15</li>
+                            <li>Producto: "Laptop"</li>
+                            <li>Cantidad: 3</li>
+                            <li>Precio unitario: $850</li>
+                        </ul>
+                    </li>
+                    <li>2. <strong>Información obtenida mediante consultas</strong>:
+                        <ul>
+                            <li>"Las ventas de laptops aumentaron un 15% en abril comparado con marzo"</li>
+                            <li>"El cliente con ID 1042 ha comprado $2,550 en productos este mes"</li>
+                            <li>"La laptop es el producto más vendido en la región norte"</li>
+                        </ul>                  
+                    </li>
+                </ul>
+                <p>Los datos son la materia prima y la información es el producto procesado con valor para la toma de decisiones.</p>          
+            </div>
+        </section>
+
+        <section id="dbms">   
+            <h1>Sistemas Gestores de Bases de Datos (SGBD/DBMS)</h1>
+            <p>Un SGBD es un software que permite crear, mantener y utilizar bases de datos.</p>
+            <p>Actúa como intermediario entre los usuarios y la base de datos física, facilitando el acceso y la manipulación de los datos.</p>
+            <h3>Principales funciones de un SGBD:</h3>
+            <ul>
+                <li>● <strong>Definición de datos</strong> → Crear y modificar estructuras.</li>
+                <li>● <strong>Manipulación de datos</strong> → Insertar, actualizar, eliminar y consultar.</li>
+                <li>● <strong>Control de seguridad</strong> → Gestionar permisos y accesos.</li>
+                <li>● <strong>Integridad</strong> → Garantizar la consistencia de los datos.</li>
+                <li>● <strong>Recuperación</strong> → Manejar copias de seguridad y restauraciones.</li>
+                <li>● <strong>Concurrencia</strong> → Gestionar accesos simultáneos.</li>
+            </ul>
+        </section>
+
+        
+        <section id="lenguaje-sql">   
+            <h1>¿Qué es SQL?</h1>
+            <ul>
+                <li>● SQL (Structured Query Language) es un lenguaje estándar para gestionar bases de datos relacionales.</li>
+                <li>● Permite crear, modificar, consultar y administrar bases de datos.</li>
+                <li>● Se utiliza en prácticamente todos los sistemas gestores de bases de datos relacionales.</li>
+            </ul>
+            <section>
+                <h3>Tipos de comandos SQL</h3>
+                <ul>
+                    <li><strong>DDL</strong> (Data Definition Language): CREATE, ALTER, DROP, TRUNCATE.</li>
+                    <li><strong>DML</strong> (Data Manipulation Language): SELECT, INSERT, UPDATE, DELETE.</li>
+                    <li><strong>DCL</strong> (Data Control Language): GRANT, REVOKE.</li>
+                    <li><strong>TCL</strong> (Transaction Control Language): COMMIT, ROLLBACK, SAVEPOINT.</li>
+                </ul>
+            </section>
+            <section id="info-section-desplegable" class="desplegable-info">
+                <h2 href="#" class="toggle-btn">🔍 Ejemplos de consultas SQL 🔽</h2>
+                <div class="submenu-info">
+                    <ul>
+                        <li><strong>Crear una tabla:</strong> <code>CREATE TABLE Clientes (id INT PRIMARY KEY, nombre VARCHAR(100), email VARCHAR(100));</code></li>
+                        <li><strong>Insertar datos:</strong> <code>INSERT INTO Clientes VALUES (1, 'Ana López', 'ana@email.com');</code></li>
+                        <li><strong>Consultar datos:</strong> <code>SELECT nombre, email FROM Clientes WHERE id = 1;</code></li>
+                        <li><strong>Actualizar datos:</strong> <code>UPDATE Clientes SET email = 'nuevo@email.com' WHERE id = 1;</code></li>
+                        <li><strong>Eliminar datos:</strong> <code>DELETE FROM Clientes WHERE id = 1;</code></li>
+                    </ul>               
+                </div>
+            </section>
+        </section> 
+
+
+        <section id="clave-primaria">
+            <h1>Claves Primarias y Relaciones</h1>
+            <section>
+                <h3>Clave Primaria</h3>
+                <ul>
+                    <li>Es un campo o conjunto de campos que identifican de forma única cada registro en una tabla.</li>
+                    <li>No puede contener valores nulos y debe ser única para cada registro.</li>
+                    <li>Ejemplo: El DNI de una persona, el número de matrícula de un coche.</li>
+                    <div class="console-code">
+                        <!-- Línea con comando y comentario -->
+                        <div class="console-line">
+                            <span class="console-command">CREATE TABLE Empleados (id_empleado INT PRIMARY KEY, nombre VARCHAR(100));</span>
+                            <span class="console-comment">#Creación de tabla con clave primaria</span>
+                        </div>
+                    </div>
+                </ul>
+            </section> 
+            <section id="relacion-tablas">
+                <h3>Relaciones entre tablas</h3>
+                <ul>
+                    <li><strong>Uno a uno (1:1)</strong>: Un registro en la tabla A se relaciona con un único registro en la tabla B.</li>
+                    <li><strong>Uno a muchos (1:N)</strong>: Un registro en la tabla A se relaciona con varios registros en la tabla B.</li>
+                    <li><strong>Muchos a muchos (N:M)</strong>: Varios registros en la tabla A se relacionan con varios registros en la tabla B (requiere tabla intermedia).</li>
+                </ul>        
+                <div class="console-code">
+                    <!-- Línea con comando y comentario -->
+                    <div class="console-line">
+                        <span class="console-command">CREATE TABLE Pedidos (id_pedido INT PRIMARY KEY, id_cliente INT, FOREIGN KEY (id_cliente) REFERENCES Clientes(id_cliente));</span>
+                        <span class="console-comment">#Creación de relación con clave foránea</span>
+                    </div>    
+                </div>        
+            </section> 
+        </section>
+
+        <section id="integridad">
+            <h1>Integridad Referencial</h1>
+            <p>La <strong>integridad referencial</strong> es un conjunto de reglas que garantizan que las relaciones entre tablas sean válidas y que los cambios en los datos no creen inconsistencias.</p>
+            
+            <h3>Reglas básicas</h3>
+            <ul>
+                <li>No se puede insertar un registro en una tabla secundaria si no existe el registro correspondiente en la tabla principal.</li>
+                <li>No se puede eliminar un registro de la tabla principal si existen registros relacionados en tablas secundarias.</li>
+                <li>No se puede modificar la clave primaria si existen registros relacionados en tablas secundarias.</li>
+            </ul>
+            
+            <h3>Acciones referenciales</h3>
+            <ul>
+                <li><strong>CASCADE</strong>: Propaga automáticamente los cambios.</li>
+                <li><strong>SET NULL</strong>: Establece valores nulos en las referencias.</li>
+                <li><strong>SET DEFAULT</strong>: Establece valores predeterminados.</li>
+                <li><strong>RESTRICT/NO ACTION</strong>: Impide realizar operaciones que violen la integridad.</li>
+            </ul>
+        </section>        
+
+        <section id="normalizacion">
+            <h1>Normalización</h1>
+            <p>La <strong>normalización</strong> es un proceso para organizar datos en una base de datos reduciendo redundancias y dependencias problemáticas.</p>
+            
+            <h3>Formas normales principales</h3>
+            <ul>
+                <li><strong>1FN</strong>: Eliminar grupos repetitivos y asegurar que cada columna contenga valores atómicos.</li>
+                <li><strong>2FN</strong>: Cumplir 1FN y eliminar dependencias parciales (todos los atributos no clave dependen de toda la clave).</li>
+                <li><strong>3FN</strong>: Cumplir 2FN y eliminar dependencias transitivas (los atributos no clave no dependen de otros atributos no clave).</li>
+                <li><strong>BCNF</strong>: Forma normal de Boyce-Codd, una versión más estricta de 3FN.</li>
+                <li><strong>4FN y 5FN</strong>: Formas normales avanzadas para casos específicos.</li>
+            </ul>
+            <p class="msg-info">Se profundizará más en normalización en secciones posteriores...</p>
+        </section>
+            
+        <section id="consultas">
+            <h1>Consultas Básicas</h1>
+            <ul>
+                <li><strong>SELECT</strong> – Recupera datos de una o más tablas.</li>
+                <li><strong>INSERT</strong> – Añade nuevos registros a una tabla.</li>
+                <li><strong>UPDATE</strong> – Modifica registros existentes.</li>
+                <li><strong>DELETE</strong> – Elimina registros de una tabla.</li>
+                <li><strong>JOIN</strong> – Combina registros de dos o más tablas.</li>
+                <li><strong>WHERE</strong> – Filtra registros basándose en condiciones.</li>
+                <li><strong>ORDER BY</strong> – Ordena los resultados por columnas específicas.</li>
+                <li><strong>GROUP BY</strong> – Agrupa registros para aplicar funciones agregadas.</li>
+            </ul>
+            <p class="msg-info">Se abordarán consultas más complejas en próximas secciones...</p>
+        </section>
+            
+        <section id="sgbd-populares">
+            <h1>SGBD Populares</h1>
+            <ul>
+                <li><strong>MySQL</strong> – Sistema de código abierto muy popular para aplicaciones web.</li>
+                <li><strong>PostgreSQL</strong> – Sistema robusto con características avanzadas y excelente cumplimiento de estándares.</li>
+                <li><strong>Oracle Database</strong> – Sistema empresarial con alto rendimiento y numerosas características.</li>
+                <li><strong>Microsoft SQL Server</strong> – Sistema integrado con otras herramientas de Microsoft.</li>
+                <li><strong>SQLite</strong> – Base de datos liviana ideal para aplicaciones móviles y pequeños proyectos.</li>
+                <li><strong>MongoDB</strong> – Base de datos NoSQL orientada a documentos.</li>
+                <li><strong>MariaDB</strong> – Fork de MySQL con licencia de código abierto.</li>
+            </ul>
+        </section>
+            
+
+        <section id="nextBack-section">
+            <a id="next-section" href="./U-base-de-datos-Relacionales-y-no-relacionales.html">Siguiente Sección</a><i class="fas fa-arrow-right"></i>
+        </section>  
+    </main>        
+</div>
+
+<div class="overlay" id="overlay">
+    <button class="close-btn" onclick="cerrarImagen()">X</button>
+    <img id="imagenAmpliada" src="" alt="Imagen Ampliada">
+</div>
+
+<script src="../../js/menuDesplegable.js"></script>    
+<script src="../../js/divInfoDesplegable.js"></script>
+<script src="../../js/ampliarImg.js"></script>
+<script src="../../js/console-code.js"></script>
+</body>
+</html>

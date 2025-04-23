@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relacionales vs No Relacionales</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/template.css">
+        <!--FONT-->
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .comparison-table th {
+            background-color: #f2f2f2;
+        }
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .use-case {
+            background-color: #f0f7ff;
+            border-left: 4px solid #0066cc;
+            padding: 10px;
+            margin: 15px 0;
+        }
+        .pros {
+            color: #2e7d32;
+            font-weight: bold;
+        }
+        .cons {
+            color: #c62828;
+            font-weight: bold;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <button id="menu-toggle" class="menu-toggle">☰ Menú</button>
+        <!-- Menú lateral izquierdo -->
+        <aside class="menu" id="menu">
+            <h2>Bases de Datos II</h2>
+            <ul>
+                <li><a href="../../pages/general.html"><i class="fas fa-home"></i> General</a>   
+                    <li><a id="btn-menu-Sect" href="#back-section">Seccion anterior</a></li>                 
+                <li><a href="#p1">Relacionales vs No Relacionales</a></li>            
+                <ul>
+                    <li><a href="#bd-relacionales">BD Relacionales</a></li>
+                    <ul>
+                        <li><a href="#caracteristicas-relacionales">Características</a></li>
+                        <li><a href="#ventajas-relacionales">Ventajas y desventajas</a></li>  
+                        <li><a href="#casos-relacionales">Casos de uso</a></li>  
+                    </ul>
+                    <li><a href="#bd-no-relacionales">BD No Relacionales</a></li>
+                    <ul>
+                        <li><a href="#tipos-nosql">Tipos de NoSQL</a></li>
+                        <li><a href="#ventajas-nosql">Ventajas y desventajas</a></li>  
+                        <li><a href="#casos-nosql">Casos de uso</a></li>  
+                    </ul>
+                    <li><a href="#comparacion">Comparación directa</a></li>  
+                    <li><a href="#escalabilidad">Escalabilidad</a></li>  
+                    <ul>
+                        <li><a href="#vertical">Escalado vertical</a></li>
+                        <li><a href="#horizontal">Escalado horizontal</a></li>
+                        <li><a href="#comparacion-escalado">Comparación</a></li>
+                    </ul>      
+                    <li><a href="#cuando-usar">¿Cuándo usar cada una?</a></li>  
+                    <li><a href="#bases-hibridas">Bases de datos híbridas</a></li>         
+                </ul>
+                <li><a id="btn-menu-Sect" href="#next-section">Siguiente Sección</a></li> <!--OPTIMIZACIÓN-->
+        </aside>
+        </main>
+
+        <!-- Contenido principal -->
+        <main class="content">  
+
+
+            <!-- Seccion anterior -->
+            <section id="nextBack-section">
+                <i class="fas fa-arrow-left"></i><a id="back-section" href="./U-base-de-datos-Introduccion.html">Seccion Anterior</a>
+            </section>
+
+            <!-- Seccion anterior -->
+            <section>
+                <h1>🔄 Bases de Datos Relacionales vs No Relacionales</h1>
+            </section>  
+
+            <section class="tags-topics">
+                <ul>
+                    <li>#SQL</li>
+                    <li>#NOSQL</li><li>#ESCALABILIDAD</li><li>#RELACIONALES</li>
+                    <li>#RENDIMIENTO</li>
+                </ul>
+            </section>  
+            
+            <section id="bd-relacionales">   
+                <h1>Bases de Datos Relacionales</h1>
+                <p>Las bases de datos relacionales organizan los datos en tablas (relaciones) con filas y columnas. Se basan en el modelo relacional propuesto por Edgar F. Codd en 1970.</p>
+                
+                <h3 id="caracteristicas-relacionales">Características principales:</h3>
+                <ul>
+                    <li>● Utilizan <strong>tablas</strong> con filas (registros) y columnas (campos).</li>                
+                    <li>● Cada tabla puede relacionarse con otras mediante <strong>claves</strong>.</li>
+                    <li>● Utilizan <strong>SQL</strong> (Structured Query Language) como lenguaje estándar.</li>
+                    <li>● Garantizan las propiedades <strong>ACID</strong> (Atomicidad, Consistencia, Aislamiento, Durabilidad).</li>
+                    <li>● Tienen un <strong>esquema rígido</strong> que define la estructura de los datos.</li>
+                </ul>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">CREATE TABLE Empleados (id INT PRIMARY KEY, nombre VARCHAR(100), departamento_id INT, FOREIGN KEY (departamento_id) REFERENCES Departamentos(id));</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ventajas-relacionales">   
+                <h1>Ventajas y Desventajas de BD Relacionales</h1>
+                
+                <h3>Ventajas <span class="pros">✓</span></h3>
+                <ul>
+                    <li>● <strong>Integridad de datos</strong>: Reglas estrictas garantizan datos consistentes.</li>                
+                    <li>● <strong>Transacciones ACID</strong>: Operaciones seguras y confiables.</li>
+                    <li>● <strong>Lenguaje estandarizado</strong>: SQL es universal y ampliamente conocido.</li>
+                    <li>● <strong>Madurez</strong>: Tecnología probada con décadas de desarrollo.</li>
+                    <li>● <strong>Soporte</strong>: Amplia documentación y comunidad grande.</li>
+                </ul>
+                
+                <h3>Desventajas <span class="cons">✗</span></h3>
+                <ul>
+                    <li>● <strong>Escalabilidad limitada</strong>: Difícil escalar horizontalmente.</li>                
+                    <li>● <strong>Esquema rígido</strong>: Cambios en la estructura requieren migraciones.</li>
+                    <li>● <strong>Rendimiento</strong>: Puede ser menos eficiente con grandes volúmenes de datos.</li>
+                    <li>● <strong>Complejidad</strong>: Consultas complejas pueden ser difíciles de optimizar.</li>
+                </ul>
+            </section>
+
+            <section id="info-section-desplegable" class="desplegable-info">
+                <h2 href="#" class="toggle-btn">🔍 Analogía: BD Relacional como una Biblioteca 🔽</h2>
+                <div class="submenu-info">
+                    <p>Una base de datos relacional es como una <strong>biblioteca tradicional</strong> con un sistema organizado:</p>
+                    <ul>
+                        <li>Las <strong>tablas</strong> son como las diferentes secciones de la biblioteca (literatura, ciencia, historia).</li>
+                        <li>Cada <strong>registro</strong> (fila) es un libro específico.</li>
+                        <li>Las <strong>columnas</strong> son características del libro (título, autor, ISBN, ubicación).</li>
+                        <li>El <strong>esquema</strong> es como el sistema decimal Dewey que define cómo se organiza todo.</li>
+                        <li>Las <strong>relaciones</strong> son como las referencias cruzadas entre libros.</li>
+                        <li>El <strong>bibliotecario</strong> (DBMS) sigue reglas estrictas para mantener el orden y la integridad.</li>
+                    </ul>     
+                    <p>Si quieres reorganizar la biblioteca (cambiar el esquema), requiere un esfuerzo significativo y planificación cuidadosa.</p>          
+                </div>
+            </section>
+
+            <section id="casos-relacionales">   
+                <h1>Casos de Uso para BD Relacionales</h1>
+                
+                <div class="use-case">
+                    <h3>💼 Sistemas bancarios y financieros</h3>
+                    <p>Ideal para transacciones que requieren integridad absoluta de datos y propiedades ACID para garantizar que las operaciones monetarias sean seguras y precisas.</p>
+                    <p><strong>Ejemplo:</strong> Transferencias bancarias donde el dinero debe salir de una cuenta y entrar en otra, sin posibilidad de errores o inconsistencias.</p>
+                </div>
+                
+                <div class="use-case">
+                    <h3>🏥 Sistemas de gestión hospitalaria</h3>
+                    <p>Adecuada para manejar datos de pacientes, médicos, citas, tratamientos y registros médicos donde las relaciones entre datos son cruciales.</p>
+                    <p><strong>Ejemplo:</strong> Relacionar historiales médicos con pacientes, resultados de laboratorio, medicamentos recetados y seguros médicos.</p>
+                </div>
+                
+                <div class="use-case">
+                    <h3>🛒 Comercio electrónico tradicional</h3>
+                    <p>Excelente para catálogos de productos, inventarios, pedidos y clientes donde la consistencia de datos es prioritaria.</p>
+                    <p><strong>Ejemplo:</strong> Sistema que debe garantizar que un producto vendido se descuente correctamente del inventario y se registre en los pedidos del cliente.</p>
+                </div>
+                
+                <div class="use-case">
+                    <h3>✈️ Sistemas de reservas</h3>
+                    <p>Ideal para aerolíneas, hoteles o cualquier servicio donde evitar la sobreventa es crítico.</p>
+                    <p><strong>Ejemplo:</strong> Sistema de reservas de vuelos donde cada asiento debe ser asignado a un solo pasajero.</p>
+                </div>
+            </section>
+
+            <section id="bd-no-relacionales">   
+                <h1>Bases de Datos No Relacionales (NoSQL)</h1>
+                <p>Las bases de datos NoSQL (Not Only SQL) surgieron como respuesta a las limitaciones de las bases de datos relacionales, especialmente para aplicaciones web a gran escala, big data y necesidades de alta disponibilidad.</p>
+                
+                <h3>Características principales:</h3>
+                <ul>
+                    <li>● <strong>Esquema flexible</strong> o sin esquema predefinido.</li>                
+                    <li>● <strong>Escalabilidad horizontal</strong> más sencilla.</li>
+                    <li>● <strong>Rendimiento optimizado</strong> para operaciones específicas.</li>
+                    <li>● <strong>Propiedades BASE</strong> (Basically Available, Soft state, Eventually consistent) en lugar de ACID.</li>
+                    <li>● <strong>Distribuidas</strong> por diseño en muchos casos.</li>
+                </ul>
+            </section>
+            
+            <section id="tipos-nosql">
+                <h1>Tipos de Bases de Datos NoSQL</h1>
+                
+                <h3>1. Bases de datos de documentos</h3>
+                <ul>
+                    <li>Almacenan datos en documentos similares a JSON o XML.</li>
+                    <li>Cada documento puede tener una estructura diferente.</li>
+                    <li><strong>Ejemplos:</strong> MongoDB, CouchDB, Firestore.</li>
+                </ul>
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">db.empleados.insert({
+    nombre: "Ana López",
+    edad: 32,
+    habilidades: ["Python", "JavaScript", "SQL"],
+    departamento: {
+        nombre: "Desarrollo",
+        ubicacion: "Planta 3"
+    }
+})</span>
+                    </div>
+                </div>
+                
+                <h3>2. Bases de datos clave-valor</h3>
+                <ul>
+                    <li>La más simple: cada elemento se almacena como un par clave-valor.</li>
+                    <li>Muy eficientes para lectura/escritura rápida.</li>
+                    <li><strong>Ejemplos:</strong> Redis, DynamoDB, Riak.</li>
+                </ul>
+                
+                <h3>3. Bases de datos columnares</h3>
+                <ul>
+                    <li>Almacenan datos por columnas en lugar de por filas.</li>
+                    <li>Optimizadas para análisis y consultas analíticas.</li>
+                    <li><strong>Ejemplos:</strong> Cassandra, HBase, Google Bigtable.</li>
+                </ul>
+                
+                <h3>4. Bases de datos de grafos</h3>
+                <ul>
+                    <li>Especializadas en relaciones entre entidades.</li>
+                    <li>Utilizan nodos, propiedades y aristas.</li>
+                    <li><strong>Ejemplos:</strong> Neo4j, JanusGraph, Amazon Neptune.</li>
+                </ul>
+            </section>
+
+            <section id="ventajas-nosql">   
+                <h1>Ventajas y Desventajas de BD NoSQL</h1>
+                
+                <h3>Ventajas <span class="pros">✓</span></h3>
+                <ul>
+                    <li>● <strong>Alta escalabilidad</strong>: Facilidad para escalar horizontalmente.</li>                
+                    <li>● <strong>Flexibilidad</strong>: Esquema dinámico que se adapta a cambios.</li>
+                    <li>● <strong>Rendimiento</strong>: Optimizado para casos de uso específicos.</li>
+                    <li>● <strong>Manejo de grandes volúmenes</strong>: Mejor rendimiento con Big Data.</li>
+                    <li>● <strong>Disponibilidad</strong>: Muchas ofrecen alta disponibilidad distribuida.</li>
+                </ul>
+                
+                <h3>Desventajas <span class="cons">✗</span></h3>
+                <ul>
+                    <li>● <strong>Consistencia eventual</strong>: No todas garantizan consistencia inmediata.</li>                
+                    <li>● <strong>Lenguajes de consulta</strong>: No estandarizados, varían entre sistemas.</li>
+                    <li>● <strong>Transacciones</strong>: Soporte limitado para transacciones complejas.</li>
+                    <li>● <strong>Madurez</strong>: Menos probadas en comparación con sistemas relacionales.</li>
+                    <li>● <strong>Aprendizaje</strong>: Curva de aprendizaje para desarrolladores acostumbrados a SQL.</li>
+                </ul>
+            </section>
+
+            <section id="info-section-desplegable" class="desplegable-info">
+                <h2 href="#" class="toggle-btn">🔍 Analogía: BD NoSQL como un Archivo Digital Flexible 🔽</h2>
+                <div class="submenu-info">
+                    <p>Una base de datos NoSQL se puede comparar con un <strong>sistema de archivos digital moderno</strong>:</p>
+                    <ul>
+                        <li>Las <strong>bases de documentos</strong> son como una colección de archivos donde cada archivo puede tener una estructura diferente (como carpetas de proyectos).</li>
+                        <li>Las <strong>bases clave-valor</strong> son como un casillero grande con etiquetas, donde puedes guardar cualquier cosa asociada a cada etiqueta.</li>
+                        <li>Las <strong>bases columnares</strong> son como archivadores donde se guardan documentos organizados por categorías en lugar de por individuos.</li>
+                        <li>Las <strong>bases de grafos</strong> son como un mapa de conexiones o una red social, donde lo importante son las relaciones entre entidades.</li>
+                    </ul>     
+                    <p>A diferencia de la biblioteca tradicional (relacional), este sistema permite añadir nuevos tipos de documentos o reorganizar información sin tener que reestructurar todo el sistema.</p>          
+                </div>
+            </section>
+
+            <section id="casos-nosql">   
+                <h1>Casos de Uso para BD NoSQL</h1>
+                
+                <div class="use-case">
+                    <h3>📱 Aplicaciones móviles y web en tiempo real</h3>
+                    <p>Perfectas para aplicaciones que requieren respuestas rápidas y pueden manejar grandes volúmenes de datos no estructurados.</p>
+                    <p><strong>Ejemplo:</strong> Aplicaciones de mensajería como WhatsApp o plataformas como Twitter que manejan millones de mensajes por segundo.</p>
+                </div>
+                
+                <div class="use-case">
+                    <h3>📊 Big Data y análisis</h3>
+                    <p>Ideales para almacenar y procesar grandes cantidades de datos para análisis.</p>
+                    <p><strong>Ejemplo:</strong> Análisis de comportamiento de usuarios en plataformas de comercio electrónico o sistemas de recomendación.</p>
+                </div>
+                
+                <div class="use-case">
+                    <h3>🌐 Contenido distribuido globalmente</h3>
+                    <p>Excelentes para aplicaciones que necesitan distribuir datos globalmente con baja latencia.</p>
+                    <p><strong>Ejemplo:</strong> CDN (Content Delivery Network) que almacena contenido cerca de los usuarios finales.</p>
+                </div>
+                
+                <div class="use-case">
+                    <h3>👥 Redes sociales</h3>
+                    <p>Ideales para modelar relaciones complejas entre entidades (especialmente bases de grafos).</p>
+                    <p><strong>Ejemplo:</strong> Modelado de conexiones entre usuarios, recomendaciones de amistad y análisis de redes.</p>
+                </div>
+                
+                <div class="use-case">
+                    <h3>🎮 Juegos online</h3>
+                    <p>Perfectas para perfiles de jugadores, estados de juego y datos que cambian frecuentemente.</p>
+                    <p><strong>Ejemplo:</strong> Almacenamiento de estados de juego, inventarios de jugadores y puntuaciones en tiempo real.</p>
+                </div>
+            </section>
+
+            <section id="comparacion">
+                <h1>Comparación Directa: Relacional vs NoSQL</h1>
+                
+                <table class="comparison-table">
+                    <tr>
+                        <th>Característica</th>
+                        <th>Bases de Datos Relacionales</th>
+                        <th>Bases de Datos NoSQL</th>
+                    </tr>
+                    <tr>
+                        <td>Estructura</td>
+                        <td>Tablas con filas y columnas</td>
+                        <td>Varía: documentos, clave-valor, columnas, grafos</td>
+                    </tr>
+                    <tr>
+                        <td>Esquema</td>
+                        <td>Rígido y predefinido</td>
+                        <td>Flexible o sin esquema</td>
+                    </tr>
+                    <tr>
+                        <td>Lenguaje</td>
+                        <td>SQL (estandarizado)</td>
+                        <td>Varía según la base de datos</td>
+                    </tr>
+                    <tr>
+                        <td>Escalabilidad</td>
+                        <td>Principalmente vertical</td>
+                        <td>Principalmente horizontal</td>
+                    </tr>
+                    <tr>
+                        <td>Transacciones</td>
+                        <td>ACID completo</td>
+                        <td>BASE (consistencia eventual)</td>
+                    </tr>
+                    <tr>
+                        <td>Relaciones</td>
+                        <td>Relaciones explícitas con JOIN</td>
+                        <td>Generalmente desnormalizadas</td>
+                    </tr>
+                    <tr>
+                        <td>Casos de uso</td>
+                        <td>Datos estructurados, transacciones complejas</td>
+                        <td>Grandes volúmenes, estructura variable</td>
+                    </tr>
+                    <tr>
+                        <td>Ejemplos populares</td>
+                        <td>MySQL, PostgreSQL, Oracle, SQL Server</td>
+                        <td>MongoDB, Redis, Cassandra, Neo4j</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="escalabilidad">
+                <h1>Escalabilidad en Bases de Datos</h1>
+                <p>La escalabilidad se refiere a la capacidad de un sistema para manejar una carga creciente de trabajo. En bases de datos, hay dos enfoques principales: escalado vertical y escalado horizontal.</p>
+                
+                <h3 id="vertical">Escalado Vertical (Scale Up)</h3>
+                <ul>
+                    <li>● <strong>Definición</strong>: Aumentar los recursos del servidor existente (CPU, RAM, almacenamiento).</li>
+                    <li>● <strong>Proceso</strong>: Actualizar el hardware de un solo servidor para hacerlo más potente.</li>
+                    <li>● <strong>Límite</strong>: Restringido por el máximo de recursos que puede tener una sola máquina.</li>
+                    <li>● <strong>Complejidad</strong>: Relativamente simple, no requiere cambios en la aplicación.</li>
+                </ul>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-comment"># Ejemplo de escalado vertical: Aumentar RAM de un servidor MySQL</span>
+                    </div>
+                    <div class="console-line">
+                        <span class="console-command">ALTER SYSTEM SET shared_buffers = '8GB';</span>
+                    </div>
+                </div>
+                
+                <h3 id="horizontal">Escalado Horizontal (Scale Out)</h3>
+                <ul>
+                    <li>● <strong>Definición</strong>: Añadir más servidores al sistema, distribuyendo la carga.</li>
+                    <li>● <strong>Proceso</strong>: Distribuir datos y operaciones entre múltiples servidores (sharding, replicación).</li>
+                    <li>● <strong>Límite</strong>: Teóricamente ilimitado, se pueden seguir añadiendo servidores.</li>
+                    <li>● <strong>Complejidad</strong>: Mayor, requiere cambios en la arquitectura y gestión de datos distribuidos.</li>
+                </ul>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-comment"># Ejemplo de configuración de sharding en MongoDB</span>
+                    </div>
+                    <div class="console-line">
+                        <span class="console-command">sh.enableSharding("miBaseDeDatos")</span>
+                    </div>
+                    <div class="console-line">
+                        <span class="console-command">sh.shardCollection("miBaseDeDatos.usuarios", {region: 1})</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="info-section-desplegable" class="desplegable-info">
+                <h2 href="#" class="toggle-btn">🔍 Analogía: Escalado como un Restaurante 🔽</h2>
+                <div class="submenu-info">
+                    <h3>Escalado Vertical</h3>
+                    <p>Imagina un restaurante con capacidad limitada:</p>
+                    <ul>
+                        <li>Para atender a más clientes, amplías el local, compras mesas más grandes y contratas más personal para el mismo espacio.</li>
+                        <li>Aumentas la capacidad del mismo restaurante, pero eventualmente llegarás a un límite físico.</li>
+                        <li>El proceso es relativamente simple: cerrar temporalmente, renovar y reabrir con mayor capacidad.</li>
+                    </ul>
+                    
+                    <h3>Escalado Horizontal</h3>
+                    <p>En lugar de ampliar un solo restaurante:</p>
+                    <ul>
+                        <li>Abres múltiples sucursales en diferentes ubicaciones.</li>
+                        <li>Cada restaurante nuevo puede atender a un segmento específico de clientes (por zona geográfica o tipo de comida).</li>
+                        <li>Puedes seguir añadiendo sucursales según crezca la demanda, sin límite teórico.</li>
+                        <li>Es más complejo: necesitas coordinar entre ubicaciones, mantener menús consistentes y gestionar múltiples equipos.</li>
+                    </ul>       
+                </div>
+            </section>
+
+            <section id="comparacion-escalado">
+                <h1>Comparación de Estrategias de Escalado</h1>
+                
+                <table class="comparison-table">
+                    <tr>
+                        <th>Aspecto</th>
+                        <th>Escalado Vertical</th>
+                        <th>Escalado Horizontal</th>
+                    </tr>
+                    <tr>
+                        <td>Costo inicial</td>
+                        <td>Alto (hardware premium)</td>
+                        <td>Moderado (múltiples servidores estándar)</td>
+                    </tr>
+                    <tr>
+                        <td>Límite de crecimiento</td>
+                        <td>Limitado por hardware disponible</td>
+                        <td>Prácticamente ilimitado</td>
+                    </tr>
+                    <tr>
+                        <td>Complejidad</td>
+                        <td>Baja</td>
+                        <td>Alta</td>
+                    </tr>
+                    <tr>
+                        <td>Punto único de fallo</td>
+                        <td>Sí</td>
+                        <td>No (con configuración adecuada)</td>
+                    </tr>
+                    <tr>
+                        <td>Tiempo de inactividad</td>
+                        <td>Generalmente requiere tiempo de inactividad</td>
+                        <td>Puede implementarse sin tiempo de inactividad</td>
+                    </tr>
+                    <tr>
+                        <td>Adecuado para</td>
+                        <td>Sistemas relacionales tradicionales</td>
+                        <td>Sistemas distribuidos, NoSQL</td>
+                    </tr>
+                    <tr>
+                        <td>Mantenimiento</td>
+                        <td>Más simple</td>
+                        <td>Más complejo</td>
+                    </tr>
+                </table>
+                
+                <h3>Enfoque ideal</h3>
+                <p>En la práctica, muchos sistemas utilizan una combinación de ambos enfoques:</p>
+                <ul>
+                    <li>● <strong>Escalar verticalmente</strong> hasta un punto óptimo costo-beneficio.</li>
+                    <li>● <strong>Luego escalar horizontalmente</strong> para crecimiento adicional.</li>
+                </ul>
+            </section>
+
+            <section id="cuando-usar">
+                <h1>¿Cuándo usar cada tipo de base de datos?</h1>
+                
+                <h3>Elige una Base de Datos Relacional cuando:</h3>
+                <ul>
+                    <li>● Los datos tienen una estructura clara y bien definida que no cambiará frecuentemente.</li>
+                    <li>● Necesitas garantizar la integridad de los datos con propiedades ACID.</li>
+                    <li>● Las transacciones complejas son una parte fundamental de la aplicación.</li>
+                    <li>● El sistema requiere consultas complejas y joins entre múltiples tablas.</li>
+                    <li>● El equipo de desarrollo está más familiarizado con SQL.</li>
+                </ul>
+                
+                <div class="use-case">
+                    <p><strong>Ejemplo práctico</strong>: Sistema de gestión bancaria donde cada transacción debe ser precisa, las relaciones entre cuentas y clientes son claras, y se requieren informes complejos.</p>
+                </div>
+                
+                <h3>Elige una Base de Datos NoSQL cuando:</h3>
+                <ul>
+                    <li>● Manejas grandes volúmenes de datos con estructura variable o desconocida.</li>
+                    <li>● La velocidad y escalabilidad son prioritarias sobre la consistencia inmediata.</li>
+                    <li>● Necesitas distribución geográfica de datos.</li>
+                    <li>● Tu aplicación tiene picos de tráfico y necesita escalar rápidamente.</li>
+                    <li>● Tu modelo de datos se adapta bien a uno de los tipos de NoSQL (documentos, clave-valor, etc.).</li>
+                </ul>
+                
+                <div class="use-case">
+                    <p><strong>Ejemplo práctico</strong>: Aplicación de red social que maneja millones de publicaciones con diferentes estructuras, necesita alta disponibilidad global y debe permitir búsquedas rápidas por diferentes criterios.</p>
+                </div>
+            </section>
+
+            <section id="bases-hibridas">
+                <h1>Bases de Datos Híbridas</h1>
+    
+    <h3>¿Qué son las bases de datos híbridas?</h3>
+    <p>Las bases de datos híbridas combinan características de bases de datos relacionales (SQL) y no relacionales (NoSQL) para ofrecer lo mejor de ambos mundos. Estas bases de datos están diseñadas para manejar diferentes tipos de datos y ofrecer flexibilidad en su estructura y escalabilidad.</p>
+    
+    <h3>Características clave</h3>
+    <ul>
+        <li>● <strong>Modelo de datos flexible</strong>: Permite usar tanto estructuras relacionales como no relacionales en una misma base de datos.</li>
+        <li>● <strong>Escalabilidad</strong>: Capacidad para escalar horizontalmente, algo que es típico en bases de datos NoSQL.</li>
+        <li>● <strong>Consulta eficiente</strong>: Ofrecen poderosas capacidades de consulta tanto para datos estructurados como no estructurados.</li>
+        <li>● <strong>Integración de datos</strong>: Facilitan la integración entre datos tradicionales y datos que requieren una estructura flexible, como documentos JSON o datos binarios.</li>
+    </ul>
+    
+    <h3>Ventajas de usar bases de datos híbridas</h3>
+    <ul>
+        <li>● <strong>Flexibilidad en el manejo de datos</strong>: Puedes elegir entre una base de datos relacional o NoSQL según la necesidad de tu aplicación, o incluso usar ambas simultáneamente.</li>
+        <li>● <strong>Optimización de rendimiento</strong>: Se puede optimizar el tipo de base de datos según los requisitos de la carga de trabajo (transacciones o alta disponibilidad, por ejemplo).</li>
+        <li>● <strong>Reducción de costos</strong>: Puedes usar la base de datos más adecuada para cada tipo de datos, evitando sobrecargar una sola solución.</li>
+    </ul>
+
+    <h3>Casos de uso comunes</h3>
+    <ul>
+        <li>● <strong>Sistemas de gestión de contenidos (CMS)</strong>: Donde se combinan datos estructurados y no estructurados, como texto y multimedia.</li>
+        <li>● <strong>Aplicaciones de IoT</strong>: Que requieren manejar grandes volúmenes de datos no estructurados (por ejemplo, datos de sensores) junto con datos tradicionales.</li>
+        <li>● <strong>Comercio electrónico</strong>: Donde se necesita manejar tanto transacciones estructuradas como datos de productos y recomendaciones no estructuradas.</li>
+    </ul>
+    
+    <h3>Desafíos y consideraciones</h3>
+    <ul>
+        <li>● <strong>Complejidad en la gestión</strong>: Requiere conocimientos avanzados para gestionar tanto bases de datos SQL como NoSQL en un mismo entorno.</li>
+        <li>● <strong>Integridad de datos</strong>: Mantener la consistencia y las relaciones entre los datos puede ser más difícil debido a la combinación de dos modelos de datos diferentes.</li>
+        <li>● <strong>Rendimiento</strong>: Dependiendo de la configuración, la combinación de tecnologías puede afectar el rendimiento si no se administra correctamente.</li>
+    </ul>
+
+    <h3>Ejemplo de uso de bases de datos híbridas</h3>
+    <div class="console-code">
+        <div class="console-line">
+            <span class="console-comment">-- Ejemplo de base de datos híbrida utilizando MongoDB para NoSQL y PostgreSQL para SQL</span>
+        </div>
+        <div class="console-line">
+            <span class="console-command">-- Crear una colección en MongoDB</span>
+        </div>
+        <div class="console-line">
+            <span class="console-command">db.productos.insertOne({ nombre: "Camiseta", categoria: "Ropa", precio: 19.99 });</span>
+        </div>
+        <div class="console-line">
+            <span class="console-command">-- Crear una tabla en PostgreSQL</span>
+        </div>
+        <div class="console-line">
+            <span class="console-command">CREATE TABLE clientes (id SERIAL PRIMARY KEY, nombre VARCHAR(100), email VARCHAR(100));</span>
+        </div>
+        <div class="console-line">
+            <span class="console-command">-- Insertar un cliente en PostgreSQL</span>
+        </div>
+        <div class="console-line">
+            <span class="console-command">INSERT INTO clientes (nombre, email) VALUES ('Juan Pérez', 'juan@ejemplo.com');</span>
+        </div>
+    </div>
+            </section>
+
+            <section id="nextBack-section">
+                <a id="next-section" href="./U-base-de-datos-Seguridad-en-base-de-datos.html">Siguiente Sección</a><i class="fas fa-arrow-right"></i>
+            </section>  
+        </main>
+    </div>
+
+<script src="../../js/menuDesplegable.js"></script>    
+<script src="../../js/divInfoDesplegable.js"></script>
+<script src="../../js/ampliarImg.js"></script>
+<script src="../../js/console-code.js"></script>
+</body>
+</html>

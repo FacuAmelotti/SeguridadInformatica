@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/template.css">
+    <link rel="stylesheet" href="../css/faqs.css">
+        <!--FONT-->
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <button id="menu-toggle" class="menu-toggle">☰ Menú</button>
+        <!-- Menú lateral izquierdo -->
+        <aside class="menu" id="menu">
+            <h2>Navegación</h2>
+            <ul>
+                <li><a href="../../index.html"><i class="fas fa-arrow-left"></i> Atras</a>
+
+            </ul>
+        </aside>
+        </main>
+
+        <!-- Contenido principal -->
+        <main class="content">
+        <section id="introduccion">
+            <h1>🖥️ Preguntas frecuentes</h1>
+            <section id="info-section" style="background-color: transparent;">                
+                <img id="imgEffect" src="../img/no-user-0.png" onclick="ampliarImagen(this)" style="height: 226px; margin-top: 12px;">
+                <div>
+                    <p>Esta página web está diseñada para ofrecer información sobre seguridad informática básica, con el fin de brindar un espacio educativo para aquellos que quieran aprender sobre este tema.</p>
+                </div>
+            </section>
+            
+            <section id="info-section-desplegable" class="desplegable-info">
+                <h2 href="#" class="toggle-btn">¿Quién creó esta página web?</h2>
+                <div class="submenu-info">
+                    <p>La página fue creada por <strong>Facundo Amelotti</strong>, estudiante de la carrera de sistemas, como un proyecto para resumir lo aprendido en la materia de seguridad informática y compartirlo con otras personas.</p>                    
+                </div>
+            </section>
+            
+            <section id="info-section-desplegable" class="desplegable-info">
+                <h2 href="#" class="toggle-btn">¿Por qué fue creada esta página?</h2>
+                <div class="submenu-info">
+                    <p>La idea detrás de la creación de esta página es proporcionar una plataforma accesible donde los interesados en la seguridad informática básica puedan encontrar conceptos clave, aprender y aplicar buenas prácticas para proteger su información personal y profesional.</p>
+                </div>
+            </section>
+            
+            <section id="info-section-desplegable" class="desplegable-info">
+                <h2 href="#" class="toggle-btn">¿Con qué fin fue creada esta página?</h2>
+                <div class="submenu-info">
+                    <p>El principal fin es educar al público sobre los aspectos fundamentales de la seguridad informática, capacitar sobre cómo proteger sistemas y datos y promover una cultura de seguridad en la web.</p>
+                </div>
+            </section>
+            
+            <section id="info-section-desplegable" class="desplegable-info">
+                <h2 href="#" class="toggle-btn">¿Cómo puedo aprender más sobre seguridad informática?</h2>
+                <div class="submenu-info">                
+                    <p>Puedes explorar los temas que se ofrecen en esta página, realizar cursos online, leer libros sobre ciberseguridad y practicar con herramientas y simuladores que ayuden a entender la teoría de manera práctica.</p>
+                </div>
+            </section>
+            
+            <section id="info-section-desplegable" class="desplegable-info">
+                <h2 href="#" class="toggle-btn">¿Qué temas abarca esta página?</h2>
+                <div class="submenu-info">
+                    <p>La página abarca conceptos básicos de seguridad informática, incluyendo la protección contra virus, firewalls, encriptación, contraseñas seguras, phishing, malware y otros riesgos comunes en el entorno digital.</p>
+                </div>
+            </section>
+            
+        </section>             
+        </main>
+    </div>
+
+    <div class="overlay" id="overlay">
+        <button class="close-btn" onclick="cerrarImagen()">X</button>
+        <img id="imagenAmpliada" src="" alt="Imagen Ampliada">
+    </div>
+
+    <script src="./../js/menuDesplegable.js"></script>    
+    <script src="./../js/divInfoDesplegable.js"></script>
+    <script src="./../js/ampliarImg.js"></script>
+    <script src="./../js/imgChangeMouseOver.js"></script>
+</body>
+</html>

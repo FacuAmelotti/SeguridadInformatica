@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a Seguridad en redes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/template.css">
+    <!--FONT-->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+    body {
+        font-family: 'IBM Plex Mono', monospace;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="menu-toggle" class="menu-toggle">☰ Menú</button>
+        <!-- Menú lateral izquierdo -->
+        <aside class="menu" id="menu">
+            <h2>Redes III</h2>
+            <ul>
+                <li><a href="../../pages/general.html"><i class="fas fa-home"></i> General</a>
+                    
+                <li><a href="#p1">Introducción a Seguridad en redes</a></li>            
+                <ul>                        
+                    <li><a href="#conceptos-basicos">Conceptos básicos de seguridad</a></li>
+                    <ul>
+                        <li><a href="">CIA (Confidencialidad, Integridad, Disponibilidad)</a></li>
+                        <li><a href="">Amenazas y vulnerabilidades</a></li>
+                    </ul>
+                    <li><a>Tipos de ataques comunes</a></li>
+                    <ul>
+                        <li><a href="">Malware</a></li>
+                        <li><a href="">Phishing</a></li>
+                        <li><a href="">DDoS</a></li>
+                        <li><a href="">Man-in-the-Middle</a></li>
+                        <li><a href="">Fuerza bruta</a></li>
+                    </ul>
+                    <li><a href="">Mecanismos de protección</a></li>
+                    <ul>
+                        <li><a href="">Firewalls</a></li>
+                        <li><a href="">IDS/IPS</a></li>
+                    </ul>
+                    <li><a>Cifrado y VPN</a></li>
+                    <ul>
+                        <li><a href="">Cifrado simétrico vs asimétrico</a></li>
+                        <li><a href="">SSL/TLS</a></li>
+                        <li><a href="">Redes privadas virtuales</a></li>
+                    </ul>
+                    <li><a href="">Principios de hardening</a></li>
+                </ul>
+                <li><a id="btn-menu-Sect" href="#next-section">Siguiente Seccion</a></li>
+        </aside>
+        </main>
+
+        <!-- Contenido principal -->
+        <main class="content">  
+
+            <!-- Seccion anterior -->
+            <section id="nextBack-section">
+                <i class="fas fa-arrow-left"></i><a id="back-section" href="./U-redes-Profundizando.html">Seccion Anterior</a>
+            </section>
+
+            <!-- Seccion anterior -->
+            <section>
+                <h1>Introducción a Seguridad en redes</h1>
+            </section>  
+
+            <section class="tags-topics">
+                <ul>
+                    <li>#SEGURIDAD</li>
+                    <li>#FIREWALL</li><li>#CIFRADO</li><li>#VPN</li>
+                    <li>#MALWARE</li><li>#DDOS</li><li>#PHISHING</li><li>#HARDENING</li>
+                </ul>
+            </section>  
+           
+            <section>   
+                <h1>¿Qué es la seguridad en redes?</h1>
+                <ul>
+                    <li>● La seguridad en redes comprende políticas y prácticas adoptadas para prevenir y supervisar el acceso no autorizado, el uso indebido, la modificación o la denegación de una red informática.</li>
+                    <li>● Protege tanto los recursos como la información en la red.</li>
+                    <li>● Abarca hardware, software y políticas de seguridad.</li>
+                    <li>● Es un componente crítico en cualquier infraestructura de redes moderna.</li>
+                </ul>
+                <div class="console-code">
+                    <!-- Línea con comando y comentario -->
+                    <div class="console-line">
+                        <span class="console-command">nmap -sV 192.168.1.1</span>
+                        <span class="console-comment">#Escanea un dispositivo para identificar servicios y versiones expuestas.</span>
+                    </div>
+                </div>
+                <p class="msg-ej">La seguridad en redes es como el sistema de seguridad de una casa: necesitas cerraduras en las puertas (firewalls), cámaras de vigilancia (IDS/IPS), y cajas fuertes para tus objetos de valor (cifrado).</p>
+            </section>
+
+            <section>
+                <h2 id="conceptos-basicos">Conceptos básicos de seguridad</h2>
+                <h3>CIA (Confidencialidad, Integridad, Disponibilidad)</h3>
+                <ul>
+                    <li>● <strong>Confidencialidad:</strong> Garantiza que la información es accesible solo para aquellos autorizados.</li>
+                    <li>● <strong>Integridad:</strong> Asegura que la información no ha sido alterada durante su transmisión o almacenamiento.</li>
+                    <li>● <strong>Disponibilidad:</strong> Asegura que la información y los recursos estén disponibles cuando se necesiten.</li>
+                </ul>
+                <h3>Amenazas y vulnerabilidades</h3>
+                <ul>
+                    <li>● <strong>Amenaza:</strong> Cualquier circunstancia o evento que pueda causar daño a un sistema.</li>
+                    <li>● <strong>Vulnerabilidad:</strong> Debilidad en un sistema que puede ser explotada por una amenaza.</li>
+                    <li>● <strong>Riesgo:</strong> Probabilidad de que una amenaza explote una vulnerabilidad.</li>
+                </ul>
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">nikto -h 192.168.1.100</span>
+                        <span class="console-comment">#Herramienta para escanear vulnerabilidades en servidores web.</span>
+                    </div>
+                </div> 
+            </section>
+
+            <section>
+                <h2>Tipos de ataques comunes</h2>
+                <h3>Malware</h3>
+                <ul>
+                    <li>● Software malicioso diseñado para dañar o infiltrarse en sistemas.</li>
+                    <li>● Incluye virus, gusanos, troyanos, ransomware, spyware, etc.</li>
+                    <li>● Se propaga a través de archivos adjuntos, descargas infectadas o dispositivos comprometidos.</li>
+                </ul>
+                <h3>Phishing</h3>
+                <ul>
+                    <li>● Técnica para obtener información confidencial haciéndose pasar por una entidad legítima.</li>
+                    <li>● Utiliza principalmente correos electrónicos o sitios web falsos.</li>
+                    <li>● Busca robar credenciales, datos bancarios o información personal.</li>
+                </ul>
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">whois suspicious-domain.com</span>
+                        <span class="console-comment">#Verifica la información de registro de un dominio sospechoso.</span>
+                    </div>
+                </div>
+                <h3>DDoS (Denegación de Servicio Distribuida)</h3>
+                <ul>
+                    <li>● Ataque que busca hacer que un servicio o recurso sea inaccesible.</li>
+                    <li>● Utiliza múltiples sistemas (generalmente una botnet) para inundar el objetivo con tráfico.</li>
+                    <li>● Afecta la disponibilidad de servicios y sitios web.</li>
+                </ul>
+                <h3>Man-in-the-Middle</h3>
+                <ul>
+                    <li>● Atacante intercepta comunicaciones entre dos partes sin que estas lo sepan.</li>
+                    <li>● Puede leer, modificar o inyectar nuevos datos en la comunicación.</li>
+                    <li>● Común en redes Wi-Fi no seguras o mal configuradas.</li>
+                </ul>
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">wireshark</span>
+                        <span class="console-comment">#Herramienta para capturar y analizar tráfico de red (para fines educativos).</span>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Mecanismos de protección</h2>
+                <h3>Firewalls</h3>
+                <ul>
+                    <li>● Sistema que monitorea y filtra el tráfico de red según reglas preestablecidas.</li>
+                    <li>● Actúa como barrera entre redes confiables y no confiables.</li>
+                    <li>● Pueden ser basados en hardware, software o ambos.</li>
+                    <li>● Tipos: Stateless, Stateful, Next-Generation Firewalls (NGFW).</li>
+                </ul>
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">sudo iptables -L</span>
+                        <span class="console-comment">#Visualiza las reglas del firewall en sistemas Linux.</span>
+                    </div>
+                </div>
+                <h3>IDS/IPS (Sistemas de Detección/Prevención de Intrusiones)</h3>
+                <ul>
+                    <li>● <strong>IDS:</strong> Monitorea la red y alerta sobre actividades sospechosas.</li>
+                    <li>● <strong>IPS:</strong> Además de detectar, toma medidas activas para bloquear amenazas.</li>
+                    <li>● Pueden basarse en firmas (patrones conocidos) o en comportamientos anómalos.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Cifrado y VPN</h2>
+                <h3>Cifrado simétrico vs asimétrico</h3>
+                <ul>
+                    <li>● <strong>Simétrico:</strong> Usa la misma clave para cifrar y descifrar (AES, DES).</li>
+                    <li>● <strong>Asimétrico:</strong> Usa par de claves pública/privada (RSA, ECC).</li>
+                    <li>● A menudo se usan juntos: asimétrico para intercambiar claves y simétrico para cifrar datos por eficiencia.</li>
+                </ul>
+                <h3>SSL/TLS</h3>
+                <ul>
+                    <li>● Protocolos que proporcionan comunicaciones seguras en redes (especialmente en HTTPS).</li>
+                    <li>● Garantizan confidencialidad, integridad y autenticación.</li>
+                    <li>● Utilizan certificados digitales para verificar la identidad de los servidores.</li>
+                </ul>
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">openssl s_client -connect example.com:443</span>
+                        <span class="console-comment">#Verifica la configuración SSL/TLS de un sitio web.</span>
+                    </div>
+                </div>
+                <h3>Redes privadas virtuales (VPN)</h3>
+                <ul>
+                    <li>● Crean una conexión cifrada (túnel) a través de redes no seguras.</li>
+                    <li>● Permiten acceso remoto seguro a recursos privados.</li>
+                    <li>● Ocultan la IP real del usuario y cifran el tráfico.</li>
+                    <li>● Protocolos comunes: OpenVPN, IPsec, WireGuard.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Principios de hardening</h2>
+                <ul>
+                    <li>● <strong>Defensa en profundidad:</strong> Implementar múltiples capas de seguridad.</li>
+                    <li>● <strong>Principio de menor privilegio:</strong> Otorgar solo los permisos mínimos necesarios.</li>
+                    <li>● <strong>Actualizaciones regulares:</strong> Mantener sistemas y software actualizados.</li>
+                    <li>● <strong>Configuración segura:</strong> Deshabilitar servicios innecesarios y configurar correctamente los necesarios.</li>
+                    <li>● <strong>Monitoreo continuo:</strong> Revisar registros y alertas de seguridad.</li>
+                </ul>
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">sudo apt update && sudo apt upgrade</span>
+                        <span class="console-comment">#Actualiza el sistema para corregir vulnerabilidades conocidas.</span>
+                    </div>
+                </div>
+                <p class="msg-ej">Recuerda: La seguridad no es un producto, sino un proceso continuo. Ningún sistema es 100% seguro, pero podemos implementar medidas para minimizar los riesgos.</p>
+            </section>
+
+            <section id="nextBack-section">
+                <a id="next-section" href="./U-redes-Monitoreo-y-analisis-de-trafico.html">Siguiente Seccion</a><i class="fas fa-arrow-right"></i>
+            </section>  
+        </main>        
+    </div>
+
+    <div class="overlay" id="overlay">
+        <button class="close-btn" onclick="cerrarImagen()">X</button>
+        <img id="imagenAmpliada" src="" alt="Imagen Ampliada">
+    </div>
+
+    <script src="../../js/menuDesplegable.js"></script>    
+    <script src="../../js/divInfoDesplegable.js"></script>
+    <script src="../../js/ampliarImg.js"></script>
+    <script src="../../js/console-code.js"></script>
+</body>
+</html>

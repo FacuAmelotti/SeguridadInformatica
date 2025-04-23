@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profundizando en redes</title>
+    <title>Introducción a Seguridad en redes</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../../css/template.css">
-        <!--FONT-->
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
-        <style>
-        body {
-            font-family: 'IBM Plex Mono', monospace;
-        }
-        </style>
+    <!--FONT-->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+    body {
+        font-family: 'IBM Plex Mono', monospace;
+    }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -23,39 +23,40 @@
             <ul>
                 <li><a href="../../pages/general.html"><i class="fas fa-home"></i> General</a>
                     
-                <li><a href="#p1">Profundizando en redes</a></li>            
+                <li><a href="#p1">Profundizando en las redes</a></li>            
                 <ul>                        
-                    <li><a href="#modelos-redes">Capas y funciones</a></li>
+                    <li><a href="#conceptos-basicos">Conceptos básicos de seguridad</a></li>
                     <ul>
-                        <li><a href="">Modelo OSI</a></li>
-                        <li><a href="">TCP/IP</a></li>
+                        <li><a href="#cia-triad">CIA (Confidencialidad, Integridad, Disponibilidad)</a></li>
+                        <li><a href="#amenazas">Amenazas y vulnerabilidades</a></li>
                     </ul>
-                    <li><a>Protocolos de Comunicación</a></li>
+                    <li><a href="#ataques-comunes">Tipos de ataques comunes</a></li>
                     <ul>
-                        <li><a href="">DNS</a></li>
-                        <li><a href="">TCP</a></li>
-                        <li><a href="">UDP</a></li>
-                        <li><a href="">ICMP</a></li>
-                        <li><a href="">ARP</a></li>
+                        <li><a href="#malware">Malware</a></li>
+                        <li><a href="#phishing">Phishing</a></li>
+                        <li><a href="#ddos">DDoS</a></li>
+                        <li><a href="#mitm">Man-in-the-Middle</a></li>
+                        <li><a href="#fuerza-bruta">Fuerza bruta</a></li>
                     </ul>
-                    <li><a href="">Subredes y Máscaras de Red</a></li>
-                    <li><a>Resolución de nombres</a></li>
-                    <li><a href="">asignación de IPs</a></li>
+                    <li><a href="#mecanismos-proteccion">Mecanismos de protección</a></li>
                     <ul>
-                        <li><a href="">DHCP</a></li>
+                        <li><a href="#firewalls">Firewalls</a></li>
+                        <li><a href="#ids-ips">IDS/IPS</a></li>
                     </ul>
-                    <li><a href="">traducción de direcciones de red</a></li>
+                    <li><a href="#cifrado-vpn">Cifrado y VPN</a></li>
                     <ul>
-                        <li><a href="">NAT</a></li>
+                        <li><a href="#cifrado">Cifrado simétrico vs asimétrico</a></li>
+                        <li><a href="#ssl-tls">SSL/TLS</a></li>
+                        <li><a href="#vpn">Redes privadas virtuales</a></li>
                     </ul>
+                    <li><a href="#hardening">Principios de hardening</a></li>
                 </ul>
-                <li><a id="btn-menu-Sect" href="#next-section">Siguiente Seccion</a></li> <!--MODELO OSI-->
+                <li><a id="btn-menu-Sect" href="#next-section">Siguiente Seccion</a></li>
         </aside>
         </main>
 
         <!-- Contenido principal -->
         <main class="content">  
-
 
             <!-- Seccion anterior -->
             <section id="nextBack-section">
@@ -64,60 +65,939 @@
 
             <!-- Seccion anterior -->
             <section>
-                <h1>Profundizando en redes</h1>
+                <h1>Profundizando en las redes</h1>
             </section>  
 
             <section class="tags-topics">
                 <ul>
-                    <li>#PROTOCOLOS</li>
-                    <li>#UDP</li><li>#ICPM</li><li>#ARP</li>
-                    <li>#DHCP</li><li>#NAT</li><li>#FIREWALL</li><li>#VPN</li>
+                    <li>#SEGURIDAD</li>
+                    <li>#FIREWALL</li><li>#CIFRADO</li><li>#VPN</li>
+                    <li>#MALWARE</li><li>#DDOS</li><li>#PHISHING</li><li>#HARDENING</li>
                 </ul>
             </section>  
            
-
             <section>   
-                <h1>¿Que significa DNS?</h1>
+                <h1>¿Qué es la seguridad en redes?</h1>
                 <ul>
-                    <li>● DNS (Domain Name System) → Es un sistema que traduce nombres de dominio (como google.com) en direcciones IP.</li>
-                    <li>● Funciona como la "agenda de contactos" de Internet.</li>
-                    <li>● Ejemplo de dirección IP: En lugar de recordar 142.250.190.14, simplemente escribes google.com.</li>
-                    <li>El DNS encuentra la IP correcta y te conecta con el servidor.</li>
+                    <li>● La seguridad en redes comprende políticas y prácticas adoptadas para prevenir y supervisar el acceso no autorizado, el uso indebido, la modificación o la denegación de una red informática.</li>
+                    <li>● Protege tanto los recursos como la información en la red.</li>
+                    <li>● Abarca hardware, software y políticas de seguridad.</li>
+                    <li>● Es un componente crítico en cualquier infraestructura de redes moderna.</li>
                 </ul>
                 <div class="console-code">
                     <!-- Línea con comando y comentario -->
                     <div class="console-line">
-                        <span class="console-command">nslookup google.com</span>
-                        <span class="console-comment">#Comando para ver la dirección IP asociada al dominio consultado.</span>
+                        <span class="console-command">nmap -sV 192.168.1.1</span>
+                        <span class="console-comment">#Escanea un dispositivo para identificar servicios y versiones expuestas.</span>
                     </div>
-                </div>  
+                </div>
                 <div class="console-code">
-                    <!-- Línea con comando y comentario -->
                     <div class="console-line">
-                        <span class="console-command">tracert google.com</span>
-                        <span class="console-comment">#Comando para ver la ruta que siguen los paquetes hasta llegar al servidor.</span>
+                        <span class="console-command">netstat -tuln</span>
+                        <span class="console-comment">#Muestra los puertos que están escuchando en el sistema y los procesos asociados.</span>
                     </div>
-                </div>  
-                <p class="msg-ej">El DNS es como una guía telefónica que traduce nombres en direcciones IP.....</p>
+                </div>
+                <p class="msg-ej">La seguridad en redes es como el sistema de seguridad de una casa: necesitas cerraduras en las puertas (firewalls), cámaras de vigilancia (IDS/IPS), y cajas fuertes para tus objetos de valor (cifrado). Ninguna medida por sí sola es suficiente; es la combinación de todas ellas lo que proporciona una protección efectiva.</p>
             </section>
-            
 
-            <section id="nextBack-section">
-                <a id="next-section" href="#">Siguiente Seccion</a><i class="fas fa-arrow-right"></i>
-            </section>  
-        </main>        
-    </div>
+            <section id="conceptos-basicos">
+                <h1>Conceptos básicos de seguridad</h1>
+                <h2 id="cia-triad">CIA (Confidencialidad, Integridad, Disponibilidad)</h2>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Confidencialidad</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li>Garantiza que la información es accesible solo para aquellos autorizados a tener acceso.</li>
+                            <li>Se implementa mediante:
+                                <ul>
+                                    <li>Cifrado de datos (en reposo y en tránsito)</li>
+                                    <li>Control de acceso y autenticación</li>
+                                    <li>Clasificación de la información</li>
+                                    <li>Políticas de seguridad</li>
+                                </ul>
+                            </li>
+                            <li>Un fallo en la confidencialidad resulta en divulgación no autorizada de información.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Integridad</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li>Asegura que la información no ha sido alterada durante su transmisión o almacenamiento.</li>
+                            <li>Se implementa mediante:
+                                <ul>
+                                    <li>Funciones hash (SHA-256, MD5)</li>
+                                    <li>Firmas digitales</li>
+                                    <li>Control de versiones</li>
+                                    <li>Checksums</li>
+                                </ul>
+                            </li>
+                            <li>Un fallo en la integridad resulta en modificación no autorizada de datos.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Disponibilidad</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li>Asegura que la información y los recursos estén disponibles cuando se necesiten.</li>
+                            <li>Se implementa mediante:
+                                <ul>
+                                    <li>Redundancia de sistemas</li>
+                                    <li>Copias de seguridad</li>
+                                    <li>Planes de recuperación ante desastres</li>
+                                    <li>Balanceo de carga</li>
+                                    <li>Protección contra DDoS</li>
+                                </ul>
+                            </li>
+                            <li>Un fallo en la disponibilidad resulta en interrupción del servicio o acceso a los recursos.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">sha256sum archivo.txt</span>
+                        <span class="console-comment">#Calcula el hash SHA-256 de un archivo para verificar su integridad.</span>
+                    </div>
+                </div>
 
-    
+                <h2 id="amenazas">Amenazas y vulnerabilidades</h2>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Amenaza</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li>Cualquier circunstancia o evento que pueda causar daño a un sistema.</li>
+                            <li>Tipos de amenazas:
+                                <ul>
+                                    <li>Naturales: terremotos, inundaciones, incendios</li>
+                                    <li>Humanas: hackers, usuarios maliciosos, errores de usuarios</li>
+                                    <li>Ambientales: fallos eléctricos, picos de tensión</li>
+                                    <li>Técnicas: malware, exploits, fallos de software</li>
+                                </ul>
+                            </li>
+                            <li>Actores de amenaza: script kiddies, hacktivistas, ciberdelincuentes, estados-nación, insiders</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Vulnerabilidad</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li>Debilidad en un sistema que puede ser explotada por una amenaza.</li>
+                            <li>Tipos de vulnerabilidades:
+                                <ul>
+                                    <li>Técnicas: errores de software, configuraciones incorrectas, parches faltantes</li>
+                                    <li>Físicas: acceso no controlado, falta de seguridad física</li>
+                                    <li>Humanas: susceptibilidad a ingeniería social, falta de concientización</li>
+                                    <li>Organizacionales: procesos deficientes, políticas inadecuadas</li>
+                                </ul>
+                            </li>
+                            <li>Las vulnerabilidades se catalogan en bases de datos como CVE (Common Vulnerabilities and Exposures)</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Riesgo</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li>Probabilidad de que una amenaza explote una vulnerabilidad y el impacto resultante.</li>
+                            <li>Fórmula: Riesgo = Probabilidad × Impacto</li>
+                            <li>Gestión de riesgos:
+                                <ul>
+                                    <li>Identificación: encontrar y catalogar riesgos</li>
+                                    <li>Evaluación: analizar probabilidad e impacto</li>
+                                    <li>Tratamiento: aceptar, transferir, mitigar o evitar</li>
+                                    <li>Monitoreo: seguimiento continuo</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">nikto -h 192.168.1.100</span>
+                        <span class="console-comment">#Herramienta para escanear vulnerabilidades en servidores web.</span>
+                    </div>
+                </div>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">searchsploit apache 2.4</span>
+                        <span class="console-comment">#Busca vulnerabilidades conocidas para una versión específica de software.</span>
+                    </div>
+                </div>
+            </section>
 
-    <div class="overlay" id="overlay">
-        <button class="close-btn" onclick="cerrarImagen()">X</button>
-        <img id="imagenAmpliada" src="" alt="Imagen Ampliada">
-    </div>
+            <section id="ataques-comunes">
+                <h1>Tipos de ataques comunes</h1>
+                <h2 id="malware">Malware</h2>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Tipos de malware</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li><strong>Virus:</strong> Código malicioso que se adjunta a archivos legítimos y requiere acción humana para propagarse.</li>
+                            <li><strong>Gusanos:</strong> Se propagan automáticamente sin intervención humana a través de redes.</li>
+                            <li><strong>Troyanos:</strong> Software malicioso disfrazado como programa legítimo.</li>
+                            <li><strong>Ransomware:</strong> Cifra los datos del usuario y exige un rescate para recuperarlos.</li>
+                            <li><strong>Spyware:</strong> Recopila información del usuario sin su conocimiento.</li>
+                            <li><strong>Adware:</strong> Muestra publicidad no deseada.</li>
+                            <li><strong>Rootkits:</strong> Oculta su presencia y permite acceso privilegiado al sistema.</li>
+                            <li><strong>Keyloggers:</strong> Registra las pulsaciones de teclas para robar contraseñas.</li>
+                            <li><strong>Botnets:</strong> Redes de dispositivos infectados controlados remotamente.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Vectores de infección</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li>Correos electrónicos con archivos adjuntos maliciosos</li>
+                            <li>Descargas de sitios web no confiables</li>
+                            <li>Dispositivos USB infectados</li>
+                            <li>Vulnerabilidades no parcheadas en software</li>
+                            <li>Scripts maliciosos en sitios web (drive-by downloads)</li>
+                            <li>Aplicaciones falsas o modificadas</li>
+                            <li>Ingeniería social para engañar a los usuarios</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Protección contra malware</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li>Software antivirus/antimalware actualizado</li>
+                            <li>Mantener sistemas operativos y aplicaciones actualizados</li>
+                            <li>Filtrado de correo electrónico</li>
+                            <li>Navegación segura (HTTPS)</li>
+                            <li>Principio de menor privilegio (usuarios sin derechos administrativos)</li>
+                            <li>Sandboxing (entornos aislados para ejecutar código sospechoso)</li>
+                            <li>Respaldos regulares (3-2-1: 3 copias, 2 medios diferentes, 1 fuera del sitio)</li>
+                            <li>Educación de usuarios</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">clamscan -r /ruta/a/escanear</span>
+                        <span class="console-comment">#Escanea recursivamente un directorio en busca de malware usando ClamAV.</span>
+                    </div>
+                </div>
 
-    <script src="../../js/menuDesplegable.js"></script>    
-    <script src="../../js/divInfoDesplegable.js"></script>
-    <script src="../../js/ampliarImg.js"></script>
-    <script src="../../js/console-code.js"></script>
-</body>
-</html>
+                <h2 id="phishing">Phishing</h2>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Tipos de phishing</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li><strong>Phishing genérico:</strong> Ataques masivos no personalizados.</li>
+                            <li><strong>Spear phishing:</strong> Ataques dirigidos a personas u organizaciones específicas.</li>
+                            <li><strong>Whaling:</strong> Dirigido a ejecutivos de alto nivel.</li>
+                            <li><strong>Smishing:</strong> Phishing a través de mensajes SMS.</li>
+                            <li><strong>Vishing:</strong> Phishing mediante llamadas telefónicas.</li>
+                            <li><strong>Clone phishing:</strong> Replica mensajes legítimos con enlaces maliciosos.</li>
+                            <li><strong>Pharming:</strong> Redirige tráfico de sitios legítimos a sitios falsos.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Indicadores de phishing</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li>Errores gramaticales u ortográficos</li>
+                            <li>Dominios sospechosos o similares a los legítimos</li>
+                            <li>URLs que no coinciden con el supuesto remitente</li>
+                            <li>Solicitudes urgentes o amenazadoras</li>
+                            <li>Peticiones de información sensible</li>
+                            <li>Ofertas demasiado buenas para ser verdad</li>
+                            <li>Remitentes desconocidos o inesperados</li>
+                            <li>Correos genéricos sin personalización</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Protección contra phishing</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li>Filtros anti-spam y anti-phishing</li>
+                            <li>Verificación de remitentes (SPF, DKIM, DMARC)</li>
+                            <li>Autenticación multifactor (MFA/2FA)</li>
+                            <li>Educación y concientización de usuarios</li>
+                            <li>Simulaciones de phishing para entrenamiento</li>
+                            <li>Verificar manualmente las URLs antes de hacer clic</li>
+                            <li>No proporcionar información sensible por correo o teléfono</li>
+                            <li>Usar gestores de contraseñas para evitar introducirlas en sitios falsos</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">whois suspicious-domain.com</span>
+                        <span class="console-comment">#Verifica la información de registro de un dominio sospechoso.</span>
+                    </div>
+                </div>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">curl -I https://example.com</span>
+                        <span class="console-comment">#Verifica los encabezados HTTP de un sitio para buscar indicadores sospechosos.</span>
+                    </div>
+                </div>
+
+                <h2 id="ddos">DDoS (Denegación de Servicio Distribuida)</h2>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Tipos de ataques DDoS</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li><strong>Ataques volumétricos:</strong> Inundan la red con tráfico (UDP floods, ICMP floods).</li>
+                            <li><strong>Ataques de protocolo:</strong> Explotan vulnerabilidades en protocolos (SYN floods, Ping of Death).</li>
+                            <li><strong>Ataques de capa de aplicación:</strong> Dirigidos a aplicaciones web (HTTP floods, Slowloris).</li>
+                            <li><strong>Ataques de amplificación:</strong> Utilizan servidores legítimos para multiplicar el tráfico (NTP, DNS, SSDP).</li>
+                            <li><strong>TCP state-exhaustion:</strong> Agotan los recursos de conexión de dispositivos de red.</li>
+                            <li><strong>Ataques de fragmentación:</strong> Envían paquetes fragmentados malformados.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Impacto de los ataques DDoS</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li>Interrupción de servicios en línea</li>
+                            <li>Pérdidas financieras (ventas, productividad)</li>
+                            <li>Daño a la reputación de la marca</li>
+                            <li>Costos adicionales de infraestructura</li>
+                            <li>Posible extorsión (DDoS como amenaza)</li>
+                            <li>Violación de SLAs (acuerdos de nivel de servicio)</li>
+                            <li>Distracción para ocultar otros ataques</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Mitigación de DDoS</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li>Sobreaprovisionamiento de recursos (ancho de banda, servidores)</li>
+                            <li>Servicios de protección DDoS (Cloudflare, Akamai, AWS Shield)</li>
+                            <li>Filtrado de tráfico y listas negras</li>
+                            <li>Balanceadores de carga</li>
+                            <li>Sistemas de detección de anomalías</li>
+                            <li>Content Delivery Networks (CDNs)</li>
+                            <li>Configuración de rate limiting</li>
+                            <li>Planificación de respuesta a incidentes</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">netstat -ant | grep SYN_RECV | wc -l</span>
+                        <span class="console-comment">#Cuenta las conexiones TCP en estado SYN_RECV, útil para detectar posibles SYN floods.</span>
+                    </div>
+                </div>
+
+                <h2 id="mitm">Man-in-the-Middle</h2>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Técnicas de ataque MitM</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li><strong>ARP spoofing:</strong> Falsificación de tablas ARP para redirigir tráfico.</li>
+                            <li><strong>DNS spoofing:</strong> Falsificación de respuestas DNS.</li>
+                            <li><strong>HTTPS spoofing:</strong> Interceptación de conexiones HTTPS con certificados falsos.</li>
+                            <li><strong>SSL stripping:</strong> Degradación de conexiones HTTPS a HTTP.</li>
+                            <li><strong>Wi-Fi eavesdropping:</strong> Interceptación de tráfico en redes inalámbricas.</li>
+                            <li><strong>Evil twin:</strong> Puntos de acceso Wi-Fi maliciosos que imitan redes legítimas.</li>
+                            <li><strong>Session hijacking:</strong> Robo de cookies o tokens de sesión.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Escenarios comunes</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li>Redes Wi-Fi públicas no seguras</li>
+                            <li>Redes corporativas comprometidas</li>
+                            <li>Dispositivos de red no protegidos</li>
+                            <li>Comunicaciones inseguras cliente-servidor</li>
+                            <li>Conexiones a puntos de acceso falsos</li>
+                            <li>Interceptaciones físicas de líneas de comunicación</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Prevención de ataques MitM</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li>HTTPS (TLS/SSL) en todas las comunicaciones</li>
+                            <li>Certificate Pinning (fijación de certificados)</li>
+                            <li>VPNs para cifrar tráfico</li>
+                            <li>Verificación de certificados</li>
+                            <li>DNSSEC para proteger consultas DNS</li>
+                            <li>Detección de ARP spoofing</li>
+                            <li>Evitar redes Wi-Fi públicas o usar VPN al conectarse</li>
+                            <li>Autenticación mutua (2-way SSL)</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">wireshark</span>
+                        <span class="console-comment">#Herramienta para capturar y analizar tráfico de red (para fines educativos).</span>
+                    </div>
+                </div>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">arp -a</span>
+                        <span class="console-comment">#Muestra la tabla ARP para detectar posibles duplicados sospechosos.</span>
+                    </div>
+                </div>
+
+                <h2 id="fuerza-bruta">Fuerza bruta</h2>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Tipos de ataques de fuerza bruta</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li><strong>Fuerza bruta simple:</strong> Prueba todas las combinaciones posibles.</li>
+                            <li><strong>Ataque de diccionario:</strong> Usa listas de palabras comunes.</li>
+                            <li><strong>Ataque híbrido:</strong> Combina diccionarios con variaciones algorítmicas.</li>
+                            <li><strong>Rainbow tables:</strong> Utiliza tablas precalculadas de hashes.</li>
+                            <li><strong>Credential stuffing:</strong> Prueba credenciales filtradas en diferentes servicios.</li>
+                            <li><strong>Password spraying:</strong> Prueba pocas contraseñas comunes en muchas cuentas.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Objetivos comunes</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li>Formularios de inicio de sesión web</li>
+                            <li>Servicios SSH, FTP, RDP</li>
+                            <li>Protocolos de correo electrónico (SMTP, POP3, IMAP)</li>
+                            <li>Cifrado de archivos (ZIP, RAR protegidos)</li>
+                            <li>Sistemas de gestión de contenido (WordPress, Joomla)</li>
+                            <li>Paneles de administración</li>
+                            <li>APIs y servicios web</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Defensas contra fuerza bruta</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li>Políticas de contraseñas robustas</li>
+                            <li>Bloqueo de cuentas después de varios intentos fallidos</li>
+                            <li>Captchas para prevenir automatización</li>
+                            <li>Autenticación de dos factores (2FA/MFA)</li>
+                            <li>Retrasos incrementales entre intentos fallidos</li>
+                            <li>Registro y alertas de intentos fallidos</li>
+                            <li>Cambio regular de contraseñas</li>
+                            <li>Filtros de IP y geolocalización</li>
+                            <li>Implementación de mecanismos de sal y pimentado (salt & pepper) en contraseñas almacenadas</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">fail2ban-client status sshd</span>
+                        <span class="console-comment">#Muestra las IPs bloqueadas por intentos fallidos de acceso SSH.</span>
+                    </div>
+                </div>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">hydra -V -f -l usuario -P wordlist.txt ssh://192.168.1.10</span>
+                        <span class="console-comment">#Herramienta de auditoría para probar la resistencia contra ataques de fuerza bruta.</span>
+                    </div>
+                </div>
+                </section>
+                
+                <section id="mecanismos-proteccion">
+                <h1>Mecanismos de protección</h1>
+                <h2 id="firewalls">Firewalls</h2>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Tipos de firewalls</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li><strong>Firewalls de filtrado de paquetes:</strong> Operan en capa 3-4, filtran basándose en IPs, puertos y protocolos.</li>
+                            <li><strong>Firewalls con estado (stateful):</strong> Mantienen registro del estado de las conexiones.</li>
+                            <li><strong>Firewalls de aplicación (proxy):</strong> Operan en capa 7, analizan tráfico específico de aplicaciones.</li>
+                            <li><strong>Next-Generation Firewalls (NGFW):</strong> Combinan funciones tradicionales con IPS y filtrado avanzado.</li>
+                            <li><strong>Firewalls basados en host:</strong> Se ejecutan en servidores individuales o endpoints.</li>
+                            <li><strong>Firewalls basados en hardware:</strong> Dispositivos físicos dedicados.</li>
+                            <li><strong>Firewalls basados en software:</strong> Soluciones implementadas como software.</li>
+                            <li><strong>Firewalls basados en la nube:</strong> Servicios de firewall ofrecidos como SaaS.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Implementación y arquitectura</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li><strong>DMZ (Zona desmilitarizada):</strong> Segmento de red entre la red interna y externa.</li>
+                            <li><strong>Arquitectura de firewall único:</strong> Un firewall protege todo el perímetro.</li>
+                            <li><strong>Arquitectura multi-firewall:</strong> Varios firewalls para diferentes segmentos de red.</li>
+                            <li><strong>Firewall a nivel de red:</strong> Protege toda la infraestructura de red.</li>
+                            <li><strong>Firewall a nivel de servidor:</strong> Protege servidores específicos.</li>
+                            <li><strong>Firewall a nivel de aplicación:</strong> Protege aplicaciones específicas.</li>
+                            <li><strong>Defensa en profundidad:</strong> Múltiples capas de firewalls y seguridad.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Configuración de reglas</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li><strong>Principio de denegación por defecto:</strong> Bloquear todo tráfico excepto el explícitamente permitido.</li>
+                            <li><strong>Reglas de entrada/salida:</strong> Control bidireccional del tráfico.</li>
+                            <li><strong>Filtrado por IP/puerto:</strong> Restringir acceso basado en direcciones y servicios.</li>
+                            <li><strong>Filtrado por horario:</strong> Restricciones temporales de acceso.</li>
+                            <li><strong>Traducción de direcciones (NAT):</strong> Ocultar la estructura de red interna.</li>
+                            <li><strong>Inspección profunda de paquetes:</strong> Análisis del contenido del tráfico.</li>
+                            <li><strong>Logging y auditoría:</strong> Registro de actividades para análisis posterior.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">iptables -A INPUT -p tcp --dport 22 -j ACCEPT</span>
+                        <span class="console-comment">#Permite tráfico SSH entrante en un firewall Linux.</span>
+                    </div>
+                </div>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">ufw allow 80/tcp</span>
+                        <span class="console-comment">#Permite tráfico HTTP en el firewall UFW de Ubuntu.</span>
+                    </div>
+                </div>
+                
+                <h2 id="ids-ips">IDS/IPS</h2>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Sistema de Detección de Intrusiones (IDS)</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li><strong>Función:</strong> Monitorea el tráfico de red o actividad del sistema y alerta sobre posibles intrusiones.</li>
+                            <li><strong>Tipos de IDS:</strong>
+                                <ul>
+                                    <li>NIDS (Network-based): Monitorea tráfico de red.</li>
+                                    <li>HIDS (Host-based): Monitorea actividad en un host específico.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Métodos de detección:</strong>
+                                <ul>
+                                    <li>Basados en firmas: Detecta patrones conocidos de ataques.</li>
+                                    <li>Basados en anomalías: Detecta desviaciones del comportamiento normal.</li>
+                                    <li>Análisis heurístico: Utiliza reglas basadas en experiencia.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Ejemplos:</strong> Snort (modo IDS), OSSEC, Suricata, Zeek (anteriormente Bro).</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Sistema de Prevención de Intrusiones (IPS)</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li><strong>Función:</strong> Además de detectar, actúa automáticamente ante intrusiones bloqueando el tráfico malicioso.</li>
+                            <li><strong>Tipos de IPS:</strong>
+                                <ul>
+                                    <li>NIPS (Network-based): Actúa sobre tráfico de red.</li>
+                                    <li>HIPS (Host-based): Actúa sobre actividad en el host.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Modos de operación:</strong>
+                                <ul>
+                                    <li>Modo en línea: Todo el tráfico pasa a través del IPS.</li>
+                                    <li>Modo pasivo con bloqueo activo: Monitorea pasivamente pero puede bloquear tráfico malicioso.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Ejemplos:</strong> Snort (modo IPS), Suricata (modo IPS), Cisco FirePOWER, Palo Alto NGFW.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Implementación y gestión</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li><strong>Posicionamiento:</strong> Puntos estratégicos de la red (perímetro, segmentos críticos).</li>
+                            <li><strong>Gestión de alertas:</strong> Categorización, priorización y respuesta a alertas.</li>
+                            <li><strong>Actualización de firmas:</strong> Mantener actualizadas las definiciones de amenazas.</li>
+                            <li><strong>Ajuste de falsos positivos:</strong> Reducir alertas incorrectas.</li>
+                            <li><strong>Integración con SIEM:</strong> Centralizar la gestión de eventos de seguridad.</li>
+                            <li><strong>Análisis forense:</strong> Investigación post-incidentes.</li>
+                            <li><strong>Requisitos de rendimiento:</strong> Evitar convertirse en cuello de botella.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">sudo snort -A console -q -c /etc/snort/snort.conf -i eth0</span>
+                        <span class="console-comment">#Ejecuta Snort en modo IDS mostrando alertas en la consola.</span>
+                    </div>
+                </div>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">grep "ALERT" /var/log/suricata/fast.log | tail -n 10</span>
+                        <span class="console-comment">#Muestra las últimas 10 alertas registradas por Suricata.</span>
+                    </div>
+                </div>
+                </section>
+                
+                <section id="cifrado-vpn">
+                <h1>Cifrado y VPN</h1>
+                <h2 id="cifrado">Cifrado simétrico vs asimétrico</h2>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Cifrado simétrico</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li><strong>Características:</strong> Usa la misma clave para cifrar y descifrar.</li>
+                            <li><strong>Ventajas:</strong> Rápido, eficiente para grandes volúmenes de datos.</li>
+                            <li><strong>Desventajas:</strong> Problema de distribución segura de claves.</li>
+                            <li><strong>Algoritmos comunes:</strong>
+                                <ul>
+                                    <li>AES (Advanced Encryption Standard): 128, 192, 256 bits</li>
+                                    <li>3DES (Triple DES)</li>
+                                    <li>ChaCha20</li>
+                                    <li>Blowfish, Twofish</li>
+                                </ul>
+                            </li>
+                            <li><strong>Usos:</strong> Cifrado de datos en reposo, comunicaciones donde la clave ya ha sido compartida de forma segura.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Cifrado asimétrico</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li><strong>Características:</strong> Usa un par de claves (pública y privada).</li>
+                            <li><strong>Ventajas:</strong> Resuelve el problema de intercambio de claves, proporciona firmas digitales.</li>
+                            <li><strong>Desventajas:</strong> Más lento, mayor consumo de recursos.</li>
+                            <li><strong>Algoritmos comunes:</strong>
+                                <ul>
+                                    <li>RSA</li>
+                                    <li>ECC (Elliptic Curve Cryptography)</li>
+                                    <li>Diffie-Hellman</li>
+                                    <li>DSA (Digital Signature Algorithm)</li>
+                                    <li>EdDSA (Ed25519)</li>
+                                </ul>
+                            </li>
+                            <li><strong>Usos:</strong> Establecimiento de conexiones seguras, firmas digitales, autenticación, PKI.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Sistemas híbridos</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li><strong>Funcionamiento:</strong> Usa cifrado asimétrico para intercambiar claves simétricas.</li>
+                            <li><strong>Ventajas:</strong> Combina la seguridad del asimétrico con la velocidad del simétrico.</li>
+                            <li><strong>Proceso típico:</strong>
+                                <ul>
+                                    <li>Generar una clave simétrica aleatoria para la sesión</li>
+                                    <li>Cifrar la clave de sesión con la clave pública del destinatario</li>
+                                    <li>Enviar la clave cifrada al destinatario</li>
+                                    <li>Usar la clave simétrica para el resto de la comunicación</li>
+                                </ul>
+                            </li>
+                            <li><strong>Usos:</strong> TLS/SSL, PGP, comunicaciones seguras en general.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">openssl enc -aes-256-cbc -salt -in archivo.txt -out archivo.enc</span>
+                        <span class="console-comment">#Cifra un archivo usando AES-256 (cifrado simétrico).</span>
+                    </div>
+                </div>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">openssl genrsa -out private.key 2048</span>
+                        <span class="console-comment">#Genera un par de claves RSA de 2048 bits (cifrado asimétrico).</span>
+                    </div>
+                </div>
+                
+                <h2 id="ssl-tls">SSL/TLS</h2>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Evolución de SSL/TLS</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li><strong>SSL 2.0 (1995):</strong> Primera versión pública, ya obsoleta y vulnerable.</li>
+                            <li><strong>SSL 3.0 (1996):</strong> Mejoras significativas, pero también obsoleta (POODLE).</li>
+                            <li><strong>TLS 1.0 (1999):</strong> Evolución de SSL 3.0, considerada insegura.</li>
+                            <li><strong>TLS 1.1 (2006):</strong> Protección contra ataques de cifrado por bloques.</li>
+                            <li><strong>TLS 1.2 (2008):</strong> Mejoras significativas en seguridad, permitiendo algoritmos más fuertes.</li>
+                            <li><strong>TLS 1.3 (2018):</strong> Versión actual, con handshake más rápido y seguro, menos vulnerabilidades.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Funcionamiento de TLS</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li><strong>Handshake TLS:</strong> Proceso para establecer una conexión segura.
+                                <ul>
+                                    <li>Cliente envía "Client Hello" con versiones y cifrados soportados.</li>
+                                    <li>Servidor responde con "Server Hello" y su certificado.</li>
+                                    <li>Cliente verifica el certificado del servidor.</li>
+                                    <li>Intercambio de claves usando algoritmos asimétricos.</li>
+                                    <li>Generación de claves de sesión simétricas.</li>
+                                    <li>Comunicación segura usando claves de sesión.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Verificación de certificados:</strong> Basada en autoridades de certificación (CA).</li>
+                            <li><strong>Perfect Forward Secrecy (PFS):</strong> Protección incluso si se compromete la clave privada del servidor.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Implementación y buenas prácticas</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li><strong>Certificados:</strong> Obtener de CAs confiables, renovar antes de expirar.</li>
+                            <li><strong>Configuración segura:</strong>
+                                <ul>
+                                    <li>Usar solo TLS 1.2+ (deshabilitar SSL y TLS antiguo)</li>
+                                    <li>Configurar cipher suites seguros</li>
+                                    <li>Implementar HSTS (HTTP Strict Transport Security)</li>
+                                    <li>Configurar OCSP Stapling</li>
+                                </ul>
+                            </li>
+                            <li><strong>Monitoreo:</strong> Verificar regularmente la configuración con herramientas como SSL Labs.</li>
+                            <li><strong>Gestión de certificados:</strong> Automatizar renovaciones, alertas de expiración.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">openssl s_client -connect example.com:443</span>
+                        <span class="console-comment">#Verifica la conexión TLS a un servidor y muestra detalles del certificado.</span>
+                    </div>
+                </div>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">nmap --script ssl-enum-ciphers -p 443 example.com</span>
+                        <span class="console-comment">#Enumera los cipher suites soportados por un servidor HTTPS.</span>
+                    </div>
+                </div>
+                
+                <h2 id="vpn">Redes privadas virtuales</h2>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Tipos de VPN</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li><strong>VPN de acceso remoto:</strong> Conecta usuarios individuales a una red privada.</li>
+                            <li><strong>VPN site-to-site:</strong> Conecta redes completas entre sí.</li>
+                            <li><strong>VPN por protocolo:</strong>
+                                <ul>
+                                    <li>OpenVPN: Flexible, seguro, basado en SSL/TLS</li>
+                                    <li>IPsec: Robusto, ampliamente compatibile</li>
+                                    <li>WireGuard: Moderno, ligero, alto rendimiento</li>
+                                    <li>L2TP/IPsec: Combinación de tunneling y cifrado</li>
+                                    <li>SSTP: Microsoft, atraviesa firewalls restrictivos</li>
+                                </ul>
+                            </li>
+                            <li><strong>VPN por propósito:</strong>
+                                <ul>
+                                    <li>VPN corporativa: Acceso a recursos empresariales</li>
+                                    <li>VPN para privacidad: Ocultar actividad en internet</li>
+                                    <li>VPN para evadir censura: Acceso a contenido bloqueado</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Componentes de una VPN</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li><strong>Cliente VPN:</strong> Software que inicia la conexión desde el dispositivo del usuario.</li>
+                            <li><strong>Servidor VPN:</strong> Punto de terminación de la conexión VPN.</li>
+                            <li><strong>Túnel:</strong> Canal de comunicación seguro entre cliente y servidor.</li>
+                            <li><strong>Protocolos de túnel:</strong> Define cómo se encapsula el tráfico.</li>
+                            <li><strong>Protocolos de cifrado:</strong> Protegen la confidencialidad de los datos.</li>
+                            <li><strong>Autenticación:</strong> Verifica la identidad de los participantes.</li>
+                            <li><strong>NAT traversal:</strong> Permite que la VPN funcione a través de NAT.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Seguridad y consideraciones</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li><strong>Ventajas de seguridad:</strong>
+                                <ul>
+                                    <li>Cifrado del tráfico</li>
+                                    <li>Ocultamiento de la IP real</li>
+                                    <li>Protección en redes no confiables</li>
+                                    <li>Bypass de restricciones geográficas</li>
+                                </ul>
+                            </li>
+                            <li><strong>Limitaciones:</strong>
+                                <ul>
+                                    <li>Posible reducción de velocidad</li>
+                                    <li>Dependencia del proveedor de VPN</li>
+                                    <li>No protege contra todos los vectores de ataque</li>
+                                    <li>Posibilidad de logs de conexión</li>
+                                </ul>
+                            </li>
+                            <li><strong>Mejores prácticas:</strong>
+                                <ul>
+                                    <li>Usar autenticación fuerte</li>
+                                    <li>Implementar kill switch</li>
+                                    <li>Actualizar regularmente</li>
+                                    <li>Verificar política de logs del proveedor</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">sudo openvpn --config cliente.ovpn</span>
+                        <span class="console-comment">#Inicia una conexión VPN usando OpenVPN.</span>
+                    </div>
+                </div>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">sudo wg-quick up wg0</span>
+                        <span class="console-comment">#Activa una interfaz WireGuard configurada.</span>
+                    </div>
+                </div>
+                </section>
+                
+                <section id="hardening">
+                <h1>Principios de hardening</h1>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Hardening de sistemas operativos</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li><strong>Actualización del sistema:</strong> Mantener todos los componentes actualizados.</li>
+                            <li><strong>Principio de mínimo privilegio:</strong> Asignar solo los derechos necesarios.</li>
+                            <li><strong>Reducción de superficie de ataque:</strong> Desinstalar servicios innecesarios.</li>
+                            <li><strong>Control de cuentas:</strong> Gestionar usuarios, grupos y permisos.</li>
+                            <li><strong>Seguridad de arranque:</strong> Configurar UEFI Secure Boot, cifrado de disco.</li>
+                            <li><strong>Auditoría y logging:</strong> Configurar registros detallados de eventos.</li>
+                            <li><strong>Firewalls locales:</strong> Configurar reglas restrictivas.</li>
+                            <li><strong>Virtualización/contenedores:</strong> Aislar servicios cuando sea posible.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Hardening de servidores</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li><strong>Seguridad física:</strong> Controlar acceso a los servidores físicos.</li>
+                            <li><strong>Configuración base segura:</strong> Partir de una imagen mínima y segura.</li>
+                            <li><strong>Gestión segura de acceso remoto:</strong> SSH con llaves, 2FA, jumpboxes.</li>
+                            <li><strong>Monitoreo de integridad:</strong> Detectar cambios no autorizados.</li>
+                            <li><strong>Backup y recuperación:</strong> Garantizar continuidad de operaciones.</li>
+                            <li><strong>Gestión de parches:</strong> Proceso definido para actualizar sistemas.</li>
+                            <li><strong>Segmentación de red:</strong> Separar entornos de producción, desarrollo, etc.</li>
+                            <li><strong>Configuración de servicios críticos:</strong> Hardening específico para web servers, bases de datos.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="info-section-desplegable" class="desplegable-info">
+                    <h2 href="#" class="toggle-btn">Hardening de red</h2>
+                    <div class="submenu-info">
+                        <ul>
+                            <li><strong>Arquitectura de red segura:</strong> Diseño con seguridad como prioridad.</li>
+                            <li><strong>Segmentación:</strong> VLANs, microsegmentación, DMZ.</li>
+                            <li><strong>Control de acceso a la red (NAC):</strong> Verificación antes de permitir conexiones.</li>
+                            <li><strong>Endurecimiento de dispositivos de red:</strong> Routers, switches, access points.</li>
+                            <li><strong>Gestión segura de dispositivos:</strong> Control de acceso administrativo.</li>
+                            <li><strong>Protocolos seguros:</strong> SSH en lugar de Telnet, HTTPS en lugar de HTTP.</li>
+                            <li><strong>Filtrado de tráfico:</strong> Firewalls, IDS/IPS, proxy.</li>
+                            <li><strong>Monitoreo y análisis de tráfico:</strong> Detección de comportamientos anómalos.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">sudo lynis audit system</span>
+                        <span class="console-comment">#Ejecuta una auditoría de seguridad en el sistema.</span>
+                    </div>
+                </div>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">sudo chown root:root /etc/shadow && sudo chmod 0400 /etc/shadow</span>
+                        <span class="console-comment">#Asegura los permisos del archivo de contraseñas.</span>
+                    </div>
+                </div>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-command">sudo systemctl disable unused-service</span>
+                        <span class="console-comment">#Desactiva servicios innecesarios para reducir la superficie de ataque.</span>
+                    </div>
+                </div>
+                </section>
+                
+                <!-- Seccion siguiente -->
+                <section id="nextBack-section">
+                    <i class="fas fa-arrow-right"></i><a id="next-section" href="./U-redes-Seguridad-en-redes.html">Siguiente Seccion</a>
+                </section>
+                </main>
+                </div>
+                
+                <script src="../../js/menuDesplegable.js"></script>    
+                <script src="../../js/divInfoDesplegable.js"></script>
+                <script src="../../js/ampliarImg.js"></script>
+                <script src="../../js/console-code.js"></script>
+            </body>
+            </html>

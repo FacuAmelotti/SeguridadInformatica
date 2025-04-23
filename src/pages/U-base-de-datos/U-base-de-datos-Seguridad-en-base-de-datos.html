@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguridad en Bases de Datos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/template.css">
+        <!--FONT-->
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .comparison-table th {
+            background-color: #f2f2f2;
+        }
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .use-case {
+            background-color: #f0f7ff;
+            border-left: 4px solid #0066cc;
+            padding: 10px;
+            margin: 15px 0;
+        }
+        .security-warning {
+            background-color: #fff0f0;
+            border-left: 4px solid #cc0000;
+            padding: 10px;
+            margin: 15px 0;
+        }
+        .security-best-practice {
+            background-color: #f0fff0;
+            border-left: 4px solid #00cc00;
+            padding: 10px;
+            margin: 15px 0;
+        }
+        .pros {
+            color: #2e7d32;
+            font-weight: bold;
+        }
+        .cons {
+            color: #c62828;
+            font-weight: bold;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <button id="menu-toggle" class="menu-toggle">☰ Menú</button>
+        <!-- Menú lateral izquierdo -->
+        <aside class="menu" id="menu">
+            <h2>Bases de Datos III</h2>
+            <ul>
+                <li><a href="../../pages/general.html"><i class="fas fa-home"></i> General</a>     
+                    <li><a id="btn-menu-Sect" href="#back-section">Seccion anterior</a></li>               
+                <li><a href="#seguridad-bd">Seguridad en Bases de Datos</a></li>            
+                <ul>
+                    <li><a href="#principios-seguridad">Principios de Seguridad</a></li>
+                    <ul>
+                        <li><a href="#cia-triad">Tríada CIA</a></li>
+                        <li><a href="#defensa-profundidad">Defensa en profundidad</a></li>  
+                    </ul>
+                    <li><a href="#amenazas-comunes">Amenazas Comunes</a></li>
+                    <ul>
+                        <li><a href="#sql-injection">Inyección SQL</a></li>
+                        <li><a href="#otros-ataques">Otros ataques</a></li>  
+                    </ul>
+                    <li><a href="#cifrado-datos">Cifrado de Datos</a></li>  
+                    <ul>
+                        <li><a href="#cifrado-reposo">Cifrado en reposo</a></li>
+                        <li><a href="#cifrado-transito">Cifrado en tránsito</a></li>
+                        <li><a href="#cifrado-aplicacion">Cifrado a nivel de aplicación</a></li>
+                    </ul>      
+                    <li><a href="#autenticacion-autorizacion">Autenticación y Autorización</a></li>  
+                    <li><a href="#auditoria-monitoreo">Auditoría y Monitoreo</a></li>
+                    <li><a href="#backups-recuperacion">Backups y Recuperación</a></li>
+                    <li><a href="#compliance">Normativas y Compliance</a></li>
+                    <li><a href="#mejores-practicas">Mejores Prácticas</a></li>
+                </ul>
+                <li><a id="btn-menu-Sect" href="#next-section">Siguiente Sección</a></li>
+        </aside>
+        </main>
+
+        <!-- Contenido principal -->
+        <main class="content">  
+
+
+            <!-- Seccion anterior -->
+            <section id="nextBack-section">
+                <i class="fas fa-arrow-left"></i><a id="back-section" href="./U-base-de-datos-Relacionales-y-no-relacionales.html">Seccion Anterior</a>
+            </section>
+
+            <!-- Seccion anterior -->
+            <section>
+                <h1>🔒 Seguridad en Bases de Datos</h1>
+            </section>  
+
+            <section class="tags-topics">
+                <ul>
+                    <li>#SEGURIDAD</li>
+                    <li>#CIFRADO</li><li>#SQL-INJECTION</li><li>#AUTENTICACION</li>
+                    <li>#AUDITORIA</li>
+                </ul>
+            </section>  
+            
+            <section id="principios-seguridad">   
+                <h1>Principios Fundamentales de Seguridad en Bases de Datos</h1>
+                <p>La seguridad de las bases de datos es crítica para proteger uno de los activos más valiosos de cualquier organización: sus datos. Se sustenta en varios principios fundamentales que guían todas las implementaciones de seguridad.</p>
+                
+                <h3 id="cia-triad">La Tríada CIA</h3>
+                <p>El modelo CIA (Confidencialidad, Integridad y Disponibilidad) constituye la base de la seguridad de la información:</p>
+                <ul>
+                    <li>● <strong>Confidencialidad</strong>: Garantizar que solo usuarios autorizados accedan a los datos.</li>                
+                    <li>● <strong>Integridad</strong>: Asegurar que los datos permanezcan completos, precisos y sin modificaciones no autorizadas.</li>
+                    <li>● <strong>Disponibilidad</strong>: Garantizar que los datos estén disponibles cuando sean necesarios.</li>
+                </ul>
+                
+                <h3 id="defensa-profundidad">Defensa en Profundidad</h3>
+                <p>Implementar múltiples capas de seguridad para proteger los datos:</p>
+                <ul>
+                    <li>● <strong>Seguridad física</strong>: Protección de servidores y hardware.</li>                
+                    <li>● <strong>Seguridad de red</strong>: Firewalls, IDS/IPS, segmentación.</li>
+                    <li>● <strong>Seguridad del host</strong>: Endurecimiento del sistema operativo.</li>
+                    <li>● <strong>Seguridad de la aplicación</strong>: Validación de entrada, control de acceso.</li>
+                    <li>● <strong>Seguridad de datos</strong>: Cifrado, controles de acceso a nivel de base de datos.</li>
+                </ul>
+                
+                <div class="security-best-practice">
+                    <h3>💡 Principio de mínimo privilegio</h3>
+                    <p>Un usuario o proceso debe tener acceso únicamente a los recursos necesarios para realizar su función legítima. Este principio limita el daño que podría causar un error, un ataque o un comportamiento malintencionado.</p>
+                </div>
+            </section>
+
+            <section id="info-section-desplegable" class="desplegable-info">
+                <h2 href="#" class="toggle-btn">🔍 Analogía: Seguridad de BD como Seguridad de un Banco 🔽</h2>
+                <div class="submenu-info">
+                    <p>Una base de datos segura es como un <strong>banco con múltiples medidas de seguridad</strong>:</p>
+                    <ul>
+                        <li>La <strong>confidencialidad</strong> es como las cajas de seguridad: solo personas autorizadas pueden acceder a ellas con las llaves correctas.</li>
+                        <li>La <strong>integridad</strong> es como los sistemas de contabilidad del banco que aseguran que el dinero no aparezca ni desaparezca misteriosamente.</li>
+                        <li>La <strong>disponibilidad</strong> es como tener horarios de servicio adecuados y cajeros automáticos 24/7.</li>
+                        <li>La <strong>defensa en profundidad</strong> incluye guardias de seguridad (seguridad física), sistemas de alarma (detección de intrusiones), cámaras (monitoreo), puertas blindadas (firewalls) y cajas fuertes (cifrado).</li>
+                        <li>El <strong>principio de mínimo privilegio</strong> es como dar a cada empleado acceso solo a las áreas necesarias para su trabajo: un cajero no puede entrar a la bóveda principal.</li>
+                    </ul>        
+                </div>
+            </section>
+
+            <section id="amenazas-comunes">   
+                <h1>Amenazas Comunes en Bases de Datos</h1>
+                
+                <h3 id="sql-injection">Inyección SQL</h3>
+                <p>La inyección SQL es una de las vulnerabilidades más peligrosas y comunes en aplicaciones web con bases de datos. Ocurre cuando un atacante puede insertar código SQL malicioso en consultas que la aplicación envía a la base de datos.</p>
+                
+                <div class="security-warning">
+                    <h3>⚠️ Ejemplo de inyección SQL vulnerable</h3>
+                    <div class="console-code">
+                        <div class="console-line">
+                            <span class="console-comment">// Código vulnerable (PHP)</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-command">$usuario = $_POST['usuario'];</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-command">$consulta = "SELECT * FROM usuarios WHERE username = '$usuario'";</span>
+                        </div>
+                    </div>
+                    <p>Si un atacante introduce <code>' OR '1'='1</code> como nombre de usuario, la consulta resultante sería:</p>
+                    <div class="console-code">
+                        <div class="console-line">
+                            <span class="console-command">SELECT * FROM usuarios WHERE username = '' OR '1'='1';</span>
+                        </div>
+                    </div>
+                    <p>Esta consulta devolvería todos los registros de la tabla de usuarios, permitiendo potencialmente el acceso sin autorización.</p>
+                </div>
+                
+                <h4>Prevención de inyecciones SQL</h4>
+                <ul>
+                    <li>● <strong>Consultas parametrizadas</strong>: Separar los datos de la estructura de la consulta.</li>                
+                    <li>● <strong>ORM (Object-Relational Mapping)</strong>: Usar frameworks que manejen automáticamente la sanitización.</li>
+                    <li>● <strong>Procedimientos almacenados</strong>: Ejecutar consultas predefinidas en el servidor.</li>
+                    <li>● <strong>Validación de entrada</strong>: Verificar formato, tipo y longitud de los datos.</li>
+                    <li>● <strong>Escapar caracteres especiales</strong>: Cuando no sea posible usar parametrización.</li>
+                </ul>
+                
+                <div class="security-best-practice">
+                    <h3>✅ Código seguro usando consultas parametrizadas</h3>
+                    <div class="console-code">
+                        <div class="console-line">
+                            <span class="console-comment">// Código seguro (PHP con PDO)</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-command">$stmt = $pdo->prepare("SELECT * FROM usuarios WHERE username = ?");</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-command">$stmt->execute([$_POST['usuario']]);</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 id="otros-ataques">Otras Amenazas Comunes</h3>
+                <ul>
+                    <li>● <strong>NoSQL Injection</strong>: Similar a la inyección SQL pero en bases de datos NoSQL.</li>                
+                    <li>● <strong>Escalada de privilegios</strong>: Cuando un usuario obtiene más permisos de los que debería tener.</li>
+                    <li>● <strong>Exposición de datos sensibles</strong>: Almacenamiento de datos confidenciales sin cifrar.</li>
+                    <li>● <strong>Ataques de fuerza bruta</strong>: Intentos repetidos para adivinar credenciales.</li>
+                    <li>● <strong>Ataques de denegación de servicio (DoS)</strong>: Consultas que consumen excesivos recursos.</li>
+                </ul>
+                
+                <div class="security-warning">
+                    <h3>⚠️ Ejemplo de ataque a bases NoSQL (MongoDB)</h3>
+                    <div class="console-code">
+                        <div class="console-line">
+                            <span class="console-comment">// Código vulnerable (Node.js con MongoDB)</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-command">db.usuarios.find({username: req.body.username, password: req.body.password});</span>
+                        </div>
+                    </div>
+                    <p>Si el atacante envía un objeto JSON como <code>{"username": {"$gt": ""}, "password": {"$gt": ""}}</code>, podría eludir la autenticación.</p>
+                </div>
+            </section>
+
+            <section id="cifrado-datos">   
+                <h1>Cifrado de Datos</h1>
+                <p>El cifrado transforma datos legibles en un formato codificado que solo puede ser leído o procesado después de descifrarlo. Es una medida fundamental para proteger datos sensibles.</p>
+                
+                <h3 id="cifrado-reposo">Cifrado en Reposo</h3>
+                <p>Protege los datos mientras están almacenados en discos o backups:</p>
+                <ul>
+                    <li>● <strong>Cifrado a nivel de archivo</strong>: Protege archivos individuales de la base de datos.</li>                
+                    <li>● <strong>Cifrado de volumen completo</strong>: Cifra todo el disco donde se almacena la base de datos.</li>
+                    <li>● <strong>Cifrado nativo de la base de datos</strong>: Muchos SGBD ofrecen soluciones incorporadas:</li>
+                    <ul>
+                        <li>○ <strong>MySQL/MariaDB</strong>: Funciones AES_ENCRYPT/AES_DECRYPT</li>
+                        <li>○ <strong>SQL Server</strong>: Transparent Data Encryption (TDE)</li>
+                        <li>○ <strong>PostgreSQL</strong>: pgcrypto</li>
+                        <li>○ <strong>Oracle</strong>: Advanced Security Option (ASO)</li>
+                    </ul>
+                </ul>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-comment">-- Ejemplo de cifrado en MySQL</span>
+                    </div>
+                    <div class="console-line">
+                        <span class="console-command">INSERT INTO usuarios (nombre, tarjeta_credito) VALUES ('Ana López', AES_ENCRYPT('4111-1111-1111-1111', 'clave_secreta'));</span>
+                    </div>
+                    <div class="console-line">
+                        <span class="console-command">SELECT nombre, CAST(AES_DECRYPT(tarjeta_credito, 'clave_secreta') AS CHAR) FROM usuarios;</span>
+                    </div>
+                </div>
+                
+                <h3 id="cifrado-transito">Cifrado en Tránsito</h3>
+                <p>Protege los datos mientras viajan a través de la red:</p>
+                <ul>
+                    <li>● <strong>SSL/TLS</strong>: Para conexiones seguras entre clientes y servidor de base de datos.</li>                
+                    <li>● <strong>VPN</strong>: Túneles cifrados para acceder a bases de datos desde redes externas.</li>
+                    <li>● <strong>SSH tunneling</strong>: Para conexiones seguras a bases de datos remotas.</li>
+                </ul>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-comment">-- Configurar MySQL para usar SSL</span>
+                    </div>
+                    <div class="console-line">
+                        <span class="console-command">[mysqld]</span>
+                    </div>
+                    <div class="console-line">
+                        <span class="console-command">ssl-ca=/path/to/ca.pem</span>
+                    </div>
+                    <div class="console-line">
+                        <span class="console-command">ssl-cert=/path/to/server-cert.pem</span>
+                    </div>
+                    <div class="console-line">
+                        <span class="console-command">ssl-key=/path/to/server-key.pem</span>
+                    </div>
+                    <div class="console-line">
+                        <span class="console-command">require_secure_transport=ON</span>
+                    </div>
+                </div>
+                
+                <h3 id="cifrado-aplicacion">Cifrado a Nivel de Aplicación</h3>
+                <p>Cifrar datos sensibles antes de enviarlos a la base de datos:</p>
+                <ul>
+                    <li>● <strong>Cifrado de campos específicos</strong>: Proteger solo la información sensible.</li>                
+                    <li>● <strong>Funciones hash</strong>: Para almacenar contraseñas (bcrypt, Argon2).</li>
+                    <li>● <strong>Gestión de claves</strong>: Sistemas seguros para administrar claves de cifrado.</li>
+                </ul>
+                
+                <div class="security-best-practice">
+                    <h3>✅ Mejores prácticas para almacenar contraseñas</h3>
+                    <div class="console-code">
+                        <div class="console-line">
+                            <span class="console-comment">// PHP - Hash seguro de contraseñas con bcrypt</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-command">$hash = password_hash($_POST['password'], PASSWORD_BCRYPT, ['cost' => 12]);</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-comment">// Verificación</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-command">if (password_verify($password_input, $hash_from_db)) {</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-command">    // Acceso permitido</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-command">}</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="autenticacion-autorizacion">   
+                <h1>Autenticación y Autorización</h1>
+                
+                <h3>Autenticación: ¿Quién eres?</h3>
+                <p>Mecanismos para verificar la identidad de usuarios y aplicaciones que acceden a la base de datos:</p>
+                <ul>
+                    <li>● <strong>Autenticación de contraseña</strong>: El método más básico pero debe implementarse correctamente.</li>                
+                    <li>● <strong>Autenticación multifactor (MFA)</strong>: Combina varios factores de autenticación:</li>
+                    <ul>
+                        <li>○ Algo que sabes (contraseña)</li>
+                        <li>○ Algo que tienes (token, teléfono)</li>
+                        <li>○ Algo que eres (biometría)</li>
+                    </ul>
+                    <li>● <strong>Autenticación integrada</strong>: Kerberos, LDAP, Active Directory.</li>
+                    <li>● <strong>Certificados digitales</strong>: Autenticación basada en certificados X.509.</li>
+                </ul>
+                
+                <h3>Autorización: ¿Qué puedes hacer?</h3>
+                <p>Controles que determinan qué acciones puede realizar un usuario autenticado:</p>
+                <ul>
+                    <li>● <strong>Control de acceso basado en roles (RBAC)</strong>: Asignar permisos a roles, no a usuarios individuales.</li>                
+                    <li>● <strong>Control de acceso a nivel de objeto</strong>: Permisos para tablas, vistas, procedimientos.</li>
+                    <li>● <strong>Control de acceso a nivel de fila/columna</strong>: Filtrar el acceso a datos específicos.</li>
+                    <li>● <strong>Políticas de seguridad dinámicas</strong>: Permisos basados en atributos o contexto.</li>
+                </ul>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-comment">-- Ejemplo de RBAC en PostgreSQL</span>
+                    </div>
+                    <div class="console-line">
+                        <span class="console-command">-- Crear rol</span>
+                    </div>
+                    <div class="console-line">
+                        <span class="console-command">CREATE ROLE analistas;</span>
+                    </div>
+                    <div class="console-line">
+                        <span class="console-command">-- Asignar permisos al rol</span>
+                    </div>
+                    <div class="console-line">
+                        <span class="console-command">GRANT SELECT ON ventas TO analistas;</span>
+                    </div>
+                    <div class="console-line">
+                        <span class="console-command">-- Asignar rol a usuario</span>
+                    </div>
+                    <div class="console-line">
+                        <span class="console-command">GRANT analistas TO maria;</span>
+                    </div>
+                </div>
+                
+                <h3>Seguridad en aplicaciones y middleware</h3>
+                <ul>
+                    <li>● <strong>No almacenar credenciales en código</strong>: Usar variables de entorno o almacenes de secretos.</li>                
+                    <li>● <strong>Manejo de pool de conexiones</strong>: Configurar seguridad para conexiones reutilizables.</li>
+                    <li>● <strong>ORM seguro</strong>: Utilizar frameworks que implementen prácticas de seguridad.</li>
+                </ul>
+                
+                <div class="security-best-practice">
+                    <h3>✅ Configuración segura de pool de conexiones</h3>
+                    <div class="console-code">
+                        <div class="console-line">
+                            <span class="console-comment">// Java - Configuración de pool de conexiones HikariCP</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-command">HikariConfig config = new HikariConfig();</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-command">config.setJdbcUrl("jdbc:mysql://localhost:3306/mibd");</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-command">config.setUsername(System.getenv("DB_USER"));</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-command">config.setPassword(System.getenv("DB_PASSWORD"));</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-command">config.setMaximumPoolSize(10);</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-command">config.setMinimumIdle(2);</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-command">config.setConnectionTimeout(30000);</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="auditoria-monitoreo">   
+                <h1>Auditoría y Monitoreo</h1>
+                <p>La auditoría y el monitoreo son esenciales para detectar actividades sospechosas, verificar el cumplimiento de políticas y facilitar la investigación de incidentes.</p>
+                
+                <h3>Registro y auditoría</h3>
+                <ul>
+                    <li>● <strong>Logs de auditoría</strong>: Registrar actividades críticas como:</li>
+                    <ul>
+                        <li>○ Intentos de inicio de sesión (exitosos y fallidos)</li>
+                        <li>○ Cambios en estructuras de datos (DDL)</li>
+                        <li>○ Cambios en permisos y roles</li>
+                        <li>○ Acceso a datos sensibles</li>
+                    </ul>
+                    <li>● <strong>Integridad de logs</strong>: Asegurar que los registros no puedan ser alterados.</li>
+                    <li>● <strong>Retención de logs</strong>: Almacenar registros por el tiempo requerido (legal o política).</li>
+                </ul>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-comment">-- Habilitar auditoría en SQL Server</span>
+                    </div>
+                    <div class="console-line">
+                        <span class="console-command">CREATE SERVER AUDIT DataAudit</span>
+                    </div>
+                    <div class="console-line">
+                        <span class="console-command">TO FILE (FILEPATH = 'C:\AuditLogs\', MAXSIZE = 100MB);</span>
+                    </div>
+                    <div class="console-line">
+                        <span class="console-command">CREATE DATABASE AUDIT SPECIFICATION DatabaseAuditSpec</span>
+                    </div>
+                    <div class="console-line">
+                        <span class="console-command">FOR SERVER AUDIT DataAudit</span>
+                    </div>
+                    <div class="console-line">
+                        <span class="console-command">ADD (SELECT, INSERT, UPDATE, DELETE ON DATABASE::MiBaseDeDatos BY dbo)</span>
+                    </div>
+                    <div class="console-line">
+                        <span class="console-command">WITH (STATE = ON);</span>
+                    </div>
+                </div>
+                
+                <h3>Monitoreo y alertas</h3>
+                <ul>
+                    <li>● <strong>Monitoreo en tiempo real</strong>: Detectar actividades anómalas inmediatamente.</li>                
+                    <li>● <strong>Análisis de patrones</strong>: Identificar comportamientos sospechosos.</li>
+                    <li>● <strong>Alertas automatizadas</strong>: Notificar sobre eventos críticos.</li>
+                    <li>● <strong>Respuesta a incidentes</strong>: Procedimientos para abordar violaciones de seguridad.</li>
+                </ul>
+                
+                <div class="security-best-practice">
+                    <h3>✅ Monitoreo efectivo</h3>
+                    <p>Implementar sistemas que alerten sobre:</p>
+                    <ul>
+                        <li>● Múltiples intentos fallidos de inicio de sesión (posible ataque de fuerza bruta)</li>
+                        <li>● Consultas inusualmente largas o complejas (posible ataque DoS)</li>
+                        <li>● Acceso a datos sensibles fuera del horario normal</li>
+                        <li>● Volumen anormal de consultas desde una sola fuente</li>
+                        <li>● Cambios en tablas o esquemas sin autorización previa</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="backups-recuperacion">
+                <h1>Backups y Recuperación</h1>
+                
+                <h3>Backups: Protección de datos</h3>
+                <p>Los backups son fundamentales para la protección de datos frente a pérdida, corrupción o desastre. Es importante tener una estrategia sólida para respaldar la información crítica.</p>
+                <ul>
+                    <li>● <strong>Backups completos</strong>: Respaldo total de la base de datos.</li>
+                    <li>● <strong>Backups incrementales</strong>: Solo se respaldan los datos modificados desde el último backup.</li>
+                    <li>● <strong>Backups diferenciales</strong>: Respaldo de todos los cambios desde el último backup completo.</li>
+                    <li>● <strong>Backups en la nube</strong>: Utilizar almacenamiento en la nube para redundancia adicional.</li>
+                </ul>
+                
+                <h3>Recuperación: ¿Cómo restaurar?</h3>
+                <p>La recuperación de datos es esencial para la continuidad del negocio. Asegúrate de tener procedimientos claros para restaurar la base de datos desde un backup en caso de emergencia.</p>
+                <ul>
+                    <li>● <strong>Recuperación de desastres</strong>: Procedimientos para restaurar la base de datos ante un fallo catastrófico.</li>
+                    <li>● <strong>Recuperación de punto en el tiempo</strong>: Restaurar a un estado específico antes de un incidente.</li>
+                    <li>● <strong>Validación de backups</strong>: Asegurar que los backups sean consistentes y estén operativos.</li>
+                </ul>
+                
+                <div class="console-code">
+                    <div class="console-line">
+                        <span class="console-comment">-- Crear backup completo en MySQL</span>
+                    </div>
+                    <div class="console-line">
+                        <span class="console-command">mysqldump -u root -p --all-databases > backup.sql</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="compliance">
+                <h1>Normativas y Compliance</h1>
+                
+                <h3>Normativas relevantes</h3>
+                <p>Las normativas y regulaciones sobre el manejo de datos varían según la industria y la región. Es crucial cumplir con ellas para evitar sanciones y proteger la información personal.</p>
+                <ul>
+                    <li>● <strong>GDPR</strong>: Regulación europea sobre la protección de datos personales.</li>
+                    <li>● <strong>HIPAA</strong>: Ley de privacidad en salud en EE.UU.</li>
+                    <li>● <strong>PCI DSS</strong>: Normativa para proteger la información de tarjetas de pago.</li>
+                    <li>● <strong>ISO 27001</strong>: Estándar para sistemas de gestión de seguridad de la información.</li>
+                </ul>
+                
+                <h3>Recomendaciones para cumplir con normativas</h3>
+                <ul>
+                    <li>● <strong>Encriptación de datos sensibles</strong>: Proteger la información mediante técnicas de cifrado.</li>
+                    <li>● <strong>Auditorías periódicas</strong>: Realizar auditorías regulares para verificar el cumplimiento.</li>
+                    <li>● <strong>Capacitación de personal</strong>: Asegurarse de que los empleados comprendan las normativas y su aplicación.</li>
+                </ul>
+                
+                <div class="security-best-practice">
+                    <h3>✅ Ejemplo de encriptación de datos</h3>
+                    <div class="console-code">
+                        <div class="console-line">
+                            <span class="console-comment">// Encriptar datos con AES en Java</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-command">Cipher cipher = Cipher.getInstance("AES");</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-command">SecretKeySpec key = new SecretKeySpec("miClaveSecreta".getBytes(), "AES");</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-command">cipher.init(Cipher.ENCRYPT_MODE, key);</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-command">byte[] encrypted = cipher.doFinal("Texto a encriptar".getBytes());</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="mejores-practicas">
+                <h1>Mejores Prácticas</h1>
+                
+                <h3>Prácticas recomendadas para la seguridad de bases de datos</h3>
+                <p>La implementación de buenas prácticas de seguridad es clave para proteger las bases de datos contra ataques y accesos no autorizados.</p>
+                <ul>
+                    <li>● <strong>Uso de contraseñas fuertes</strong>: Evitar contraseñas débiles o predecibles.</li>
+                    <li>● <strong>Principio de menor privilegio</strong>: Asignar a los usuarios solo los permisos necesarios.</li>
+                    <li>● <strong>Actualizaciones regulares</strong>: Mantener la base de datos y sistemas actualizados con los últimos parches de seguridad.</li>
+                    <li>● <strong>Cifrado en tránsito y reposo</strong>: Asegurarse de que los datos sean encriptados tanto al almacenarse como al transmitirse.</li>
+                </ul>
+                
+                <h3>Seguridad en la infraestructura</h3>
+                <ul>
+                    <li>● <strong>Firewall de base de datos</strong>: Implementar firewalls para limitar el acceso no autorizado.</li>
+                    <li>● <strong>Segregación de redes</strong>: Separar las bases de datos de la red corporativa para mayor seguridad.</li>
+                    <li>● <strong>Monitorización constante</strong>: Configurar sistemas de monitoreo para detectar comportamientos inusuales.</li>
+                </ul>
+                
+                <div class="security-best-practice">
+                    <h3>✅ Mejores prácticas para contraseñas</h3>
+                    <p>Al configurar contraseñas, asegúrate de:</p>
+                    <ul>
+                        <li>● Usar una longitud mínima de 12 caracteres.</li>
+                        <li>● Incluir mayúsculas, minúsculas, números y caracteres especiales.</li>
+                        <li>● Cambiar las contraseñas regularmente.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="nextBack-section">
+                <a id="next-section" href="../U-redes/U-redes-Introduccion.html">Siguiente Sección</a><i class="fas fa-arrow-right"></i>
+            </section>
+
+        </main>
+    </div>
+    <script src="../../js/menuDesplegable.js"></script>    
+    <script src="../../js/divInfoDesplegable.js"></script>
+    <script src="../../js/ampliarImg.js"></script>
+    <script src="../../js/console-code.js"></script>
+</body>
+</html>
+                
+                
