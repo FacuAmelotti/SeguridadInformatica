@@ -6,13 +6,151 @@
     <title>Principios de Redes</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../../css/template.css">
-        <!--FONT-->
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
-        <style>
+    <!--FONT-->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
         body {
             font-family: 'IBM Plex Mono', monospace;
         }
-        </style>
+        
+        /* Estilos adicionales para los nuevos elementos */
+        .network-diagram {
+            max-width: 100%;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        .comparison-table th {
+            background-color: #f2f2f2;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .protocol-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .protocol-card h4 {
+            margin-top: 0;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        
+        .important-note {
+            background-color: #fffacd;
+            border-left: 4px solid #ffcc00;
+            padding: 10px;
+            margin: 15px 0;
+        }
+        
+        .ip-comparison {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .ip-box {
+            flex: 1;
+            min-width: 250px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+        }
+        
+        .ip-pub {
+            background-color: #e6f7ff;
+        }
+        
+        .ip-priv {
+            background-color: #f0f7e6;
+        }
+        
+        .interactive-demo {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .port-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .port-category {
+            flex: 1;
+            min-width: 200px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        
+        .port-range-well-known {
+            background-color: #e6f7ff;
+        }
+        
+        .port-range-registered {
+            background-color: #f0f7e6;
+        }
+        
+        .port-range-dynamic {
+            background-color: #fff0f5;
+        }
+        
+        .protocol-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        
+        .example-scenario {
+            background-color: #f0f7ff;
+            border-left: 4px solid #0077cc;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .real-world-application {
+            background-color: #f7f0ff;
+            border-left: 4px solid #7700cc;
+            padding: 15px;
+            margin: 15px 0;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -24,37 +162,40 @@
                 <li><a href="../../pages/general.html"><i class="fas fa-home"></i> General</a>                    
                 <li><a href="#p1">Principios de Redes</a></li>            
                 <ul>
-                        <li><a href="#que-es-internet">¿Qué es una red?</a></li>
-                        <ul>
-                            <li><a href="#que-es-internet">LAN</a></li>
-                            <li><a href="">WAN</a></li>  
-                            <li><a href="">MAN</a></li>  
-                        </ul>
-                        <li><a href="#que-es-internet">¿Qué es internet?</a></li>
-                        <li><a href="">¿Que es un protocolo?</a></li>  
-                        <li><a href="">¿Que significa IP?</a></li>  
-                        <ul>
-                            <li><a href="#que-es-internet">IPv4</a></li>
-                            <li><a href="#que-es-internet">IPv6</a></li>
-                            <li><a href="#que-es-internet">IP Publica & privada</a></li>
-                        </ul>      
-                        <li><a href="">¿Qué es un puerto?</a></li>  
-                        <li><a href="">Principales protocolos</a></li>         
+                    <li><a href="#que-es-una-red">¿Qué es una red?</a></li>
+                    <ul>
+                        <li><a href="#tipos-de-redes">Tipos de Redes</a></li>
+                        <li><a href="#topologias">Topologías de Red</a></li>
+                        <li><a href="#componentes">Componentes de Red</a></li>
+                    </ul>
+                    <li><a href="#comunicacion">¿Cómo se comunican?</a></li>
+                    <li><a href="#que-es-internet">¿Qué es Internet?</a></li>
+                    <li><a href="#que-es-protocolo">¿Qué es un protocolo?</a></li>  
+                    <li><a href="#ip">¿Qué significa IP?</a></li>  
+                    <ul>
+                        <li><a href="#ipv4">IPv4</a></li>
+                        <li><a href="#ipv6">IPv6</a></li>
+                        <li><a href="#ip-public-private">IP Pública & Privada</a></li>
+                        <li><a href="#mascara-de-red">Máscara de red</a></li>
+                        <li><a href="#calc-subredes">Cálculo de subredes</a></li>
+                    </ul>      
+                    <li><a href="#puertos">¿Qué es un puerto?</a></li>  
+                    <li><a href="#protocolos-principales">Principales protocolos</a></li>
+                    <li><a href="#dns">Sistema DNS</a></li>
+                    <li><a href="#arquitectura-cliente-servidor">Arquitectura Cliente-Servidor</a></li>
                 </ul>
-                <li><a id="btn-menu-Sect" href="#next-section">Siguiente Seccion</a></li> <!--MODELO OSI-->
+                <li><a id="btn-menu-Sect" href="#next-section">Siguiente Sección</a></li> <!--MODELO OSI-->
+            </ul>
         </aside>
-        </main>
 
         <!-- Contenido principal -->
         <main class="content">  
-
-
             <!-- Seccion anterior -->
             <section id="nextBack-section">
                 <i class="fas fa-arrow-left"></i><a id="back-section" href="../general.html">General</a>
             </section>
 
-            <!-- Seccion anterior -->
+            <!-- Título principal -->
             <section>
                 <h1>🌐 Principios de Redes</h1>
             </section>  
@@ -62,251 +203,993 @@
             <section class="tags-topics">
                 <ul>
                     <li>#RED</li>
-                    <li>#INTERNET</li><li>#PROTOCOLO</li><li>#IP</li>
+                    <li>#INTERNET</li>
+                    <li>#PROTOCOLO</li>
+                    <li>#IP</li>
                     <li>#DNS</li>
+                    <li>#ARQUITECTURA</li>
+                    <li>#COMUNICACIÓN</li>
                 </ul>
             </section>  
             
-            <section>   
+            <!-- ¿Qué es una Red? -->
+            <section id="que-es-una-red">   
                 <h1>¿Qué es una Red?</h1>
                 <ul>
                     <li>● Una <strong>RED</strong> es un conjunto de dispositivos (computadoras, servidores, routers, etc.) conectados entre sí para compartir información y recursos.</li>                
                     <li>● Las redes permiten comunicación rápida, acceso a servicios y compartir recursos (archivos, internet, impresoras, etc.). 🌐</li>
+                    <li>● Sin las redes, cada computadora sería una isla aislada; con ellas, creamos un ecosistema digital interconectado.</li>
                 </ul>
-                <h3>Existen diferentes tipos de redes:</h3>
-                <ul>
-                    <li>● <strong>LAN</strong> (Local Area Network) → Red local, como en una casa o empresa.</li>   
-                    <li>● <strong>WAN</strong> (Wide Area Network) → Red extensa, como Internet.</li>
-                    <li>● <strong>WLAN</strong> (Wireless LAN) → Red inalámbrica (Wi-Fi).</li>       
-                    <li>● <strong>MAN</strong> (Metropolitan Area Network) → Red de una ciudad.</li>      
-                </ul>
+
+                <section id="tipos-de-redes">
+                    <h3>Existen diferentes tipos de redes:</h3>
+                    <ul>
+                        <li>● <strong>LAN</strong> (Local Area Network) → Red local, como en una casa o empresa.
+                            <ul>
+                                <li>Alcance: Limitado a un edificio o campus</li>
+                                <li>Velocidad: Alta (Gigabit/s)</li>
+                                <li>Administración: Centralizada</li>
+                                <li>Ejemplo: La red WiFi de tu hogar</li>
+                            </ul>
+                        </li>   
+                        <li>● <strong>WAN</strong> (Wide Area Network) → Red extensa, como Internet.
+                            <ul>
+                                <li>Alcance: Geográficamente amplio (ciudades, países)</li>
+                                <li>Velocidad: Variable (depende de la tecnología)</li>
+                                <li>Administración: Distribuida</li>
+                                <li>Ejemplo: La red que conecta las sucursales de un banco</li>
+                            </ul>
+                        </li>
+                        <li>● <strong>WLAN</strong> (Wireless LAN) → Red inalámbrica (Wi-Fi).
+                            <ul>
+                                <li>Tipo: Subconjunto de LAN sin cables</li>
+                                <li>Estándares: IEEE 802.11 (a/b/g/n/ac/ax)</li>
+                                <li>Ventaja: Movilidad</li>
+                                <li>Desventaja: Seguridad y cobertura</li>
+                            </ul>
+                        </li>       
+                        <li>● <strong>MAN</strong> (Metropolitan Area Network) → Red de una ciudad.
+                            <ul>
+                                <li>Alcance: Intermedio entre LAN y WAN (una ciudad)</li>
+                                <li>Administración: Generalmente por proveedores de servicios</li>
+                                <li>Ejemplo: Red municipal que conecta edificios gubernamentales</li>
+                            </ul>
+                        </li>
+                        <li>● <strong>PAN</strong> (Personal Area Network) → Red personal.
+                            <ul>
+                                <li>Alcance: Muy reducido (pocos metros)</li>
+                                <li>Tecnologías: Bluetooth, Infrarrojo, NFC</li>
+                                <li>Ejemplo: Conexión entre tu teléfono y auriculares inalámbricos</li>
+                            </ul>
+                        </li>
+                        <li>● <strong>SAN</strong> (Storage Area Network) → Red de almacenamiento.
+                            <ul>
+                                <li>Propósito: Conectar servidores a dispositivos de almacenamiento</li>
+                                <li>Uso: Entornos empresariales y centros de datos</li>
+                                <li>Beneficio: Alta disponibilidad y rendimiento para datos</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="comparison-table">
+                        <table>
+                            <tr>
+                                <th>Tipo de Red</th>
+                                <th>Alcance</th>
+                                <th>Velocidad típica</th>
+                                <th>Ejemplo</th>
+                            </tr>
+                            <tr>
+                                <td>PAN</td>
+                                <td>1-10 metros</td>
+                                <td>1-3 Mbps</td>
+                                <td>Auriculares Bluetooth</td>
+                            </tr>
+                            <tr>
+                                <td>LAN</td>
+                                <td>Edificio/Campus</td>
+                                <td>100 Mbps - 10 Gbps</td>
+                                <td>Red empresarial</td>
+                            </tr>
+                            <tr>
+                                <td>MAN</td>
+                                <td>Ciudad</td>
+                                <td>10 Mbps - 10 Gbps</td>
+                                <td>Red municipal</td>
+                            </tr>
+                            <tr>
+                                <td>WAN</td>
+                                <td>País/Global</td>
+                                <td>1.5 Mbps - 100 Gbps</td>
+                                <td>Internet</td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="topologias">
+                    <h3>Topologías de Red</h3>
+                    <p>La topología de red define cómo los dispositivos están conectados físicamente o lógicamente:</p>
+                    <ul>
+                        <li>● <strong>Estrella</strong>: Todos los dispositivos conectados a un punto central (switch/hub).
+                            <ul>
+                                <li>Ventaja: Fallo en un dispositivo no afecta al resto</li>
+                                <li>Desventaja: Si falla el punto central, falla toda la red</li>
+                                <li>Uso común: Redes LAN modernas</li>
+                            </ul>
+                        </li>
+                        <li>● <strong>Bus</strong>: Todos los dispositivos conectados a un cable principal.
+                            <ul>
+                                <li>Ventaja: Simple y económico</li>
+                                <li>Desventaja: Un corte en el cable afecta toda la red</li>
+                                <li>Uso: Redes antiguas, raramente usado hoy</li>
+                            </ul>
+                        </li>
+                        <li>● <strong>Anillo</strong>: Dispositivos conectados en un círculo cerrado.
+                            <ul>
+                                <li>Ventaja: Flujo de datos predecible</li>
+                                <li>Desventaja: Un fallo puede interrumpir toda la red</li>
+                                <li>Uso: Token Ring (histórico)</li>
+                            </ul>
+                        </li>
+                        <li>● <strong>Malla</strong>: Cada dispositivo conectado a todos los demás.
+                            <ul>
+                                <li>Ventaja: Alta redundancia y tolerancia a fallos</li>
+                                <li>Desventaja: Costoso y complejo de implementar</li>
+                                <li>Uso: Infraestructura crítica, Internet backbone</li>
+                            </ul>
+                        </li>
+                        <li>● <strong>Árbol</strong>: Estructura jerárquica con un nodo raíz.
+                            <ul>
+                                <li>Ventaja: Fácil expansión y administración</li>
+                                <li>Desventaja: Dependencia del nodo raíz</li>
+                                <li>Uso: Redes empresariales grandes</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                </section>
+
+                <section id="componentes">
+                    <h3>Componentes básicos de una red</h3>
+                    <ul>
+                        <li>● <strong>Host/Nodos</strong>: Cualquier dispositivo conectado a la red (PC, servidor, smartphone).</li>
+                        <li>● <strong>Medios de transmisión</strong>: 
+                            <ul>
+                                <li><em>Guiados</em>: Cable Ethernet (UTP/STP), Fibra óptica, Cable coaxial</li>
+                                <li><em>No guiados</em>: WiFi (ondas de radio), Bluetooth, Infrarrojo</li>
+                            </ul>
+                        </li>
+                        <li>● <strong>Dispositivos de interconexión</strong>:
+                            <ul>
+                                <li><em>Capa 1 (Física)</em>: Hub, Repetidor</li>
+                                <li><em>Capa 2 (Enlace)</em>: Switch, Bridge</li>
+                                <li><em>Capa 3 (Red)</em>: Router, Gateway</li>
+                            </ul>
+                        </li>
+                        <li>● <strong>Software de red</strong>: Sistema operativo, drivers, aplicaciones de red.</li>
+                    </ul>
+
+                    <div class="comparison-table">
+                        <table>
+                            <tr>
+                                <th>Dispositivo</th>
+                                <th>Función</th>
+                                <th>Capa OSI</th>
+                            </tr>
+                            <tr>
+                                <td>Hub</td>
+                                <td>Repite señal a todos los puertos</td>
+                                <td>Física</td>
+                            </tr>
+                            <tr>
+                                <td>Switch</td>
+                                <td>Envía datos solo al puerto destino</td>
+                                <td>Enlace</td>
+                            </tr>
+                            <tr>
+                                <td>Router</td>
+                                <td>Selecciona la mejor ruta entre redes</td>
+                                <td>Red</td>
+                            </tr>
+                            <tr>
+                                <td>Gateway</td>
+                                <td>Conecta redes con protocolos diferentes</td>
+                                <td>Red-Aplicación</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="important-note">
+                        <p><strong>Nota importante:</strong> En redes modernas, los dispositivos a menudo cumplen múltiples funciones. Por ejemplo, tu "router" doméstico generalmente es una combinación de router, switch, punto de acceso WiFi y modem.</p>
+                    </div>
+                </section>
             </section>
 
-            <section>   
-                <h1>¿Como se comunican entre si?</h1>
+            <!-- ¿Cómo se comunican? -->
+            <section id="comunicacion">   
+                <h1>¿Cómo se comunican entre sí?</h1>
                 <p>Las computadoras y dispositivos en una red se comunican entre sí usando protocolos que establecen reglas para el intercambio de datos.</p>
                 <ul>
-                    <li>● <strong>Por cable</strong> (Ethernet, fibra óptica) o <strong>Inámbrico</strong> (Wi-Fi, Bluetooth).</li>                
-                    <li>● A través de <strong>direcciones IP</strong>, que identifican a cada dispositivo en la red.</li>
-                    <li>● Usando <strong>protocolos de comunicación</strong> (TCP/IP, UDP, HTTP, DNS, ARP, etc...)</li>
+                    <li>● <strong>Por cable</strong> (Ethernet, fibra óptica) o <strong>Inalámbrico</strong> (Wi-Fi, Bluetooth).
+                        <ul>
+                            <li><em>Cable Ethernet (UTP/STP)</em>: Velocidades de 10 Mbps a 10 Gbps, susceptible a interferencias electromagnéticas</li>
+                            <li><em>Fibra óptica</em>: Velocidades de hasta 100 Gbps o más, inmune a interferencias, mayor alcance</li>
+                            <li><em>WiFi</em>: Velocidades variables (hasta 9.6 Gbps en 802.11ax/WiFi 6), afectado por obstáculos e interferencias</li>
+                            <li><em>Bluetooth</em>: Corto alcance, velocidades entre 1-3 Mbps (clásico) o hasta 50 Mbps (BLE 5.0)</li>
+                        </ul>
+                    </li>                
+                    <li>● A través de <strong>direcciones IP</strong>, que identifican a cada dispositivo en la red.
+                        <ul>
+                            <li>Cada dispositivo tiene una dirección IP única en la red</li>
+                            <li>Las IP permiten que los datos lleguen correctamente a su destino</li>
+                            <li>Son como las "direcciones postales" del mundo digital</li>
+                        </ul>
+                    </li>
+                    <li>● Usando <strong>protocolos de comunicación</strong> (TCP/IP, UDP, HTTP, DNS, ARP, etc...)
+                        <ul>
+                            <li>Los protocolos definen reglas, formatos y procedimientos</li>
+                            <li>Determinan cómo se empaquetan, enrutan, transmiten y reciben los datos</li>
+                            <li>Cada protocolo está diseñado para un propósito específico en la comunicación</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="example-scenario">
+                    <h4>Escenario paso a paso: ¿Qué ocurre cuando cargas una página web?</h4>
+                    <ol>
+                        <li>Tu dispositivo solicita la dirección IP del servidor web (google.com) a un servidor DNS</li>
+                        <li>Tu dispositivo establece una conexión TCP con el servidor usando su dirección IP</li>
+                        <li>A través de esta conexión, tu navegador envía una solicitud HTTP al servidor</li>
+                        <li>El servidor procesa la solicitud y envía de vuelta los datos de la página web</li>
+                        <li>Tu navegador recibe los datos, los interpreta y muestra la página web</li>
+                    </ol>
+                </div>
+
+                <h3>Conceptos clave en la comunicación de redes</h3>
+                <ul>
+                    <li>● <strong>Paquetes</strong>: Unidad básica de datos transmitidos en una red.
+                        <ul>
+                            <li>Contienen datos del usuario + información de control (headers)</li>
+                            <li>Permiten enviar grandes cantidades de información en fragmentos manejables</li>
+                            <li>Si un paquete se pierde, solo ese paquete necesita ser retransmitido</li>
+                        </ul>
+                    </li>
+                    <li>● <strong>Ancho de banda</strong>: Capacidad de transmisión de datos de una red.
+                        <ul>
+                            <li>Se mide en bits por segundo (bps, Kbps, Mbps, Gbps)</li>
+                            <li>Mayor ancho de banda permite transferir más datos simultáneamente</li>
+                        </ul>
+                    </li>
+                    <li>● <strong>Latencia</strong>: Tiempo que tarda un paquete en ir de origen a destino.
+                        <ul>
+                            <li>Se mide en milisegundos (ms)</li>
+                            <li>Afecta la velocidad percibida, especialmente en aplicaciones interactivas</li>
+                            <li>Determinada por distancia física, número de saltos, congestión, etc.</li>
+                        </ul>
+                    </li>
                 </ul>
             </section>
 
-            <section id="info-section-desplegable" class="desplegable-info">
-                <h2 href="#" class="toggle-btn">📡 Ejemplo de Comunicación 🔽</h2>
-                <div class="submenu-info">
-                    <ul>
-                        <li>1. Tu PC envía una solicitud a un servidor web (ej. google.com).</li>
-                        <li>2. El DNS traduce el nombre a una dirección IP.</li>
-                        <li>3. Se establece una conexión con el servidor usando TCP/IP.</li>
-                        <li>4. El servidor responde con los datos de la página web.</li>
-                        <li>5. Tu navegador muestra la página.</li>
-                    </ul>               
-                </div>
-            </section>
-
-            <section>   
-                <h1>¿Que es Internet?</h1>
+            <!-- ¿Qué es Internet? -->
+            <section id="que-es-internet">   
+                <h1>¿Qué es Internet?</h1>
                 <p>🌐 Internet es una red global de redes que conecta millones de dispositivos en todo el mundo para intercambiar información.</p>
                 
                 <h3>Características clave</h3>
                 <ul>
-                    <li>● Basado en el protocolo TCP/IP → Usa protocolos estándar para comunicación.</li>
-                    <li>● Descentralizado → No tiene un único dueño; múltiples servidores lo conforman.</li>
-                    <li>● Escalable → Permite la conexión de nuevos dispositivos continuamente.</li>
-                    <li>● Accesible globalmente → Desde cualquier lugar con conexión.</li>
+                    <li>● <strong>Basado en el protocolo TCP/IP</strong> → Usa protocolos estándar para comunicación.
+                        <ul>
+                            <li>TCP/IP es el "idioma común" que todos los dispositivos en Internet hablan</li>
+                            <li>Permite que dispositivos diferentes se comuniquen independientemente del hardware o software</li>
+                        </ul>
+                    </li>
+                    <li>● <strong>Descentralizado</strong> → No tiene un único dueño; múltiples servidores lo conforman.
+                        <ul>
+                            <li>No hay un punto central de control o fallo</li>
+                            <li>Administrado por múltiples organizaciones (ICANN, IANA, ISPs, etc.)</li>
+                            <li>Esta arquitectura lo hace resistente a fallos y censura</li>
+                        </ul>
+                    </li>
+                    <li>● <strong>Escalable</strong> → Permite la conexión de nuevos dispositivos continuamente.
+                        <ul>
+                            <li>Diseñado para crecer sin rediseño significativo</li>
+                            <li>De millones a miles de millones de dispositivos conectados</li>
+                        </ul>
+                    </li>
+                    <li>● <strong>Accesible globalmente</strong> → Desde cualquier lugar con conexión.
+                        <ul>
+                            <li>Permite comunicación instantánea a nivel mundial</li>
+                            <li>Ha transformado cómo trabajamos, aprendemos y nos conectamos</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Historia breve de Internet</h3>
+                <ul>
+                    <li>● <strong>1969</strong>: ARPANET - Primera red que usó conmutación de paquetes (precursora de Internet)</li>
+                    <li>● <strong>1983</strong>: Adopción oficial de TCP/IP como protocolo estándar</li>
+                    <li>● <strong>1989</strong>: Tim Berners-Lee propone la World Wide Web (WWW)</li>
+                    <li>● <strong>1991</strong>: La WWW se hace pública</li>
+                    <li>● <strong>1993</strong>: Lanzamiento del navegador Mosaic, popularizando la web</li>
+                    <li>● <strong>1998</strong>: Fundación de Google</li>
+                    <li>● <strong>2004</strong>: Inicio de Facebook, marcando la era de las redes sociales</li>
+                    <li>● <strong>2007</strong>: Lanzamiento del iPhone, revolucionando el internet móvil</li>
                 </ul>                      
-                <p class="msg-info">Luego se entrara mas en detalle...</p>
+                <p class="msg-info">Luego se entrará más en detalle...</p>
             </section>
 
             <section id="info-section-desplegable" class="desplegable-info">
-                <h2 href="#" class="toggle-btn">Ejemplo basico de como funciona: 🔽</h2>
+                <h2 href="#" class="toggle-btn">Ejemplo básico de cómo funciona Internet: 🔽</h2>
                 <div class="submenu-info">
-                <ul>
-                    <li>
-                        1. Tu dispositivo se conecta a un proveedor de Internet (ISP)...
-                        <ul>
-                            <li>Tu dispositivo (PC, móvil, etc.) se conecta a través de una red local...</li>
-                            <li>El ISP asigna una dirección IP a tu dispositivo...</li>
-                        </ul>
-                    </li>
-                    <li>2. Solicitas información...
-                        <ul>
-                            <li>Cuando abres una web, tu navegador envía una solicitud HTTP(S) a la URL ingresada.</li>
-                            <li>Si la página requiere autenticación, cookies o tokens, estos se incluyen en la solicitud.</li>
-                        </ul>                  
-                    </li>
-                    <li>3. El DNS traduce el dominio a una dirección IP.
-                        <ul>
-                            <li>El dominio (ej. google.com) se convierte en una IP mediante servidores DNS.</li>
-                            <li>Si la IP ya está en caché (en el sistema o router), el DNS no tiene que consultar a servidores externos.</li>
-                        </ul>
-                    </li>
-                    <li>4. Se envían y reciben paquetes de datos entre tu dispositivo y el servidor.
-                        <ul>
-                           <li>Tu dispositivo usa protocolos como TCP/IP para fragmentar y enviar datos.</li>
-                           <li>Los paquetes viajan a través de múltiples routers y redes hasta llegar al servidor.</li>
-                           <li>El servidor responde con los datos solicitados (HTML, CSS, JS, imágenes, etc.).</li>
-                        </ul>
-                    </li>
-                    <li>5. Los datos se muestran en tu pantalla (página web, video, etc.).
-                        <ul>
-                            <li>El navegador interpreta y muestra la página web.</li>
-                            <li>Si hay elementos dinámicos, pueden ejecutarse scripts y cargar más contenido en segundo plano.</li>
-                        </ul>
-                    </li>
-                </ul>          
-            </div>
-        </section>
-
-        <section>   
-            <h1>¿Que es un protocolo?</h1>
-            <p>Un protocolo es un conjunto de reglas y estándares que definen cómo se comunican dos o más dispositivos en una red.</p>
-            <p>Podriamos decir que, define un "idioma" común para que los dispositivos intercambien información correctamente.</p>
-            <h3>Ejemplos de protocolos en Internet:</h3>
-            <ul>
-                <li>● HTTP/HTTPS → Para acceder a páginas web.</li>
-                <li>● TCP/IP → Base de la comunicación en Internet.</li>
-                <li>● DNS → Traduce dominios en direcciones IP.</li>
-                <li>● FTP → Para transferir archivos.</li>
-                <li>● SMTP/IMAP/POP3 → Para enviar y recibir correos electrónicos.</li>
-            </ul>
-            <p class="msg-info">Luego se comentaran mas en detalle...</p>
-        </section>
-
-        
-        <section>   
-            <h1>¿Que significa IP?</h1>
-            <ul>
-                <li>● IP (Internet Protocol) Es un protocolo que permite identificar dispositivos en una red mediante una dirección IP (un número único asignado a cada dispositivo).</li>
-                <li>● Se usa para enviar y recibir datos en Internet.</li>
-                <li>● Ejemplo de dirección IP: 192.168.1.1 (IPv4) o 2001:db8::ff00:42:8329 (IPv6).</li>
-            </ul>
-            <section>
-                <h3>IPv4 (Internet Protocol version 4)</h3>
-                <ul>
-                    <li>Usa direcciones de 32 bits (4 números del 0 al 255 separados por puntos).</li>
-                    <li>Permite un máximo de ≈ 4.3 mil millones de direcciones, lo que ya no es suficiente.</li>
-                    <li>Ej: 192.168.1.1</li>
-                </ul>
-            </section>
-            <section>
-                <h3>IPv6 (Internet Protocol version 6)</h3>
-                <ul>
-                    <li>Usa direcciones de 128 bits (números y letras en hexadecimal, separados por :).</li>
-                    <li>Soporta trillones de direcciones y mejora la seguridad y eficiencia.</li>
-                    <li>Ej: 2001:db8::ff00:42:8329</li>
-                </ul>
-                <h3>💡 ¿Por qué IPv6?</h3>
-                <ul>
-                    <li>IPv4 se está agotando, por eso se creó IPv6 con muchas más direcciones disponibles.</li>
-                </ul>
-            </section> 
-
-
-            <section>
-                <h1>IP Pública vs. IP Privada</h1>
-                <section class="ip-pub">
-                    <h3>IP Pública</h3>
                     <ul>
-                        <li>Es la dirección que te asigna tu proveedor de Internet (ISP)</li>                            .</li>
-                        <li>Es única en Internet y permite que tu red sea accesible desde cualquier lugar.</li>
-                        <li>Ej: 181.47.88.223.</li>
-                        <div class="console-code">
-                            <!-- Línea con comando y comentario -->
-                            <div class="console-line">
-                                <span class="console-command">$ curl ifconfig.me</span>
-                                <span class="console-comment">#Comando para ver la IP pública</span>
-                            </div>
-                            <!-- Salida -->
-                            <p class="console-output"></p>
-                        </div>
-                    </ul>
-                    <p class="msg-ej">IP Pública → Visible desde Internet, asignada por tu ISP.</p>
-                </section> 
-                <section class="ip-priv">
-                    <h3>IP Privada</h3>
-                    <ul>
-                        <li>Se usa dentro de redes locales (casas, oficinas, etc.).</li>
-                        <li>No es accesible desde Internet directamente.</li>
-                        <li>Ej:
+                        <li>
+                            1. Tu dispositivo se conecta a un proveedor de Internet (ISP)...
                             <ul>
-                                <li>1. 192.168.0.1 - 192.168.255.255</li>
-                                <li>2. 10.0.0.1 - 10.255.255.255</li>
-                                <li>3. 172.16.0.0 - 172.31.255.255</li>
+                                <li>Tu dispositivo (PC, móvil, etc.) se conecta a través de una red local...</li>
+                                <li>El ISP asigna una dirección IP a tu dispositivo...</li>
+                                <li>Esta conexión puede ser por cable (fibra, DSL, cable coaxial) o inalámbrica (4G/5G)</li>
                             </ul>
                         </li>
-                    </ul>        
-                    <div class="console-code">
-                        <!-- Línea con comando y comentario -->
-                        <div class="console-line">
-                            <span class="console-command">ipconfig</span>
-                            <span class="console-comment">#Comando para ver la IP Privada</span>
-                        </div>
-                        <!-- Salida -->
-                        <p class="console-output"></p>
-                    </div>        
-                    <p class="msg-ej">IP Privada → Usada dentro de redes locales, no accesible desde afuera.</p>
-                </section> 
+                        <li>2. Solicitas información...
+                            <ul>
+                                <li>Cuando abres una web, tu navegador envía una solicitud HTTP(S) a la URL ingresada.</li>
+                                <li>Si la página requiere autenticación, cookies o tokens, estos se incluyen en la solicitud.</li>
+                                <li>La solicitud incluye el método (GET, POST), cabeceras, y posiblemente datos.</li>
+                            </ul>                  
+                        </li>
+                        <li>3. El DNS traduce el dominio a una dirección IP.
+                            <ul>
+                                <li>El dominio (ej. google.com) se convierte en una IP mediante servidores DNS.</li>
+                                <li>Si la IP ya está en caché (en el sistema o router), el DNS no tiene que consultar a servidores externos.</li>
+                                <li>Esta traducción es necesaria porque las redes trabajan con IPs, no con nombres.</li>
+                            </ul>
+                        </li>
+                        <li>4. Se envían y reciben paquetes de datos entre tu dispositivo y el servidor.
+                            <ul>
+                               <li>Tu dispositivo usa protocolos como TCP/IP para fragmentar y enviar datos.</li>
+                               <li>Los paquetes viajan a través de múltiples routers y redes hasta llegar al servidor.</li>
+                               <li>Cada paquete puede tomar una ruta diferente para llegar al destino.</li>
+                               <li>Si hay pérdida de paquetes, TCP solicita su retransmisión.</li>
+                            </ul>
+                        </li>
+                        <li>5. El servidor procesa tu solicitud y responde.
+                            <ul>
+                                <li>El servidor web recibe la solicitud, la procesa y genera una respuesta.</li>
+                                <li>La respuesta incluye código de estado (200 OK, 404 Not Found, etc.), cabeceras y contenido.</li>
+                                <li>Si es un sitio dinámico, puede consultar bases de datos o APIs antes de responder.</li>
+                            </ul>
+                        </li>
+                        <li>6. Tu navegador recibe y muestra la información.
+                            <ul>
+                                <li>Los paquetes de respuesta llegan a tu dispositivo y se reensamblan.</li>
+                                <li>Tu navegador interpreta el HTML, CSS y JavaScript recibidos.</li>
+                                <li>El contenido se renderiza en pantalla para que puedas interactuar con él.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="real-world-application">
+                        <h4>Aplicación en el mundo real</h4>
+                        <p>Este proceso ocurre constantemente, a menudo en milisegundos, cada vez que:</p>
+                        <ul>
+                            <li>• Abres una página web</li>
+                            <li>• Envías un correo electrónico</li>
+                            <li>• Reproduces un video en streaming</li>
+                            <li>• Realizas una videollamada</li>
+                            <li>• Descargas una aplicación</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
-            <p class="msg-ej">La IP seria como la dirección de tu casa....</p>
-        </section>
 
-        <section>
-            <h1>¿Qué es un puerto y para qué sirve?</h1>
-            <p>En redes, un <strong>puerto</strong> es un número que identifica un proceso o servicio dentro de un dispositivo. Permite que múltiples servicios se comuniquen a través de una misma dirección IP.</p>
-            
-            <h2>Puertos más comunes</h2>
-            <ul>
-                <li><strong>80</strong> – HTTP (Navegación web)</li>
-                <li><strong>443</strong> – HTTPS (Navegación segura con cifrado)</li>
-                <li><strong>22</strong> – SSH (Acceso remoto seguro)</li>
-                <li><strong>21</strong> – FTP (Transferencia de archivos)</li>
-                <li><strong>25</strong> – SMTP (Envío de correos electrónicos)</li>
-                <li><strong>53</strong> – DNS (Resolución de nombres de dominio)</li>
-                <li><strong>3306</strong> – MySQL (Base de datos)</li>
-            </ul>
-            
-            <h2>Tipos de puertos</h2>
-            <ul>
-                <li><strong>Puertos bien conocidos (0-1023)</strong>: Usados por protocolos estándar.</li>
-                <li><strong>Puertos registrados (1024-49151)</strong>: Usados por aplicaciones específicas.</li>
-                <li><strong>Puertos dinámicos (49152-65535)</strong>: Asignados temporalmente para conexiones.</li>
-            </ul>
-        </section>        
-
-            <section>
-                <h1>Principales Protocolos</h1>
+            <!-- ¿Qué es un protocolo? -->
+            <section id="que-es-protocolo">   
+                <h1>¿Qué es un protocolo?</h1>
+                <p>Un <strong>protocolo</strong> es un conjunto de reglas y estándares que determinan cómo se comunican los dispositivos en una red. 📝</p>
+                
                 <ul>
-                    <li><strong>TCP/IP</strong> – Protocolo base de Internet que garantiza la entrega de datos.</li>
-                    <li><strong>UDP</strong> – Similar a TCP, pero sin verificación de entrega, más rápido pero menos fiable.</li>
-                    <li><strong>HTTP/HTTPS</strong> – Protocolos para la comunicación web; HTTPS incluye seguridad con cifrado SSL/TLS.</li>
-                    <li><strong>FTP/SFTP</strong> – Protocolos para la transferencia de archivos; SFTP es la versión segura.</li>
-                    <li><strong>SSH</strong> – Protocolo para acceso remoto seguro a servidores.</li>
-                    <li><strong>ICMP</strong> – Utilizado para diagnósticos de red, como en el comando <code>ping</code>.</li>
-                    <li><strong>DNS</strong> – Convierte nombres de dominio en direcciones IP.</li>
-                    <li><strong>DHCP</strong> – Asigna direcciones IP automáticamente en una red.</li>
+                    <li>● <strong>Función</strong>: Define el formato, sincronización, secuencia y control de errores en la comunicación de datos.
+                        <ul>
+                            <li>Establece un "lenguaje común" entre dispositivos</li>
+                            <li>Maneja la representación de datos y estructuras de mensajes</li>
+                            <li>Define cómo se establecen y terminan las conexiones</li>
+                        </ul>
+                    </li>
+                    <li>● <strong>Analogía</strong>: Son como las reglas de un idioma o el protocolo diplomático.
+                        <ul>
+                            <li>Si yo hablo español y tú inglés, necesitamos un protocolo común para entendernos</li>
+                            <li>En diplomacia, existen reglas específicas sobre cómo los representantes deben interactuar</li>
+                        </ul>
+                    </li>
+                    <li>● <strong>Importancia</strong>: Sin protocolos, los datos serían incomprensibles entre sistemas diferentes.
+                        <ul>
+                            <li>Permiten la interoperabilidad entre dispositivos de diferentes fabricantes</li>
+                            <li>Facilitan la evolución tecnológica mientras mantienen compatibilidad</li>
+                            <li>Proporcionan mecanismos estandarizados para gestionar errores y problemas</li>
+                        </ul>
+                    </li>
                 </ul>
-                <p class="msg-info">Luego se comentaran mas en detalle...</p>
+
+                <div class="protocol-card">
+                    <h4>Componentes típicos de un protocolo</h4>
+                    <ul>
+                        <li><strong>Sintaxis</strong>: Formato de los datos y señales</li>
+                        <li><strong>Semántica</strong>: Significado de cada sección de datos</li>
+                        <li><strong>Temporización</strong>: Velocidad y secuencia de la comunicación</li>
+                        <li><strong>Control de errores</strong>: Detección y corrección de problemas</li>
+                        <li><strong>Control de flujo</strong>: Regulación de la transmisión de datos</li>
+                        <li><strong>Establecimiento/cierre de conexión</strong>: Inicio y finalización del diálogo</li>
+                    </ul>
+                </div>
+
+                <h3>Clasificación de protocolos</h3>
+                <ul>
+                    <li>● <strong>Por función</strong>:
+                        <ul>
+                            <li><em>Protocolos de comunicación</em>: TCP, UDP, HTTP, FTP</li>
+                            <li><em>Protocolos de enrutamiento</em>: OSPF, BGP, RIP</li>
+                            <li><em>Protocolos de seguridad</em>: SSL/TLS, IPsec, SSH</li>
+                        </ul>
+                    </li>
+                    <li>● <strong>Por capa en el modelo OSI/TCP/IP</strong>:
+                        <ul>
+                            <li><em>Capa física/enlace</em>: Ethernet, Wi-Fi (802.11), Bluetooth</li>
+                            <li><em>Capa de red</em>: IP, ICMP, ARP</li>
+                            <li><em>Capa de transporte</em>: TCP, UDP, SCTP</li>
+                            <li><em>Capa de aplicación</em>: HTTP, SMTP, DNS, FTP</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="example-scenario">
+                    <h4>Ejemplo de comunicación con múltiples protocolos</h4>
+                    <p>Cuando accedes a un sitio web seguro (https://ejemplo.com):</p>
+                    <ol>
+                        <li>Tu navegador usa <strong>DNS</strong> para traducir "ejemplo.com" a una dirección IP</li>
+                        <li>Utiliza <strong>TCP</strong> para establecer una conexión confiable con el servidor</li>
+                        <li>Emplea <strong>TLS</strong> para cifrar la comunicación</li>
+                        <li>Envía una solicitud mediante <strong>HTTP</strong> para pedir la página web</li>
+                        <li>Recibe la respuesta y muestra el contenido</li>
+                    </ol>
+                    <p>Cada protocolo trabaja en una capa diferente y cumple una función específica en el proceso.</p>
+                </div>
             </section>
-            
 
-            <section id="nextBack-section">
-                <a id="next-section" href="./U-redes-Profundizando.html">Siguiente Seccion</a><i class="fas fa-arrow-right"></i>
-            </section>  
-        </main>        
-    </div>
+            <!-- ¿Qué significa IP? -->
+            <section id="ip">   
+                <h1>¿Qué significa IP?</h1>
+                <p><strong>IP</strong> significa <strong>Internet Protocol</strong> (Protocolo de Internet) y es fundamental para la comunicación en redes. 🔢</p>
+                
+                <ul>
+                    <li>● <strong>Función principal</strong>: Asignar una dirección única (dirección IP) a cada dispositivo en una red.
+                        <ul>
+                            <li>Permite identificar y localizar dispositivos en una red</li>
+                            <li>Facilita el enrutamiento de paquetes de datos entre origen y destino</li>
+                            <li>Es la base del direccionamiento en Internet</li>
+                        </ul>
+                    </li>
+                    <li>● <strong>Analogía</strong>: Es como el sistema de direcciones postales para Internet.
+                        <ul>
+                            <li>La dirección IP es como la dirección de tu casa</li>
+                            <li>Los routers son como las oficinas de correos</li>
+                            <li>Los paquetes de datos son como las cartas</li>
+                        </ul>
+                    </li>
+                </ul>
 
+                <section id="ipv4">
+                    <h3>IPv4 (Internet Protocol version 4)</h3>
+                    <ul>
+                        <li>● <strong>Formato</strong>: Dirección de 32 bits, escrita como cuatro números decimales separados por puntos.
+                            <ul>
+                                <li>Ejemplo: 192.168.1.1</li>
+                                <li>Cada número puede variar de 0 a 255 (8 bits)</li>
+                                <li>Total de direcciones posibles: 2^32 ≈ 4.3 mil millones</li>
+                            </ul>
+                        </li>
+                        <li>● <strong>Limitación</strong>: Número limitado de direcciones disponibles (agotamiento de IPv4).
+                            <ul>
+                                <li>El crecimiento de Internet superó las expectativas originales</li>
+                                <li>Se implementaron soluciones temporales como NAT (Network Address Translation)</li>
+                                <li>La escasez llevó al desarrollo de IPv6</li>
+                            </ul>
+                        </li>
+                        <li>● <strong>Clases de direcciones</strong>: Tradicionalmente se dividían en clases A, B, C, D y E.
+                            <table class="comparison-table">
+                                <tr>
+                                    <th>Clase</th>
+                                    <th>Rango</th>
+                                    <th>Uso típico</th>
+                                </tr>
+                                <tr>
+                                    <td>A</td>
+                                    <td>1.0.0.0 - 126.255.255.255</td>
+                                    <td>Grandes organizaciones</td>
+                                </tr>
+                                <tr>
+                                    <td>B</td>
+                                    <td>128.0.0.0 - 191.255.255.255</td>
+                                    <td>Organizaciones medianas</td>
+                                </tr>
+                                <tr>
+                                    <td>C</td>
+                                    <td>192.0.0.0 - 223.255.255.255</td>
+                                    <td>Redes pequeñas</td>
+                                </tr>
+                                <tr>
+                                    <td>D</td>
+                                    <td>224.0.0.0 - 239.255.255.255</td>
+                                    <td>Multicast</td>
+                                </tr>
+                                <tr>
+                                    <td>E</td>
+                                    <td>240.0.0.0 - 255.255.255.255</td>
+                                    <td>Experimental</td>
+                                </tr>
+                            </table>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="ipv6">
+                    <h3>IPv6 (Internet Protocol version 6)</h3>
+                    <ul>
+                        <li>● <strong>Formato</strong>: Dirección de 128 bits, escrita como ocho grupos de cuatro dígitos hexadecimales.
+                            <ul>
+                                <li>Ejemplo: 2001:0db8:85a3:0000:0000:8a2e:0370:7334</li>
+                                <li>Puede abreviarse eliminando ceros: 2001:db8:85a3::8a2e:370:7334</li>
+                                <li>Total de direcciones: 2^128 ≈ 340 undecillones (¡muchísimas!)</li>
+                            </ul>
+                        </li>
+                        <li>● <strong>Ventajas</strong>: Amplio espacio de direcciones, mejor seguridad, autoconfiguración.
+                            <ul>
+                                <li>Elimina la necesidad de NAT</li>
+                                <li>Seguridad integrada con IPsec</li>
+                                <li>Mejor soporte para QoS (Calidad de Servicio)</li>
+                                <li>Encabezados simplificados para mayor eficiencia</li>
+                            </ul>
+                        </li>
+                        <li>● <strong>Adopción</strong>: Implementación gradual junto con IPv4 (coexistencia).
+                            <ul>
+                                <li>Muchas redes operan en modo "dual stack" (ambos protocolos)</li>
+                                <li>Técnicas de transición: túneles, traducción, etc.</li>
+                                <li>Adopción completa tomará años o décadas</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="ip-public-private">
+                    <h3>IP Pública vs IP Privada</h3>
+                    
+                    <div class="ip-comparison">
+                        <div class="ip-box ip-pub">
+                            <h4>IP Pública</h4>
+                            <ul>
+                                <li>● <strong>Definición</strong>: Asignada por tu ISP, visible en Internet</li>
+                                <li>● <strong>Uso</strong>: Identificar tu red en Internet</li>
+                                <li>● <strong>Cantidad</strong>: Generalmente una por conexión</li>
+                                <li>● <strong>Ejemplo</strong>: 203.0.113.45</li>
+                                <li>● <strong>Característica</strong>: Debe ser única globalmente</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="ip-box ip-priv">
+                            <h4>IP Privada</h4>
+                            <ul>
+                                <li>● <strong>Definición</strong>: Usada dentro de redes locales</li>
+                                <li>● <strong>Uso</strong>: Identificar dispositivos en tu red local</li>
+                                <li>● <strong>Cantidad</strong>: Múltiples en la misma red</li>
+                                <li>● <strong>Ejemplo</strong>: 192.168.1.5, 10.0.0.2</li>
+                                <li>● <strong>Característica</strong>: No enrutable directamente en Internet</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h4>Rangos de IPs privadas (no enrutables en Internet):</h4>
+                    <ul>
+                        <li>● <code>10.0.0.0</code> a <code>10.255.255.255</code> (10.0.0.0/8)</li>
+                        <li>● <code>172.16.0.0</code> a <code>172.31.255.255</code> (172.16.0.0/12)</li>
+                        <li>● <code>192.168.0.0</code> a <code>192.168.255.255</code> (192.168.0.0/16)</li>
+                    </ul>
+                    
+                    <div class="important-note">
+                        <p><strong>¿Cómo se conectan las IPs privadas a Internet?</strong> Mediante NAT (Network Address Translation), que permite que múltiples dispositivos con IPs privadas compartan una única IP pública. Tu router realiza este proceso automáticamente.</p>
+                    </div>
+                </section>
+
+                <section id="mascara-de-red">
+                    <h3>Máscara de red</h3>
+                    <p>La máscara de red determina qué parte de una dirección IP identifica la red y qué parte identifica el host.</p>
+                    
+                    <ul>
+                        <li>● <strong>Notación decimal</strong>: Similar a una dirección IP (ej. 255.255.255.0)</li>
+                        <li>● <strong>Notación CIDR</strong>: Número de bits para la red (ej. /24)</li>
+                        <li>● <strong>Función</strong>: Dividir redes en subredes y definir el tamaño de las redes</li>
+                    </ul>
+                    
+                    <h4>Ejemplos comunes:</h4>
+                    <table class="comparison-table">
+                        <tr>
+                            <th>Notación CIDR</th>
+                            <th>Máscara decimal</th>
+                            <th>Hosts disponibles</th>
+                            <th>Uso típico</th>
+                        </tr>
+                        <tr>
+                            <td>/24</td>
+                            <td>255.255.255.0</td>
+                            <td>254</td>
+                            <td>Red local pequeña</td>
+                        </tr>
+                        <tr>
+                            <td>/16</td>
+                            <td>255.255.0.0</td>
+                            <td>65,534</td>
+                            <td>Red corporativa</td>
+                        </tr>
+                        <tr>
+                            <td>/8</td>
+                            <td>255.0.0.0</td>
+                            <td>16,777,214</td>
+                            <td>Redes muy grandes</td>
+                        </tr>
+                        <tr>
+                            <td>/30</td>
+                            <td>255.255.255.252</td>
+                            <td>2</td>
+                            <td>Enlaces punto a punto</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section id="calc-subredes">
+                    <h3>Cálculo de subredes</h3>
+                    <p>El proceso de subdividir una red IP en múltiples redes más pequeñas.</p>
+                    
+                    <h4>Pasos básicos para calcular subredes:</h4>
+                    <ol>
+                        <li>Determinar cuántas subredes necesitas</li>
+                        <li>Determinar cuántos hosts necesitas por subred</li>
+                        <li>Seleccionar una máscara de subred apropiada</li>
+                        <li>Calcular las direcciones de red, broadcast y rango de hosts</li>
+                    </ol>
+                    
+                    <div class="example-scenario">
+                        <h4>Ejemplo: Subdividir 192.168.1.0/24 en 4 subredes</h4>
+                        <ul>
+                            <li>● Red original: 192.168.1.0/24</li>
+                            <li>● Nueva máscara: /26 (2 bits adicionales para subredes)</li>
+                            <li>● Resultado:
+                                <ul>
+                                    <li>Subred 1: 192.168.1.0/26 (hosts: 192.168.1.1 - 192.168.1.62)</li>
+                                    <li>Subred 2: 192.168.1.64/26 (hosts: 192.168.1.65 - 192.168.1.126)</li>
+                                    <li>Subred 3: 192.168.1.128/26 (hosts: 192.168.1.129 - 192.168.1.190)</li>
+                                    <li>Subred 4: 192.168.1.192/26 (hosts: 192.168.1.193 - 192.168.1.254)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="important-note">
+                        <p><strong>Nota importante:</strong> La primera dirección de cada subred es la dirección de red y la última es la dirección de broadcast. Ambas no se pueden asignar a dispositivos.</p>
+                    </div>
+                </section>
+            </section>
+
+            <!-- ¿Qué es un puerto? -->
+            <section id="puertos">   
+                <h1>¿Qué es un puerto?</h1>
+                <p>Un <strong>puerto</strong> es un número que identifica una aplicación o servicio específico dentro de un dispositivo con una dirección IP. 🚪</p>
+                
+                <ul>
+                    <li>● <strong>Función</strong>: Permiten que múltiples aplicaciones o servicios utilicen la misma conexión de red.
+                        <ul>
+                            <li>Una IP identifica el dispositivo, un puerto identifica la aplicación</li>
+                            <li>Facilita la comunicación simultánea de múltiples servicios</li>
+                            <li>Esencial para el funcionamiento de Internet moderno</li>
+                        </ul>
+                    </li>
+                    <li>● <strong>Analogía</strong>: Si la IP es como la dirección de un edificio, los puertos son como los números de apartamento.
+                        <ul>
+                            <li>El edificio (dispositivo) tiene una dirección única (IP)</li>
+                            <li>Cada apartamento (aplicación) tiene un número único (puerto)</li>
+                            <li>El correo (datos) llega al edificio correcto y luego al apartamento específico</li>
+                        </ul>
+                    </li>
+                    <li>● <strong>Rango</strong>: Los puertos van desde 0 hasta 65535 (2^16 - 1).
+                        <ul>
+                            <li>Total de 65,536 puertos posibles por dirección IP</li>
+                            <li>Divididos en diferentes categorías según su uso</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="port-categories">
+                    <div class="port-category port-range-well-known">
+                        <h4>Puertos bien conocidos (0-1023)</h4>
+                        <ul>
+                            <li>● <strong>Gestión</strong>: IANA (Internet Assigned Numbers Authority)</li>
+                            <li>● <strong>Acceso</strong>: Requieren privilegios en sistemas Unix/Linux</li>
+                            <li>● <strong>Ejemplos</strong>:
+                                <ul>
+                                    <li>HTTP (80)</li>
+                                    <li>HTTPS (443)</li>
+                                    <li>FTP (21)</li>
+                                    <li>SSH (22)</li>
+                                    <li>SMTP (25)</li>
+                                    <li>DNS (53)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="port-category port-range-registered">
+                        <h4>Puertos registrados (1024-49151)</h4>
+                        <ul>
+                            <li>● <strong>Gestión</strong>: Registrados en IANA pero menos restrictivos</li>
+                            <li>● <strong>Acceso</strong>: No requieren privilegios especiales</li>
+                            <li>● <strong>Ejemplos</strong>:
+                                <ul>
+                                    <li>MySQL (3306)</li>
+                                    <li>PostgreSQL (5432)</li>
+                                    <li>RDP (3389)</li>
+                                    <li>MongoDB (27017)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="port-category port-range-dynamic">
+                        <h4>Puertos dinámicos/privados (49152-65535)</h4>
+                        <ul>
+                            <li>● <strong>Gestión</strong>: No controlados ni registrados</li>
+                            <li>● <strong>Uso</strong>: Conexiones temporales, cliente-servidor</li>
+                            <li>● <strong>Características</strong>:
+                                <ul>
+                                    <li>Asignados dinámicamente</li>
+                                    <li>Utilizados para conexiones salientes</li>
+                                    <li>Disponibles para uso privado</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Socket = IP + Puerto</h3>
+                <p>Un <strong>socket</strong> es la combinación de una dirección IP y un número de puerto, identificando de forma única un punto de comunicación.</p>
+                <ul>
+                    <li>● <strong>Formato</strong>: IP:Puerto (ej. 192.168.1.5:80)</li>
+                    <li>● <strong>Función</strong>: Permite establecer comunicaciones específicas entre aplicaciones</li>
+                    <li>● <strong>Uso</strong>: Base de las comunicaciones cliente-servidor en redes</li>
+                </ul>
+
+                <div class="example-scenario">
+                    <h4>Ejemplo: Proceso de comunicación con puertos</h4>
+                    <p>Cuando abres una página web (https://ejemplo.com):</p>
+                    <ol>
+                        <li>Tu navegador (cliente) abre un puerto dinámico aleatorio (ej. 54321)</li>
+                        <li>Se conecta al servidor web en su IP y puerto 443 (HTTPS)</li>
+                        <li>La comunicación se establece entre tu socket (TuIP:54321) y el socket del servidor (IPServidor:443)</li>
+                        <li>El servidor sabe responder a tu solicitud enviando datos a tu IP y puerto dinámico</li>
+                        <li>Cuando cierras la página, el puerto dinámico se libera para futuras conexiones</li>
+                    </ol>
+                </div>
+
+                <div class="important-note">
+                    <p><strong>Seguridad y puertos</strong>: Los firewalls filtran el tráfico basándose en puertos, permitiendo o bloqueando conexiones específicas. Cerrar puertos innecesarios es una práctica de seguridad básica.</p>
+                </div>
+            </section>
+
+            <!-- Principales protocolos -->
+<section id="protocolos-principales">   
+    <h1>Principales protocolos</h1>
+    <p>Existen numerosos protocolos de red, cada uno diseñado para cumplir funciones específicas. Estos son algunos de los más importantes:</p>
     
+    <div class="protocol-grid">
+        
+        <div class="protocol-card">
+            <h4>TCP/IP</h4>
+            <ul>
+                <li>● <strong>Función</strong>: Conjunto de protocolos base de Internet</li>
+                <li>● <strong>Características</strong>:
+                    <ul>
+                        <li>Orientado a conexión</li>
+                        <li>Control de flujo</li>
+                        <li>Verificación de errores</li>
+                        <li>Garantiza entrega de paquetes</li>
+                    </ul>
+                </li>
+                <li>● <strong>Puerto típico</strong>: Varía según aplicación</li>
+            </ul>
+        </div>
+        
+        <div class="protocol-card">
+            <h4>UDP</h4>
+            <ul>
+                <li>● <strong>Función</strong>: Transmisión rápida sin conexión</li>
+                <li>● <strong>Características</strong>:
+                    <ul>
+                        <li>No orientado a conexión</li>
+                        <li>Sin control de flujo</li>
+                        <li>Sin garantía de entrega</li>
+                        <li>Menor sobrecarga que TCP</li>
+                    </ul>
+                </li>
+                <li>● <strong>Usos</strong>: Streaming, juegos en línea, DNS</li>
+            </ul>
+        </div>
+        
+        <div class="protocol-card">
+            <h4>HTTP/HTTPS</h4>
+            <ul>
+                <li>● <strong>Función</strong>: Transferencia de páginas web</li>
+                <li>● <strong>Características</strong>:
+                    <ul>
+                        <li>Cliente-servidor</li>
+                        <li>Sin estado (stateless)</li>
+                        <li>HTTPS añade cifrado SSL/TLS</li>
+                    </ul>
+                </li>
+                <li>● <strong>Puertos</strong>: 80 (HTTP), 443 (HTTPS)</li>
+            </ul>
+        </div>
+        
+        <div class="protocol-card">
+            <h4>FTP</h4>
+            <ul>
+                <li>● <strong>Función</strong>: Transferencia de archivos</li>
+                <li>● <strong>Características</strong>:
+                    <ul>
+                        <li>Modo activo y pasivo</li>
+                        <li>Autenticación de usuarios</li>
+                        <li>Transferencia binaria y ASCII</li>
+                    </ul>
+                </li>
+                <li>● <strong>Puertos</strong>: 20 (datos), 21 (control)</li>
+            </ul>
+        </div>
+        
+        <div class="protocol-card">
+            <h4>SMTP</h4>
+            <ul>
+                <li>● <strong>Función</strong>: Envío de correo electrónico</li>
+                <li>● <strong>Características</strong>:
+                    <ul>
+                        <li>Orientado a texto</li>
+                        <li>Sistema de colas</li>
+                        <li>Comandos simples</li>
+                    </ul>
+                </li>
+                <li>● <strong>Puertos</strong>: 25 (no cifrado), 587 (cifrado)</li>
+            </ul>
+        </div>
+        
+        <div class="protocol-card">
+            <h4>POP3/IMAP</h4>
+            <ul>
+                <li>● <strong>Función</strong>: Recepción de correo electrónico</li>
+                <li>● <strong>Características</strong>:
+                    <ul>
+                        <li>POP3: Descarga y elimina del servidor</li>
+                        <li>IMAP: Sincroniza entre dispositivos</li>
+                    </ul>
+                </li>
+                <li>● <strong>Puertos</strong>: 110/995 (POP3), 143/993 (IMAP)</li>
+            </ul>
+        </div>
+        
+        <div class="protocol-card">
+            <h4>SSH</h4>
+            <ul>
+                <li>● <strong>Función</strong>: Acceso remoto seguro a sistemas</li>
+                <li>● <strong>Características</strong>:
+                    <ul>
+                        <li>Autenticación por usuario/clave o clave pública</li>
+                        <li>Cifrado de extremo a extremo</li>
+                        <li>Permite túneles seguros y transferencia de archivos (SCP/SFTP)</li>
+                    </ul>
+                </li>
+                <li>● <strong>Puerto</strong>: 22</li>
+            </ul>
+        </div>
+        
+    </div>
+</section>
+<section id="dns">
+    <h1>Sistema DNS (Domain Name System)</h1>
+    <p>El Sistema de Nombres de Dominio (DNS) es un componente esencial de Internet. Su función principal es traducir nombres de dominio comprensibles para los humanos (como <em>www.ejemplo.com</em>) en direcciones IP comprensibles para las máquinas (como <em>192.0.2.1</em>).</p>
+    
+    <h3>¿Por qué es importante?</h3>
+    <ul>
+        <li>Permite a los usuarios acceder a sitios web usando nombres fáciles de recordar en lugar de memorizar direcciones IP.</li>
+        <li>Es fundamental para el funcionamiento del correo electrónico, navegación web, y muchos otros servicios de red.</li>
+    </ul>
 
-    <div class="overlay" id="overlay">
-        <button class="close-btn" onclick="cerrarImagen()">X</button>
-        <img id="imagenAmpliada" src="" alt="Imagen Ampliada">
+    <h3>Componentes principales</h3>
+    <ul>
+        <li><strong>Servidor raíz (Root DNS):</strong> El nivel más alto del sistema DNS. Redirige a los servidores de dominio superior (TLD).</li>
+        <li><strong>Servidor TLD:</strong> Maneja dominios de nivel superior como <em>.com</em>, <em>.org</em>, <em>.edu</em>.</li>
+        <li><strong>Servidor autoritativo:</strong> Contiene la información final sobre el dominio (dirección IP exacta).</li>
+        <li><strong>Servidor recursivo:</strong> Intermediario entre el usuario y el resto de la jerarquía. Se encarga de resolver la consulta completa.</li>
+    </ul>
+
+    <h3>Proceso de resolución DNS</h3>
+    <ol>
+        <li>El usuario ingresa un dominio en el navegador.</li>
+        <li>El servidor DNS recursivo busca la IP correspondiente consultando a servidores raíz, TLD y autoritativos.</li>
+        <li>El navegador recibe la dirección IP y se conecta al servidor web.</li>
+    </ol>
+
+    <h3>Ejemplo de consulta DNS en consola</h3>
+    <div class="console-code">
+        <div class="console-line">
+            <span class="console-command">nslookup www.google.com</span>
+            <span class="console-comment">#Consulta DNS para obtener la IP de Google</span>
+        </div>
+    </div>
+</section>
+<section id="arquitectura-cliente-servidor">
+    <h1>Arquitectura Cliente-Servidor</h1>
+    <p>La arquitectura cliente-servidor es un modelo de red que divide las responsabilidades entre dos tipos de entidades: los clientes y los servidores. Es uno de los modelos más utilizados para el diseño de aplicaciones y sistemas en red.</p>
+    
+    <h3>¿Cómo funciona?</h3>
+    <ul>
+        <li><strong>Cliente:</strong> Es la parte que inicia la comunicación. Solicita servicios o recursos (como páginas web, archivos o datos).</li>
+        <li><strong>Servidor:</strong> Es la parte que espera y responde a las solicitudes del cliente, proporcionando los recursos requeridos.</li>
+    </ul>
+
+    <h3>Características principales</h3>
+    <ul>
+        <li>Separación clara de roles: uno solicita, el otro responde.</li>
+        <li>Escalabilidad: los servidores pueden atender a múltiples clientes simultáneamente.</li>
+        <li>Seguridad centralizada: se pueden aplicar políticas de control desde el servidor.</li>
+        <li>Ejemplos típicos: navegación web (navegador-cliente, servidor web), correo electrónico (cliente de correo-servidor SMTP/IMAP).</li>
+    </ul>
+
+    <h3>Ventajas</h3>
+    <ul>
+        <li>Mantenimiento centralizado del servidor</li>
+        <li>Fácil administración de usuarios y permisos</li>
+        <li>Mayor seguridad y control</li>
+    </ul>
+
+    <h3>Desventajas</h3>
+    <ul>
+        <li>Dependencia del servidor: si falla, todos los clientes se ven afectados.</li>
+        <li>Puede requerir hardware potente del lado del servidor</li>
+    </ul>
+
+    <h3>Diagrama básico</h3>
+    <div class="diagram-box">
+        <p><strong>Cliente</strong> → Solicitud → <strong>Servidor</strong> → Respuesta → <strong>Cliente</strong></p>
     </div>
 
-    <script src="../../js/menuDesplegable.js"></script>    
-    <script src="../../js/divInfoDesplegable.js"></script>
-    <script src="../../js/ampliarImg.js"></script>
-    <script src="../../js/console-code.js"></script>
+    <h3>Ejemplo en consola: Cliente web accediendo a un servidor</h3>
+    <div class="console-code">
+        <div class="console-line">
+            <span class="console-command">curl https://www.wikipedia.org</span>
+            <span class="console-comment">#Cliente solicita página al servidor de Wikipedia</span>
+        </div>
+    </div>
+</section>
+
+
+<section id="nextBack-section">
+    <a id="next-section" href="./U-redes-Seguridad-en-redes.html">Siguiente Sección</a><i class="fas fa-arrow-right"></i>
+</section>  
+</main>        
+</div>
+
+<div class="overlay" id="overlay">
+<button class="close-btn" onclick="cerrarImagen()">X</button>
+<img id="imagenAmpliada" src="" alt="Imagen Ampliada">
+</div>
+
+<script src="../../js/menuDesplegable.js"></script>    
+<script src="../../js/divInfoDesplegable.js"></script>
+<script src="../../js/ampliarImg.js"></script>
+<script src="../../js/console-code.js"></script>
 </body>
 </html>

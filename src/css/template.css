@@ -266,6 +266,15 @@ section {
     padding-bottom: 6px;
 }
 
+.content ol li {
+    padding-left: 20px;
+    color:  #171b1f;
+    font-size: 1rem;
+    max-width: 96%;
+    padding-bottom: 6px;
+    list-style-position: inside;
+}
+
 .content ul li ul li {
     list-style: circle;
     color: #080d11;
