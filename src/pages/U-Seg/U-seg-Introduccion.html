@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historia de la computación</title>
+    <title>Introducción a Seguridad y Privacidad</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../../css/template.css">
         <!--FONT-->
@@ -19,35 +19,317 @@
         <button id="menu-toggle" class="menu-toggle">☰ Menú</button>
         <!-- Menú lateral izquierdo -->
         <aside class="menu" id="menu">
-            <h2>Seguridad Informática I</h2>
+            <h2>Introducción a seguridad y privacidad I</h2>
             <ul>
                 <li><a href="../../pages/general.html"><i class="fas fa-home"></i> General</a>
                     
-                <li><a href="#p1">Principios de seguridad</a></li>
+                <li><a href="#p1">Introducción a seguridad y privacidad</a></li>
                 <ul>
-                    <li><a href="#">Introduccion</a></li>
+                    <li><a href="#introduccion">Introducción</a></li>
+                    <li><a href="#importancia">Importancia de la seguridad informática</a></li>
+                    <li><a href="#principios">Principios fundamentales</a></li>
+                    <li><a href="#amenazas">Amenazas comunes</a></li>
+                    <li><a href="#medidas">Medidas básicas de protección</a></li>
                 </ul>
-                <li><a id="btn-menu-Sect" href="#next-section">Siguiente Seccion</a></li>
+                <li><a id="btn-menu-Sect" href="#next-section">Siguiente Sección</a></li>
+            </ul>
         </aside>
-        </main>
 
         <!-- Contenido principal -->
         <main class="content">  
 
-
         <!-- Seccion anterior -->
         <section id="nextBack-section">
-            <i class="fas fa-arrow-left"></i><a id="back-section" href="../../pages/general.html">General</a>
+            <i class="fas fa-arrow-left"></i><a id="back-section" href="../general.html">General</a>
         </section>
 
-        <!-- Seccion anterior -->
+        <!-- Introduccion -->
         <section>
-            <h1>🔒 Principios de Seguridad</h1>
-        </section>  
+            <h2 id="introduccion">📜 Introducción</h2>
+            <p>Bienvenidos al fascinante mundo de la seguridad informática y la privacidad, un campo que ha cobrado una importancia crítica en nuestra era digital. En un mundo cada vez más conectado, donde nuestros datos fluyen constantemente entre dispositivos y sistemas, la protección de la información se ha convertido en una prioridad fundamental tanto para individuos como para organizaciones.</p>
+            <p>La seguridad informática no es simplemente un conjunto de herramientas o técnicas; es una filosofía, una actitud y un proceso continuo que debe integrarse en cada aspecto de nuestra interacción con la tecnología. A lo largo de esta unidad, exploraremos los fundamentos teóricos y prácticos que nos permitirán entender y mitigar las amenazas que acechan en el ciberespacio.</p>
+            <p>Este viaje nos llevará desde los conceptos básicos de la seguridad informática hasta temas más avanzados como la criptografía, la seguridad en redes, y el complejo panorama legal que regula la privacidad en el entorno digital. Prepárate para adentrarte en un campo en constante evolución, donde la combinación de conocimiento técnico, pensamiento crítico y vigilancia continua es la clave para proteger nuestros activos más valiosos: la información y la privacidad.</p>
+        </section>
 
+        <!-- Importancia de la seguridad informática -->
+        <section>
+            <h1>🔒 Introducción a Seguridad y Privacidad</h1>
+        </section>
+
+        <section id="importancia">
+            <h2 class="toggle-btn">Importancia de la Seguridad Informática</h2>
+            <div>
+                <p>La seguridad informática ha evolucionado de ser una preocupación técnica periférica a convertirse en un pilar fundamental en cualquier estrategia organizacional y personal. Esta transformación no es casual, sino que responde a una realidad cada vez más compleja y desafiante.</p>
                 
+                <div id="sub-panel">
+                    <h1>● El valor de la información</h1>
+                    <p>En la economía digital actual, la información se ha convertido en uno de los activos más valiosos. Datos personales, propiedad intelectual, secretos comerciales y estrategias de negocio ahora existen en formato digital, lo que los hace potencialmente vulnerables a accesos no autorizados.</p>
+                    <p>Como suelo explicar a mis estudiantes, si en el pasado protegíamos nuestros bienes con cerraduras y cajas fuertes, hoy debemos aplicar la misma o mayor diligencia para proteger nuestros datos, que en muchos casos tienen un valor incalculable y, a diferencia de los bienes físicos, pueden ser robados sin que notemos su ausencia inmediatamente.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Impacto de las brechas de seguridad</h1>
+                    <p>Las consecuencias de los fallos en seguridad informática pueden ser devastadoras:</p>
+                    <ul>
+                        <li>Pérdidas económicas directas e indirectas</li>
+                        <li>Daño reputacional y pérdida de confianza</li>
+                        <li>Interrupción de servicios críticos</li>
+                        <li>Violaciones a la privacidad personal</li>
+                        <li>Responsabilidades legales y sanciones</li>
+                    </ul>
+                    <p>A lo largo de mi carrera profesional, he sido testigo de cómo organizaciones sólidas pueden verse severamente comprometidas por incidentes de seguridad que podrían haberse prevenido con medidas adecuadas. El caso de Equifax en 2017, donde se expusieron los datos de 147 millones de personas debido a un parche no aplicado, demuestra cómo un simple descuido puede tener consecuencias catastróficas.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Evolución del panorama de amenazas</h1>
+                    <p>El entorno de seguridad es dinámico y en constante evolución:</p>
+                    <ul>
+                        <li>Mayor sofisticación de los ataques</li>
+                        <li>Profesionalización del cibercrimen (crime-as-a-service)</li>
+                        <li>Amenazas persistentes avanzadas (APTs)</li>
+                        <li>Ataques patrocinados por estados</li>
+                        <li>Vulnerabilidades en nuevas tecnologías (IoT, IA, etc.)</li>
+                    </ul>
+                    <p>Lo que me resulta particularmente fascinante es cómo el panorama de amenazas ha evolucionado de ataques oportunistas realizados por individuos aislados a operaciones complejas ejecutadas por grupos organizados con abundantes recursos. Esta realidad nos obliga a adoptar un enfoque igualmente sofisticado y coordinado para la ciberseguridad.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● La seguridad como proceso</h1>
+                    <p>Es crucial entender que la seguridad informática no es un producto que se adquiere una vez, sino un proceso continuo que requiere:</p>
+                    <ul>
+                        <li>Evaluación constante de riesgos</li>
+                        <li>Implementación de controles apropiados</li>
+                        <li>Monitorización y detección de incidentes</li>
+                        <li>Respuesta efectiva ante eventos de seguridad</li>
+                        <li>Mejora continua basada en lecciones aprendidas</li>
+                    </ul>
+                    <p>En mi experiencia como consultor, he observado que las organizaciones más resilientes son aquellas que han integrado la seguridad en su cultura y procesos, en lugar de tratarla como un complemento técnico o una obligación regulatoria. La seguridad debe ser parte integral del diseño de sistemas y no una consideración posterior.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Principios fundamentales -->
+        <section id="principios">
+            <h2 class="toggle-btn">Principios Fundamentales de Seguridad</h2>
+            <div>
+                <p>La seguridad informática se fundamenta en una serie de principios clave que han resistido la prueba del tiempo a pesar de la evolución tecnológica. Estos principios proporcionan un marco conceptual para entender y abordar los desafíos de seguridad.</p>
+                
+                <div id="sub-panel">
+                    <h1>● La tríada CIA</h1>
+                    <p>El modelo CIA (Confidencialidad, Integridad y Disponibilidad) representa los tres objetivos fundamentales de la seguridad informática:</p>
+                    <ul>
+                        <li><strong>Confidencialidad:</strong> Garantizar que la información sea accesible únicamente para aquellos autorizados a tener acceso.</li>
+                        <li><strong>Integridad:</strong> Mantener la exactitud y completitud de la información y los métodos de procesamiento.</li>
+                        <li><strong>Disponibilidad:</strong> Asegurar que los usuarios autorizados tengan acceso a la información cuando lo requieran.</li>
+                    </ul>
+                    <p>Durante mis años como profesional de la seguridad, he comprobado que este sencillo modelo sigue siendo extremadamente útil para evaluar riesgos y diseñar estrategias de protección. La clave está en lograr un equilibrio adecuado entre estos tres aspectos, ya que frecuentemente existen compensaciones entre ellos.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Defensa en profundidad</h1>
+                    <p>Este principio sostiene que la seguridad debe implementarse en múltiples capas, de modo que si una medida falla, haya otras que continúen protegiendo el sistema. La idea es comparable a un castillo medieval con foso, murallas, torres y guardias.</p>
+                    <p>Capas típicas de defensa incluyen:</p>
+                    <ul>
+                        <li>Controles físicos</li>
+                        <li>Perímetro de red</li>
+                        <li>Sistema operativo</li>
+                        <li>Aplicación</li>
+                        <li>Datos</li>
+                    </ul>
+                    <p>Mi experiencia en auditorías de seguridad me ha demostrado que muchas organizaciones cometen el error de depender excesivamente de un único control, como un firewall perimetral, descuidando otras capas igualmente importantes. La defensa en profundidad no sólo dificulta los ataques sino que también proporciona tiempo adicional para detectar y responder a las intrusiones.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Principio del mínimo privilegio</h1>
+                    <p>Este principio establece que cualquier usuario, programa o sistema debe operar con el conjunto mínimo de privilegios necesarios para realizar su función. Esto limita el daño potencial de accidentes, errores o ataques maliciosos.</p>
+                    <p>La implementación efectiva incluye:</p>
+                    <ul>
+                        <li>Asignación cuidadosa de permisos</li>
+                        <li>Segregación de funciones</li>
+                        <li>Uso de cuentas privilegiadas solo cuando sea necesario</li>
+                        <li>Revisión periódica de accesos</li>
+                    </ul>
+                    <p>He visto numerosos casos donde este principio podría haber mitigado significativamente el impacto de un incidente. Un ejemplo clásico son los usuarios con privilegios administrativos innecesarios que, al ser comprometidos, otorgan a los atacantes control total sobre los sistemas.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Seguridad por diseño</h1>
+                    <p>La seguridad debe ser una consideración desde las primeras etapas del diseño de sistemas y no una característica añadida posteriormente. Este enfoque proactivo permite identificar y mitigar vulnerabilidades antes de que se conviertan en problemas.</p>
+                    <p>Aspectos clave incluyen:</p>
+                    <ul>
+                        <li>Modelado de amenazas</li>
+                        <li>Revisión de arquitectura de seguridad</li>
+                        <li>Codificación segura</li>
+                        <li>Pruebas de seguridad integradas en el ciclo de desarrollo</li>
+                    </ul>
+                    <p>Como desarrollador y posteriormente como consultor de seguridad, he experimentado personalmente la enorme diferencia en esfuerzo y costo entre incorporar la seguridad desde el principio y tratar de implementarla después de que un sistema ya está operativo. El enfoque reactivo no solo es más costoso sino también menos efectivo.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Eslabón más débil</h1>
+                    <p>Un sistema es tan seguro como su componente más vulnerable. Este principio nos recuerda la importancia de un enfoque holístico que considere todos los aspectos de seguridad, incluyendo el factor humano.</p>
+                    <p>Áreas frecuentemente descuidadas incluyen:</p>
+                    <ul>
+                        <li>Concienciación y formación de usuarios</li>
+                        <li>Seguridad física</li>
+                        <li>Gestión de proveedores y terceros</li>
+                        <li>Sistemas legacy o heredados</li>
+                    </ul>
+                    <p>A lo largo de mi carrera, he observado cómo incluso las organizaciones con fuertes controles técnicos pueden ser comprometidas a través de ingeniería social o por descuidos en la seguridad física. Este principio nos recuerda la importancia de un enfoque equilibrado que aborde todos los posibles vectores de ataque.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Amenazas comunes -->
+        <section id="amenazas">
+            <h2 class="toggle-btn">Amenazas Comunes en Ciberseguridad</h2>
+            <div>
+                <p>El panorama de amenazas cibernéticas es vasto y diverso, evolucionando constantemente para adaptarse a las nuevas tecnologías y contramedidas. Comprender las principales categorías de amenazas es el primer paso para protegerse efectivamente contra ellas.</p>
+                
+                <div id="sub-panel">
+                    <h1>● Malware</h1>
+                    <p>El software malicioso (malware) engloba una amplia variedad de programas diseñados para infiltrarse en los sistemas sin consentimiento y con fines dañinos:</p>
+                    <ul>
+                        <li><strong>Virus:</strong> Se adjuntan a programas legítimos y se propagan cuando estos se ejecutan.</li>
+                        <li><strong>Gusanos:</strong> Se replican y propagan automáticamente a través de redes.</li>
+                        <li><strong>Troyanos:</strong> Se presentan como software legítimo pero contienen funcionalidades maliciosas.</li>
+                        <li><strong>Ransomware:</strong> Cifra los datos del usuario y exige un rescate para restaurarlos.</li>
+                        <li><strong>Spyware:</strong> Recopila información sin consentimiento.</li>
+                        <li><strong>Rootkits:</strong> Permiten acceso privilegiado persistente ocultando su existencia.</li>
+                    </ul>
+                    <p>En mi labor como analista de seguridad, he visto cómo el ransomware ha evolucionado de ataques oportunistas a operaciones dirigidas contra objetivos específicos con demandas de rescate que pueden alcanzar millones de dólares. El caso de Colonial Pipeline en 2021 demuestra cómo estos ataques pueden afectar infraestructuras críticas y tener repercusiones en la vida cotidiana.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Ataques de ingeniería social</h1>
+                    <p>Estas técnicas explotan la psicología humana en lugar de vulnerabilidades técnicas, manipulando a las personas para que realicen acciones o revelen información confidencial:</p>
+                    <ul>
+                        <li><strong>Phishing:</strong> Suplantación de identidad para obtener credenciales u otra información sensible.</li>
+                        <li><strong>Pretexting:</strong> Creación de un escenario fabricado para obtener información.</li>
+                        <li><strong>Baiting:</strong> Ofrecer algo atractivo para incitar a la víctima a comprometer su seguridad.</li>
+                        <li><strong>Vishing:</strong> Phishing a través de llamadas telefónicas.</li>
+                        <li><strong>Smishing:</strong> Phishing mediante mensajes SMS.</li>
+                    </ul>
+                    <p>Lo que encuentro particularmente interesante sobre la ingeniería social es su persistente efectividad a pesar de la creciente concienciación. He conducido pruebas de phishing en organizaciones y, invariablemente, un porcentaje significativo de empleados cae en la trampa, incluso después de haber recibido formación. Esto refuerza la importancia de combinar la educación con controles técnicos para mitigar estos riesgos.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Ataques a redes</h1>
+                    <p>Estos ataques se dirigen a la infraestructura de comunicaciones para interceptar datos, interrumpir servicios o ganar acceso no autorizado:</p>
+                    <ul>
+                        <li><strong>Man-in-the-Middle (MitM):</strong> Interceptación de comunicaciones entre dos partes.</li>
+                        <li><strong>Denial of Service (DoS) y Distributed DoS (DDoS):</strong> Saturación de sistemas para interrumpir servicios.</li>
+                        <li><strong>Spoofing:</strong> Falsificación de datos o identidades en una comunicación.</li>
+                        <li><strong>Sniffing:</strong> Captura y análisis del tráfico de red.</li>
+                        <li><strong>Ataques de inyección:</strong> Inserción de código malicioso en comunicaciones o aplicaciones.</li>
+                    </ul>
+                    <p>En mi experiencia gestionando infraestructuras críticas, he observado cómo los ataques DDoS han evolucionado en escala y sofisticación. Lo que antes requería recursos considerables ahora está al alcance de cualquiera a través de servicios de "DDoS como servicio" en la dark web. Esta democratización de las capacidades ofensivas representa un desafío significativo para las estrategias de defensa tradicionales.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Amenazas internas</h1>
+                    <p>Estas amenazas provienen de individuos con acceso legítimo a los sistemas de la organización:</p>
+                    <ul>
+                        <li><strong>Empleados descontentos:</strong> Pueden sabotear sistemas o robar información.</li>
+                        <li><strong>Negligencia:</strong> Errores no intencionados que comprometen la seguridad.</li>
+                        <li><strong>Usuarios privilegiados maliciosos:</strong> Abuso de accesos especiales para fines ilegítimos.</li>
+                        <li><strong>Insider trading:</strong> Uso de información privilegiada para beneficio personal.</li>
+                    </ul>
+                    <p>Las amenazas internas son particularmente desafiantes porque los actores ya tienen acceso legítimo y conocimiento de los sistemas. Durante mi trabajo en consultoría de seguridad, he comprobado que la combinación de controles técnicos (como el principio de mínimo privilegio) con políticas claras y monitorización de comportamientos anómalos es esencial para mitigar estos riesgos.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Amenazas persistentes avanzadas (APTs)</h1>
+                    <p>Son campañas de ataque prolongadas y dirigidas que suelen estar patrocinadas por estados o grupos con abundantes recursos:</p>
+                    <ul>
+                        <li>Objetivos específicos y estratégicos</li>
+                        <li>Operaciones de larga duración</li>
+                        <li>Técnicas sofisticadas y personalizadas</li>
+                        <li>Evasión activa de detección</li>
+                        <li>Múltiples vectores de ataque</li>
+                    </ul>
+                    <p>Estas amenazas representan el nivel más sofisticado del espectro. He participado en investigaciones de incidentes donde los atacantes habían permanecido indetectados durante meses, moviéndose lateralmente por la red y exfiltrando datos sensibles de manera sigilosa. La defensa contra APTs requiere una estrategia integral que incluya inteligencia de amenazas, detección avanzada y capacidades robustas de respuesta a incidentes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Medidas básicas de protección -->
+        <section id="medidas">
+            <h2 class="toggle-btn">Medidas Básicas de Protección</h2>
+            <div>
+                <p>Aunque la seguridad informática puede parecer un campo complejo y técnico, existen medidas fundamentales que forman la base de cualquier estrategia de protección efectiva. Estas prácticas no solo son aplicables en contextos organizacionales sino también a nivel personal.</p>
+                
+                <div id="sub-panel">
+                    <h1>● Autenticación y control de acceso</h1>
+                    <p>Estas medidas garantizan que solo los usuarios legítimos puedan acceder a sistemas y datos:</p>
+                    <ul>
+                        <li><strong>Contraseñas robustas:</strong> Combinaciones complejas de caracteres, únicas para cada servicio.</li>
+                        <li><strong>Autenticación multifactor (MFA):</strong> Combinación de algo que sabes, algo que tienes y/o algo que eres.</li>
+                        <li><strong>Gestores de contraseñas:</strong> Herramientas para almacenar y generar credenciales seguras.</li>
+                        <li><strong>Control de acceso basado en roles:</strong> Asignación de privilegios según la función del usuario.</li>
+                        <li><strong>Single Sign-On (SSO):</strong> Autenticación centralizada para múltiples sistemas.</li>
+                    </ul>
+                    <p>En mi práctica profesional, he observado cómo la implementación de MFA puede reducir drásticamente el riesgo de compromiso de cuentas. Un cliente redujo los incidentes de acceso no autorizado en más del 99% tras implementar esta medida. Por otra parte, la resistencia inicial de los usuarios a adoptar prácticas como el uso de gestores de contraseñas suele disiparse una vez que comprenden sus beneficios prácticos en términos de seguridad y comodidad.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Gestión de actualizaciones</h1>
+                    <p>Mantener el software actualizado es crucial para protegerse contra vulnerabilidades conocidas:</p>
+                    <ul>
+                        <li>Actualizaciones regulares de sistemas operativos</li>
+                        <li>Parches de seguridad para aplicaciones</li>
+                        <li>Actualización de firmware en dispositivos</li>
+                        <li>Políticas de gestión de parches</li>
+                        <li>Pruebas antes de implementar actualizaciones en entornos críticos</li>
+                    </ul>
+                    <p>A lo largo de mi carrera, he sido testigo de numerosos incidentes que podrían haberse evitado con una política efectiva de actualizaciones. El caso de WannaCry en 2017 es particularmente ilustrativo: a pesar de que Microsoft había lanzado un parche dos meses antes del ataque, muchas organizaciones no lo habían aplicado, lo que resultó en pérdidas millonarias. Esta experiencia refuerza la importancia de un proceso estructurado para la gestión de actualizaciones.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Copias de seguridad</h1>
+                    <p>Las copias de seguridad son una medida esencial tanto para la continuidad operativa como para la recuperación ante incidentes:</p>
+                    <ul>
+                        <li>Regla 3-2-1: Tres copias, en dos medios distintos, con una fuera del sitio</li>
+                        <li>Verificación regular de la integridad de las copias</li>
+                        <li>Pruebas de restauración</li>
+                        <li>Copias de seguridad cifradas</li>
+                        <li>Almacenamiento seguro y aislado (especialmente importante contra ransomware)</li>
+                    </ul>
+                    <p>He asesorado a organizaciones víctimas de ransomware donde la diferencia entre una recuperación rápida y un desastre fue simplemente la existencia de copias de seguridad bien implementadas y aisladas. Un caso particularmente memorable fue el de una institución educativa que, gracias a su estrategia robusta de backups, pudo restaurar sus sistemas en 48 horas sin pagar rescate, mientras instituciones similares tardaron semanas en recuperarse.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Concienciación y formación</h1>
+                    <p>El factor humano es crucial en la seguridad informática:</p>
+                    <ul>
+                        <li>Programas regulares de formación en seguridad</li>
+                        <li>Simulacros de phishing y otros ataques</li>
+                        <li>Cultura de seguridad en la organización</li>
+                        <li>Políticas claras y procedimientos documentados</li>
+                        <li>Canales para reportar incidentes o comportamientos sospechosos</li>
+                    </ul>
+                    <p>Durante mi trabajo en formación de seguridad, he comprobado que el enfoque más efectivo combina la educación teórica con ejercicios prácticos. Los simulacros de phishing, por ejemplo, no solo identifican vulnerabilidades sino que también crean momentos de aprendizaje cuando los usuarios cometen errores en un entorno controlado. La clave está en fomentar una cultura donde los errores se vean como oportunidades de mejora y no motivos de penalización.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Cifrado de datos</h1>
+                    <p>El cifrado proporciona una capa adicional de protección, especialmente valiosa cuando otras medidas fallan:</p>
+                    <ul>
+                        <li>Cifrado de datos en reposo (almacenamiento)</li>
+                        <li>Cifrado de datos en tránsito (comunicaciones)</li>
+                        <li>Cifrado de dispositivos móviles y portátiles</li>
+                        <li>Gestión segura de claves criptográficas</li>
+                        <li>Comunicaciones encriptadas (HTTPS, VPN, etc.)</li>
+                    </ul>
+                    <p>Un caso ilustrativo que suelo compartir es el de una empresa que sufrió el robo de varios portátiles corporativos. Gracias al cifrado del disco completo, lo que podría haber sido una grave brecha de datos quedó reducido a una simple pérdida de hardware. Este ejemplo subraya cómo el cifrado puede actuar como salvaguarda incluso cuando se pierde el control físico de los dispositivos.</p>
+                </div>
+            </div>
+        </section>
+
+
+                        
         <section id="nextBack-section">
-            <a id="next-section" href="./U1-Conceptos-Basicos.html">Siguiente Seccion</a><i class="fas fa-arrow-right"></i>
+            <a id="next-section" href="./U-seg-Tipos-de-ataques-y-vulnerabilidades.html">Siguiente Seccion</a><i class="fas fa-arrow-right"></i>
         </section>  
         </main>        
     </div>

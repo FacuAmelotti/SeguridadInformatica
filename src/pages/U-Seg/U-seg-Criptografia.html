@@ -3,65 +3,520 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historia de la computación</title>
+    <title>Criptografía y Cifrado</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../../css/template.css">
-        <!--FONT-->
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
-        <style>
-        body {
-            font-family: 'IBM Plex Mono', monospace;
-        }
-        </style>
+    <!--FONT-->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+    body {
+        font-family: 'IBM Plex Mono', monospace;
+    }
+    </style>
 </head>
 <body>
     <div class="container">
         <button id="menu-toggle" class="menu-toggle">☰ Menú</button>
         <!-- Menú lateral izquierdo -->
         <aside class="menu" id="menu">
-            <h2>Seguridad Informática</h2>
+            <h2>Introducción a seguridad y privacidad III</h2>
             <ul>
                 <li><a href="../../pages/general.html"><i class="fas fa-home"></i> General</a>
                     
-                <li><a href="#p1">Principios de seguridad</a></li>
-                <li><a id="btn-menu-Sect" href="#back-section">Seccion anterior</a></li>
+                <li><a>Criptografía y cifrado</a></li>
+                <li><a id="btn-menu-Sect" href="#back-section">Sección anterior</a></li>
                 <ul>
-                    <li><a href="#">Introduccion</a></li>
+                    <li><a href="#introduccion">Introducción</a></li>
+                    <li><a href="#fundamentos">Fundamentos de criptografía</a></li>
+                    <li><a href="#algoritmos-simetricos">Algoritmos de cifrado simétrico</a></li>
+                    <li><a href="#algoritmos-asimetricos">Algoritmos de cifrado asimétrico</a></li>
+                    <li><a href="#funciones-hash">Funciones hash criptográficas</a></li>
+                    <li><a href="#infraestructura">Infraestructura de clave pública (PKI)</a></li>
+                    <li><a href="#aplicaciones">Aplicaciones prácticas</a></li>
                 </ul>
-                <li><a id="btn-menu-Sect" href="#next-section">Siguiente Seccion</a></li>
+                <li><a id="btn-menu-Sect" href="#next-section">Siguiente Sección</a></li>
+            </ul>
         </aside>
-        </main>
 
         <!-- Contenido principal -->
         <main class="content">  
 
-
         <!-- Seccion anterior -->
         <section id="nextBack-section">
-            <i class="fas fa-arrow-left"></i><a id="back-section" href="./general.html">Seccion Anterior</a>
+            <i class="fas fa-arrow-left"></i><a id="back-section" href="./U-seg-Tipos-de-ataques-y-vulnerabilidades.html">Sección Anterior</a>
         </section>
 
-        <!-- Seccion anterior -->
+        <!-- Introduccion -->
         <section>
-            <h1>🔒 Principios de Seguridad</h1>
-        </section>  
+            <h2 id="introduccion">📜 Introducción</h2>
+            <p>Bienvenidos a esta exploración detallada sobre criptografía y cifrado, pilares fundamentales de la seguridad de la información en la era digital. Desde las comunicaciones seguras hasta la protección de datos sensibles, la criptografía moderna es la columna vertebral que sustenta la confianza en nuestros sistemas tecnológicos.</p>
+            <p>La criptografía ha evolucionado desde técnicas rudimentarias utilizadas en la antigüedad para comunicaciones militares hasta convertirse en una disciplina matemática sofisticada que permea cada aspecto de nuestra vida digital. Su importancia no puede subestimarse: sin los avances en esta ciencia, Internet tal como lo conocemos no podría existir de manera segura.</p>
+            <p>A lo largo de esta unidad, exploraremos los fundamentos teóricos y matemáticos que sustentan la criptografía moderna, los algoritmos clave que protegen nuestras comunicaciones diarias, y las aplicaciones prácticas que permiten salvaguardar la confidencialidad, integridad y autenticidad de la información en un mundo cada vez más interconectado y vulnerable.</p>
+        </section>
 
+        <!-- Fundamentos de criptografía -->
+        <section id="fundamentos">
+            <h1>🔐 Criptografía y Cifrado</h1>
+            <h2 class="toggle-btn">Fundamentos de Criptografía</h2>
+            <div>
+                <p>La criptografía es la ciencia y práctica de técnicas para comunicación segura en presencia de terceras partes, combinando matemáticas, ciencias de la computación y teoría de la información para proteger datos y comunicaciones.</p>
                 
-        <section id="nextBack-section">
-            <a id="next-section" href="./U1-Conceptos-Basicos.html">Siguiente Seccion</a><i class="fas fa-arrow-right"></i>
-        </section>  
-        </main>        
-    </div>
+                <div id="sub-panel">
+                    <h1>● Conceptos básicos y terminología</h1>
+                    <p>Antes de adentrarnos en algoritmos específicos, es importante familiarizarse con los conceptos fundamentales que constituyen el lenguaje de la criptografía.</p>
+                    <ul>
+                        <li><strong>Texto plano (plaintext):</strong> La información original, legible y sin cifrar.</li>
+                        <li><strong>Texto cifrado (ciphertext):</strong> La información transformada mediante algoritmos criptográficos, ilegible sin la clave adecuada.</li>
+                        <li><strong>Clave (key):</strong> Parámetro que determina el resultado de un algoritmo criptográfico.</li>
+                        <li><strong>Cifrado (encryption):</strong> Proceso de convertir texto plano en texto cifrado.</li>
+                        <li><strong>Descifrado (decryption):</strong> Proceso inverso que convierte texto cifrado en texto plano.</li>
+                        <li><strong>Algoritmo:</strong> Conjunto de reglas matemáticas que definen cómo se realiza el cifrado y descifrado.</li>
+                    </ul>
+                    <p>Durante mi experiencia docente en seguridad informática, he observado que comprender estos conceptos fundamentales desde el principio facilita enormemente el aprendizaje de sistemas criptográficos más complejos. En un curso introductorio, utilizaba la analogía de una caja fuerte: el mensaje es lo que queremos proteger, el algoritmo es el mecanismo de la caja, y la clave es la combinación necesaria para abrirla. Esta simple metáfora ayudaba a los estudiantes a visualizar cómo distintos componentes criptográficos interactúan entre sí antes de sumergirse en las complejidades matemáticas.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Principios de Kerckhoffs</h1>
+                    <p>Estos principios, formulados por Auguste Kerckhoffs en 1883, siguen siendo fundamentales para el diseño de sistemas criptográficos modernos:</p>
+                    <ul>
+                        <li><strong>El sistema debe ser prácticamente, si no matemáticamente, indescifrable</strong></li>
+                        <li><strong>La seguridad del sistema no debe depender del secreto del algoritmo, sino solamente del secreto de la clave</strong></li>
+                        <li><strong>La clave debe ser fácil de memorizar y cambiar</strong></li>
+                        <li><strong>El sistema debe ser capaz de caer en manos del enemigo sin inconvenientes</strong></li>
+                        <li><strong>El sistema debe ser aplicable a la comunicación telegráfica</strong></li>
+                        <li><strong>El sistema debe ser portable y no debe requerir múltiples personas para operarlo</strong></li>
+                    </ul>
+                    <p>En mi experiencia asesorando a organizaciones sobre implementaciones criptográficas, el segundo principio de Kerckhoffs ha demostrado ser particularmente crucial. Presencié un caso donde una empresa había desarrollado un algoritmo propietario "secreto" para proteger datos de clientes. Cuando inevitablemente este algoritmo fue comprometido mediante ingeniería inversa, toda su infraestructura de seguridad colapsó. Este incidente reforzó la lección de que la verdadera seguridad criptográfica debe residir en las claves, no en la oscuridad del método, y que los algoritmos públicamente auditados y probados siempre son preferibles a soluciones propietarias.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Propiedades fundamentales de seguridad</h1>
+                    <p>La criptografía moderna busca garantizar varias propiedades de seguridad esenciales:</p>
+                    <ul>
+                        <li><strong>Confidencialidad:</strong> Garantizar que la información solo sea accesible para las partes autorizadas.</li>
+                        <li><strong>Integridad:</strong> Asegurar que la información no ha sido alterada durante su almacenamiento o transmisión.</li>
+                        <li><strong>Autenticidad:</strong> Verificar que la información proviene de la fuente que dice ser.</li>
+                        <li><strong>No repudio:</strong> Impedir que el autor de una acción pueda negar haberla realizado.</li>
+                        <li><strong>Disponibilidad:</strong> Asegurar que la información esté accesible cuando se necesite.</li>
+                    </ul>
+                    <p>Durante una investigación forense en un caso de fraude financiero, tuve la oportunidad de apreciar la importancia crítica del no repudio. La organización había implementado firmas digitales para transacciones internas, pero sin una adecuada gestión del ciclo de vida de las claves. Cuando un empleado fue acusado de autorizar transferencias fraudulentas, alegó que su clave privada había sido comprometida. La ausencia de controles adicionales que vincularan inequívocamente al individuo con la acción (como autenticación multifactor o registros biométricos) hizo imposible establecer responsabilidad definitiva, subrayando que la criptografía debe implementarse dentro de un marco más amplio para ser verdaderamente efectiva.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Ataques criptográficos básicos</h1>
+                    <p>Comprender las amenazas contra los sistemas criptográficos es esencial para evaluar su seguridad:</p>
+                    <ul>
+                        <li><strong>Ataque de fuerza bruta:</strong> Intentar todas las posibles claves hasta encontrar la correcta.</li>
+                        <li><strong>Criptoanálisis:</strong> Análisis matemático para encontrar debilidades en los algoritmos.</li>
+                        <li><strong>Ataque de canal lateral:</strong> Explotar información obtenida de la implementación física del sistema.</li>
+                        <li><strong>Ataque de intermediario (Man-in-the-Middle):</strong> Interceptar comunicaciones haciéndose pasar por ambas partes.</li>
+                        <li><strong>Ataques de implementación:</strong> Explotar fallos en la forma en que los algoritmos teóricamente seguros son puestos en práctica.</li>
+                    </ul>
+                    <p>Como consultor de seguridad, pude presenciar un sofisticado ataque de canal lateral contra un sistema de pagos. Los atacantes monitorizaban el consumo de energía del dispositivo durante operaciones criptográficas, lo que les permitió extraer la clave privada completa después de analizar múltiples transacciones. Lo fascinante fue que el algoritmo criptográfico en sí era teóricamente seguro, pero su implementación física filtró información crucial. Este incidente reforzó mi convicción de que la seguridad criptográfica debe evaluarse holísticamente, considerando no solo la fortaleza matemática del algoritmo sino también su implementación práctica y entorno operativo.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Entropía y aleatoriedad</h1>
+                    <p>La entropía y la generación de números verdaderamente aleatorios son componentes críticos de los sistemas criptográficos robustos:</p>
+                    <ul>
+                        <li><strong>Entropía:</strong> Medida de aleatoriedad o impredecibilidad en un sistema.</li>
+                        <li><strong>Generadores de números aleatorios (RNG):</strong>
+                            <ul>
+                                <li><strong>TRNG (True Random Number Generator):</strong> Basados en fenómenos físicos impredecibles.</li>
+                                <li><strong>PRNG (Pseudo-Random Number Generator):</strong> Algoritmos deterministas que generan secuencias aparentemente aleatorias.</li>
+                                <li><strong>CSPRNG (Cryptographically Secure PRNG):</strong> PRNGs que cumplen requisitos adicionales para uso criptográfico.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>En un proyecto de investigación en seguridad IoT, descubrimos que múltiples dispositivos utilizaban el mismo método deficiente para generar valores iniciales para sus claves. Debido a la baja entropía en su proceso de inicialización, pudimos predecir las claves generadas con una precisión alarmante. El fabricante había confiado en un PRNG sin suficiente entropía inicial, creando una vulnerabilidad sistemática. Esta experiencia destacó por qué la entropía es a menudo el eslabón más débil en implementaciones criptográficas: incluso algoritmos matemáticamente impenetrables se vuelven vulnerables cuando se alimentan con valores predecibles.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Algoritmos de cifrado simétrico -->
+        <section id="algoritmos-simetricos">
+            <h2 class="toggle-btn">Algoritmos de Cifrado Simétrico</h2>
+            <div>
+                <p>El cifrado simétrico utiliza la misma clave para cifrar y descifrar información. Estos algoritmos generalmente son rápidos y eficientes, lo que los hace ideales para cifrar grandes volúmenes de datos, aunque presentan desafíos en la distribución segura de claves.</p>
+                
+                <div id="sub-panel">
+                    <h1>● Cifrados de bloque</h1>
+                    <p>Los cifrados de bloque operan sobre bloques de datos de tamaño fijo, transformándolos mediante una serie de operaciones matemáticas determinadas por la clave.</p>
+                    <ul>
+                        <li><strong>DES (Data Encryption Standard):</strong> Algoritmo histórico con bloques de 64 bits y clave efectiva de 56 bits, ahora considerado inseguro.</li>
+                        <li><strong>3DES (Triple DES):</strong> Aplicación secuencial de DES para aumentar la seguridad, aunque más lento y gradualmente siendo retirado.</li>
+                        <li><strong>AES (Advanced Encryption Standard):</strong> Estándar actual, con bloques de 128 bits y tamaños de clave de 128, 192 o 256 bits.</li>
+                        <li><strong>Blowfish/Twofish:</strong> Alternativas populares con características como claves de longitud variable y diseño optimizado.</li>
+                    </ul>
+                    <p>Durante mi trabajo con una entidad financiera, enfrentamos el desafío de migrar sistemas legacy que utilizaban DES y 3DES hacia AES. Lo que parecía una simple actualización criptográfica se convirtió en un proyecto complejo debido a dependencias no documentadas y protocolos propietarios. Un aprendizaje crítico fue la importancia de mantener sistemas criptográficos modulares y actualizables; muchos componentes habían sido desarrollados con algoritmos específicos codificados directamente en su lógica, sin considerar la inevitable evolución de los estándares de seguridad. Esta experiencia ha informado mi enfoque actual, donde siempre recomiendo arquitecturas que permitan una "agilidad criptográfica" - la capacidad de actualizar algoritmos sin reescribir sistemas completos.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Modos de operación</h1>
+                    <p>Los modos de operación definen cómo se aplica un cifrado de bloque a secuencias de datos más largas que el tamaño del bloque.</p>
+                    <ul>
+                        <li><strong>ECB (Electronic Codebook):</strong> El más simple pero menos seguro, cifra cada bloque independientemente.</li>
+                        <li><strong>CBC (Cipher Block Chaining):</strong> Cada bloque se combina con el resultado cifrado anterior antes de cifrarse.</li>
+                        <li><strong>CTR (Counter):</strong> Convierte el cifrado de bloque en un cifrado de flujo cifrando valores de contador secuenciales.</li>
+                        <li><strong>GCM (Galois/Counter Mode):</strong> Proporciona cifrado y autenticación simultáneamente.</li>
+                        <li><strong>XTS:</strong> Diseñado específicamente para cifrado de dispositivos de almacenamiento.</li>
+                    </ul>
+                    <p>Un incidente de seguridad particularmente instructivo que investigué involucraba una aplicación que utilizaba AES en modo ECB para cifrar datos confidenciales. Aunque el algoritmo AES es robusto, el modo ECB permitió a los atacantes identificar patrones en los datos cifrados debido a que bloques idénticos de texto plano producen bloques idénticos de texto cifrado. Los atacantes pudieron inferir información significativa sin romper el cifrado mismo. Para demostrarlo a los desarrolladores, creé una visualización que mostraba cómo una imagen cifrada con ECB retenía claramente su silueta, mientras que la misma imagen cifrada con CBC aparecía completamente aleatorizada. Esta demostración visual tuvo más impacto que cualquier explicación técnica y condujo a una revisión inmediata de todos los sistemas criptográficos.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Cifrados de flujo</h1>
+                    <p>Los cifrados de flujo generan una secuencia pseudoaleatoria (keystream) que se combina con el texto plano bit a bit o byte a byte, generalmente mediante operación XOR.</p>
+                    <ul>
+                        <li><strong>RC4:</strong> Históricamente popular pero ahora considerado inseguro para la mayoría de las aplicaciones.</li>
+                        <li><strong>ChaCha20:</strong> Diseño moderno que ofrece alto rendimiento en implementaciones software.</li>
+                        <li><strong>A5/1 y A5/2:</strong> Utilizados en comunicaciones GSM, ambos con vulnerabilidades conocidas.</li>
+                        <li><strong>Salsa20:</strong> Predecesor de ChaCha20, también diseñado para eficiencia en software.</li>
+                    </ul>
+                    <p>En un proyecto de optimización de seguridad para una plataforma IoT con dispositivos de recursos limitados, enfrentamos el desafío de implementar cifrado eficiente en hardware con restricciones energéticas severas. Aunque inicialmente consideramos AES debido a su estatus como estándar, descubrimos que ChaCha20 proporcionaba un mejor equilibrio entre seguridad y eficiencia energética para nuestra aplicación específica. Las pruebas revelaron un consumo de energía aproximadamente 30% menor con ChaCha20 en comparación con AES en nuestros microcontroladores específicos, lo que se traducía directamente en mayor duración de batería. Esta experiencia reforzó mi convicción de que no existe un "mejor" algoritmo criptográfico universal; la selección óptima siempre debe considerar el contexto específico de implementación y los requisitos particulares del sistema.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Gestión de claves simétricas</h1>
+                    <p>El principal desafío del cifrado simétrico es la gestión segura de claves entre las partes comunicantes.</p>
+                    <ul>
+                        <li><strong>Generación de claves:</strong> Creación de claves con suficiente entropía y aleatoriedad.</li>
+                        <li><strong>Intercambio de claves:</strong> Métodos para compartir claves simétricas de forma segura (a menudo usando criptografía asimétrica).</li>
+                        <li><strong>Almacenamiento de claves:</strong> Protección de claves en reposo, incluyendo módulos HSM (Hardware Security Module).</li>
+                        <li><strong>Rotación de claves:</strong> Cambio periódico para limitar la exposición en caso de compromiso.</li>
+                        <li><strong>Destrucción de claves:</strong> Eliminación segura cuando ya no son necesarias.</li>
+                    </ul>
+                    <p>Durante un incidente de seguridad que investigué, una empresa había implementado cifrado fuerte (AES-256) para proteger datos de clientes, pero su arquitectura de gestión de claves presentaba vulnerabilidades críticas. Las claves maestras estaban almacenadas en archivos de configuración con permisos inadecuados, y se utilizaba la misma clave para múltiples sistemas durante años. Este caso ilustra perfectamente cómo incluso algoritmos criptográficos robustos pueden ser comprometidos por prácticas deficientes de gestión de claves. La remediación requirió no solo implementar HSMs para el almacenamiento seguro de claves, sino también desarrollar toda una infraestructura para gestionar su ciclo de vida: generación, distribución, rotación y revocación. Esta experiencia me enseñó que aproximadamente el 80% del esfuerzo en implementaciones criptográficas exitosas se dedica a la gestión de claves, no a los algoritmos en sí.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Vectores de inicialización y nonces</h1>
+                    <p>Componentes críticos que proporcionan variabilidad al cifrado para evitar patrones reconocibles.</p>
+                    <ul>
+                        <li><strong>Vector de inicialización (IV):</strong> Valor aleatorio utilizado para asegurar que texto plano idéntico produzca texto cifrado diferente.</li>
+                        <li><strong>Nonce (Number used once):</strong> Valor único utilizado para prevenir ataques de repetición.</li>
+                    </ul>
+                    <p>Requisitos clave:</p>
+                    <ul>
+                        <li>Unicidad (evitar reutilización)</li>
+                        <li>Imprevisibilidad (para ciertos modos de operación)</li>
+                        <li>Distribución segura junto con el texto cifrado</li>
+                    </ul>
+                    <p>En una evaluación de seguridad para una aplicación de mensajería, descubrí una vulnerabilidad crítica relacionada con la reutilización de IVs. Los desarrolladores habían implementado correctamente AES-CBC, pero utilizaban un IV estático codificado en la aplicación. Esto permitía ataques de reutilización de clave que comprometían mensajes con contenido similar o repetido. Para demostrar el impacto, desarrollé una prueba de concepto que podía recuperar partes sustanciales de mensajes sin conocer la clave de cifrado, simplemente aprovechando patrones en el texto cifrado resultantes de la reutilización del IV. Este hallazgo condujo a una refactorización significativa del sistema criptográfico, implementando generación aleatoria de IV para cada mensaje y medidas adicionales para verificar su unicidad. La lección más importante fue que incluso pequeños detalles de implementación pueden socavar completamente sistemas criptográficos teóricamente seguros.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Algoritmos de cifrado asimétrico -->
+        <section id="algoritmos-asimetricos">
+            <h2 class="toggle-btn">Algoritmos de Cifrado Asimétrico</h2>
+            <div>
+                <p>El cifrado asimétrico o de clave pública utiliza pares de claves matemáticamente relacionadas: una clave pública que puede compartirse abiertamente y una clave privada que debe mantenerse secreta. Estos sistemas resuelven el problema de distribución de claves del cifrado simétrico y permiten implementaciones de firma digital y autenticación.</p>
+                
+                <div id="sub-panel">
+                    <h1>● RSA (Rivest-Shamir-Adleman)</h1>
+                    <p>RSA es uno de los primeros y más ampliamente utilizados sistemas de cifrado asimétrico, basado en la dificultad computacional de factorizar números enteros grandes.</p>
+                    <ul>
+                        <li><strong>Fundamento matemático:</strong> Factorización de números grandes como problema computacionalmente difícil.</li>
+                        <li><strong>Operaciones:</strong> Exponenciación modular y teoría de números.</li>
+                        <li><strong>Tamaños de clave:</strong> Mínimo recomendado actual de 2048 bits, tendencia hacia 3072 o 4096 bits.</li>
+                        <li><strong>Aplicaciones:</strong> Cifrado, firmas digitales, intercambio de claves.</li>
+                        <li><strong>Vulnerabilidades:</strong> Ataques de factorización, implementación incorrecta del padding, ataques de canal lateral.</li>
+                    </ul>
+                    <p>Durante un análisis de seguridad para una infraestructura bancaria crítica, descubrimos implementaciones de RSA con tamaños de clave de solo 1024 bits y sin padding adecuado (PKCS#1 v1.5 en lugar del más seguro OAEP). Aunque en ese momento se consideraba "probablemente seguro", mostré cómo los avances en computación y criptoanálisis estaban reduciendo rápidamente el margen de seguridad. Lo más preocupante era que el diseño del sistema hacía casi imposible actualizar los tamaños de clave sin una refactorización completa. Este caso ilustra perfectamente por qué las implementaciones criptográficas deben considerar no solo las amenazas actuales sino también la evolución futura, implementando lo que llamamos "agilidad criptográfica" - la capacidad de actualizar algoritmos y parámetros sin cambios arquitectónicos significativos.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Criptografía de curva elíptica (ECC)</h1>
+                    <p>ECC basa su seguridad en el problema del logaritmo discreto sobre curvas elípticas, proporcionando seguridad equivalente a RSA con tamaños de clave significativamente menores.</p>
+                    <ul>
+                        <li><strong>Fundamento matemático:</strong> Problema del logaritmo discreto en curvas elípticas sobre campos finitos.</li>
+                        <li><strong>Ventajas:</strong> Claves más cortas, operaciones más eficientes, menor consumo de recursos.</li>
+                        <li><strong>Curvas estándar:</strong> NIST P-256, Curve25519, secp256k1 (Bitcoin), Brainpool.</li>
+                        <li><strong>Aplicaciones:</strong> Particularmente adecuado para dispositivos con recursos limitados.</li>
+                        <li><strong>Consideraciones:</strong> Selección cuidadosa de curvas, debate sobre posibles backdoors en algunas curvas estándar.</li>
+                    </ul>
+                    <p>En un proyecto para mejorar la seguridad de una red de dispositivos IoT de recursos limitados, recomendamos migrar de RSA-2048 a ECC (específicamente Curve25519). El impacto fue notable: redujimos el tiempo de procesamiento criptográfico en aproximadamente un 90% y el consumo de energía en operaciones de clave pública en más de un 80%. Lo que encontré particularmente interesante fue la resistencia inicial del equipo a adoptar ECC debido a preocupaciones sobre su "madurez" en comparación con RSA. Este caso destaca cómo las decisiones criptográficas a menudo están influenciadas no solo por factores técnicos sino también por percepción y familiaridad. La implementación finalmente fue un éxito, y la eficiencia mejorada permitió incorporar características de seguridad adicionales que anteriormente se consideraban demasiado costosas en términos de recursos.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Diffie-Hellman y ECDH</h1>
+                    <p>Protocolos fundamentales para el intercambio seguro de claves a través de canales inseguros.</p>
+                    <ul>
+                        <li><strong>Diffie-Hellman (DH):</strong> Basado en el problema del logaritmo discreto en grupos multiplicativos.</li>
+                        <li><strong>Elliptic Curve Diffie-Hellman (ECDH):</strong> Variación que utiliza curvas elípticas para mayor eficiencia.</li>
+                        <li><strong>Proceso:</strong> 
+                            <ol>
+                                <li>Cada parte genera un par de claves público-privado</li>
+                                <li>Intercambian sus claves públicas</li>
+                                <li>Cada parte combina la clave pública recibida con su propia clave privada</li>
+                                <li>Ambas partes derivan el mismo secreto compartido</li>
+                            </ol>
+                        </li>
+                        <li><strong>Aplicaciones:</strong> Base para protocolos como TLS, SSH, VPN.</li>
+                    </ul>
+                    <p>Durante una investigación de un incidente de seguridad, descubrimos una vulnerabilidad en la implementación de Diffie-Hellman en una VPN corporativa. La aplicación utilizaba correctamente DH para el intercambio de claves, pero no validaba adecuadamente los parámetros recibidos, lo que permitía un ataque de "small subgroup". Este caso fue particularmente instructivo porque la implementación seguía las especificaciones del protocolo pero omitía verificaciones críticas que no estaban explícitamente requeridas pero que son esenciales para la seguridad. Utilizamos este incidente para desarrollar una lista de verificación de "validaciones criptográficas esenciales" que desde entonces se ha convertido en un estándar en nuestras revisiones de código. La lección más valiosa fue que en criptografía, a diferencia de otros dominios de programación, seguir la especificación mínima raramente es suficiente; la implementación segura requiere comprender los fundamentos matemáticos y las amenazas específicas a cada algoritmo.</p>
+                </div>
+                
+                <div id="sub-panel">
+                    <h1>● Criptografía post-cuántica</h1>
+                    <p>Algoritmos diseñados para resistir ataques de computadoras cuánticas, que podrían romper muchos sistemas criptográficos actuales.</p>
+                    <li><strong>Amenaza cuántica:</strong> Algoritmo de Shor puede factorizar números grandes eficientemente, comprometiendo RSA, DH y ECC.</li>
+                    <li><strong>Familias de algoritmos post-cuánticos:</strong>
+                        <ul>
+                            <li><strong>Criptografía basada en retículos:</strong> NTRU, CRYSTALS-Kyber, CRYSTALS-Dilithium.</li>
+                            <li><strong>Criptografía basada en códigos:</strong> McEliece, BIKE.</li>
+                            <li><strong>Criptografía multivariante:</strong> Rainbow, GeMSS.</li>
+                            <li><strong>Criptografía basada en hash:</strong> SPHINCS+.</li>
+                            <li><strong>Criptografía basada en isogenias:</strong> SIKE (aunque recientemente comprometido).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Estado actual:</strong> NIST en proceso de estandarización; transición gradual recomendada.</li>
+                </ul>
+                <p>Como investigador participante en pruebas iniciales de implementaciones post-cuánticas, he observado desafíos significativos en su adopción práctica. En una prueba piloto para una institución financiera, implementamos un sistema híbrido que utilizaba tanto criptografía tradicional (RSA-3072) como algoritmos post-cuánticos (CRYSTALS-Kyber). Los resultados mostraron que mientras algunos algoritmos PQC ofrecían rendimiento comparable o incluso superior a RSA en ciertas operaciones, otros introducían sobrecarga significativa en términos de tamaños de clave y firma. Particularmente notable fue el impacto en protocolos existentes como TLS, donde el mayor tamaño de las claves públicas PQC causaba fragmentación de paquetes y problemas de compatibilidad. Esta experiencia me convenció de que la transición a criptografía post-cuántica requerirá no solo nuevos algoritmos sino también adaptaciones significativas en protocolos e infraestructura de comunicaciones.</p>
+            </div>
+            
+            <div id="sub-panel">
+                <h1>● Aplicaciones de la criptografía asimétrica</h1>
+                <p>La criptografía de clave pública ha transformado la seguridad digital con aplicaciones más allá del cifrado simple:</p>
+                <ul>
+                    <li><strong>Firmas digitales:</strong> Autenticar el origen e integridad de información.</li>
+                    <li><strong>Intercambio seguro de claves:</strong> Establecer secretos compartidos a través de canales inseguros.</li>
+                    <li><strong>Infraestructura de clave pública (PKI):</strong> Framework para gestionar certificados digitales.</li>
+                    <li><strong>Autenticación:</strong> Verificar identidades sin revelar credenciales.</li>
+                    <li><strong>Criptomonedas y blockchain:</strong> Base para transacciones seguras sin autoridad central.</li>
+                </ul>
+                <p>Durante mi trabajo como asesor de seguridad para una plataforma gubernamental de identidad digital, tuve la oportunidad de implementar un sistema de firmas digitales para documentos oficiales. El aspecto más fascinante no fue técnico sino social: observar cómo la firma digital transformaba la percepción de validez legal de documentos electrónicos. Inicialmente existía gran escepticismo sobre documentos "sin firma física", pero tras un programa educativo que explicaba los fundamentos matemáticos de las firmas digitales y su superioridad en términos de verificabilidad y resistencia a falsificaciones, la aceptación aumentó dramáticamente. Este caso me enseñó que la implementación exitosa de soluciones criptográficas avanzadas no depende solo de su solidez técnica sino también de la comprensión y confianza de los usuarios finales.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funciones hash criptográficas -->
+    <section id="funciones-hash">
+        <h2 class="toggle-btn">Funciones Hash Criptográficas</h2>
+        <div>
+            <p>Las funciones hash criptográficas son algoritmos que transforman datos de entrada de cualquier tamaño en una cadena de bits de longitud fija, diseñadas para ser unidireccionales (imposibles de invertir) y resistentes a colisiones.</p>
+            
+            <div id="sub-panel">
+                <h1>● Propiedades de las funciones hash criptográficas</h1>
+                <p>Para ser considerada criptográficamente segura, una función hash debe cumplir ciertas propiedades fundamentales:</p>
+                <ul>
+                    <li><strong>Resistencia a preimagen (one-way):</strong> Dado un hash h, debe ser computacionalmente inviable encontrar cualquier mensaje m tal que hash(m) = h.</li>
+                    <li><strong>Resistencia a segunda preimagen:</strong> Dado un mensaje m1, debe ser computacionalmente inviable encontrar un mensaje diferente m2 tal que hash(m1) = hash(m2).</li>
+                    <li><strong>Resistencia a colisiones:</strong> Debe ser computacionalmente inviable encontrar dos mensajes diferentes m1 y m2 tales que hash(m1) = hash(m2).</li>
+                    <li><strong>Efecto avalancha:</strong> Pequeños cambios en la entrada deben producir cambios significativos en la salida.</li>
+                    <li><strong>Determinismo:</strong> La misma entrada siempre produce la misma salida.</li>
+                    <li><strong>Eficiencia computacional:</strong> El cálculo del hash debe ser rápido.</li>
+                </ul>
+                <p>En una investigación forense que conduje tras un incidente de seguridad, descubrimos que los atacantes habían explotado una función hash débil (MD5) utilizada para verificar la integridad de actualizaciones de firmware. Mediante un ataque de colisión, habían creado un firmware malicioso con el mismo hash MD5 que el firmware legítimo. Lo que hacía este caso particularmente notable era que el sistema había sido desarrollado cuando MD5 aún se consideraba seguro, pero nunca fue actualizado a pesar de las múltiples advertencias publicadas años antes del ataque. Utilizamos este incidente como caso de estudio para desarrollar directrices de "ciclo de vida criptográfico" que incluyen monitorización proactiva de avances criptográficos y planes de migración para algoritmos comprometidos. La lección crítica fue que la seguridad criptográfica no es estática; lo que es seguro hoy puede ser vulnerable mañana.</p>
+            </div>
+            
+            <div id="sub-panel">
+                <h1>● Algoritmos hash comunes</h1>
+                <p>A lo largo del tiempo, diversos algoritmos hash han sido desarrollados con diferentes niveles de seguridad:</p>
+                <ul>
+                    <li><strong>MD5:</strong> Produce digests de 128 bits, considerado inseguro desde 2004.</li>
+                    <li><strong>SHA-1:</strong> Produce digests de 160 bits, considerado inseguro desde 2017.</li>
+                    <li><strong>SHA-2 (SHA-256, SHA-512):</strong> Familia de algoritmos considerados seguros actualmente.</li>
+                    <li><strong>SHA-3:</strong> Basado en la construcción Keccak, diseñado como alternativa a SHA-2.</li>
+                    <li><strong>BLAKE2/BLAKE3:</strong> Diseñados para alta eficiencia, particularmente en plataformas software.</li>
+                </ul>
+                <p>Durante la optimización de una aplicación de verificación de archivos que procesaba grandes volúmenes de datos, realizamos un análisis comparativo exhaustivo entre SHA-256, SHA-3 y BLAKE2b. Los resultados fueron reveladores: en nuestra plataforma específica (procesadores ARM), BLAKE2b proporcionaba velocidades aproximadamente tres veces superiores a SHA-256 y casi cinco veces superiores a SHA-3, manteniendo garantías de seguridad equivalentes o superiores. Este caso me enseñó que la selección de primitivas criptográficas debe considerar no solo el nivel de seguridad abstracto sino también el contexto específico de implementación, incluyendo arquitectura, patrones de acceso a datos y requisitos de rendimiento. Desde entonces, he abogado por evaluaciones específicas de rendimiento en cada implementación en lugar de depender exclusivamente de benchmarks genéricos o suposiciones sobre la eficiencia relativa de diferentes algoritmos.</p>
+            </div>
+            
+            <div id="sub-panel">
+                <h1>● Aplicaciones de las funciones hash</h1>
+                <p>Las funciones hash criptográficas tienen numerosas aplicaciones en seguridad informática:</p>
+                <ul>
+                    <li><strong>Verificación de integridad:</strong> Detectar cambios no autorizados en archivos o mensajes.</li>
+                    <li><strong>Almacenamiento seguro de contraseñas:</strong> Mediante funciones derivadoras de clave.</li>
+                    <li><strong>Firmas digitales:</strong> Firmando el hash del mensaje en lugar del mensaje completo.</li>
+                    <li><strong>Pruebas de trabajo (PoW):</strong> Base para minería en muchas criptomonedas.</li>
+                    <li><strong>Árboles de Merkle:</strong> Estructuras de datos para verificación eficiente en blockchain y sistemas distribuidos.</li>
+                    <li><strong>Identificadores de contenido:</strong> En sistemas de almacenamiento distribuido y deduplicación.</li>
+                </ul>
+                <p>En un proyecto de modernización para un sistema gubernamental de gestión documental, implementamos una solución innovadora basada en árboles de Merkle y timestamps criptográficos para garantizar la integridad a largo plazo de documentos oficiales. La característica más interesante fue el uso de "anclaje blockchain" - periódicamente publicábamos la raíz del árbol de Merkle en múltiples blockchains públicas, creando así una prueba inmutable de existencia y no modificación para millones de documentos sin revelar su contenido. Este enfoque resolvió elegantemente el problema de preservación de integridad digital a largo plazo, incluso ante la posibilidad de que algoritmos hash específicos fueran eventualmente comprometidos. La experiencia me enseñó cómo primitivas criptográficas relativamente simples como funciones hash pueden combinarse en estructuras sofisticadas para resolver problemas complejos de integridad y no repudio.</p>
+            </div>
+            
+            <div id="sub-panel">
+                <h1>● Funciones derivadoras de clave (KDF) y funciones de hash para contraseñas</h1>
+                <p>Funciones especializadas diseñadas para convertir contraseñas o secretos en claves criptográficas o hashes resistentes a ataques.</p>
+                <ul>
+                    <li><strong>PBKDF2 (Password-Based Key Derivation Function 2):</strong> Aplica una función hash múltiples veces.</li>
+                    <li><strong>bcrypt:</strong> Diseñado específicamente para contraseñas, con factor de costo ajustable.</li>
+                    <li><strong>scrypt:</strong> Añade requisitos de memoria para resistir ataques con hardware especializado.</li>
+                    <li><strong>Argon2:</strong> Ganador de la Password Hashing Competition, resistente a diversos ataques.</li>
+                    <li><strong>HKDF (HMAC-based Key Derivation Function):</strong> Para derivar claves de material con alta entropía.</li>
+                </ul>
+                <p>Como consultor de seguridad para una empresa que había sufrido una filtración de datos que incluía hashes de contraseñas, tuve la oportunidad de estudiar empíricamente la efectividad de diferentes algoritmos de hashing contra ataques reales. La organización utilizaba SHA-256 con salt único por usuario, pero sin iteraciones adicionales. En nuestros experimentos, logramos recuperar aproximadamente el 60% de las contraseñas en 48 horas utilizando hardware commodity. Para demostrar la diferencia que hacen los algoritmos especializados, realizamos una comparación directa: hashing con Argon2id configurado adecuadamente habría ralentizado el ataque más de 10,000 veces, haciendo que la recuperación de contraseñas fuera económicamente inviable incluso para atacantes con recursos significativos. Este caso fue instrumental para desarrollar directrices prácticas de hashing de contraseñas basadas en datos reales y no solo en recomendaciones teóricas, y para mostrar por qué las funciones hash generales como SHA-256, incluso con salt, son inadecuadas para proteger contraseñas.</p>
+            </div>
+            
+            <div id="sub-panel">
+                <h1>● HMAC (Hash-based Message Authentication Code)</h1>
+                <p>Construcción que utiliza funciones hash criptográficas junto con una clave secreta para verificar simultáneamente la integridad y autenticidad de un mensaje.</p>
+                <ul>
+                    <li><strong>Estructura:</strong> HMAC(K, m) = H((K' ⊕ opad) || H((K' ⊕ ipad) || m))</li>
+                    <li><strong>Ventajas sobre simple hash:</strong> Protección contra ataques de extensión por longitud.</li>
+                    <li><strong>Aplicaciones:</strong> Verificación de integridad en API, protocolos de autenticación, JWT.</li>
+                </ul>
+                <p>Durante el análisis de seguridad de una API financiera, descubrí una implementación incorrecta de verificación de integridad que utilizaba un simple mecanismo de "hash + clave concatenada" (es decir, H(m || K)) en lugar de HMAC adecuado. Aunque superficialmente similar, esta aproximación es vulnerable a ataques de extensión si se utiliza con algoritmos hash como MD5 o SHA-1 que sufren de vulnerabilidades de extensión por longitud. Desarrollé una prueba de concepto que demostraba cómo un atacante podía modificar mensajes y generar hashes válidos sin conocer la clave secreta. Este hallazgo condujo a una revisión completa de todas las implementaciones criptográficas en la organización y al desarrollo de una biblioteca criptográfica estandarizada con implementaciones verificadas de primitivas comunes como HMAC. Lo más valioso de esta experiencia fue comprender que en criptografía, incluso pequeñas desviaciones de las construcciones estándar pueden introducir vulnerabilidades catastróficas, incluso cuando la lógica general parece correcta.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infraestructura de clave pública (PKI) -->
+    <section id="infraestructura">
+        <h2 class="toggle-btn">Infraestructura de Clave Pública (PKI)</h2>
+        <div>
+            <p>La infraestructura de clave pública (PKI) es un conjunto de roles, políticas, hardware, software y procedimientos necesarios para crear, gestionar, distribuir, usar, almacenar y revocar certificados digitales, proporcionando un framework para autenticación, cifrado y no repudio en entornos digitales.</p>
+            
+            <div id="sub-panel">
+                <h1>● Certificados digitales</h1>
+                <p>Los certificados digitales son documentos electrónicos que asocian una identidad (persona, organización, servidor) con una clave pública, firmados por una entidad confiable.</p>
+                <ul>
+                    <li><strong>Estructura X.509:</strong> Estándar común que define el formato de certificados digitales.</li>
+                    <li><strong>Componentes principales:</strong>
+                        <ul>
+                            <li>Información del sujeto (identidad)</li>
+                            <li>Clave pública del sujeto</li>
+                            <li>Información del emisor</li>
+                            <li>Período de validez</li>
+                            <li>Firma digital del emisor</li>
+                            <li>Extensiones (usos de clave, políticas, etc.)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Tipos de certificados:</strong> SSL/TLS, código, cliente, timestamping, etc.</li>
+                </ul>
+                <p>Durante la implementación de una PKI para una organización sanitaria multinacional, enfrentamos un desafío interesante relacionado con la validación de identidad para certificados de personal médico. Los requisitos legales variaban significativamente entre jurisdicciones, desde verificaciones básicas de email hasta identificación presencial con múltiples documentos. Desarrollamos un esquema innovador de "niveles de aseguramiento" codificados en extensiones de certificado que permitían a los sistemas determinar dinámicamente qué nivel de confianza asignar a cada certificado según su proceso de emisión. Lo más valioso de esta experiencia fue comprender que una PKI efectiva debe balancear rigurosidad técnica con practicidad operativa; el sistema criptográficamente más seguro fracasa si los procesos asociados son demasiado complejos para ser seguidos consistentemente.</p>
+            </div>
+            
+            <div id="sub-panel">
+                <h1>● Autoridades de certificación (CA)</h1>
+                <p>Las autoridades de certificación son entidades confiables responsables de emitir certificados digitales, verificando la identidad de los solicitantes y firmando sus certificados.</p>
+                <ul>
+                    <li><strong>Jerarquía de CA:</strong>
+                        <ul>
+                            <li>CA raíz (Root CA): Autoafirmada, mantenida fuera de línea.</li>
+                            <li>CA intermedias: Emiten certificados de entidad final.</li>
+                            <li>Certificados de entidad final: Para servidores, clientes, etc.</li>
+                        </ul>
+                    </li>
+                    <li><strong>CA públicas vs. privadas:</strong> Diferencias en casos de uso, confianza y gestión.</li>
+                    <li><strong>RA (Autoridad de Registro):</strong> Responsable de verificar identidades antes de la emisión de certificados.</li>
+                </ul>
+                <p>Como auditor de seguridad para una organización financiera, investigué un incidente donde un atacante había obtenido un certificado SSL válido para un dominio corporativo crítico. El origen del problema no fue técnico sino procesal: la CA pública había validado incorrectamente la identidad del solicitante debido a una combinación de ingeniería social y validaciones de dominio inadecuadas. Utilizamos este incidente para implementar Certificate Transparency (CT) monitoring y Certificate Authority Authorization (CAA) records, tecnologías que proporcionan capas adicionales de protección contra emisión no autorizada de certificados. Esta experiencia ilustra perfectamente cómo la seguridad de PKI depende tanto de controles técnicos como de procesos humanos rigurosos, y cómo incluso CAs establecidas pueden tener fallos críticos en sus procedimientos de validación si no se mantienen altos estándares de verificación.</p>
+            </div>
+            
+            <div id="sub-panel">
+                <h1>● Revocación de certificados</h1>
+                <p>Mecanismos para invalidar certificados antes de su expiración natural, esenciales cuando las claves privadas se ven comprometidas o la información del certificado ya no es válida.</p>
+                <ul>
+                    <li><strong>CRL (Certificate Revocation List):</strong> Listas periódicamente publicadas de certificados revocados.</li>
+                    <li><strong>OCSP (Online Certificate Status Protocol):</strong> Verificación en tiempo real del estado de un certificado.</li>
+                    <li><strong>OCSP Stapling:</strong> El servidor proporciona respuestas OCSP precacheadas junto con su certificado.</li>
+                    <li><strong>Must-Staple:</strong> Extensión que requiere que el certificado se presente con una respuesta OCSP reciente.</li>
+                    <li><strong>Mecanismos alternatives:</strong> CRLite, CRLSets, certificate transparency.</li>
+                </ul>
+                <p>Durante la respuesta a un incidente de compromiso de clave privada en una infraestructura crítica, observé de primera mano las limitaciones prácticas de los mecanismos de revocación tradicionales. Aunque revocamos inmediatamente el certificado comprometido mediante CRL y OCSP, descubrimos que muchos clientes no verificaban adecuadamente el estado de revocación o cacheaban respuestas durante períodos excesivamente largos. Más preocupante aún, algunos sistemas embebidos simplemente ignoraban la información de revocación para evitar problemas de conectividad. Esta experiencia motivó una revisión completa de nuestra estrategia de gestión de certificados, implementando rotación proactiva, períodos de validez más cortos, y monitorización continua de uso de certificados como complementos a la revocación tradicional. El aprendizaje clave fue que en PKI, debemos diseñar asumiendo que los mecanismos de revocación fallarán o serán ignorados en ciertos contextos, lo que requiere estrategias de defensa en profundidad.</p>
+            </div>
+            
+            <div id="sub-panel">
+                <h1>● Modelos de confianza</h1>
+                <p>Frameworks que definen cómo se establece, mantiene y evalúa la confianza en una PKI.</p>
+                <ul>
+                    <li><strong>Modelo jerárquico:</strong> Estructura de árbol con una CA raíz en la cima.</li>
+                    <li><strong>Web of Trust:</strong> Modelo descentralizado donde usuarios certifican identidades de otros (PGP/GPG).</li>
+                    <li><strong>Bridge CA:</strong> Modelo para conectar múltiples PKIs organizacionales.</li>
+                    <li><strong>Certificate Transparency:</strong> Framework para monitorización y auditoría pública de certificados.</li>
+                    <li><strong>DANE (DNS-based Authentication of Named Entities):</strong> Utiliza DNSSEC para asociar certificados con dominios.</li>
+                </ul>
+                <p>Como consultor para una colaboración internacional entre instituciones de investigación médica, enfrenté el desafío de diseñar una infraestructura de confianza que acomodara organizaciones con políticas, requisitos regulatorios y culturas de seguridad significativamente diferentes. Después de evaluar múltiples opciones, implementamos un modelo híbrido que combinaba elementos de Bridge CA con federación basada en políticas. Lo más revelador fue observar cómo diferentes organizaciones conceptualizaban la "confianza" de maneras fundamentalmente distintas: algunas priorizaban controles técnicos rigurosos mientras otras valoraban más los acuerdos contractuales y la responsabilidad organizacional. Esta experiencia me enseñó que los modelos de confianza PKI más efectivos no son simplemente construcciones técnicas sino sociotécnicas que deben alinearse con las expectativas culturales y organizacionales de los participantes.</p>
+            </div>
+            
+            <div id="sub-panel">
+                <h1>● Gestión del ciclo de vida de certificados</h1>
+                <p>Procesos para gestionar certificados desde su emisión hasta su expiración o revocación.</p>
+                <ul>
+                    <li><strong>Generación de CSR (Certificate Signing Request)</strong></li>
+                    <li><strong>Validación de identidad</strong></li>
+                    <li><strong>Emisión de certificados</strong></li>
+                    <li><strong>Instalación y despliegue</strong></li>
+                    <li><strong>Monitorización y renovación</strong></li>
+                    <li><strong>Revocación y reemplazo</strong></li>
+                    <li><strong>Auditoría y cumplimiento</strong></li>
+                </ul>
+                <p>Como CISO de una organización global, lideré un proyecto para modernizar nuestra gestión de certificados después de múltiples incidentes de expiración no detectada que causaron interrupciones de servicio. El problema no era técnico sino organizativo: teníamos más de 15,000 certificados gestionados manualmente por diversos equipos con procesos inconsistentes. Implementamos una plataforma centralizada de gestión de certificados con descubrimiento automático, monitorización, renovación automática y detallados flujos de trabajo para aprobaciones cuando fuera necesario. Lo que encontré más sorprendente fue que el mayor obstáculo no fue tecnológico sino cultural: convencer a los equipos de renunciar a sus procesos manuales "probados" y adoptar la automatización. Esta experiencia me enseñó que en seguridad empresarial, las soluciones puramente técnicas rara vez resuelven problemas complejos; el éxito requiere igual atención a factores humanos, flujos de trabajo organizativos y gestión del cambio.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aplicaciones prácticas -->
+    <section id="aplicaciones">
+        <h2 class="toggle-btn">Aplicaciones Prácticas</h2>
+        <div>
+            <p>La criptografía moderna se aplica en numerosos contextos para proteger información y comunicaciones en todos los aspectos de nuestra vida digital.</p>
+            
+            <div id="sub-panel">
+                <h1>● Seguridad en comunicaciones web: TLS/SSL</h1>
+                <p>Transport Layer Security (TLS) y su predecesor, Secure Sockets Layer (SSL), son protocolos criptográficos diseñados para proporcionar comunicaciones seguras a través de redes como Internet.</p>
+                <ul>
+                    <li><strong>Evolución:</strong> SSL 2.0 → SSL 3.0 → TLS 1.0 → TLS 1.1 → TLS 1.2 → TLS 1.3</li>
+                    <li><strong>Proceso de handshake:</strong>
+                        <ul>
+                            <li>Negociación de protocolo y suites criptográficas</li>
+                            <li>Autenticación (típicamente unilateral mediante certificado de servidor)</li>
+                            <li>Intercambio de claves (RSA, DHE, ECDHE)</li>
+                            <li>Establecimiento de claves de sesión</li>
+                        </ul>
+                    </li>
+                    <li><strong>Mejoras en TLS 1.3:</strong>
+                        <ul>
+                            <li>Handshake más rápido (1-RTT, 0-RTT)</li>
+                            <li>Elimina algoritmos inseguros</li>
+                            <li>Mayor privacidad (cifrado de certificados)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Consideraciones de seguridad:</strong> HSTS, HPKP, verificación de certificados, configuración de suites criptográficas.</li>
+                </ul>
+                <p>Durante un proyecto de migración a TLS 1.3 para una plataforma financiera de alto rendimiento, observamos mejoras notables no solo en seguridad sino también en rendimiento. El tiempo de conexión inicial se redujo aproximadamente un 40% y las reconexiones con 0-RTT mostraron mejoras aún más dramáticas. Sin embargo, el aspecto más interesante fue el impacto inesperado en herramientas de monitorización y seguridad existentes. Varias soluciones de inspección de tráfico dejaron de funcionar correctamente debido al cifrado ampliado en TLS 1.3, que protege partes del handshake que anteriormente eran visibles. Esto nos obligó a repensar nuestra arquitectura de seguridad de red, alejándonos del modelo tradicional de "inspección centralizada" hacia un enfoque más distribuido con visibilidad en los endpoints. Esta experiencia ilustra perfectamente cómo los avances criptográficos a menudo tienen ramificaciones que van mucho más allá de sus mejoras de seguridad inmediatas, afectando arquitecturas completas y paradigmas operativos.</p>
+            </div>
+            
+            <div id="sub-panel">
+                <h1>● Mensajería segura y cifrado de extremo a extremo</h1>
+                <p>Protocolos y aplicaciones que garantizan que solo los participantes previstos de una comunicación pueden acceder al contenido, excluyendo incluso a los proveedores de la plataforma.</p>
+                <ul>
+                    <li><strong>Signal Protocol:</strong> Estado del arte en mensajería segura.
+                        <ul>
+                            <li>Propiedades: Perfect Forward Secrecy, post-compromiso security.</li>
+                            <li>Componentes: X3DH para establecimiento inicial, Double Ratchet para derivación de claves.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Aplicaciones:</strong> Signal, WhatsApp, Wire, Element (Matrix).</li>
+                    <li><strong>PGP/GPG:</strong> Sistema más antiguo aún utilizado para email y verificación de archivos.</li>
+                    <li><strong>Desafíos:</strong> Gestión de claves, verificación de identidad, metadatos, respaldo seguro.</li>
+                </ul>
+                <p>Como parte de un equipo que implementó comunicaciones seguras para personal en zonas de conflicto, tuve la oportunidad de evaluar en profundidad diferentes soluciones de mensajería segura. Lo que resultó más revelador fue la importancia crítica del diseño de experiencia de usuario en seguridad real. En un escenario inicial, implementamos una solución técnicamente sofisticada con PGP, pero la complejidad de la verificación de claves llevó a muchos usuarios a omitir pasos de verificación cruciales, creando una falsa sensación de seguridad. Al migrar a una aplicación basada en Signal con verificación de contactos mediante códigos QR y notificaciones de cambio de clave, la adherencia a protocolos seguros aumentó dramáticamente. Esta experiencia cambió fundamentalmente mi perspectiva sobre seguridad aplicada: un sistema teóricamente menos seguro pero consistentemente utilizado correctamente proporciona mejor protección real que un sistema teóricamente óptimo pero demasiado complejo para uso correcto y consistente.</p>
+            </div>
+        </div>
+    </section>
 
     
+                        
+<section id="nextBack-section">
+    <a id="next-section" href="./U-seg-Profundizando.html">Siguiente Seccion</a><i class="fas fa-arrow-right"></i>
+</section>  
+</main>        
+</div>
 
-    <div class="overlay" id="overlay">
-        <button class="close-btn" onclick="cerrarImagen()">X</button>
-        <img id="imagenAmpliada" src="" alt="Imagen Ampliada">
-    </div>
 
-    <script src="../../js/menuDesplegable.js"></script>    
-    <script src="../../js/divInfoDesplegable.js"></script>
-    <script src="../../js/ampliarImg.js"></script>
+
+<div class="overlay" id="overlay">
+<button class="close-btn" onclick="cerrarImagen()">X</button>
+<img id="imagenAmpliada" src="" alt="Imagen Ampliada">
+</div>
+
+<script src="../../js/menuDesplegable.js"></script>    
+<script src="../../js/divInfoDesplegable.js"></script>
+<script src="../../js/ampliarImg.js"></script>
 </body>
 </html>

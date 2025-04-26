@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preguntas Frecuentes</title>
+    <title>Evaluador</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/template.css">
-    <link rel="stylesheet" href="../css/faqs.css">
+    
+    <link rel="stylesheet" href="../css/template.css">    
         <!--FONT-->
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
         <style>
@@ -20,61 +20,55 @@
         <button id="menu-toggle" class="menu-toggle">☰ Menú</button>
         <!-- Menú lateral izquierdo -->
         <aside class="menu" id="menu">
-            <h2>Navegación</h2>
+            <h2>Evaluador</h2>
             <ul>
-                <li><a href="../../index.html"><i class="fas fa-arrow-left"></i> Atras</a>
-
+                <li><a href="./general.html"><i class="fas fa-arrow-left"></i> General</a>
             </ul>
         </aside>
         </main>
 
         <!-- Contenido principal -->
         <main class="content">
-        <section id="introduccion">
-            <h1>🖥️ Preguntas frecuentes</h1>
-            <section id="info-section" style="background-color: transparent;">                
-                <img id="imgEffect" src="../img/no-user-0.png" onclick="ampliarImagen(this)" style="height: 226px; margin-top: 12px;">
-                <div>
-                    <p>Esta página web está diseñada para ofrecer información sobre seguridad informática básica, con el fin de brindar un espacio educativo para aquellos que quieran aprender sobre este tema.</p>
-                </div>
-            </section>
-            
-            <section id="info-section-desplegable" class="desplegable-info">
-                <h2 href="#" class="toggle-btn">¿Quién creó esta página web?</h2>
-                <div class="submenu-info">
-                    <p>La página fue creada por <strong>Facundo Amelotti</strong>, estudiante de la carrera de sistemas, como un proyecto para resumir lo aprendido en la materia de seguridad informática y compartirlo con otras personas.</p>                    
-                </div>
-            </section>
-            
-            <section id="info-section-desplegable" class="desplegable-info">
-                <h2 href="#" class="toggle-btn">¿Por qué fue creada esta página?</h2>
-                <div class="submenu-info">
-                    <p>La idea detrás de la creación de esta página es proporcionar una plataforma accesible donde los interesados en la seguridad informática básica puedan encontrar conceptos clave, aprender y aplicar buenas prácticas para proteger su información personal y profesional.</p>
-                </div>
-            </section>
-            
-            <section id="info-section-desplegable" class="desplegable-info">
-                <h2 href="#" class="toggle-btn">¿Con qué fin fue creada esta página?</h2>
-                <div class="submenu-info">
-                    <p>El principal fin es educar al público sobre los aspectos fundamentales de la seguridad informática, capacitar sobre cómo proteger sistemas y datos y promover una cultura de seguridad en la web.</p>
-                </div>
-            </section>
-            
-            <section id="info-section-desplegable" class="desplegable-info">
-                <h2 href="#" class="toggle-btn">¿Cómo puedo aprender más sobre seguridad informática?</h2>
-                <div class="submenu-info">                
-                    <p>Puedes explorar los temas que se ofrecen en esta página, realizar cursos online, leer libros sobre ciberseguridad y practicar con herramientas y simuladores que ayuden a entender la teoría de manera práctica.</p>
-                </div>
-            </section>
-            
-            <section id="info-section-desplegable" class="desplegable-info">
-                <h2 href="#" class="toggle-btn">¿Qué temas abarca esta página?</h2>
-                <div class="submenu-info">
-                    <p>La página abarca conceptos básicos de seguridad informática, incluyendo la protección contra virus, firewalls, encriptación, contraseñas seguras, phishing, malware y otros riesgos comunes en el entorno digital.</p>
-                </div>
-            </section>
-            
-        </section>             
+
+          <section>
+            <p>🔹 Puede que haya preguntas que no esten en el contenido...</p>
+            <p>🔹 La mejor forma de aprender este juego es memorizando!</p>
+        </section>
+
+            <div class="evaluador">
+                <section id="tema-section">
+                  <h2>Selecciona los temas a evaluar</h2>
+                  <form id="temas-form">
+                    <label><input type="checkbox" name="tema" value="redes"> Redes</label>
+                    <label><input type="checkbox" name="tema" value="bd"> Bases de Datos</label>
+                    <label><input type="checkbox" name="tema" value="seguridad"> Seguridad</label>
+                    <button type="submit" style="height: 32px; padding: 0 12px; background-color: rgb(97, 116, 149);">Comenzar Evaluación</button>
+                  </form>
+                </section>
+          
+                <section id="evaluacion-section" class="hidden">
+                  <div id="pregunta-container">
+                    <h2 id="preg-titulo"></h2>
+                    <h3 id="pregunta-texto"></h3>
+
+                    <section style="margin: 6px 32px;">
+                    <ul id="opciones-lista"></ul>
+                  </section>
+
+                    <section style="margin: 6px 32px;">
+                  
+                      <div id="info-pregunta">
+                        <p id="area"></p>
+                        <p id="dificultad"></p>
+                        <p id="contador"></p>
+                      </div>
+                    </section>
+    
+                    <button id="siguiente-btn" disabled>Siguiente pregunta</button>
+                  </div>
+                  <button id="finalizar-btn" disabled>Finalizar Evaluación</button>
+                  
+                </section>
         </main>
     </div>
 
@@ -83,7 +77,8 @@
         <img id="imagenAmpliada" src="" alt="Imagen Ampliada">
     </div>
 
-    <script src="./../js/menuDesplegable.js"></script>    
+    <script src="./../js/menuDesplegable.js"></script>
+    <script src="./../js/evaluador.js"></script>    
     <script src="./../js/divInfoDesplegable.js"></script>
     <script src="./../js/ampliarImg.js"></script>
     <script src="./../js/imgChangeMouseOver.js"></script>

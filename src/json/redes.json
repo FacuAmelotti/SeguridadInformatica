@@ -1,0 +1,440 @@
+[
+  {
+    "Text": "¿Qué significa IP?",
+    "Options": ["International Port", "Information Protocol", "Internet Protocol", "Internal Protocol"],
+    "CorrectAnswerIndex": 2,
+    "Topic": "Redes"
+  },
+  {
+    "Text": "¿Cuál es el propósito principal del protocolo TCP?",
+    "Options": ["Enrutamiento de paquetes", "Control de transmisión de datos", "Asignación de direcciones IP", "Seguridad de la red"],
+    "CorrectAnswerIndex": 1,
+    "Topic": "Redes"
+  },
+  {
+    "Text": "¿Qué dispositivo se utiliza para conectar múltiples redes y enrutar paquetes entre ellas?",
+    "Options": ["Switch", "Router", "Hub", "Firewall"],
+    "CorrectAnswerIndex": 1,
+    "Topic": "Redes"
+  },
+  {
+    "Text": "¿Qué tipo de dirección MAC identifica de forma única un dispositivo en una red?",
+    "Options": ["Dirección lógica", "Dirección física", "Dirección IP", "Dirección de subred"],
+    "CorrectAnswerIndex": 1,
+    "Topic": "Redes"
+  },
+  {
+    "Text": "¿Qué protocolo se utiliza para asignar dinámicamente direcciones IP a los dispositivos en una red?",
+    "Options": ["DNS", "DHCP", "HTTP", "FTP"],
+    "CorrectAnswerIndex": 1,
+    "Topic": "Redes"
+  },
+  {
+    "Text": "¿Cuál es el puerto por defecto utilizado por el protocolo HTTP?",
+    "Options": ["21", "80", "443", "25"],
+    "CorrectAnswerIndex": 1,
+    "Topic": "Redes"
+  },
+  {
+    "Text": "¿Qué significa DNS?",
+    "Options": ["Data Network Service", "Domain Name System", "Dynamic Network Server", "Digital Naming Service"],
+    "CorrectAnswerIndex": 1,
+    "Topic": "Redes"
+  },
+  {
+    "Text": "¿Qué tipo de red cubre un área geográfica pequeña, como una oficina o un edificio?",
+    "Options": ["LAN", "WAN", "MAN", "PAN"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Redes"
+  },
+  {
+    "Text": "¿Qué protocolo se utiliza para transferir archivos entre sistemas en una red?",
+    "Options": ["SMTP", "FTP", "HTTP", "SNMP"],
+    "CorrectAnswerIndex": 1,
+    "Topic": "Redes"
+  },
+  {
+    "Text": "¿Qué dispositivo divide una red en múltiples segmentos para mejorar el rendimiento?",
+    "Options": ["Router", "Switch", "Firewall", "Repetidor"],
+    "CorrectAnswerIndex": 1,
+    "Topic": "Redes"
+  },
+  {
+    "Text": "¿Qué es un firewall en términos de redes?",
+    "Options": ["Un dispositivo para conectar redes", "Un sistema de seguridad que filtra tráfico", "Un servidor web", "Un protocolo de enrutamiento"],
+    "CorrectAnswerIndex": 1,
+    "Topic": "Redes"
+  },
+  {
+    "Text": "¿Qué significa VLAN?",
+    "Options": ["Virtual Local Area Network", "Very Large Area Network", "Virtual Longitudinal Area Network", "Variable Length Addressing Network"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Redes"
+  },
+  {
+    "Text": "¿Qué protocolo se utiliza para cifrar las comunicaciones en la web?",
+    "Options": ["HTTP", "HTTPS", "FTP", "SMTP"],
+    "CorrectAnswerIndex": 1,
+    "Topic": "Redes"
+  },
+  {
+    "Text": "¿Qué es un gateway en una red?",
+    "Options": ["Un dispositivo que conecta redes diferentes", "Un tipo de cable de red", "Un protocolo de comunicación", "Un software de administración de red"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Redes"
+  },
+  {
+    "Text": "¿Qué significa NAT?",
+    "Options": ["Network Address Translation", "Network Access Terminal", "Network Application Technology", "Network Authentication Tool"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Redes"
+  },
+  {
+    "Text": "¿Qué protocolo se utiliza para enviar correos electrónicos?",
+    "Options": ["FTP", "SMTP", "HTTP", "SNMP"],
+    "CorrectAnswerIndex": 1,
+    "Topic": "Redes"
+  },
+  {
+    "Text": "¿Qué tipo de red cubre un área geográfica extensa, como un país o continente?",
+    "Options": ["LAN", "WAN", "MAN", "PAN"],
+    "CorrectAnswerIndex": 1,
+    "Topic": "Redes"
+  },
+  {
+    "Text": "¿Qué significa DHCP?",
+    "Options": ["Dynamic Host Configuration Protocol", "Data Handling Control Protocol", "Dynamic Hardware Communication Protocol", "Direct Host Connection Protocol"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Redes"
+  },
+  {
+    "Text": "¿Qué es un switch en una red?",
+    "Options": ["Un dispositivo que enruta paquetes", "Un dispositivo que conecta dispositivos en una LAN", "Un sistema de seguridad", "Un servidor web"],
+    "CorrectAnswerIndex": 1,
+    "Topic": "Redes"
+  },
+  {
+    "Text": "¿Qué protocolo se utiliza para sincronizar relojes en una red?",
+    "Options": ["NTP", "FTP", "HTTP", "SMTP"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Redes"
+  },
+    {
+      "Text": "¿Qué significa OSI en el modelo de referencia OSI?",
+      "Options": ["Open Systems Interconnection", "Operating System Integration", "Optimized System Interface", "Online Security Infrastructure"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Cuántas capas tiene el modelo OSI?",
+      "Options": ["5", "7", "4", "8"],
+      "CorrectAnswerIndex": 1,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿En qué capa del modelo OSI se manejan las direcciones MAC?",
+      "Options": ["Capa de Enlace de Datos", "Capa de Red", "Capa de Transporte", "Capa Física"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué protocolo se utiliza para resolver direcciones IP a direcciones MAC?",
+      "Options": ["DNS", "ARP", "DHCP", "ICMP"],
+      "CorrectAnswerIndex": 1,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué tipo de dirección IP identifica una red específica?",
+      "Options": ["Dirección de host", "Dirección de red", "Dirección de broadcast", "Dirección física"],
+      "CorrectAnswerIndex": 1,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué significa CIDR en el contexto de redes?",
+      "Options": ["Classless Inter-Domain Routing", "Classful Internet Domain Routing", "Centralized Internet Data Routing", "Classified Internal Data Routing"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué comando se utiliza para verificar la conectividad entre dos dispositivos en una red?",
+      "Options": ["ping", "traceroute", "netstat", "ipconfig"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué es un ataque de denegación de servicio (DoS)?",
+      "Options": ["Un ataque que roba datos", "Un ataque que sobrecarga un servidor", "Un ataque que cifra archivos", "Un ataque que falsifica direcciones IP"],
+      "CorrectAnswerIndex": 1,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué dispositivo se utiliza para dividir una red en subredes para mejorar la seguridad?",
+      "Options": ["Router", "Switch", "Firewall", "Hub"],
+      "CorrectAnswerIndex": 2,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué es un proxy en el contexto de redes?",
+      "Options": ["Un dispositivo que enruta paquetes", "Un servidor intermediario que filtra tráfico", "Un protocolo de comunicación", "Un sistema de almacenamiento temporal"],
+      "CorrectAnswerIndex": 1,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué significa QoS en redes?",
+      "Options": ["Quality of Service", "Quantity of Servers", "Query on System", "Queue of Signals"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué protocolo se utiliza para monitorear y gestionar dispositivos en una red?",
+      "Options": ["SNMP", "HTTP", "FTP", "SMTP"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué es un ataque MITM (Man-in-the-Middle)?",
+      "Options": ["Un ataque que intercepta el tráfico entre dos partes", "Un ataque que inunda la red con paquetes", "Un ataque que roba contraseñas", "Un ataque que falsifica direcciones MAC"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué tipo de cable se utiliza comúnmente para conectar dispositivos en una red Ethernet?",
+      "Options": ["Cable coaxial", "Cable de fibra óptica", "Cable UTP Cat5e/Cat6", "Cable HDMI"],
+      "CorrectAnswerIndex": 2,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué significa MTU en redes?",
+      "Options": ["Maximum Transmission Unit", "Minimum Transfer Unit", "Media Transfer Utility", "Multi-Threaded Unit"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué protocolo se utiliza para enviar mensajes de correo electrónico?",
+      "Options": ["POP3", "IMAP", "SMTP", "HTTP"],
+      "CorrectAnswerIndex": 2,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué significa SSID en redes inalámbricas?",
+      "Options": ["Secure System Identification", "Service Set Identifier", "Signal Strength Indicator", "System Security Interface"],
+      "CorrectAnswerIndex": 1,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué tipo de red inalámbrica utiliza frecuencias de radio para transmitir datos?",
+      "Options": ["WAN", "LAN", "Wi-Fi", "MAN"],
+      "CorrectAnswerIndex": 2,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué es un túnel VPN?",
+      "Options": ["Un dispositivo físico que conecta redes", "Una conexión segura a través de una red pública", "Un tipo de firewall", "Un protocolo de enrutamiento"],
+      "CorrectAnswerIndex": 1,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué significa ICMP?",
+      "Options": ["Internet Control Message Protocol", "Internal Communication Management Protocol", "Internet Connection Monitoring Protocol", "Inter-Channel Messaging Protocol"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué es un switch administrable?",
+      "Options": ["Un switch que no requiere configuración", "Un switch que permite configurar VLANs y otros parámetros", "Un switch que solo funciona en redes inalámbricas", "Un switch que no enruta paquetes"],
+      "CorrectAnswerIndex": 1,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué significa PoE en redes?",
+      "Options": ["Power over Ethernet", "Protocol of Encryption", "Packet over Ethernet", "Port over Ethernet"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué protocolo se utiliza para sincronizar relojes en una red?",
+      "Options": ["NTP", "FTP", "HTTP", "SMTP"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué es un ataque de phishing?",
+      "Options": ["Un ataque que inunda la red con paquetes", "Un ataque que engaña a los usuarios para obtener credenciales", "Un ataque que cifra archivos", "Un ataque que falsifica direcciones MAC"],
+      "CorrectAnswerIndex": 1,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué significa BGP?",
+      "Options": ["Border Gateway Protocol", "Basic Gateway Protocol", "Broadband Gateway Protocol", "Binary Gateway Protocol"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué es un cortafuegos (firewall)?",
+      "Options": ["Un dispositivo que conecta redes", "Un sistema que filtra tráfico entrante y saliente", "Un servidor web", "Un protocolo de enrutamiento"],
+      "CorrectAnswerIndex": 1,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué tipo de dirección IP identifica un dispositivo específico en una red?",
+      "Options": ["Dirección de red", "Dirección de broadcast", "Dirección de host", "Dirección MAC"],
+      "CorrectAnswerIndex": 2,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué significa WAN en términos de redes?",
+      "Options": ["Wide Area Network", "Wireless Access Network", "Web Application Network", "Workgroup Area Network"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué protocolo se utiliza para enviar paquetes de error en una red IP?",
+      "Options": ["TCP", "ICMP", "UDP", "HTTP"],
+      "CorrectAnswerIndex": 1,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué comando se utiliza para mostrar la tabla de enrutamiento en un sistema operativo?",
+      "Options": ["ping", "traceroute", "route print", "ipconfig"],
+      "CorrectAnswerIndex": 2,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué es un enrutador en una red?",
+      "Options": ["Un dispositivo que conecta múltiples redes", "Un dispositivo que filtra tráfico", "Un dispositivo que almacena datos", "Un dispositivo que cifra paquetes"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué significa PoE en el contexto de redes?",
+      "Options": ["Power over Ethernet", "Packet over Ethernet", "Protocol of Encryption", "Port over Ethernet"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué tipo de cable se utiliza comúnmente para conectar un router a un módem?",
+      "Options": ["Cable coaxial", "Cable UTP Cat5e/Cat6", "Cable de fibra óptica", "Cable HDMI"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué es un switch no administrable?",
+      "Options": ["Un switch que no permite configuración", "Un switch que solo funciona en redes inalámbricas", "Un switch que enruta paquetes", "Un switch que filtra tráfico"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué significa MTU en redes?",
+      "Options": ["Maximum Transmission Unit", "Minimum Transfer Unit", "Media Transfer Utility", "Multi-Threaded Unit"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué protocolo se utiliza para sincronizar relojes en una red?",
+      "Options": ["NTP", "FTP", "HTTP", "SMTP"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué es un ataque de denegación de servicio (DoS)?",
+      "Options": ["Un ataque que roba datos", "Un ataque que sobrecarga un servidor", "Un ataque que cifra archivos", "Un ataque que falsifica direcciones IP"],
+      "CorrectAnswerIndex": 1,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué significa CIDR en el contexto de redes?",
+      "Options": ["Classless Inter-Domain Routing", "Classful Internet Domain Routing", "Centralized Internet Data Routing", "Classified Internal Data Routing"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué tipo de dirección IP identifica una red específica?",
+      "Options": ["Dirección de host", "Dirección de red", "Dirección de broadcast", "Dirección física"],
+      "CorrectAnswerIndex": 1,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué protocolo se utiliza para resolver direcciones IP a direcciones MAC?",
+      "Options": ["DNS", "ARP", "DHCP", "ICMP"],
+      "CorrectAnswerIndex": 1,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué significa OSI en el modelo de referencia OSI?",
+      "Options": ["Open Systems Interconnection", "Operating System Integration", "Optimized System Interface", "Online Security Infrastructure"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Cuántas capas tiene el modelo OSI?",
+      "Options": ["5", "7", "4", "8"],
+      "CorrectAnswerIndex": 1,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿En qué capa del modelo OSI se manejan las direcciones MAC?",
+      "Options": ["Capa de Enlace de Datos", "Capa de Red", "Capa de Transporte", "Capa Física"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué comando se utiliza para verificar la conectividad entre dos dispositivos en una red?",
+      "Options": ["ping", "traceroute", "netstat", "ipconfig"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué es un proxy en el contexto de redes?",
+      "Options": ["Un dispositivo que enruta paquetes", "Un servidor intermediario que filtra tráfico", "Un protocolo de comunicación", "Un sistema de almacenamiento temporal"],
+      "CorrectAnswerIndex": 1,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué significa QoS en redes?",
+      "Options": ["Quality of Service", "Quantity of Servers", "Query on System", "Queue of Signals"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué protocolo se utiliza para monitorear y gestionar dispositivos en una red?",
+      "Options": ["SNMP", "HTTP", "FTP", "SMTP"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué tipo de red inalámbrica utiliza frecuencias de radio para transmitir datos?",
+      "Options": ["WAN", "LAN", "Wi-Fi", "MAN"],
+      "CorrectAnswerIndex": 2,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué significa SSID en redes inalámbricas?",
+      "Options": ["Secure System Identification", "Service Set Identifier", "Signal Strength Indicator", "System Security Interface"],
+      "CorrectAnswerIndex": 1,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué es un túnel VPN?",
+      "Options": ["Un dispositivo físico que conecta redes", "Una conexión segura a través de una red pública", "Un tipo de firewall", "Un protocolo de enrutamiento"],
+      "CorrectAnswerIndex": 1,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué significa ICMP?",
+      "Options": ["Internet Control Message Protocol", "Internal Communication Management Protocol", "Internet Connection Monitoring Protocol", "Inter-Channel Messaging Protocol"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué es un switch administrable?",
+      "Options": ["Un switch que no requiere configuración", "Un switch que permite configurar VLANs y otros parámetros", "Un switch que solo funciona en redes inalámbricas", "Un switch que no enruta paquetes"],
+      "CorrectAnswerIndex": 1,
+      "Topic": "Redes"
+    },
+    {
+      "Text": "¿Qué significa PoE en redes?",
+      "Options": ["Power over Ethernet", "Protocol of Encryption", "Packet over Ethernet", "Port over Ethernet"],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Redes"
+    }
+  ]

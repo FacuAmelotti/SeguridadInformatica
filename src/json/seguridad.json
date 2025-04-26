@@ -1,0 +1,562 @@
+[
+  {
+    "Text": "¿Qué significa el término 'malware'?",
+    "Options": ["Software malicioso", "Un tipo de antivirus", "Un protocolo de red", "Un sistema operativo"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Seguridad y Privacidad"
+  },
+  {
+    "Text": "¿Qué es un virus informático?",
+    "Options": ["Un programa que se replica y daña archivos", "Un dispositivo de hardware", "Un tipo de red inalámbrica", "Un archivo de texto plano"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Seguridad y Privacidad"
+  },
+  {
+    "Text": "¿Qué significa cifrar datos?",
+    "Options": ["Convertir datos en un formato ilegible sin una clave", "Comprimir archivos para ahorrar espacio", "Eliminar archivos permanentemente", "Copiar datos a la nube"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Seguridad y Privacidad"
+  },
+  {
+    "Text": "¿Qué es una contraseña segura?",
+    "Options": ["Una combinación de letras, números y símbolos", "Una palabra común del diccionario", "Tu nombre de usuario", "La misma contraseña para todas tus cuentas"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Seguridad y Privacidad"
+  },
+  {
+    "Text": "¿Qué es phishing?",
+    "Options": ["Un ataque que intenta robar información personal fingiendo ser una entidad confiable", "Un software antivirus", "Un protocolo de red", "Un método de cifrado"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Seguridad y Privacidad"
+  },
+  {
+    "Text": "¿Qué es un firewall?",
+    "Options": ["Un sistema que bloquea tráfico no deseado en una red", "Un tipo de malware", "Un dispositivo de almacenamiento", "Un navegador web"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Seguridad y Privacidad"
+  },
+  {
+    "Text": "¿Qué significa HTTPS?",
+    "Options": ["HyperText Transfer Protocol Secure", "HyperText Transfer Protocol System", "HyperText Transfer Protocol Signal", "HyperText Transfer Protocol Server"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Seguridad y Privacidad"
+  },
+  {
+    "Text": "¿Qué es un antivirus?",
+    "Options": ["Un software que detecta y elimina malware", "Un tipo de red inalámbrica", "Un dispositivo de hardware", "Un archivo de texto plano"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Seguridad y Privacidad"
+  },
+  {
+    "Text": "¿Qué es el espionaje de teclado (keylogger)?",
+    "Options": ["Un software que registra las pulsaciones del teclado", "Un tipo de red inalámbrica", "Un dispositivo de hardware", "Un archivo de texto plano"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Seguridad y Privacidad"
+  },
+  {
+    "Text": "¿Qué es un parche de seguridad?",
+    "Options": ["Una actualización que corrige vulnerabilidades en el software", "Un tipo de malware", "Un dispositivo de hardware", "Un archivo de texto plano"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Seguridad y Privacidad"
+  },
+  {
+    "Text": "¿Qué significa autenticación de dos factores (2FA)?",
+    "Options": ["Un método de seguridad que requiere dos formas de verificación", "Un tipo de malware", "Un protocolo de red", "Un archivo de texto plano"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Seguridad y Privacidad"
+  },
+  {
+    "Text": "¿Qué es un certificado SSL/TLS?",
+    "Options": ["Un certificado que cifra la comunicación entre un servidor y un cliente", "Un tipo de malware", "Un dispositivo de hardware", "Un archivo de texto plano"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Seguridad y Privacidad"
+  },
+  {
+    "Text": "¿Qué es un ataque de fuerza bruta?",
+    "Options": ["Un método para adivinar contraseñas probando todas las combinaciones posibles", "Un tipo de red inalámbrica", "Un dispositivo de hardware", "Un archivo de texto plano"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Seguridad y Privacidad"
+  },
+  {
+    "Text": "¿Qué es el cifrado simétrico?",
+    "Options": ["Un método de cifrado que usa la misma clave para cifrar y descifrar", "Un tipo de malware", "Un protocolo de red", "Un archivo de texto plano"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Seguridad y Privacidad"
+  },
+  {
+    "Text": "¿Qué es el cifrado asimétrico?",
+    "Options": ["Un método de cifrado que usa una clave pública y una privada", "Un tipo de malware", "Un protocolo de red", "Un archivo de texto plano"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Seguridad y Privacidad"
+  },
+  {
+    "Text": "¿Qué es un cortafuegos (firewall)?",
+    "Options": ["Un sistema que filtra tráfico entrante y saliente", "Un tipo de malware", "Un dispositivo de hardware", "Un archivo de texto plano"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Seguridad y Privacidad"
+  },
+  {
+    "Text": "¿Qué es un ransomware?",
+    "Options": ["Un tipo de malware que cifra archivos y pide un rescate", "Un software antivirus", "Un protocolo de red", "Un archivo de texto plano"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Seguridad y Privacidad"
+  },
+  {
+    "Text": "¿Qué es un ataque DDoS?",
+    "Options": ["Un ataque que sobrecarga un servidor con tráfico malicioso", "Un tipo de malware", "Un dispositivo de hardware", "Un archivo de texto plano"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Seguridad y Privacidad"
+  },
+  {
+    "Text": "¿Qué es la ingeniería social?",
+    "Options": ["Un método para manipular a las personas para obtener información confidencial", "Un tipo de red inalámbrica", "Un dispositivo de hardware", "Un archivo de texto plano"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Seguridad y Privacidad"
+  },
+  {
+    "Text": "¿Qué es un token de seguridad?",
+    "Options": ["Un dispositivo físico o virtual que genera claves únicas para autenticación", "Un tipo de malware", "Un protocolo de red", "Un archivo de texto plano"],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Seguridad y Privacidad"
+  },
+    {
+      "Text": "¿Qué es el cifrado de extremo a extremo (end-to-end encryption)?",
+      "Options": [
+        "Un método donde solo el emisor y el receptor pueden leer los datos",
+        "Un tipo de cifrado que usa claves públicas",
+        "Un protocolo de red",
+        "Un archivo de texto plano"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Seguridad y Privacidad"
+    },
+    {
+      "Text": "¿Qué es un hash en criptografía?",
+      "Options": [
+        "Una función que convierte datos en una cadena de longitud fija",
+        "Un tipo de malware",
+        "Un dispositivo de hardware",
+        "Un archivo de texto plano"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Seguridad y Privacidad"
+    },
+    {
+      "Text": "¿Qué significa salting en el contexto de contraseñas?",
+      "Options": [
+        "Añadir datos aleatorios a una contraseña antes de hashearla",
+        "Comprimir archivos para ahorrar espacio",
+        "Eliminar archivos permanentemente",
+        "Copiar datos a la nube"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Seguridad y Privacidad"
+    },
+    {
+      "Text": "¿Qué es un ataque MITM (Man-in-the-Middle)?",
+      "Options": [
+        "Un ataque que intercepta y modifica la comunicación entre dos partes",
+        "Un tipo de malware",
+        "Un dispositivo de hardware",
+        "Un archivo de texto plano"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Seguridad y Privacidad"
+    },
+    {
+      "Text": "¿Qué es un certificado digital?",
+      "Options": [
+        "Un documento electrónico que verifica la identidad de una entidad",
+        "Un tipo de malware",
+        "Un dispositivo de hardware",
+        "Un archivo de texto plano"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Seguridad y Privacidad"
+    },
+    {
+      "Text": "¿Qué es OAuth?",
+      "Options": [
+        "Un protocolo de autorización para acceder a recursos en nombre de un usuario",
+        "Un tipo de cifrado",
+        "Un dispositivo de hardware",
+        "Un archivo de texto plano"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Seguridad y Privacidad"
+    },
+    {
+      "Text": "¿Qué es un token JWT (JSON Web Token)?",
+      "Options": [
+        "Un estándar para transmitir información segura entre dos partes",
+        "Un tipo de cifrado asimétrico",
+        "Un dispositivo de hardware",
+        "Un archivo de texto plano"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Seguridad y Privacidad"
+    },
+    {
+      "Text": "¿Qué es un honeypot en seguridad informática?",
+      "Options": [
+        "Un sistema configurado para atraer y detectar ataques",
+        "Un tipo de malware",
+        "Un dispositivo de hardware",
+        "Un archivo de texto plano"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Seguridad y Privacidad"
+    },
+    {
+      "Text": "¿Qué es un SIEM (Security Information and Event Management)?",
+      "Options": [
+        "Un sistema que monitorea y analiza eventos de seguridad en tiempo real",
+        "Un tipo de cifrado",
+        "Un dispositivo de hardware",
+        "Un archivo de texto plano"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Seguridad y Privacidad"
+    },
+    {
+      "Text": "¿Qué es un exploit?",
+      "Options": [
+        "Un código o técnica que aprovecha una vulnerabilidad en un sistema",
+        "Un tipo de malware",
+        "Un dispositivo de hardware",
+        "Un archivo de texto plano"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Seguridad y Privacidad"
+    },
+    {
+      "Text": "¿Qué es un IDS (Sistema de Detección de Intrusiones)?",
+      "Options": [
+        "Un sistema que monitorea actividades sospechosas en una red",
+        "Un tipo de cifrado",
+        "Un dispositivo de hardware",
+        "Un archivo de texto plano"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Seguridad y Privacidad"
+    },
+    {
+      "Text": "¿Qué es un IPS (Sistema de Prevención de Intrusiones)?",
+      "Options": [
+        "Un sistema que bloquea actividades sospechosas en una red",
+        "Un tipo de cifrado",
+        "Un dispositivo de hardware",
+        "Un archivo de texto plano"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Seguridad y Privacidad"
+    },
+    {
+      "Text": "¿Qué es el principio de menor privilegio?",
+      "Options": [
+        "Conceder solo los permisos mínimos necesarios para realizar una tarea",
+        "Un tipo de cifrado",
+        "Un dispositivo de hardware",
+        "Un archivo de texto plano"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Seguridad y Privacidad"
+    },
+    {
+      "Text": "¿Qué es un análisis de riesgos en seguridad?",
+      "Options": [
+        "Un proceso para identificar y evaluar posibles amenazas",
+        "Un tipo de cifrado",
+        "Un dispositivo de hardware",
+        "Un archivo de texto plano"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Seguridad y Privacidad"
+    },
+    {
+      "Text": "¿Qué es un sandbox en seguridad?",
+      "Options": [
+        "Un entorno aislado para ejecutar programas potencialmente peligrosos",
+        "Un tipo de cifrado",
+        "Un dispositivo de hardware",
+        "Un archivo de texto plano"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Seguridad y Privacidad"
+    },
+    {
+      "Text": "¿Qué es un ataque de replay?",
+      "Options": [
+        "Un ataque que intercepta y reenvía datos válidos para engañar a un sistema",
+        "Un tipo de malware",
+        "Un dispositivo de hardware",
+        "Un archivo de texto plano"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Seguridad y Privacidad"
+    },
+    {
+      "Text": "¿Qué es un algoritmo de hashing seguro?",
+      "Options": [
+        "Un algoritmo que genera un hash irreversiblemente único",
+        "Un tipo de cifrado simétrico",
+        "Un dispositivo de hardware",
+        "Un archivo de texto plano"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Seguridad y Privacidad"
+    },
+    {
+      "Text": "¿Qué es un certificado raíz (root certificate)?",
+      "Options": [
+        "Un certificado que firma otros certificados en una cadena de confianza",
+        "Un tipo de cifrado",
+        "Un dispositivo de hardware",
+        "Un archivo de texto plano"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Seguridad y Privacidad"
+    },
+    {
+      "Text": "¿Qué es un ataque de fuerza bruta híbrida?",
+      "Options": [
+        "Un ataque que combina diccionarios con modificaciones",
+        "Un tipo de malware",
+        "Un dispositivo de hardware",
+        "Un archivo de texto plano"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Seguridad y Privacidad"
+    },
+    {
+      "Text": "¿Qué es un sistema de gestión de vulnerabilidades?",
+      "Options": [
+        "Un sistema que identifica, clasifica y corrige vulnerabilidades en una red",
+        "Un tipo de cifrado",
+        "Un dispositivo de hardware",
+        "Un archivo de texto plano"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Seguridad y Privacidad"
+    },
+      {
+        "Text": "¿Qué es un ataque de canal lateral?",
+        "Options": [
+          "Un ataque que explota información indirecta, como el tiempo o el consumo de energía",
+          "Un ataque que intercepta tráfico de red",
+          "Un tipo de malware",
+          "Un archivo de texto plano"
+        ],
+        "CorrectAnswerIndex": 0,
+        "Topic": "Seguridad y Privacidad"
+      },
+      {
+        "Text": "¿Qué es la criptografía post-cuántica?",
+        "Options": [
+          "Un campo de investigación para desarrollar algoritmos resistentes a computadoras cuánticas",
+          "Un tipo de cifrado simétrico",
+          "Un dispositivo de hardware",
+          "Un archivo de texto plano"
+        ],
+        "CorrectAnswerIndex": 0,
+        "Topic": "Seguridad y Privacidad"
+      },
+      {
+        "Text": "¿Qué es un ataque de colisión en hashing?",
+        "Options": [
+          "Un ataque que busca dos entradas diferentes que produzcan el mismo hash",
+          "Un ataque que intercepta tráfico de red",
+          "Un tipo de malware",
+          "Un archivo de texto plano"
+        ],
+        "CorrectAnswerIndex": 0,
+        "Topic": "Seguridad y Privacidad"
+      },
+      {
+        "Text": "¿Qué es un certificado EV (Extended Validation)?",
+        "Options": [
+          "Un certificado que verifica exhaustivamente la identidad de una entidad",
+          "Un tipo de cifrado asimétrico",
+          "Un dispositivo de hardware",
+          "Un archivo de texto plano"
+        ],
+        "CorrectAnswerIndex": 0,
+        "Topic": "Seguridad y Privacidad"
+      },
+      {
+        "Text": "¿Qué es el protocolo Kerberos?",
+        "Options": [
+          "Un protocolo de autenticación basado en tickets para redes no seguras",
+          "Un tipo de cifrado simétrico",
+          "Un dispositivo de hardware",
+          "Un archivo de texto plano"
+        ],
+        "CorrectAnswerIndex": 0,
+        "Topic": "Seguridad y Privacidad"
+      },
+      {
+        "Text": "¿Qué es un ataque de padding oracle?",
+        "Options": [
+          "Un ataque que explota errores en el relleno de cifrado para descifrar datos",
+          "Un ataque que intercepta tráfico de red",
+          "Un tipo de malware",
+          "Un archivo de texto plano"
+        ],
+        "CorrectAnswerIndex": 0,
+        "Topic": "Seguridad y Privacidad"
+      },
+      {
+        "Text": "¿Qué es el estándar NIST SP 800-53?",
+        "Options": [
+          "Un marco de control de seguridad para sistemas de información",
+          "Un tipo de cifrado asimétrico",
+          "Un dispositivo de hardware",
+          "Un archivo de texto plano"
+        ],
+        "CorrectAnswerIndex": 0,
+        "Topic": "Seguridad y Privacidad"
+      },
+      {
+        "Text": "¿Qué es un ataque de desbordamiento de buffer?",
+        "Options": [
+          "Un ataque que sobrescribe memoria para ejecutar código malicioso",
+          "Un tipo de malware",
+          "Un dispositivo de hardware",
+          "Un archivo de texto plano"
+        ],
+        "CorrectAnswerIndex": 0,
+        "Topic": "Seguridad y Privacidad"
+      },
+      {
+        "Text": "¿Qué es un TCB (Trusted Computing Base)?",
+        "Options": [
+          "El conjunto de componentes críticos que garantizan la seguridad de un sistema",
+          "Un tipo de cifrado asimétrico",
+          "Un dispositivo de hardware",
+          "Un archivo de texto plano"
+        ],
+        "CorrectAnswerIndex": 0,
+        "Topic": "Seguridad y Privacidad"
+      },
+      {
+        "Text": "¿Qué es un ataque de cache poisoning?",
+        "Options": [
+          "Un ataque que inserta datos falsos en una caché DNS",
+          "Un tipo de malware",
+          "Un dispositivo de hardware",
+          "Un archivo de texto plano"
+        ],
+        "CorrectAnswerIndex": 0,
+        "Topic": "Seguridad y Privacidad"
+      },
+      {
+        "Text": "¿Qué es un HSM (Hardware Security Module)?",
+        "Options": [
+          "Un dispositivo físico dedicado a gestionar claves criptográficas de forma segura",
+          "Un tipo de cifrado asimétrico",
+          "Un archivo de texto plano",
+          "Un protocolo de red"
+        ],
+        "CorrectAnswerIndex": 0,
+        "Topic": "Seguridad y Privacidad"
+      },
+      {
+        "Text": "¿Qué es un ataque de timing?",
+        "Options": [
+          "Un ataque que explota diferencias en el tiempo de ejecución de operaciones",
+          "Un tipo de malware",
+          "Un dispositivo de hardware",
+          "Un archivo de texto plano"
+        ],
+        "CorrectAnswerIndex": 0,
+        "Topic": "Seguridad y Privacidad"
+      },
+      {
+        "Text": "¿Qué es el modelo Bell-LaPadula?",
+        "Options": [
+          "Un modelo de seguridad enfocado en la confidencialidad mediante reglas de acceso",
+          "Un tipo de cifrado asimétrico",
+          "Un dispositivo de hardware",
+          "Un archivo de texto plano"
+        ],
+        "CorrectAnswerIndex": 0,
+        "Topic": "Seguridad y Privacidad"
+      },
+      {
+        "Text": "¿Qué es un ataque de cross-site scripting (XSS)?",
+        "Options": [
+          "Un ataque que inyecta scripts maliciosos en sitios web vulnerables",
+          "Un tipo de malware",
+          "Un dispositivo de hardware",
+          "Un archivo de texto plano"
+        ],
+        "CorrectAnswerIndex": 0,
+        "Topic": "Seguridad y Privacidad"
+      },
+      {
+        "Text": "¿Qué es un ataque de cross-site request forgery (CSRF)?",
+        "Options": [
+          "Un ataque que fuerza a un usuario autenticado a realizar acciones no deseadas",
+          "Un tipo de malware",
+          "Un dispositivo de hardware",
+          "Un archivo de texto plano"
+        ],
+        "CorrectAnswerIndex": 0,
+        "Topic": "Seguridad y Privacidad"
+      },
+      {
+        "Text": "¿Qué es un sistema RBAC (Role-Based Access Control)?",
+        "Options": [
+          "Un modelo de control de acceso basado en roles asignados a usuarios",
+          "Un tipo de cifrado asimétrico",
+          "Un dispositivo de hardware",
+          "Un archivo de texto plano"
+        ],
+        "CorrectAnswerIndex": 0,
+        "Topic": "Seguridad y Privacidad"
+      },
+      {
+        "Text": "¿Qué es un ataque de DNS spoofing?",
+        "Options": [
+          "Un ataque que falsifica respuestas DNS para redirigir tráfico",
+          "Un tipo de malware",
+          "Un dispositivo de hardware",
+          "Un archivo de texto plano"
+        ],
+        "CorrectAnswerIndex": 0,
+        "Topic": "Seguridad y Privacidad"
+      },
+      {
+        "Text": "¿Qué es un ataque de SQL injection?",
+        "Options": [
+          "Un ataque que inyecta código SQL malicioso en consultas",
+          "Un tipo de malware",
+          "Un dispositivo de hardware",
+          "Un archivo de texto plano"
+        ],
+        "CorrectAnswerIndex": 0,
+        "Topic": "Seguridad y Privacidad"
+      },
+      {
+        "Text": "¿Qué es un sistema de firma digital?",
+        "Options": [
+          "Un mecanismo que garantiza la autenticidad e integridad de un mensaje usando criptografía asimétrica",
+          "Un tipo de cifrado simétrico",
+          "Un dispositivo de hardware",
+          "Un archivo de texto plano"
+        ],
+        "CorrectAnswerIndex": 0,
+        "Topic": "Seguridad y Privacidad"
+      },
+      {
+        "Text": "¿Qué es un ataque de rainbow table?",
+        "Options": [
+          "Un ataque que usa tablas precomputadas para revertir hashes",
+          "Un tipo de malware",
+          "Un dispositivo de hardware",
+          "Un archivo de texto plano"
+        ],
+        "CorrectAnswerIndex": 0,
+        "Topic": "Seguridad y Privacidad"
+      }
+    ]

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia de la computación</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/template.css">
+        <!--FONT-->
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <button id="menu-toggle" class="menu-toggle">☰ Menú</button>
+        <!-- Menú lateral izquierdo -->
+        <aside class="menu" id="menu">
+            <h2>Introducción a la Informática I</h2>
+            <ul>
+                <li><a href="../../pages/general.html"><i class="fas fa-home"></i> General</a>
+                    
+                <li><a href="#p1">Introduccion a la informatica</a></li>
+                <li><a id="btn-menu-Sect" href="#back-section">Seccion anterior</a></li>
+                <ul>
+                    <li><a href="#introduccion">Introduccion</a></li>
+                    <li><a href="#computacion">¿Que es la computación?</a></li>
+                    <li><a href="#evolucion">Evolucion de la computacion</a></li>
+                    <li><a href="#computadora">¿Qué es una computadora?</a></li>
+                    <li><a href="#primeras-computadoras">Primeras computadoras</a></li>
+                    <li><a href="#tipos-computadoras">Tipos de Computadoras</a></li>
+                </ul>
+                <li><a id="btn-menu-Sect" href="#next-section">Siguiente Seccion</a></li>
+        </aside>
+        </main>
+
+        <!-- Contenido principal -->
+        <main class="content">  
+
+        <!-- Seccion anterior -->
+        <section id="nextBack-section">
+            <i class="fas fa-arrow-left"></i><a id="back-section" href="../../pages/general.html">General</a>
+        </section>
+
+        <!-- Introduccion -->
+        <section>
+            <h2 id="introduccion">📜 Introduccion</h2>
+            <p>La informática, como la conocemos hoy, ha evolucionado a lo largo de siglos. Su desarrollo ha estado marcado por avances en matemáticas, ingeniería y tecnología, permitiendo la creación de máquinas capaces de procesar información de manera automática.</p>
+            <h3>¿Que es la Informatica?</h3>
+            <p>La informática es la ciencia que estudia el tratamiento automático y racional de la información. Esta disciplina abarca el estudio, desarrollo e implementación de métodos, técnicas y herramientas para el procesamiento automático de datos e información mediante el uso de sistemas computacionales.</p>
+            <h3>¿Que relacion tiene con la computacion?</h3>
+            <p>La informática y la computación están íntimamente relacionadas, aunque suelen confundirse. Mientras la computación se enfoca en los fundamentos teóricos y matemáticos del procesamiento de información, la informática aplica estos conceptos para desarrollar sistemas y soluciones prácticas.</p>
+            <p>Podemos pensar en la computación como el núcleo teórico y la informática como su aplicación práctica. En mi experiencia académica y profesional, he observado que ambas disciplinas se complementan perfectamente: necesitamos entender los algoritmos y la lógica computacional para desarrollar sistemas informáticos eficientes y funcionales.</p>
+        </section>
+
+        <!-- Seccion anterior -->
+        <section>
+            <h1>🖥️ Historia de la computación</h1>
+        </section>  
+        
+        <section id="computacion">
+            <h2 class="toggle-btn">¿Que es la computación? </h2>
+            <div>
+                <p>La computación es el estudio de los sistemas de procesamiento de datos y los principios matemáticos y lógicos que los sustentan.</p>
+                <p>Abarca áreas como la programación, la teoría de la computación y la inteligencia artificial, centrándose en cómo resolver problemas mediante cálculos y procesamiento de información.</p>
+                <p>La computación es mucho más que solo tecnología; es un enfoque sistemático para resolver problemas complejos. Utilizamos modelos matemáticos y lógicos para analizar y procesar información, lo que nos permite afrontar desafíos cada vez más complejos en todas las áreas del conocimiento humano.</p>
+            </div>
+        </section>
+
+        <!-- Evolucion de la computacion -->
+        <section id="evolucion">
+            <h3>Evolucion de la Computacion</h3>
+            <p>Desde la antigüedad, el ser humano ha buscado formas de facilitar los cálculos.</p>
+            <ul>
+                <li><strong>Ábaco (3000 a.C.)</strong>: Uno de los primeros dispositivos de cálculo, utilizado en diversas civilizaciones.</li>
+                <img src="../../img/U1_img0.jpg" alt="Ábaco" style="height: 200px;" onclick="ampliarImagen(this)">
+                <li><strong>Máquina de Pascal (1642)</strong>: Inventada por Blaise Pascal, permitía realizar sumas y restas mecánicamente.</li>
+                <img src="../../img/U1_img0_1.jpg" alt="Máquina de Pascal" style="height: 200px;" onclick="ampliarImagen(this)">
+                <img src="../../img/U1_img0_2.jpg" alt="Máquina de Pascal" style="height: 200px;" onclick="ampliarImagen(this)">
+                <li><strong>Máquina Analítica de Babbage (1837)</strong>: Diseñada por Charles Babbage, sentó las bases de los computadores modernos.</li>
+                <img src="../../img/U1_img0_3.jpg" alt="Máquina Analítica de Babbage" style="height: 200px;" onclick="ampliarImagen(this)">
+                <li><strong>Máquina Diferencial (1822)</strong>: También diseñada por Babbage, fue concebida para calcular funciones polinómicas mediante el método de diferencias.</li>
+                <li><strong>Tarjetas Perforadas de Hollerith (1890)</strong>: Herman Hollerith desarrolló este sistema para el censo estadounidense, permitiendo automatizar el procesamiento de datos estadísticos.</li>
+                <li><strong>Máquina Z3 (1941)</strong>: Creada por Konrad Zuse, es considerada la primera computadora programable completamente automática y funcional.</li>
+            </ul>
+            <p>Es fascinante observar cómo cada innovación ha construido sobre las anteriores, creando un camino evolutivo que nos ha llevado desde simples herramientas de conteo hasta los complejos sistemas computacionales que usamos hoy en día.</p>
+        </section>
+
+        <!-- Computadora -->
+        <section id="computadora">
+            <h2 id="p2" href="#" class="toggle-btn">¿Que es una Computadora? 🔽</h2>
+            <div>
+                <section >
+                    <div class="info-text">
+                        <p>Una computadora es un <strong> dispositivo electrónico programable que recibe, procesa, almacena y emite información mediante el uso de hardware y software</strong>. Su principal característica es la capacidad de ejecutar una variedad de programas y realizar múltiples tareas, desde cálculos matemáticos hasta inteligencia artificial y gráficos avanzados.</p>
+                        <p>En mi experiencia docente, siempre destaco que las computadoras son herramientas extraordinarias que amplían nuestras capacidades cognitivas. Nos permiten resolver problemas que serían prácticamente imposibles de abordar con nuestras limitaciones humanas. Lo que realmente hace única a una computadora no es solo su capacidad de cálculo, sino su versatilidad para adaptarse a diferentes necesidades y contextos.</p>
+                    </div>
+                    <img src="../../img/computadora.jpg" onclick="ampliarImagen(this)" style="height: 128px;">
+                </section>
+            </div>
+        </section>
+
+        <section id="info-section-desplegable" class="desplegable-info">
+            <h2 href="#" class="toggle-btn">¿Como se compone una computadora?  🔽</h2>
+            <div class="submenu-info">
+                <section id="info-section">
+                        <img src="../../img/computadora_partes.jpg" onclick="ampliarImagen(this)">
+                    <div class="info-text">
+                        <p><strong>Unidad Central de Procesamiento (CPU)</strong> El cerebro de la computadora, que ejecuta instrucciones y procesos.</p>
+                        <p><strong>Memoria RAM</strong>: Permite almacenar temporalmente datos y ejecutar programas con fluidez.</p>
+                        <p><strong>Disco Duro o SSD</strong>: Almacena datos de forma permanente.</p>
+                        <p><strong>Sistema Operativo</strong>: Software base que gestiona los recursos del hardware y permite la interacción con el usuario.</p>
+                        <p><strong>Periféricos</strong>: Dispositivos de entrada y salida como teclado, mouse, pantalla e impresoras.</p>
+                        <p>Una analogía que suelo utilizar con mis estudiantes es comparar la computadora con el cuerpo humano: la CPU sería el cerebro, la RAM la memoria a corto plazo, el disco duro la memoria a largo plazo, y los periféricos serían nuestros sentidos. Esta analogía facilita la comprensión de cómo estos componentes trabajan juntos como un sistema integrado.</p>
+                        <p>Además de estos componentes básicos, las computadoras modernas también incluyen:</p>
+                        <p><strong>Tarjeta Gráfica (GPU)</strong>: Especializada en el procesamiento y renderizado de imágenes y vídeos.</p>
+                        <p><strong>Placa Base</strong>: Circuito impreso que conecta y permite la comunicación entre todos los componentes.</p>
+                        <p><strong>Fuente de Alimentación</strong>: Proporciona la energía eléctrica necesaria para el funcionamiento del sistema.</p>
+                        <p><strong>Sistemas de Refrigeración</strong>: Mantienen una temperatura adecuada para el funcionamiento óptimo.</p>
+                        </div>
+                </section>
+            </div>
+        </section>
+
+
+
+        <section id="primeras-computadoras">   
+            <h1>Primeras computadoras modernas</h1>         
+            <p>Las primeras computadoras electrónicas surgieron en la Segunda Guerra Mundial, utilizadas principalmente para cálculos militares.</p>
+            <ul>
+                <li><strong>ENIAC (1946)</strong>: La primera computadora electrónica de propósito general.</li>
+                <li><strong>UNIVAC I (1951)</strong>: Primera computadora comercial.</li>
+                <li><strong>EDVAC (1949)</strong>: Primera computadora con programa almacenado, basada en la arquitectura von Neumann.</li>
+                <li><strong>Manchester Baby (1948)</strong>: Primera computadora que ejecutó un programa almacenado en memoria.</li>
+                <li><strong>IBM 701 (1952)</strong>: Primera computadora de producción masiva de IBM, marcando el inicio de la era comercial.</li>
+            </ul>
+ 
+            <section id="info-section">
+                <div class="info-text">
+                    <p>El ENIAC (Computador e Integrador Numérico Electrónico) fue la primera computadora electrónica de propósito general. Fue diseñada en la Universidad de Pensilvania y se completó en 1945. </p>
+                    <h3>Características:</h3>
+                    <ul>
+                        <li>● Fue diseñada por John Presper Eckert y John William Mauchly</li>
+                        <li>● Fue utilizada por el Laboratorio de Investigación Balística del ejército de los EEUU</li>
+                        <li>● Medía 167 metros cuadrados y pesaba 27 toneladas</li>
+                        <li>● Era capaz de realizar 5.000 sumas y 300 multiplicaciones por segundo</li>
+                        <li>● Utilizaba más de 17.000 válvulas de vacío y consumía 150 kW de electricidad</li>
+                        <li>● La programación se realizaba mediante conexiones físicas y conmutadores</li>
+                        <li>● Un aspecto notable es que seis mujeres matemáticas fueron las primeras programadoras del ENIAC, entre ellas Jean Jennings, Marlyn Wescoff y Frances Bilas</li>                   
+                    </ul>
+                    <p>Lo que me parece más impresionante del ENIAC es cómo, a pesar de sus limitaciones por estándares actuales, revolucionó la forma en que procesamos información. Cada vez que hablo de estas primeras computadoras, me asombra pensar que el teléfono que llevamos en el bolsillo tiene millones de veces más potencia de cálculo que estas máquinas pioneras.</p>             
+                </div>
+                <img src="../../img/U1_img1.jpg" onclick="ampliarImagen(this)" alt="El ENIAC (Computador e Integrador Numérico Electrónico) fue la primera computadora electrónica de propósito general.">        
+            </section>
+
+            <section id="info-section">
+                <h1>Comparación:</h1>
+                <ul>
+                    <li>● <strong>UNIVAC I</strong>: Hacía 1,000 operaciones por segundo. (1951)</li>
+                    <li>● <strong>Intel Core i3</strong>: Un Intel Core i3 moderno a 3.3 GHz puede ejecutar aproximadamente 3.300 millones de operaciones por segundo. (Super normal y de bajo rendimiento - 2025)</li>
+                    <li>● <strong>AMD Ryzen 9</strong>: Puede alcanzar más de 10.000 millones de operaciones por segundo. (2025)</li>
+                    <li>● <strong>Supercomputadora Frontier</strong>: Capaz de realizar más de 1 quintillón (10^18) de operaciones por segundo. (2025)</li>
+                </ul>
+                <p>Esta comparación nos da una perspectiva clara del avance exponencial que ha experimentado la tecnología. En mis clases, siempre enfatizo este punto para que los estudiantes comprendan la velocidad con la que evoluciona nuestro campo. Lo que hoy consideramos potente, en una década será considerado obsoleto. Esta realidad nos obliga a mantener una mentalidad de aprendizaje continuo.</p>
+            </section>
+            
+        </section>
+        
+        <section id="tipos-computadoras">
+            <h3 id="p3">Tipos de computadoras:</h3>
+            <p>Las computadoras se pueden clasificar en distintos tipos según su tamaño, capacidad de procesamiento y propósito</p>
+            <div id="sub-panel">
+                <h1> ● Supercomputadoras</h1>
+                <p>Son usadas para cálculos extremadamente complejos.</p>
+                <p>Se encuentran en centros de investigación, meteorología y simulaciones científicas.</p>
+                <p>Ejemplos actuales incluyen Frontier en Estados Unidos, Fugaku en Japón y Aurora, con capacidades de procesamiento que superan los quintillones de operaciones por segundo.</p>
+                <p>Estas maravillas tecnológicas son fundamentales para la investigación en campos como la física cuántica, el plegamiento de proteínas para el desarrollo de medicamentos, y las simulaciones climáticas a escala global.</p>
+            </div>
+            <div id="sub-panel">
+                <h1> ● Mainframes</h1>
+                <p>Grandes sistemas utilizados por bancos, gobiernos y empresas para procesar enormes volúmenes de datos.</p>
+                <p>Son altamente confiables y capaces de manejar miles de usuarios simultáneamente.</p>
+                <p>Ej: IBM Z Series.</p>
+                <p>Un dato interesante es que, a pesar de la tendencia hacia la computación en la nube, los mainframes siguen siendo insustituibles en muchas industrias por su capacidad de procesamiento de transacciones masivas y su extraordinaria fiabilidad, con tiempos de actividad que superan el 99.999%.</p>
+            </div>
+            <div id="sub-panel">
+                <h1> ● Servidores</h1>
+                <p>Computadoras diseñadas para gestionar redes y servicios como bases de datos, sitios web o almacenamiento en la nube.</p>
+                <p>Se caracterizan por su alta disponibilidad y rendimiento continuo.</p>
+                <p>Los servidores modernos incluyen sistemas físicos dedicados, servidores virtualizados y soluciones basadas en contenedores, adaptándose a las necesidades específicas de cada organización.</p>
+                <p>En mi experiencia profesional, he visto cómo la virtualización y los contenedores han transformado radicalmente la administración de servidores, permitiendo un uso mucho más eficiente de los recursos de hardware.</p>
+            </div>
+            <div id="sub-panel">
+                <h1> ● Computadoras de escritorio (PCs)</h1>
+                <p>Usadas en hogares y oficinas para tareas generales como navegación web, diseño, programación o videojuegos.</p>
+                <p>Se pueden personalizar con diferentes componentes de hardware.</p>
+                <p>Ejemplo: PCs con Windows, Mac, Linux.</p>
+                <p>La versatilidad de las computadoras de escritorio es su principal ventaja. Como entusiasta de la tecnología, siempre recomiendo las PCs para usuarios que necesitan capacidad de actualización y personalización, especialmente en campos como el diseño gráfico, la edición de video o el desarrollo de software.</p>
+            </div>
+            <div id="sub-panel">
+                <h1> ● Computadoras portátiles (Laptops, Notebooks, Ultrabooks)</h1>
+                <p>Dispositivos compactos y portátiles con batería integrada.</p>
+                <p>Las Ultrabooks son versiones más ligeras y delgadas con alto rendimiento.</p>
+                <p>La evolución de las laptops ha sido impresionante: hemos pasado de equipos voluminosos con poca autonomía a ultrabooks con potencia comparable a equipos de escritorio y baterías que duran todo el día.</p>
+                <p>En la actualidad, vemos un enfoque hacia la integración de tecnologías como pantallas táctiles, convertibles 2-en-1, y la implementación de procesadores ARM de bajo consumo pero alto rendimiento.</p>
+            </div>
+            <div id="sub-panel">
+                <h1> ● Mini-PCs y computadoras de placa única</h1>
+                <p>Dispositivos pequeños con bajo consumo de energía.</p>
+                <p>Usados para proyectos de IoT, servidores caseros o emulación de videojuegos.</p>
+                <p>Ejemplos populares incluyen Raspberry Pi, Arduino, y NUC de Intel.</p>
+                <p>Como aficionado a los proyectos DIY, considero que estas pequeñas computadoras representan una democratización del acceso a la tecnología. Con un Raspberry Pi de bajo costo, cualquier estudiante puede crear proyectos que anteriormente requerían equipos costosos y conocimientos especializados.</p>
+            </div>
+            <div id="sub-panel">
+                <h1> ● Dispositivos móviles y wearables</h1>
+                <p>Smartphones, tablets y dispositivos wearables como smartwatches.</p>
+                <p>Combinan capacidad de computación con alta portabilidad.</p>
+                <p>Aunque a menudo no los consideramos "computadoras" en el sentido tradicional, estos dispositivos tienen capacidades de procesamiento que superan a las supercomputadoras de hace algunas décadas.</p>
+                <p>La tendencia hacia la computación ubicua está transformando nuestra interacción con la tecnología, integrándola de manera casi imperceptible en nuestra vida cotidiana.</p>
+            </div>
+            <div id="sub-panel">
+                <h1> ● Sistemas embebidos</h1>
+                <p>Computadoras integradas en otros dispositivos con funciones específicas.</p>
+                <p>Presentes en electrodomésticos, automóviles, dispositivos médicos y sistemas industriales.</p>
+                <p>Estos sistemas, aunque menos visibles, son probablemente las computadoras más numerosas en nuestro entorno. Un automóvil moderno puede contener más de 100 unidades de procesamiento diferentes, cada una dedicada a tareas específicas.</p>
+            </div>
+        </section>
+
+        <section>
+            <p>📌 <strong>Conclusión:</strong> La informática ha evolucionado enormemente, pasando de simples herramientas de cálculo a sistemas avanzados que transforman nuestra vida diaria.</p>
+            <p>Esta evolución no solo refleja nuestro ingenio como especie, sino también nuestra constante búsqueda de soluciones a problemas cada vez más complejos. Como profesionales y estudiantes de esta disciplina, formamos parte de una tradición que se remonta milenios atrás y que continúa avanzando a un ritmo exponencial.</p>
+            <p>El futuro de la informática promete desarrollos fascinantes en áreas como la computación cuántica, la inteligencia artificial y la realidad mixta. En mis años como docente e investigador, he aprendido que la clave del éxito en este campo es mantener siempre la curiosidad y la disposición para seguir aprendiendo.</p>
+            <p>Los invito a profundizar en estos temas y a descubrir cómo pueden aplicar estos conocimientos en sus propios proyectos e intereses. La informática es, después de todo, una herramienta para potenciar nuestra creatividad y capacidad de innovación.</p>
+        </section>
+                
+        <section id="nextBack-section">
+            <a id="next-section" href="./U1-Introduccion-software.html">Siguiente Seccion</a><i class="fas fa-arrow-right"></i>
+        </section>  
+        </main>        
+    </div>
+
+    
+
+    <div class="overlay" id="overlay">
+        <button class="close-btn" onclick="cerrarImagen()">X</button>
+        <img id="imagenAmpliada" src="" alt="Imagen Ampliada">
+    </div>
+
+    <script src="../../js/menuDesplegable.js"></script>    
+    <script src="../../js/divInfoDesplegable.js"></script>
+    <script src="../../js/ampliarImg.js"></script>
+</body>
+</html>

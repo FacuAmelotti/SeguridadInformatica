@@ -1,0 +1,171 @@
+[
+  {
+    "Text": "¿Qué es la informática?",
+    "Options": [
+      "Estudio de los sistemas computacionales y el procesamiento de la información",
+      "Conjunto de programas instalados en una computadora",
+      "Red global que permite el intercambio de datos",
+      "Método para organizar componentes físicos de un sistema"
+    ],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Conceptos fundamentales",
+    "Difficult": "Media"
+  },
+  {
+    "Text": "¿Qué es una computadora?",
+    "Options": [
+      "Máquina electrónica que ejecuta instrucciones para procesar datos",
+      "Sistema que se encarga de gestionar la red de un hogar",
+      "Dispositivo de entrada que permite interactuar con el software",
+      "Conjunto de programas utilizados por el usuario final"
+    ],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Conceptos fundamentales",
+    "Difficult": "Media"
+  },
+  {
+    "Text": "¿Qué se entiende por software?",
+    "Options": [
+      "Instrucciones y datos que permiten operar el hardware",
+      "Componentes tangibles que forman un sistema informático",
+      "Documentación impresa asociada a un sistema",
+      "Arquitectura física que conecta dispositivos"
+    ],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Conceptos fundamentales",
+    "Difficult": "Inicial"
+  },
+  {
+    "Text": "¿Qué es un algoritmo?",
+    "Options": [
+      "Conjunto finito y ordenado de pasos que resuelven un problema",
+      "Aplicación específica para diseñar interfaces gráficas",
+      "Lenguaje utilizado para comunicarse con bases de datos",
+      "Instrucción lógica contenida dentro de una clase"
+    ],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Conceptos fundamentales",
+    "Difficult": "Inicial"
+  },
+  {
+    "Text": "¿Cuál es la función de un lenguaje de programación?",
+    "Options": [
+      "Permitir escribir instrucciones comprensibles por la máquina",
+      "Controlar el hardware mediante señales físicas",
+      "Organizar los archivos dentro del sistema operativo",
+      "Convertir imágenes en código binario para su procesamiento"
+    ],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Conceptos fundamentales",
+    "Difficult": "Inicial"
+  },
+    {
+      "Text": "¿Qué es la computación?",
+      "Options": [
+        "Estudio del procesamiento automático de la información",
+        "Uso de redes para transmitir datos a distancia",
+        "Creación de hardware para almacenar información",
+        "Administración de sistemas de comunicación inalámbrica"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Conceptos fundamentales",
+      "Difficult": "Media"
+    },
+    {
+      "Text": "¿Qué describe la evolución de la computación?",
+      "Options": [
+        "Progreso en la capacidad de procesamiento y reducción del tamaño de los dispositivos",
+        "Aumento exclusivo del almacenamiento de datos sin cambios en la lógica de operación",
+        "Disminución de la velocidad de cálculo para mejorar la eficiencia energética",
+        "Creación de sistemas mecánicos que sustituyen completamente la electrónica"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Conceptos fundamentales",
+      "Difficult": "Media"
+    },
+    {
+      "Text": "¿Qué caracterizaba a las primeras computadoras?",
+      "Options": [
+        "Utilizaban válvulas de vacío para procesar información",
+        "Operaban de forma totalmente inalámbrica",
+        "Estaban basadas en redes de fibra óptica",
+        "Eran diseñadas exclusivamente para procesamiento gráfico"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Conceptos fundamentales",
+      "Difficult": "Inicial"
+    },
+    {
+      "Text": "¿Cuál es una clasificación correcta de los tipos de computadoras?",
+      "Options": [
+        "Supercomputadoras, minicomputadoras y microcomputadoras",
+        "Sistemas de refrigeración, periféricos y redes locales",
+        "Bases de datos, unidades de almacenamiento y procesadores",
+        "Aplicaciones móviles, programas de escritorio y firmware"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Conceptos fundamentales",
+      "Difficult": "Inicial"
+    },
+    {
+      "Text": "¿Qué son los tipos de software?",
+      "Options": [
+        "Software de sistema, de aplicación y de programación",
+        "Hardware, drivers y dispositivos de entrada",
+        "Bases de datos, protocolos y redes",
+        "Líneas de transmisión, plataformas y hubs"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Conceptos fundamentales",
+      "Difficult": "Media"
+    },
+    {
+      "Text": "¿Qué caracteriza a los lenguajes de programación?",
+      "Options": [
+        "Permiten expresar algoritmos de manera que puedan ser ejecutados por computadoras",
+        "Son herramientas para medir la eficiencia de una red de datos",
+        "Permiten diseñar la arquitectura física de los sistemas de hardware",
+        "Definen la cantidad de almacenamiento requerida para un sistema"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Conceptos fundamentales",
+      "Difficult": "Inicial"
+    },
+    {
+      "Text": "¿Qué implica trabajar con algoritmos y lógica?",
+      "Options": [
+        "Diseñar secuencias ordenadas para resolver problemas computacionales",
+        "Optimizar la velocidad de conexión de redes locales",
+        "Crear nuevas interfaces gráficas en aplicaciones móviles",
+        "Reparar dispositivos físicos mediante métodos de soldadura"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Conceptos fundamentales",
+      "Difficult": "Inicial"
+    },
+    {
+      "Text": "¿Qué son los paradigmas de programación?",
+      "Options": [
+        "Modelos que definen cómo se estructuran y ejecutan los programas",
+        "Estándares para el diseño físico de procesadores",
+        "Protocolos de comunicación entre dispositivos electrónicos",
+        "Normas para la instalación de redes de alta velocidad"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Conceptos fundamentales",
+      "Difficult": "Inicial"
+    },
+    {
+      "Text": "¿Qué describe mejor el desarrollo de software?",
+      "Options": [
+        "Proceso de analizar, diseñar, construir y mantener programas informáticos",
+        "Fabricación en serie de componentes electrónicos para computadoras",
+        "Configuración física de redes de telecomunicaciones",
+        "Optimización de algoritmos matemáticos en procesos industriales"
+      ],
+      "CorrectAnswerIndex": 0,
+      "Topic": "Conceptos fundamentales",
+      "Difficult": "Inicial"
+    }
+  ]
+  

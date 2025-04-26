@@ -24,13 +24,15 @@
                 <li><a href="../../pages/general.html"><i class="fas fa-home"></i> General</a>                    
                 <li><a href="#p1">Principios de Bases de Datos</a></li>            
                 <ul>
+                         <li><a href="#introduccion">Introduccion</a></li>
                         <li><a href="#que-es-bd">¿Qué es una base de datos?</a></li>
                         <ul>
                             <li><a href="#tipos-bd">Tipos de bases de datos</a></li>
                             <li><a href="#modelos-bd">Modelos de datos</a></li>  
-                            <li><a href="#dbms">Sistemas gestores</a></li>  
-                        </ul>
-                        <li><a href="#datos-vs-informacion">Datos vs Información</a></li>
+                            <li><a href="#datos-vs-informacion">Datos vs Información</a></li>
+                            <li><a href="#dbms">Sistemas gestores</a></li> 
+                            <li><a href="#sgbd-populares">SGBD populares</a></li>    
+                        </ul>                       
                         <li><a href="#lenguaje-sql">¿Qué es SQL?</a></li>  
                         <li><a href="#clave-primaria">Claves primarias</a></li>  
                         <ul>
@@ -38,8 +40,8 @@
                             <li><a href="#integridad">Integridad referencial</a></li>
                             <li><a href="#normalizacion">Normalización</a></li>
                         </ul>      
-                        <li><a href="#consultas">Consultas básicas</a></li>  
-                        <li><a href="#sgbd-populares">SGBD populares</a></li>         
+                        <li><a href="#clave-foranea">Claves foraneas</a></li>
+                        <li><a href="#consultas">Consultas básicas</a></li>                               
                 </ul>
                 <li><a id="btn-menu-Sect" href="#next-section">Siguiente Sección</a></li> <!--BASES DE DATOS RELACIONALES-->
         </aside>
@@ -66,12 +68,18 @@
                     <li>#TABLAS</li>
                 </ul>
             </section>  
+
+            <!-- Introduccion -->
+            <section>
+                <h2 id="introduccion">📜 Introduccion</h2>
+                <p>Las base de datos...</p>
+            </section>
             
             <section id="que-es-bd">   
                 <h1>¿Qué es una Base de Datos?</h1>
                 <ul>
-                    <li>● Una <strong>BASE DE DATOS</strong> es una colección organizada de datos relacionados entre sí, almacenados de forma estructurada para facilitar su acceso, gestión y actualización.</li>                
-                    <li>● Las bases de datos permiten almacenar, recuperar, actualizar y eliminar información de manera eficiente. 💾</li>
+                    <li>● Una <strong>BASE DE DATOS</strong> es una <strong>colección organizada de datos relacionados entre sí, almacenados de forma estructurada</strong> para facilitar su acceso, gestión y actualización.</li>                
+                    <li>● Las bases de datos <strong>permiten almacenar, recuperar, actualizar y eliminar información</strong> de manera eficiente. 💾</li>
                 </ul>
                 <h3 id="tipos-bd">Existen diferentes tipos de bases de datos:</h3>
                 <ul>
@@ -80,6 +88,7 @@
                     <li>● <strong>En memoria</strong> → Almacenan datos en la memoria principal (Redis).</li>       
                     <li>● <strong>Orientadas a objetos</strong> → Almacenan objetos completos.</li>      
                 </ul>
+                <img src="../../img/tipos-de-bd.jpg" alt="Tipos de base de datos" style="height: 600px;" onclick="ampliarImagen(this)">
             </section>
 
             <section id="modelos-bd">   
@@ -104,6 +113,7 @@
                         <li>4. <strong>Tabla Detalle_Pedido</strong>: id_pedido, id_producto, cantidad, precio_unitario</li>
                     </ul>
                     <p>Las tablas se relacionan entre sí mediante claves primarias y foráneas. Por ejemplo, id_cliente en la tabla Pedidos es una clave foránea que referencia a id_cliente en la tabla Clientes.</p>              
+                    <p class="msg-info">Se profundizará más adelante sobre claves primarias y foraneas...</p>
                 </div>
             </section>
 
@@ -160,6 +170,18 @@
             </ul>
         </section>
 
+        <section id="sgbd-populares">
+            <h1>SGBD Populares</h1>
+            <ul>
+                <li><strong>MySQL</strong> – Sistema de código abierto muy popular para aplicaciones web.</li>
+                <li><strong>PostgreSQL</strong> – Sistema robusto con características avanzadas y excelente cumplimiento de estándares.</li>
+                <li><strong>Oracle Database</strong> – Sistema empresarial con alto rendimiento y numerosas características.</li>
+                <li><strong>Microsoft SQL Server</strong> – Sistema integrado con otras herramientas de Microsoft.</li>
+                <li><strong>SQLite</strong> – Base de datos liviana ideal para aplicaciones móviles y pequeños proyectos.</li>
+                <li><strong>MongoDB</strong> – Base de datos NoSQL orientada a documentos.</li>
+                <li><strong>MariaDB</strong> – Fork de MySQL con licencia de código abierto.</li>
+            </ul>
+        </section>
         
         <section id="lenguaje-sql">   
             <h1>¿Qué es SQL?</h1>
@@ -195,20 +217,23 @@
         <section id="clave-primaria">
             <h1>Claves Primarias y Relaciones</h1>
             <section>
-                <h3>Clave Primaria</h3>
+                <h3>Clave Primaria – Principios Fundamentales</h3>
                 <ul>
                     <li>Es un campo o conjunto de campos que identifican de forma única cada registro en una tabla.</li>
                     <li>No puede contener valores nulos y debe ser única para cada registro.</li>
+                    <li>Su valor debe ser estable, es decir, no cambiar con el tiempo.</li>
+                    <li>Garantiza la integridad de los datos y la correcta identificación de los registros.</li>
                     <li>Ejemplo: El DNI de una persona, el número de matrícula de un coche.</li>
                     <div class="console-code">
-                        <!-- Línea con comando y comentario -->
                         <div class="console-line">
                             <span class="console-command">CREATE TABLE Empleados (id_empleado INT PRIMARY KEY, nombre VARCHAR(100));</span>
                             <span class="console-comment">#Creación de tabla con clave primaria</span>
                         </div>
                     </div>
                 </ul>
-            </section> 
+            </section>
+            
+
             <section id="relacion-tablas">
                 <h3>Relaciones entre tablas</h3>
                 <ul>
@@ -222,7 +247,9 @@
                         <span class="console-command">CREATE TABLE Pedidos (id_pedido INT PRIMARY KEY, id_cliente INT, FOREIGN KEY (id_cliente) REFERENCES Clientes(id_cliente));</span>
                         <span class="console-comment">#Creación de relación con clave foránea</span>
                     </div>    
-                </div>        
+                </div>   
+                <img src="../../img/relaciones-bbdd.png" alt="Tipos de base de datos" style="height: 200px;" onclick="ampliarImagen(this)">
+              
             </section> 
         </section>
 
@@ -258,8 +285,44 @@
                 <li><strong>BCNF</strong>: Forma normal de Boyce-Codd, una versión más estricta de 3FN.</li>
                 <li><strong>4FN y 5FN</strong>: Formas normales avanzadas para casos específicos.</li>
             </ul>
-            <p class="msg-info">Se profundizará más en normalización en secciones posteriores...</p>
+            <img src="../../img//NormalizacionBaseDeDatos.png" alt="Tipos de base de datos" style="height: 380px;" onclick="ampliarImagen(this)">
+              
         </section>
+
+        <section id="clave-foranea">
+            <h3>Clave Foránea</h3>
+            <ul>
+                <li>Es un campo o conjunto de campos que hacen referencia a la clave primaria de otra tabla.</li>
+                <li>Establece una relación entre dos tablas (integridad referencial).</li>
+                <li>Puede contener valores nulos si la relación no es obligatoria.</li>
+                <li>No permite insertar un valor que no exista en la tabla referenciada.</li>                
+                  <li>Ejemplo: El `id_departamento` en la tabla `Empleados` que hace referencia al `id_departamento` de la tabla `Departamentos`.</li>
+                <div class="console-code">
+                    <!-- Línea con comando y comentario -->
+                    <div class="console-line">
+                        <span class="console-command">
+                            CREATE TABLE Departamentos (
+                                id_departamento INT PRIMARY KEY,
+                                nombre VARCHAR(100)
+                            );
+                        </span>
+                        <span class="console-comment">#Tabla referenciada</span>
+                    </div>
+                    <div class="console-line">
+                        <span class="console-command">
+                            CREATE TABLE Empleados (
+                                id_empleado INT PRIMARY KEY,
+                                nombre VARCHAR(100),
+                                id_departamento INT,
+                                FOREIGN KEY (id_departamento) REFERENCES Departamentos(id_departamento)
+                            );
+                        </span>
+                        <span class="console-comment">#Clave foránea hacia Departamentos</span>
+                    </div>
+                </div>
+            </ul>
+        </section>
+        
             
         <section id="consultas">
             <h1>Consultas Básicas</h1>
@@ -273,22 +336,8 @@
                 <li><strong>ORDER BY</strong> – Ordena los resultados por columnas específicas.</li>
                 <li><strong>GROUP BY</strong> – Agrupa registros para aplicar funciones agregadas.</li>
             </ul>
-            <p class="msg-info">Se abordarán consultas más complejas en próximas secciones...</p>
         </section>
-            
-        <section id="sgbd-populares">
-            <h1>SGBD Populares</h1>
-            <ul>
-                <li><strong>MySQL</strong> – Sistema de código abierto muy popular para aplicaciones web.</li>
-                <li><strong>PostgreSQL</strong> – Sistema robusto con características avanzadas y excelente cumplimiento de estándares.</li>
-                <li><strong>Oracle Database</strong> – Sistema empresarial con alto rendimiento y numerosas características.</li>
-                <li><strong>Microsoft SQL Server</strong> – Sistema integrado con otras herramientas de Microsoft.</li>
-                <li><strong>SQLite</strong> – Base de datos liviana ideal para aplicaciones móviles y pequeños proyectos.</li>
-                <li><strong>MongoDB</strong> – Base de datos NoSQL orientada a documentos.</li>
-                <li><strong>MariaDB</strong> – Fork de MySQL con licencia de código abierto.</li>
-            </ul>
-        </section>
-            
+                 
 
         <section id="nextBack-section">
             <a id="next-section" href="./U-base-de-datos-Relacionales-y-no-relacionales.html">Siguiente Sección</a><i class="fas fa-arrow-right"></i>
