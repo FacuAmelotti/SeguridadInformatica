@@ -96,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const li = document.createElement('li');
             const btn = document.createElement('button');
             btn.textContent = opcion;
+            btn.id = 'button_resp';
             btn.addEventListener('click', () => {
                 seleccionarRespuesta(i, btn);
             });
@@ -150,7 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
         textos.forEach(t => t.remove());
     }
     
-
     function finalizarEvaluacion() {
         preguntaTexto.textContent = `Evaluación terminada. Puntaje final: ${puntaje} de ${respondidas}`;
         opcionesLista.innerHTML = '';
@@ -160,5 +160,15 @@ document.addEventListener('DOMContentLoaded', () => {
         titulo.textContent = '';
         dificultad.textContent = '';
         contador.textContent = '';
+    
+        preguntas = [];
+        preguntasRestantes = [];
+        preguntaActual = null;
+        totalPreguntas = 0;
+    
+        // --- Mostrar nuevamente el formulario inicial ---
+        temaSection.classList.remove('hidden');
+        evaluacionSection.classList.add('hidden');
     }
+    
 });

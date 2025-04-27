@@ -6,7 +6,10 @@
     <title>Evaluador</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
+    
     <link rel="stylesheet" href="../css/template.css">    
+    <link rel="stylesheet" href="../css/evaluador.css">    
+
         <!--FONT-->
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
         <style>
@@ -29,20 +32,25 @@
 
         <!-- Contenido principal -->
         <main class="content">
-
-          <section>
-            <p>🔹 Puede que haya preguntas que no esten en el contenido...</p>
-            <p>🔹 La mejor forma de aprender este juego es memorizando!</p>
-        </section>
-
             <div class="evaluador">
+              
                 <section id="tema-section">
+
+                  <section id="tips-section">
+                    <img id="imgEffect" src="../img/el_cerebrito.jpg" onclick="ampliarImagen(this)">
+                    <div class="info-text">
+                     <h1>Evaluador</h1> 
+                     <p>🔹 Puede que haya preguntas que no esten en el contenido...</p>
+                     <p>🔹 La mejor forma de aprender este juego es memorizando!</p>
+                    </div>
+                  </section>
+
                   <h2>Selecciona los temas a evaluar</h2>
                   <form id="temas-form">
-                    <label><input type="checkbox" name="tema" value="redes"> Redes</label>
-                    <label><input type="checkbox" name="tema" value="bd"> Bases de Datos</label>
-                    <label><input type="checkbox" name="tema" value="seguridad"> Seguridad</label>
-                    <button type="submit" style="height: 32px; padding: 0 12px; background-color: rgb(97, 116, 149);">Comenzar Evaluación</button>
+                    <label><input type="checkbox" checked name="tema" value="redes"> Redes</label>
+                    <label><input type="checkbox" checked name="tema" value="bd"> Bases de Datos</label>
+                    <label><input type="checkbox" checked name="tema" value="seguridad"> Seguridad</label>
+                    <button id="button" type="submit" style="height: 32px; padding: 0 12px; background-color: rgb(131, 153, 190);">Comenzar Evaluación</button>
                   </form>
                 </section>
           
@@ -54,19 +62,19 @@
                     <section style="margin: 6px 32px;">
                     <ul id="opciones-lista"></ul>
                   </section>
-
-                    <section style="margin: 6px 32px;">
+                  <section id="pregunta-section">
+                    <div id="pregunta-buttons">
+                      <button class="button" id="siguiente-btn" disabled>Siguiente pregunta</button>
+                      <button class="button_end" id="finalizar-btn" disabled>Finalizar Evaluación</button>
+                    </div>
                   
-                      <div id="info-pregunta">
-                        <p id="area"></p>
-                        <p id="dificultad"></p>
-                        <p id="contador"></p>
-                      </div>
-                    </section>
-    
-                    <button id="siguiente-btn" disabled>Siguiente pregunta</button>
-                  </div>
-                  <button id="finalizar-btn" disabled>Finalizar Evaluación</button>
+                    <div id="info-pregunta">
+                      <p id="area"></p>
+                      <p id="dificultad"></p>
+                      <p id="contador"></p>
+                    </div>
+                  </section>
+                  
                   
                 </section>
         </main>
