@@ -2,10 +2,10 @@
   {
     "Text": "¿Qué es la informática?",
     "Options": [
-      "Estudio de los sistemas computacionales y el procesamiento de la información",
-      "Conjunto de programas instalados en una computadora",
-      "Red global que permite el intercambio de datos",
-      "Método para organizar componentes físicos de un sistema"
+      "Ciencia que estudia el tratamiento automático y racional de la información.",
+      "Conjunto de programas instalados en una computadora que permiten que la misma funcione.",
+      "Sistema de componentes que permite el procesamiento de informacion.",
+      "Métodos teóricos y matemáticos del procesamiento de información."
     ],
     "CorrectAnswerIndex": 0,
     "Topic": "Conceptos fundamentales",
@@ -14,22 +14,34 @@
   {
     "Text": "¿Qué es una computadora?",
     "Options": [
-      "Máquina electrónica que ejecuta instrucciones para procesar datos",
-      "Sistema que se encarga de gestionar la red de un hogar",
-      "Dispositivo de entrada que permite interactuar con el software",
-      "Conjunto de programas utilizados por el usuario final"
+      "Máquina electrónica digital que ejecuta instrucciones para procesar datos.",
+      "Sistema que se encarga de gestionar la red de un ordenador.",
+      "Dispositivo de entrada que permite interactuar con el software.",
+      "Conjunto de componentes utilizados como dispositivo de cálculo."
     ],
     "CorrectAnswerIndex": 0,
     "Topic": "Conceptos fundamentales",
     "Difficult": "Media"
   },
   {
+    "Text": "¿Cual fue el primer dispositivo de computo?",
+    "Options": [
+      "Ábaco.",
+      "Máquina de Pascal",
+      "Máquina de Babbage.",
+      "z1."
+    ],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Conceptos fundamentales",
+    "Difficult": "Facil"
+  },
+  {
     "Text": "¿Qué se entiende por software?",
     "Options": [
-      "Instrucciones y datos que permiten operar el hardware",
-      "Componentes tangibles que forman un sistema informático",
-      "Documentación impresa asociada a un sistema",
-      "Arquitectura física que conecta dispositivos"
+      "Conjunto de programas, instrucciones y reglas informáticas que permiten ejecutar distintas tareas.",
+      "Conjunto de programas que permiten el funcionamiento del sistema operativo.",
+      "Conjunto de algoritmos y lógica diseñados para resolver problemas específicos.",
+      "Arquitectura y base para que otros programas funcionen."
     ],
     "CorrectAnswerIndex": 0,
     "Topic": "Conceptos fundamentales",
@@ -38,10 +50,10 @@
   {
     "Text": "¿Qué es un algoritmo?",
     "Options": [
-      "Conjunto finito y ordenado de pasos que resuelven un problema",
-      "Aplicación específica para diseñar interfaces gráficas",
-      "Lenguaje utilizado para comunicarse con bases de datos",
-      "Instrucción lógica contenida dentro de una clase"
+      "Conjunto finito y ordenado de pasos que resuelven un problema.",
+      "Herramientas formales que permiten a los desarrolladores crear aplicaciones.",
+      "Lenguaje utilizado para comunicarse con protocolos.",
+      "Instrucción lógica contenida dentro de una clase."
     ],
     "CorrectAnswerIndex": 0,
     "Topic": "Conceptos fundamentales",
