@@ -1,470 +1,342 @@
 [
   {
     "Text": "¿Qué significa BD en el contexto de tecnología?",
-    "Options": ["Base de Datos", "Bit Dinámico", "Byte Data", "Binary Disk"],
-    "CorrectAnswerIndex": 0,
-    "Topic": "Bases de Datos"
+    "Options": [
+      "Sistema que gestiona grandes volúmenes de datos estructurados.",
+      "Conjunto de sistemas diseñados para realizar operaciones matemáticas complejas.",
+      "Unidad de almacenamiento utilizada para guardar información digital.",
+      "Conjunto organizado de datos accesibles y manipulables por programas informáticos."
+    ],
+    "CorrectAnswerIndex": 3,
+    "Topic": "Bases de Datos",
+    "Difficult": "Media",
+    "Justification": "En tecnología, BD hace referencia a una **base de datos**, que es un sistema que organiza, almacena y gestiona grandes volúmenes de datos de manera estructurada. Estas bases de datos permiten consultas rápidas, actualizaciones eficientes y un manejo optimizado de la información en distintos sistemas informáticos."
   },
   {
     "Text": "¿Qué tipo de base de datos organiza los datos en filas y columnas?",
-    "Options": ["Base de datos jerárquica", "Base de datos relacional", "Base de datos orientada a objetos", "Base de datos distribuida"],
+    "Options": [
+      "Sistema de almacenamiento basado en jerarquías predefinidas.",
+      "Modelo de datos que usa relaciones tabulares entre entidades.",
+      "Sistema que permite modelar objetos y sus relaciones.",
+      "Modelo de datos distribuido en múltiples nodos físicos."
+    ],
     "CorrectAnswerIndex": 1,
-    "Topic": "Bases de Datos"
+    "Topic": "Bases de Datos",
+    "Difficult": "Media",
+    "Justification": "Las bases de datos **relacionales** organizan la información en tablas compuestas de filas y columnas, utilizando relaciones entre diferentes tablas. Este modelo es el más utilizado en sistemas de gestión de bases de datos tradicionales como MySQL, PostgreSQL y Oracle."
   },
   {
     "Text": "¿Qué lenguaje se utiliza comúnmente para interactuar con bases de datos relacionales?",
-    "Options": ["Python", "Java", "SQL", "C++"],
-    "CorrectAnswerIndex": 2,
-    "Topic": "Bases de Datos"
+    "Options": [
+      "Lenguaje de programación de alto nivel utilizado para manipular objetos en memoria.",
+      "Lenguaje de consulta estructurado utilizado para gestionar bases de datos.",
+      "Lenguaje de programación interpretado usado en aplicaciones web.",
+      "Lenguaje estándar para manipular datos a nivel de sistema operativo."
+    ],
+    "CorrectAnswerIndex": 1,
+    "Topic": "Bases de Datos",
+    "Difficult": "Media",
+    "Justification": "El **SQL (Structured Query Language)** es el lenguaje estándar utilizado para interactuar con bases de datos relacionales. Permite crear, leer, actualizar y eliminar datos dentro de una base de datos, facilitando la administración de la información de manera eficiente."
   },
   {
     "Text": "¿Qué es una tabla en una base de datos relacional?",
-    "Options": ["Un conjunto de registros organizados en filas y columnas", "Un archivo de texto plano", "Una función matemática", "Un diagrama de flujo"],
+    "Options": [
+      "Una representación de un conjunto de entidades relacionadas, organizadas en filas y columnas.",
+      "Una estructura de datos optimizada para almacenar texto y números de forma desorganizada.",
+      "Una forma de representar gráficamente relaciones entre diferentes tipos de datos.",
+      "Un archivo estructurado que contiene registros sin ninguna organización interna."
+    ],
     "CorrectAnswerIndex": 0,
-    "Topic": "Bases de Datos"
+    "Topic": "Bases de Datos",
+    "Difficult": "Media",
+    "Justification": "En las bases de datos relacionales, una **tabla** es una estructura compuesta por filas (registros) y columnas (campos) que almacena información organizada. Cada columna representa un atributo o tipo de dato, y cada fila corresponde a un conjunto de valores relacionados entre sí."
   },
   {
     "Text": "¿Qué significa SQL?",
-    "Options": ["Structured Query Language", "Simple Query Language", "System Query Language", "Standard Query Language"],
+    "Options": [
+      "Lenguaje formal que estructura consultas sobre bases de datos relacionales.",
+      "Sistema estándar de lenguaje de programación para aplicaciones distribuidas.",
+      "Lenguaje utilizado para manipular archivos de texto y bases de datos simples.",
+      "Sistema de consulta estructurada utilizado exclusivamente en bases de datos no relacionales."
+    ],
     "CorrectAnswerIndex": 0,
-    "Topic": "Bases de Datos"
+    "Topic": "Bases de Datos",
+    "Difficult": "Media",
+    "Justification": "SQL (**Structured Query Language**) es un lenguaje estandarizado utilizado para gestionar y manipular bases de datos relacionales. Su sintaxis está diseñada para realizar consultas estructuradas, gestionar datos, y administrar la estructura y acceso a bases de datos."
   },
   {
     "Text": "¿Qué comando SQL se utiliza para recuperar datos de una tabla?",
-    "Options": ["INSERT", "SELECT", "UPDATE", "DELETE"],
-    "CorrectAnswerIndex": 1,
-    "Topic": "Bases de Datos"
+    "Options": [
+      "Operación para insertar datos en tablas de una base de datos.",
+      "Comando para eliminar registros de una tabla.",
+      "Comando utilizado para modificar el contenido de una tabla.",
+      "Comando empleado para seleccionar registros específicos dentro de una tabla."
+    ],
+    "CorrectAnswerIndex": 3,
+    "Topic": "Bases de Datos",
+    "Difficult": "Media",
+    "Justification": "El comando **SELECT** en SQL es utilizado para recuperar datos de una o varias tablas dentro de una base de datos. Permite seleccionar columnas específicas, aplicar filtros, ordenar resultados y realizar un sinfín de operaciones para extraer la información deseada."
   },
   {
     "Text": "¿Qué tipo de dato se utiliza para almacenar números enteros en una base de datos?",
-    "Options": ["VARCHAR", "INTEGER", "TEXT", "BOOLEAN"],
-    "CorrectAnswerIndex": 1,
-    "Topic": "Bases de Datos"
+    "Options": [
+      "Tipo de dato usado para guardar cadenas de caracteres.",
+      "Tipo de dato para almacenar valores booleanos.",
+      "Tipo de dato para almacenar números con decimales.",
+      "Tipo de dato usado para guardar números enteros sin decimales."
+    ],
+    "CorrectAnswerIndex": 3,
+    "Topic": "Bases de Datos",
+    "Difficult": "Media",
+    "Justification": "El tipo de dato **INTEGER** se utiliza para almacenar números enteros en una base de datos. A diferencia de los tipos de datos como **DECIMAL** o **FLOAT**, el tipo INTEGER solo almacena números sin valores decimales, lo cual es útil para representar cantidades enteras, identificadores y otros valores numéricos."
   },
   {
     "Text": "¿Qué es una clave primaria en una base de datos?",
-    "Options": ["Un campo que identifica de forma única cada registro en una tabla", "Un campo que almacena texto", "Un campo que permite valores duplicados", "Un campo que no puede ser modificado"],
+    "Options": [
+      "Un campo que garantiza que cada registro dentro de la tabla sea único.",
+      "Un campo opcional utilizado para permitir la relación entre varias tablas.",
+      "Un campo que restringe los valores que pueden ser ingresados a una tabla.",
+      "Un campo que se utiliza para almacenar fechas y horas dentro de una tabla."
+    ],
     "CorrectAnswerIndex": 0,
-    "Topic": "Bases de Datos"
-  },
-  {
-    "Text": "¿Qué comando SQL se utiliza para agregar nuevos registros a una tabla?",
-    "Options": ["SELECT", "UPDATE", "INSERT", "DELETE"],
-    "CorrectAnswerIndex": 2,
-    "Topic": "Bases de Datos"
-  },
-  {
-    "Text": "¿Qué es un DBMS?",
-    "Options": ["Data Base Management System", "Data Binary Management System", "Dynamic Byte Memory System", "Digital Backup Management System"],
-    "CorrectAnswerIndex": 0,
-    "Topic": "Bases de Datos"
-  },
-  {
-    "Text": "¿Cuál de los siguientes es un ejemplo de DBMS?",
-    "Options": ["MySQL", "HTML", "CSS", "JavaScript"],
-    "CorrectAnswerIndex": 0,
-    "Topic": "Bases de Datos"
-  },
-  {
-    "Text": "¿Qué es un campo en una base de datos?",
-    "Options": ["Una columna que contiene un tipo específico de datos", "Una fila que contiene datos", "Un archivo que almacena datos", "Un diagrama que representa datos"],
-    "CorrectAnswerIndex": 0,
-    "Topic": "Bases de Datos"
-  },
-  {
-    "Text": "¿Qué es un registro en una base de datos?",
-    "Options": ["Una fila que contiene datos", "Una columna que contiene datos", "Un archivo que almacena datos", "Un diagrama que representa datos"],
-    "CorrectAnswerIndex": 0,
-    "Topic": "Bases de Datos"
-  },
-  {
-    "Text": "¿Qué comando SQL se utiliza para eliminar registros de una tabla?",
-    "Options": ["INSERT", "SELECT", "UPDATE", "DELETE"],
-    "CorrectAnswerIndex": 3,
-    "Topic": "Bases de Datos"
-  },
-  {
-    "Text": "¿Qué es una base de datos distribuida?",
-    "Options": ["Una base de datos que está dividida en múltiples ubicaciones físicas", "Una base de datos que solo almacena texto", "Una base de datos que no permite consultas", "Una base de datos que no requiere conexión a internet"],
-    "CorrectAnswerIndex": 0,
-    "Topic": "Bases de Datos"
-  },
-  {
-    "Text": "¿Qué significa ACID en el contexto de bases de datos?",
-    "Options": ["Atomicity, Consistency, Isolation, Durability", "Access Control, Integrity, Data Storage", "Advanced Coding for Internet Databases", "Automatic Configuration of Integrated Data"],
-    "CorrectAnswerIndex": 0,
-    "Topic": "Bases de Datos"
-  },
-  {
-    "Text": "¿Qué es una consulta en SQL?",
-    "Options": ["Una instrucción para recuperar o manipular datos", "Un archivo que almacena datos", "Un diagrama que representa datos", "Un tipo de base de datos"],
-    "CorrectAnswerIndex": 0,
-    "Topic": "Bases de Datos"
-  },
-  {
-    "Text": "¿Qué tipo de dato se utiliza para almacenar texto en una base de datos?",
-    "Options": ["INTEGER", "VARCHAR", "BOOLEAN", "DATE"],
-    "CorrectAnswerIndex": 1,
-    "Topic": "Bases de Datos"
-  },
-  {
-    "Text": "¿Qué es una relación en una base de datos relacional?",
-    "Options": ["Una conexión entre dos tablas", "Un campo que almacena números", "Un archivo que almacena datos", "Un diagrama que representa datos"],
-    "CorrectAnswerIndex": 0,
-    "Topic": "Bases de Datos"
-  },
-  {
-    "Text": "¿Qué comando SQL se utiliza para modificar datos existentes en una tabla?",
-    "Options": ["INSERT", "SELECT", "UPDATE", "DELETE"],
-    "CorrectAnswerIndex": 2,
-    "Topic": "Bases de Datos"
-  },
-  {
-    "Text": "¿Qué es un índice en una base de datos?",
-    "Options": ["Una estructura que mejora la velocidad de búsqueda", "Un campo que almacena números", "Un archivo que almacena datos", "Un diagrama que representa datos"],
-    "CorrectAnswerIndex": 0,
-    "Topic": "Bases de Datos"
-  },
-  {
-    "Text": "¿Qué tipo de base de datos es MongoDB?",
-    "Options": ["Relacional", "NoSQL", "Jerárquica", "Distribuida"],
-    "CorrectAnswerIndex": 1,
-    "Topic": "Bases de Datos"
-  },
-  {
-    "Text": "¿Qué es una vista en una base de datos?",
-    "Options": ["Una tabla virtual basada en el resultado de una consulta SQL", "Un archivo que almacena datos", "Un diagrama que representa datos", "Un tipo de base de datos"],
-    "CorrectAnswerIndex": 0,
-    "Topic": "Bases de Datos"
-  },
-  {
-    "Text": "¿Qué comando SQL se utiliza para crear una nueva tabla?",
-    "Options": ["CREATE TABLE", "INSERT INTO", "SELECT", "UPDATE"],
-    "CorrectAnswerIndex": 0,
-    "Topic": "Bases de Datos"
-  },
-  {
-    "Text": "¿Qué es una clave foránea en una base de datos?",
-    "Options": ["Un campo que referencia la clave primaria de otra tabla", "Un campo que almacena texto", "Un campo que permite valores duplicados", "Un campo que no puede ser modificado"],
-    "CorrectAnswerIndex": 0,
-    "Topic": "Bases de Datos"
-  },
-  {
-    "Text": "¿Qué es un esquema en una base de datos?",
-    "Options": ["La estructura lógica que define las tablas y relaciones", "Un archivo que almacena datos", "Un diagrama que representa datos", "Un tipo de base de datos"],
-    "CorrectAnswerIndex": 0,
-    "Topic": "Bases de Datos"
+    "Topic": "Bases de Datos",
+    "Difficult": "Media",
+    "Justification": "Una **clave primaria** es un campo o conjunto de campos en una tabla de base de datos que se utiliza para identificar de manera única a cada registro. Cada valor de la clave primaria debe ser único y no puede ser nulo, lo cual garantiza que los registros sean identificables de forma inequívoca."
   },
     {
-      "Text": "¿Qué es la normalización en una base de datos?",
-      "Options": ["Un proceso para eliminar redundancia y dependencias", "Un método para cifrar datos", "Una técnica para mejorar la velocidad de las consultas", "Un proceso para crear vistas"],
+      "Text": "¿Qué es una base de datos?",
+      "Options": [
+        "Un sistema para almacenar y organizar información de manera eficiente.",
+        "Un dispositivo que permite la visualización de datos en tiempo real.",
+        "Un lenguaje de programación para manipular archivos de texto.",
+        "Una aplicación que solo permite la edición de imágenes digitales."
+      ],
       "CorrectAnswerIndex": 0,
-      "Topic": "Bases de Datos"
+      "Topic": "Bases de Datos",
+      "Difficult": "Baja",
+      "Justification": "Una base de datos es un sistema diseñado para almacenar, organizar y gestionar datos de forma eficiente. Las bases de datos permiten almacenar grandes cantidades de información, facilitar su recuperación y garantizar la integridad de los datos almacenados."
     },
     {
-      "Text": "¿Cuál es el propósito de la primera forma normal (1FN) en la normalización?",
-      "Options": ["Eliminar valores duplicados en las tablas", "Eliminar columnas que no dependen de la clave primaria", "Eliminar dependencias transitivas", "Agregar índices a las tablas"],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Bases de Datos"
+      "Text": "¿Qué significa CRUD en el contexto de bases de datos?",
+      "Options": [
+        "Crear, Reemplazar, Utilizar, Eliminar.",
+        "Consultar, Reemplazar, Unificar, Dividir.",
+        "Crear, Leer, Actualizar, Eliminar.",
+        "Conectar, Reorganizar, Unificar, Definir."
+      ],
+      "CorrectAnswerIndex": 2,
+      "Topic": "Bases de Datos",
+      "Difficult": "Baja",
+      "Justification": "CRUD es un acrónimo que se utiliza para describir las cuatro operaciones básicas que se realizan en las bases de datos: **Crear** (insertar nuevos registros), **Leer** (consultar los registros existentes), **Actualizar** (modificar datos existentes), y **Eliminar** (borrar registros). Estas operaciones permiten gestionar el contenido de una base de datos."
     },
     {
-      "Text": "¿Qué significa JOIN en SQL?",
-      "Options": ["Combinar datos de dos o más tablas", "Eliminar registros duplicados", "Ordenar los datos en una tabla", "Actualizar valores en una tabla"],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Bases de Datos"
-    },
-    {
-      "Text": "¿Qué tipo de JOIN devuelve solo los registros que coinciden en ambas tablas?",
-      "Options": ["INNER JOIN", "LEFT JOIN", "RIGHT JOIN", "FULL OUTER JOIN"],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Bases de Datos"
-    },
-    {
-      "Text": "¿Qué es una transacción en una base de datos?",
-      "Options": ["Un conjunto de operaciones que se ejecutan como una sola unidad", "Un comando para crear índices", "Un archivo que almacena datos", "Un diagrama que representa datos"],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Bases de Datos"
-    },
-    {
-      "Text": "¿Cuál de los siguientes comandos se utiliza para iniciar una transacción en SQL?",
-      "Options": ["BEGIN TRANSACTION", "START TRANSACTION", "COMMIT", "ROLLBACK"],
+      "Text": "¿Qué es una columna en una tabla de base de datos?",
+      "Options": [
+        "Una fila de registros que contiene datos relacionados.",
+        "Una categoría que define el tipo de datos almacenados en una tabla.",
+        "Un conjunto de tablas interrelacionadas.",
+        "Una función utilizada para calcular valores en la base de datos."
+      ],
       "CorrectAnswerIndex": 1,
-      "Topic": "Bases de Datos"
+      "Topic": "Bases de Datos",
+      "Difficult": "Baja",
+      "Justification": "En una tabla de base de datos, una **columna** es un campo que define el tipo de datos almacenados, como nombres, fechas, o números. Cada columna contiene un conjunto de valores de un tipo específico que se repiten a través de las filas de la tabla."
     },
     {
-      "Text": "¿Qué comando SQL se utiliza para confirmar una transacción?",
-      "Options": ["BEGIN TRANSACTION", "COMMIT", "ROLLBACK", "SAVEPOINT"],
+      "Text": "¿Qué es un registro en una base de datos?",
+      "Options": [
+        "Un conjunto de tablas relacionadas entre sí.",
+        "Un grupo de filas que contienen datos relacionados de una sola entidad.",
+        "Una fila que contiene datos de una entidad en una tabla.",
+        "Una lista de consultas realizadas sobre una base de datos."
+      ],
+      "CorrectAnswerIndex": 2,
+      "Topic": "Bases de Datos",
+      "Difficult": "Baja",
+      "Justification": "Un **registro** es una fila en una tabla de base de datos que contiene datos relacionados con una sola entidad o instancia. Por ejemplo, un registro en una tabla de empleados podría contener el nombre, ID, puesto y salario de un empleado específico."
+    },
+    {
+      "Text": "¿Qué significa el término 'relacional' en bases de datos?",
+      "Options": [
+        "El tipo de relación que se establece entre un usuario y una computadora.",
+        "La forma en que las tablas están interconectadas mediante claves primarias y foráneas.",
+        "La estructura utilizada para almacenar grandes cantidades de imágenes.",
+        "El proceso de encriptar datos para garantizar la seguridad."
+      ],
       "CorrectAnswerIndex": 1,
-      "Topic": "Bases de Datos"
+      "Topic": "Bases de Datos",
+      "Difficult": "Baja",
+      "Justification": "El término 'relacional' en bases de datos se refiere a cómo las tablas están interconectadas mediante relaciones, generalmente utilizando **claves primarias** (que identifican registros de manera única) y **claves foráneas** (que vinculan registros de diferentes tablas). Este modelo permite organizar y gestionar datos de manera más eficiente."
     },
     {
-      "Text": "¿Qué es un índice compuesto en una base de datos?",
-      "Options": ["Un índice que incluye múltiples columnas", "Un índice que almacena texto", "Un índice que no permite valores duplicados", "Un índice que se actualiza automáticamente"],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Bases de Datos"
+      "Text": "¿Qué tipo de dato es comúnmente utilizado para almacenar texto en una base de datos?",
+      "Options": [
+        "INTEGER",
+        "BOOLEAN",
+        "VARCHAR",
+        "DATE"
+      ],
+      "CorrectAnswerIndex": 2,
+      "Topic": "Bases de Datos",
+      "Difficult": "Baja",
+      "Justification": "El tipo de dato **VARCHAR** (Variable Character) se utiliza para almacenar cadenas de texto de longitud variable en una base de datos. Es ideal para almacenar información como nombres, direcciones o descripciones que pueden tener diferentes longitudes."
     },
     {
-      "Text": "¿Qué es una vista materializada en una base de datos?",
-      "Options": ["Una copia física de los datos resultantes de una consulta", "Una tabla virtual basada en una consulta", "Un archivo que almacena datos", "Un diagrama que representa datos"],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Bases de Datos"
+      "Text": "¿Qué es una clave foránea en una base de datos?",
+      "Options": [
+        "Un campo que almacena datos sensibles de forma segura.",
+        "Un campo que sirve para vincular registros de una tabla con los de otra.",
+        "Un campo que solo permite almacenar valores numéricos.",
+        "Un campo que asegura la unicidad de los registros en la tabla."
+      ],
+      "CorrectAnswerIndex": 1,
+      "Topic": "Bases de Datos",
+      "Difficult": "Baja",
+      "Justification": "Una **clave foránea** es un campo en una tabla que hace referencia a la clave primaria de otra tabla. Su propósito es establecer una relación entre las dos tablas, lo que permite que los datos de ambas tablas se mantengan relacionados y consistentes."
     },
     {
-      "Text": "¿Qué es un deadlock en una base de datos?",
-      "Options": ["Una situación donde dos o más transacciones se bloquean mutuamente", "Un error en una consulta SQL", "Un archivo corrupto en la base de datos", "Un proceso que no puede ser completado"],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Bases de Datos"
+      "Text": "¿Qué tipo de base de datos utiliza tablas para organizar los datos?",
+      "Options": [
+        "Base de datos jerárquica",
+        "Base de datos relacional",
+        "Base de datos orientada a objetos",
+        "Base de datos en red"
+      ],
+      "CorrectAnswerIndex": 1,
+      "Topic": "Bases de Datos",
+      "Difficult": "Baja",
+      "Justification": "Las bases de datos **relacionales** utilizan tablas para organizar los datos. Estas tablas están estructuradas en filas y columnas, y las relaciones entre los datos se definen mediante claves primarias y foráneas, lo que permite una organización eficiente y flexible de la información."
     },
     {
-      "Text": "¿Qué significa OLTP en el contexto de bases de datos?",
-      "Options": ["Online Transaction Processing", "Offline Transaction Processing", "Optimized Logical Transaction Protocol", "Open Link Transaction Protocol"],
+      "Text": "¿Qué es un índice en una base de datos?",
+      "Options": [
+        "Una función que ayuda a buscar registros de manera más eficiente.",
+        "Una estructura utilizada para almacenar los datos de forma ordenada.",
+        "Un tipo de dato utilizado para almacenar números enteros.",
+        "Una forma de dividir los datos en diferentes tablas."
+      ],
       "CorrectAnswerIndex": 0,
-      "Topic": "Bases de Datos"
+      "Topic": "Bases de Datos",
+      "Difficult": "Baja",
+      "Justification": "Un **índice** en una base de datos es una estructura de datos que mejora la velocidad de las operaciones de búsqueda. Los índices permiten acceder a los registros de manera más eficiente, evitando la necesidad de recorrer toda la tabla para encontrar los datos deseados."
     },
     {
-      "Text": "¿Qué es un procedimiento almacenado en una base de datos?",
-      "Options": ["Un conjunto de instrucciones SQL precompiladas", "Un archivo que almacena datos", "Un diagrama que representa datos", "Un tipo de base de datos"],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Bases de Datos"
-    },
-    {
-      "Text": "¿Qué es un trigger en una base de datos?",
-      "Options": ["Un evento que se activa automáticamente cuando ocurre una acción específica", "Un comando para crear índices", "Un archivo que almacena datos", "Un diagrama que representa datos"],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Bases de Datos"
-    },
-    {
-      "Text": "¿Qué es una base de datos distribuida?",
-      "Options": ["Una base de datos que está dividida en múltiples ubicaciones físicas", "Una base de datos que solo almacena texto", "Una base de datos que no permite consultas", "Una base de datos que no requiere conexión a internet"],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Bases de Datos"
-    },
-    {
-      "Text": "¿Qué es un índice único en una base de datos?",
-      "Options": ["Un índice que no permite valores duplicados", "Un índice que incluye múltiples columnas", "Un índice que se actualiza automáticamente", "Un índice que almacena texto"],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Bases de Datos"
-    },
-    {
-      "Text": "¿Qué es una subconsulta en SQL?",
-      "Options": ["Una consulta anidada dentro de otra consulta", "Un archivo que almacena datos", "Un diagrama que representa datos", "Un tipo de base de datos"],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Bases de Datos"
-    },
-    {
-      "Text": "¿Qué es una clave candidata en una base de datos?",
-      "Options": ["Un campo que puede ser utilizado como clave primaria", "Un campo que almacena texto", "Un campo que permite valores duplicados", "Un campo que no puede ser modificado"],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Bases de Datos"
-    },
-    {
-      "Text": "¿Qué es una base de datos en memoria?",
-      "Options": ["Una base de datos que almacena datos en la RAM para mejorar el rendimiento", "Una base de datos que almacena datos en disco", "Una base de datos que no permite consultas", "Una base de datos que no requiere conexión a internet"],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Bases de Datos"
-    },
-    {
-      "Text": "¿Qué es una función agregada en SQL?",
-      "Options": ["Una función que realiza cálculos sobre un conjunto de valores", "Un archivo que almacena datos", "Un diagrama que representa datos", "Un tipo de base de datos"],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Bases de Datos"
-    },
-    {
-      "Text": "¿Qué significa DML en SQL?",
-      "Options": ["Data Manipulation Language", "Data Management Language", "Dynamic Memory Language", "Digital Modeling Language"],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Bases de Datos"
-    },
-    {
-      "Text": "¿Qué es una partición en una base de datos?",
-      "Options": ["La división de una tabla en partes más pequeñas para mejorar el rendimiento", "Un archivo que almacena datos", "Un diagrama que representa datos", "Un tipo de base de datos"],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Bases de Datos"
-    },
-    {
-      "Text": "¿Qué es una base de datos orientada a documentos?",
-      "Options": ["Una base de datos que almacena datos en formato JSON o XML", "Una base de datos que almacena datos en tablas", "Una base de datos que no permite consultas", "Una base de datos que no requiere conexión a internet"],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Bases de Datos"
-    },
-    {
-      "Text": "¿Qué es un plan de ejecución en SQL?",
-      "Options": ["Un mapa que muestra cómo se ejecutará una consulta", "Un archivo que almacena datos", "Un diagrama que representa datos", "Un tipo de base de datos"],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Bases de Datos"
-    },
-    {
-      "Text": "¿Qué es una base de datos temporal?",
-      "Options": ["Una base de datos que almacena datos por un período limitado", "Una base de datos que almacena datos permanentemente", "Una base de datos que no permite consultas", "Una base de datos que no requiere conexión a internet"],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Bases de Datos"
-    },
-    {
-      "Text": "¿Qué es una clave alternativa en una base de datos?",
-      "Options": ["Un campo que podría haber sido elegido como clave primaria pero no lo fue", "Un campo que almacena texto", "Un campo que permite valores duplicados", "Un campo que no puede ser modificado"],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Bases de Datos"
-    },
-    {
-      "Text": "¿Qué es un índice clusterizado en una base de datos?",
-      "Options": ["Un índice que determina el orden físico de los datos en una tabla", "Un índice que incluye múltiples columnas", "Un índice que no permite valores duplicados", "Un índice que se actualiza automáticamente"],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Bases de Datos"
+      "Text": "¿Qué es una consulta en SQL?",
+      "Options": [
+        "Una instrucción que se utiliza para modificar la estructura de una base de datos.",
+        "Una operación que verifica la integridad de los datos en la base de datos.",
+        "Un comando que permite extraer datos específicos de una base de datos.",
+        "Una herramienta para crear una nueva base de datos."
+      ],
+      "CorrectAnswerIndex": 2,
+      "Topic": "Bases de Datos",
+      "Difficult": "Baja",
+      "Justification": "Una **consulta** en SQL es una instrucción que permite recuperar datos de una base de datos. Las consultas se utilizan para seleccionar, filtrar y ordenar datos de manera específica, y son la forma principal de interactuar con la información almacenada en las bases de datos."
     },
       {
-        "Text": "¿Qué es la fragmentación horizontal en una base de datos distribuida?",
-        "Options": ["Dividir una tabla en subconjuntos basados en filas", "Dividir una tabla en subconjuntos basados en columnas", "Crear índices compuestos", "Agregar claves foráneas"],
+        "Text": "¿Qué diferencia fundamental existe entre una clave primaria y una clave única en una base de datos?",
+        "Options": [
+          "Ambas garantizan la unicidad de los datos, pero una clave primaria no puede contener valores nulos, mientras que una clave única sí puede.",
+          "Las claves primarias se usan solo en tablas temporales, mientras que las claves únicas son para tablas permanentes.",
+          "Una clave primaria se refiere a datos numéricos, mientras que la clave única se refiere a cadenas de texto.",
+          "Una clave primaria puede aparecer en varias tablas, mientras que la clave única solo se utiliza en una tabla."
+        ],
         "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
+        "Topic": "Bases de Datos",
+        "Difficult": "Media",
+        "Justification": "La principal diferencia entre una clave primaria y una clave única es que ambas aseguran la unicidad de los datos en una tabla, pero la **clave primaria** no puede tener valores nulos, mientras que la **clave única** sí permite valores nulos en su campo. Además, cada tabla solo puede tener una clave primaria, pero puede tener múltiples claves únicas."
       },
       {
-        "Text": "¿Qué es el protocolo de bloqueo de dos fases (Two-Phase Locking) en bases de datos?",
-        "Options": ["Un método para garantizar la consistencia en transacciones concurrentes", "Un método para cifrar datos", "Un método para crear índices", "Un método para eliminar redundancias"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
+        "Text": "¿Qué es una base de datos NoSQL?",
+        "Options": [
+          "Una base de datos que utiliza el modelo relacional tradicional para almacenar datos en tablas.",
+          "Una base de datos diseñada para manejar grandes volúmenes de datos no estructurados o semi-estructurados.",
+          "Una base de datos que se utiliza únicamente para almacenar grandes cantidades de texto.",
+          "Una base de datos que emplea únicamente índices para organizar la información."
+        ],
+        "CorrectAnswerIndex": 1,
+        "Topic": "Bases de Datos",
+        "Difficult": "Media",
+        "Justification": "Las bases de datos **NoSQL** están diseñadas para manejar grandes volúmenes de datos no estructurados o semi-estructurados, como documentos, datos clave-valor o grafos. Estas bases de datos son flexibles en cuanto a la estructura de los datos y son útiles en escenarios de grandes cantidades de información que no se ajustan bien a los modelos tradicionales de bases de datos relacionales."
       },
       {
-        "Text": "¿Qué es CAP Theorem en sistemas distribuidos?",
-        "Options": ["Un teorema que establece que un sistema distribuido no puede garantizar simultáneamente Consistencia, Disponibilidad y Tolerancia a Particiones", "Un teorema que describe cómo crear índices", "Un teorema que define la normalización", "Un teorema que describe cómo cifrar datos"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
+        "Text": "¿Cuál de las siguientes operaciones no puede realizarse con una clave foránea en una base de datos relacional?",
+        "Options": [
+          "Establecer una relación entre dos tablas.",
+          "Garantizar la unicidad de los valores en la tabla.",
+          "Referenciar la clave primaria de otra tabla.",
+          "Garantizar la integridad referencial entre dos tablas."
+        ],
+        "CorrectAnswerIndex": 1,
+        "Topic": "Bases de Datos",
+        "Difficult": "Media",
+        "Justification": "Una **clave foránea** se utiliza para establecer una relación entre dos tablas y garantizar la **integridad referencial** entre ellas. No está diseñada para garantizar la unicidad de los valores, ya que esa función corresponde a la **clave primaria**. La clave foránea permite que los registros de una tabla se correspondan con los registros de otra, pero no asegura la unicidad de los datos."
       },
       {
-        "Text": "¿Qué es el algoritmo de consenso Paxos?",
-        "Options": ["Un algoritmo para alcanzar acuerdo en sistemas distribuidos", "Un algoritmo para cifrar datos", "Un algoritmo para eliminar redundancias", "Un algoritmo para crear vistas"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
+        "Text": "En una base de datos relacional, ¿qué tipo de relación se establece entre dos tablas cuando una tabla tiene una clave foránea que hace referencia a la clave primaria de otra tabla?",
+        "Options": [
+          "Relación uno a uno",
+          "Relación uno a muchos",
+          "Relación muchos a muchos",
+          "Relación opcional"
+        ],
+        "CorrectAnswerIndex": 1,
+        "Topic": "Bases de Datos",
+        "Difficult": "Media",
+        "Justification": "Cuando una tabla tiene una **clave foránea** que hace referencia a la **clave primaria** de otra tabla, se establece una **relación uno a muchos**. Esto significa que un solo registro en la tabla principal (con la clave primaria) puede estar relacionado con múltiples registros en la tabla secundaria (con la clave foránea). Este es el tipo de relación más común en bases de datos relacionales."
       },
       {
-        "Text": "¿Qué es la replicación maestro-esclavo en bases de datos?",
-        "Options": ["Una técnica donde un nodo principal (maestro) replica datos a nodos secundarios (esclavos)", "Una técnica para eliminar redundancias", "Una técnica para cifrar datos", "Una técnica para crear índices"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
+        "Text": "¿Cuál es la principal ventaja de utilizar índices en una base de datos?",
+        "Options": [
+          "Incrementan la velocidad de las operaciones de inserción y actualización.",
+          "Mejoran la velocidad de búsqueda y recuperación de datos en grandes volúmenes.",
+          "Aseguran que los datos sean siempre coherentes y estén actualizados.",
+          "Reducción del espacio de almacenamiento utilizado por los datos."
+        ],
+        "CorrectAnswerIndex": 1,
+        "Topic": "Bases de Datos",
+        "Difficult": "Media",
+        "Justification": "La principal ventaja de utilizar **índices** en una base de datos es que mejoran la **velocidad de búsqueda y recuperación** de datos, especialmente en grandes volúmenes de información. Los índices permiten acceder rápidamente a los registros, evitando la necesidad de recorrer toda la tabla. Sin embargo, los índices no mejoran las operaciones de inserción o actualización, y pueden aumentar el uso de espacio de almacenamiento."
       },
       {
-        "Text": "¿Qué es un índice invertido en una base de datos?",
-        "Options": ["Un índice que mapea valores a las ubicaciones donde aparecen en los datos", "Un índice que ordena los datos físicamente", "Un índice que elimina redundancias", "Un índice que cifra datos"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
+        "Text": "En un modelo de base de datos relacional, ¿qué operación SQL se utiliza para eliminar un registro específico de una tabla?",
+        "Options": [
+          "DROP",
+          "DELETE",
+          "TRUNCATE",
+          "REMOVE"
+        ],
+        "CorrectAnswerIndex": 1,
+        "Topic": "Bases de Datos",
+        "Difficult": "Media",
+        "Justification": "El comando **DELETE** se utiliza para eliminar registros específicos de una tabla en SQL, basándose en una condición determinada (por ejemplo, el valor de una columna). El comando **DROP** elimina toda la tabla o la estructura de la base de datos, mientras que **TRUNCATE** elimina todos los registros de una tabla sin eliminar la estructura. **REMOVE** no es un comando válido en SQL."
       },
       {
-        "Text": "¿Qué es un deadlock en una base de datos y cómo se resuelve comúnmente?",
-        "Options": ["Una situación donde dos o más transacciones se bloquean mutuamente; se resuelve abortando una transacción", "Un error en una consulta SQL; se resuelve reiniciando la base de datos", "Un archivo corrupto; se resuelve restaurando una copia de seguridad", "Una dependencia transitiva; se resuelve normalizando la tabla"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
+        "Text": "¿Qué es la normalización en el contexto de bases de datos?",
+        "Options": [
+          "El proceso de distribuir la carga de trabajo entre varias bases de datos.",
+          "El proceso de diseñar una base de datos para minimizar la redundancia y dependencia de los datos.",
+          "El proceso de almacenar copias de seguridad de la base de datos en servidores externos.",
+          "El proceso de convertir datos no estructurados en formato de texto legible."
+        ],
+        "CorrectAnswerIndex": 1,
+        "Topic": "Bases de Datos",
+        "Difficult": "Media",
+        "Justification": "La **normalización** en bases de datos es el proceso de diseñar la estructura de la base de datos para reducir la redundancia y la dependencia de los datos. Esto implica dividir grandes tablas en tablas más pequeñas y establecer relaciones entre ellas, lo que mejora la integridad de los datos y facilita su mantenimiento a largo plazo."
       },
       {
-        "Text": "¿Qué es el ajuste fino del plan de ejecución en SQL?",
-        "Options": ["Optimizar manualmente cómo se ejecuta una consulta para mejorar el rendimiento", "Eliminar redundancias en los datos", "Cifrar los datos en una tabla", "Crear índices automáticamente"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
-      },
-      {
-        "Text": "¿Qué es un sistema ACID en bases de datos?",
-        "Options": ["Un sistema que garantiza Atomicidad, Consistencia, Aislamiento y Durabilidad", "Un sistema que cifra datos", "Un sistema que elimina redundancias", "Un sistema que crea índices"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
-      },
-      {
-        "Text": "¿Qué es eventual consistency en sistemas distribuidos?",
-        "Options": ["Un modelo de consistencia donde los datos eventualmente se sincronizan entre nodos", "Un modelo de cifrado", "Un modelo de eliminación de redundancias", "Un modelo de creación de índices"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
-      },
-      {
-        "Text": "¿Qué es un índice bitmap en una base de datos?",
-        "Options": ["Un índice que utiliza bits para representar la presencia o ausencia de valores", "Un índice que ordena los datos físicamente", "Un índice que elimina redundancias", "Un índice que cifra datos"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
-      },
-      {
-        "Text": "¿Qué es un sistema BASE en bases de datos?",
-        "Options": ["Un sistema que garantiza Básicamente Disponible, Estado Suave y Eventualmente Consistente", "Un sistema que cifra datos", "Un sistema que elimina redundancias", "Un sistema que crea índices"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
-      },
-      {
-        "Text": "¿Qué es sharding en bases de datos?",
-        "Options": ["Dividir una base de datos en partes más pequeñas distribuidas entre múltiples servidores", "Cifrar los datos en una tabla", "Crear índices automáticamente", "Eliminar redundancias en los datos"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
-      },
-      {
-        "Text": "¿Qué es un índice funcional en una base de datos?",
-        "Options": ["Un índice creado sobre el resultado de una función aplicada a una columna", "Un índice que ordena los datos físicamente", "Un índice que elimina redundancias", "Un índice que cifra datos"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
-      },
-      {
-        "Text": "¿Qué es un MVCC (Multi-Version Concurrency Control)?",
-        "Options": ["Un mecanismo que permite múltiples versiones de los datos para mejorar la concurrencia", "Un mecanismo para cifrar datos", "Un mecanismo para eliminar redundancias", "Un mecanismo para crear índices"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
-      },
-      {
-        "Text": "¿Qué es la fragmentación vertical en una base de datos distribuida?",
-        "Options": ["Dividir una tabla en subconjuntos basados en columnas", "Dividir una tabla en subconjuntos basados en filas", "Crear índices compuestos", "Agregar claves foráneas"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
-      },
-      {
-        "Text": "¿Qué es un índice hash en una base de datos?",
-        "Options": ["Un índice que utiliza funciones hash para buscar datos rápidamente", "Un índice que ordena los datos físicamente", "Un índice que elimina redundancias", "Un índice que cifra datos"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
-      },
-      {
-        "Text": "¿Qué es un sistema OLAP en bases de datos?",
-        "Options": ["Un sistema optimizado para análisis de grandes volúmenes de datos", "Un sistema que cifra datos", "Un sistema que elimina redundancias", "Un sistema que crea índices"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
-      },
-      {
-        "Text": "¿Qué es un índice cuboide en una base de datos?",
-        "Options": ["Un índice utilizado en sistemas OLAP para precalcular agregaciones", "Un índice que ordena los datos físicamente", "Un índice que elimina redundancias", "Un índice que cifra datos"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
-      },
-      {
-        "Text": "¿Qué es un sistema NoSQL eventualmente consistente?",
-        "Options": ["Un sistema que prioriza la disponibilidad y tolerancia a fallos sobre la consistencia inmediata", "Un sistema que cifra datos", "Un sistema que elimina redundancias", "Un sistema que crea índices"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
-      },
-      {
-        "Text": "¿Qué es un índice full-text en una base de datos?",
-        "Options": ["Un índice que permite realizar búsquedas de texto completo", "Un índice que ordena los datos físicamente", "Un índice que elimina redundancias", "Un índice que cifra datos"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
-      },
-      {
-        "Text": "¿Qué es un sistema de replicación multi-maestro?",
-        "Options": ["Un sistema donde múltiples nodos pueden actuar como maestros y replicar datos entre ellos", "Un sistema que cifra datos", "Un sistema que elimina redundancias", "Un sistema que crea índices"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
-      },
-      {
-        "Text": "¿Qué es un índice espacial en una base de datos?",
-        "Options": ["Un índice diseñado para manejar datos geográficos o geométricos", "Un índice que ordena los datos físicamente", "Un índice que elimina redundancias", "Un índice que cifra datos"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
-      },
-      {
-        "Text": "¿Qué es un sistema de particionamiento por rango?",
-        "Options": ["Un sistema que divide datos en rangos específicos", "Un sistema que cifra datos", "Un sistema que elimina redundancias", "Un sistema que crea índices"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
-      },
-      {
-        "Text": "¿Qué es un sistema de particionamiento por hash?",
-        "Options": ["Un sistema que divide datos utilizando una función hash", "Un sistema que cifra datos", "Un sistema que elimina redundancias", "Un sistema que crea índices"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
-      },
-      {
-        "Text": "¿Qué es un índice denso en una base de datos?",
-        "Options": ["Un índice que tiene entradas para cada valor único en una columna", "Un índice que ordena los datos físicamente", "Un índice que elimina redundancias", "Un índice que cifra datos"],
-        "CorrectAnswerIndex": 0,
-        "Topic": "Bases de Datos"
+        "Text": "¿Qué es un 'JOIN' en SQL?",
+        "Options": [
+          "Un comando utilizado para ordenar los resultados de una consulta.",
+          "Una operación que combina filas de dos o más tablas basadas en una condición de relación.",
+          "Una función para modificar datos en una tabla de base de datos.",
+          "Una operación para eliminar registros duplicados en los resultados de una consulta."
+        ],
+        "CorrectAnswerIndex": 1,
+        "Topic": "Bases de Datos",
+        "Difficult": "Media",
+        "Justification": "El **JOIN** en SQL es una operación que permite combinar filas de dos o más tablas basadas en una condición de relación (generalmente, usando claves primarias y foráneas). Existen diferentes tipos de JOIN (INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN) que determinan cómo se deben combinar los registros entre las tablas, dependiendo de las coincidencias entre las filas."
       }
     ]
+    
+  

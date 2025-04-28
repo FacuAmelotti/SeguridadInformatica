@@ -25,10 +25,53 @@
         <aside class="menu" id="menu">
             <h2>Evaluador</h2>
             <ul>
-                <li><a href="./general.html"><i class="fas fa-arrow-left"></i> General</a>
+                <li><a href="./general.html"><i class="fas fa-arrow-left"></i> General</a></li>
             </ul>
+
+            <div id="music-control" style="
+            background-color: rgb(26, 35, 64);
+            color: #00bcd4;
+            font-size: 14px;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 32px;
+            border-radius: 12px;
+            gap: 20px;
+        ">
+        
+            <!-- Icono de música a la izquierda -->
+            <div style="flex: 30%; text-align: center;">
+                <img src="../img/music.jpg" alt="Music Icon" style="width: 48px; border-radius: 50px; height: 48px;">
+            </div>
+        
+            <!-- Controles a la derecha -->
+            <div style="flex: 70%; text-align: center;">
+                <button id="music-toggle" style="
+                    background-color: #2277b9;
+                    color: white;
+                    border: none;
+                    padding: 6px 14px;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    font-size: 12px;
+                    margin-bottom: 8px;
+                ">
+                    Pausar Música
+                </button>
+                <br>
+                <input type="range" id="volume-slider" min="0" max="100" value="46" style="
+                    width: 80%;
+                    margin-top: 6px;
+                    height: 6px;
+                ">
+            </div>
+        
+        </div>
+          
         </aside>
-        </main>
+
 
         <!-- Contenido principal -->
         <main class="content">
@@ -36,7 +79,7 @@
               
                 <section id="tema-section">
 
-                  <section id="tips-section">
+                  <section id="tips-section" style="z-index: 2;">
                     <img id="imgEffect" src="../img/el_cerebrito.jpg" onclick="ampliarImagen(this)">
                     <div class="info-text">
                      <h1>Evaluador</h1> 
@@ -54,7 +97,7 @@
                   </form>
                 </section>
           
-                <section id="evaluacion-section" class="hidden">
+                <section id="evaluacion-section" class="hidden" style="z-index: 2;">
                   <div id="pregunta-container">
                     <h2 id="preg-titulo"></h2>
                     <h3 id="pregunta-texto"></h3>
@@ -85,10 +128,23 @@
         <img id="imagenAmpliada" src="" alt="Imagen Ampliada">
     </div>
 
+    <!-- Fondo negro que cambia opacidad -->
+    <div id="background-overlay" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(10, 4, 52);
+    pointer-events: none; /* que no sea clickeable */
+    z-index: 1; /* que esté detrás de todo el contenido principal */
+    "></div>
+
     <script src="./../js/menuDesplegable.js"></script>
     <script src="./../js/evaluador.js"></script>    
     <script src="./../js/divInfoDesplegable.js"></script>
     <script src="./../js/ampliarImg.js"></script>
+    <script src="./../js/reproductor.js"></script>
     <script src="./../js/imgChangeMouseOver.js"></script>
 </body>
 </html>

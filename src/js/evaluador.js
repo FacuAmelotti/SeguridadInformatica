@@ -11,6 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const titulo = document.getElementById('preg-titulo');
     const dificultad = document.getElementById('dificultad');
 
+    // --- Cargar sonidos ---
+    const Startclick = new Audio('../audio/start.mp3');
+    const correctSound = new Audio('../audio/correct.mp3');
+    const incorrectSound = new Audio('../audio/incorrect.mp3');
+
+
     let preguntas = [];
     let preguntasRestantes = [];
     let preguntaActual = null;
@@ -51,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         totalPreguntas = Math.min(30, preguntasRestantes.length);
         puntaje = 0;
         respondidas = 0;
+        Startclick.play();
 
         siguienteBtn.classList.add('hidden');
         finalizarBtn.classList.add('hidden');
@@ -65,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     function mostrarSiguientePregunta() {
+
         if (preguntasRestantes.length === 0 || totalPreguntas <= 0) {
             finalizarEvaluacion();
             return;
@@ -115,9 +123,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
         if (originalIndex === preguntaActual.CorrectAnswerIndex) {
             boton.style.backgroundColor = 'green';
+            correctSound.play();
             puntaje++;
         } else {
             boton.style.backgroundColor = 'red';
+            incorrectSound.play();
             botones[correctaIndex].style.backgroundColor = 'green';
         }
     
@@ -128,8 +138,18 @@ document.addEventListener('DOMContentLoaded', () => {
         textoCorrecto.style.color = 'green';
         textoCorrecto.style.marginTop = '8px';
         textoCorrecto.classList.add('texto-correcto');
-    
         correctoBoton.parentElement.appendChild(textoCorrecto);
+    
+        // --- Agregar justificación si existe ---
+        if (preguntaActual.Justification) {
+            const explicacion = document.createElement('p');
+            explicacion.textContent = preguntaActual.Justification;
+            explicacion.style.color = 'black';
+            explicacion.style.fontSize = '0.72em';
+            explicacion.style.marginTop = '4px';
+            explicacion.classList.add('texto-explicacion');
+            correctoBoton.parentElement.appendChild(explicacion);
+        }
     
         contador.textContent = `Puntaje: ${puntaje} / ${respondidas}`;
         siguienteBtn.disabled = false;

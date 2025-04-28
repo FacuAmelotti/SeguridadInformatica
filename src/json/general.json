@@ -2,182 +2,183 @@
   {
     "Text": "¿Qué es la informática?",
     "Options": [
-      "Ciencia que estudia el tratamiento automático y racional de la información.",
-      "Conjunto de programas instalados en una computadora que permiten que la misma funcione.",
-      "Sistema de componentes que permite el procesamiento de informacion.",
-      "Métodos teóricos y matemáticos del procesamiento de información."
+      "Ciencia que estudia el tratamiento automático de la información.",
+      "Disciplina que se encarga solo del almacenamiento de datos.",
+      "Método para transmitir información a través de redes digitales.",
+      "Tecnología basada en el intercambio de datos entre dispositivos."
     ],
     "CorrectAnswerIndex": 0,
     "Topic": "Conceptos fundamentales",
-    "Difficult": "Media"
+    "Difficult": "Alta",
+    "Justification": "La informática no solo se ocupa del almacenamiento o transmisión de datos, sino que abarca un enfoque mucho más amplio. Es una ciencia que estudia los procesos de recopilación, procesamiento, almacenamiento y transmisión de datos mediante el uso de sistemas computacionales, abriendo el camino a todo lo relacionado con la automatización de la información en la era digital."
   },
   {
     "Text": "¿Qué es una computadora?",
     "Options": [
-      "Máquina electrónica digital que ejecuta instrucciones para procesar datos.",
-      "Sistema que se encarga de gestionar la red de un ordenador.",
-      "Dispositivo de entrada que permite interactuar con el software.",
-      "Conjunto de componentes utilizados como dispositivo de cálculo."
+      "Máquina electrónica capaz de procesar y almacenar información siguiendo instrucciones.",
+      "Sistema que permite únicamente la transmisión de datos entre redes.",
+      "Dispositivo que actúa solo como intermediario entre usuarios y software.",
+      "Instrumento diseñado exclusivamente para controlar señales eléctricas."
     ],
     "CorrectAnswerIndex": 0,
     "Topic": "Conceptos fundamentales",
-    "Difficult": "Media"
+    "Difficult": "Alta",
+    "Justification": "Una computadora es mucho más que un simple dispositivo de transmisión de datos o control de señales. Es una máquina electrónica versátil que puede ejecutar una serie de instrucciones predefinidas, permitiéndole realizar tareas complejas, procesar información de manera eficiente y almacenar grandes volúmenes de datos. Su capacidad para seguir instrucciones permite a los usuarios llevar a cabo desde operaciones matemáticas hasta simulaciones avanzadas."
   },
   {
-    "Text": "¿Cual fue el primer dispositivo de computo?",
+    "Text": "¿Cuál fue el primer dispositivo de cómputo?",
     "Options": [
       "Ábaco.",
-      "Máquina de Pascal",
-      "Máquina de Babbage.",
-      "z1."
+      "Máquina analítica de Babbage.",
+      "Z1 de Konrad Zuse.",
+      "Máquina aritmética de Pascal."
     ],
     "CorrectAnswerIndex": 0,
     "Topic": "Conceptos fundamentales",
-    "Difficult": "Facil"
+    "Difficult": "Media",
+    "Justification": "Aunque las máquinas como la máquina analítica de Babbage o la Z1 de Konrad Zuse fueron importantes avances en la computación, el ábaco, utilizado desde tiempos antiguos, es reconocido como el primer dispositivo de cómputo. Su función era realizar cálculos mediante la manipulación de cuentas en barras, lo cual lo convierte en el antecedente más cercano a las calculadoras modernas."
   },
   {
     "Text": "¿Qué se entiende por software?",
     "Options": [
-      "Conjunto de programas, instrucciones y reglas informáticas que permiten ejecutar distintas tareas.",
-      "Conjunto de programas que permiten el funcionamiento del sistema operativo.",
-      "Conjunto de algoritmos y lógica diseñados para resolver problemas específicos.",
-      "Arquitectura y base para que otros programas funcionen."
+      "Conjunto de programas y datos que permiten ejecutar tareas específicas en una computadora.",
+      "Grupo de circuitos y dispositivos físicos que forman parte del sistema.",
+      "Sistema que regula únicamente el funcionamiento del hardware.",
+      "Infraestructura que permite la comunicación entre redes y dispositivos físicos."
     ],
     "CorrectAnswerIndex": 0,
     "Topic": "Conceptos fundamentales",
-    "Difficult": "Inicial"
+    "Difficult": "Alta",
+    "Justification": "El software es el conjunto de instrucciones, programas y datos que permiten a una computadora realizar tareas específicas. Es lo que da vida al hardware, instruyéndolo sobre cómo interactuar con los usuarios y otros sistemas. Sin el software, el hardware sería solo un conjunto de componentes inertes sin capacidad para ejecutar funciones útiles."
   },
   {
     "Text": "¿Qué es un algoritmo?",
     "Options": [
-      "Conjunto finito y ordenado de pasos que resuelven un problema.",
-      "Herramientas formales que permiten a los desarrolladores crear aplicaciones.",
-      "Lenguaje utilizado para comunicarse con protocolos.",
-      "Instrucción lógica contenida dentro de una clase."
+      "Conjunto finito y ordenado de pasos diseñados para resolver un problema o tarea.",
+      "Método informal que resuelve problemas sin una estructura definida.",
+      "Serie de instrucciones aleatorias para procesar datos.",
+      "Conjunto de programas ejecutables en cualquier computadora moderna."
     ],
     "CorrectAnswerIndex": 0,
     "Topic": "Conceptos fundamentales",
-    "Difficult": "Inicial"
+    "Difficult": "Alta",
+    "Justification": "Un algoritmo no es solo un conjunto de instrucciones, sino que debe ser claro, ordenado y finito. Cada paso debe estar definido de forma precisa para que pueda ser seguido sin ambigüedades, garantizando que el problema se resuelva de manera eficiente. Su estructura es esencial en la programación, ya que proporciona un enfoque lógico para la resolución de tareas complejas."
   },
   {
     "Text": "¿Cuál es la función de un lenguaje de programación?",
     "Options": [
-      "Permitir escribir instrucciones comprensibles por la máquina",
-      "Controlar el hardware mediante señales físicas",
-      "Organizar los archivos dentro del sistema operativo",
-      "Convertir imágenes en código binario para su procesamiento"
+      "Permitir expresar instrucciones de manera comprensible tanto para humanos como para máquinas.",
+      "Administrar de forma automática los dispositivos de red de una computadora.",
+      "Transformar imágenes digitales en instrucciones binarizadas.",
+      "Organizar físicamente los componentes internos de un sistema informático."
     ],
     "CorrectAnswerIndex": 0,
     "Topic": "Conceptos fundamentales",
-    "Difficult": "Inicial"
+    "Difficult": "Alta",
+    "Justification": "Un lenguaje de programación permite a los humanos comunicar a la máquina lo que debe hacer. A través de una sintaxis y estructura definida, los programadores escriben instrucciones que la computadora puede interpretar y ejecutar. Estos lenguajes son esenciales para el desarrollo de software, ya que transforman ideas y conceptos abstractos en comandos comprensibles por las máquinas."
   },
-    {
-      "Text": "¿Qué es la computación?",
-      "Options": [
-        "Estudio del procesamiento automático de la información",
-        "Uso de redes para transmitir datos a distancia",
-        "Creación de hardware para almacenar información",
-        "Administración de sistemas de comunicación inalámbrica"
-      ],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Conceptos fundamentales",
-      "Difficult": "Media"
-    },
-    {
-      "Text": "¿Qué describe la evolución de la computación?",
-      "Options": [
-        "Progreso en la capacidad de procesamiento y reducción del tamaño de los dispositivos",
-        "Aumento exclusivo del almacenamiento de datos sin cambios en la lógica de operación",
-        "Disminución de la velocidad de cálculo para mejorar la eficiencia energética",
-        "Creación de sistemas mecánicos que sustituyen completamente la electrónica"
-      ],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Conceptos fundamentales",
-      "Difficult": "Media"
-    },
-    {
-      "Text": "¿Qué caracterizaba a las primeras computadoras?",
-      "Options": [
-        "Utilizaban válvulas de vacío para procesar información",
-        "Operaban de forma totalmente inalámbrica",
-        "Estaban basadas en redes de fibra óptica",
-        "Eran diseñadas exclusivamente para procesamiento gráfico"
-      ],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Conceptos fundamentales",
-      "Difficult": "Inicial"
-    },
-    {
-      "Text": "¿Cuál es una clasificación correcta de los tipos de computadoras?",
-      "Options": [
-        "Supercomputadoras, minicomputadoras y microcomputadoras",
-        "Sistemas de refrigeración, periféricos y redes locales",
-        "Bases de datos, unidades de almacenamiento y procesadores",
-        "Aplicaciones móviles, programas de escritorio y firmware"
-      ],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Conceptos fundamentales",
-      "Difficult": "Inicial"
-    },
-    {
-      "Text": "¿Qué son los tipos de software?",
-      "Options": [
-        "Software de sistema, de aplicación y de programación",
-        "Hardware, drivers y dispositivos de entrada",
-        "Bases de datos, protocolos y redes",
-        "Líneas de transmisión, plataformas y hubs"
-      ],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Conceptos fundamentales",
-      "Difficult": "Media"
-    },
-    {
-      "Text": "¿Qué caracteriza a los lenguajes de programación?",
-      "Options": [
-        "Permiten expresar algoritmos de manera que puedan ser ejecutados por computadoras",
-        "Son herramientas para medir la eficiencia de una red de datos",
-        "Permiten diseñar la arquitectura física de los sistemas de hardware",
-        "Definen la cantidad de almacenamiento requerida para un sistema"
-      ],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Conceptos fundamentales",
-      "Difficult": "Inicial"
-    },
-    {
-      "Text": "¿Qué implica trabajar con algoritmos y lógica?",
-      "Options": [
-        "Diseñar secuencias ordenadas para resolver problemas computacionales",
-        "Optimizar la velocidad de conexión de redes locales",
-        "Crear nuevas interfaces gráficas en aplicaciones móviles",
-        "Reparar dispositivos físicos mediante métodos de soldadura"
-      ],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Conceptos fundamentales",
-      "Difficult": "Inicial"
-    },
-    {
-      "Text": "¿Qué son los paradigmas de programación?",
-      "Options": [
-        "Modelos que definen cómo se estructuran y ejecutan los programas",
-        "Estándares para el diseño físico de procesadores",
-        "Protocolos de comunicación entre dispositivos electrónicos",
-        "Normas para la instalación de redes de alta velocidad"
-      ],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Conceptos fundamentales",
-      "Difficult": "Inicial"
-    },
-    {
-      "Text": "¿Qué describe mejor el desarrollo de software?",
-      "Options": [
-        "Proceso de analizar, diseñar, construir y mantener programas informáticos",
-        "Fabricación en serie de componentes electrónicos para computadoras",
-        "Configuración física de redes de telecomunicaciones",
-        "Optimización de algoritmos matemáticos en procesos industriales"
-      ],
-      "CorrectAnswerIndex": 0,
-      "Topic": "Conceptos fundamentales",
-      "Difficult": "Inicial"
-    }
-  ]
-  
+  {
+    "Text": "¿Qué es la computación?",
+    "Options": [
+      "Estudio y aplicación de métodos automáticos para el tratamiento de información.",
+      "Desarrollo exclusivo de sistemas de comunicación inalámbrica.",
+      "Administración de hardware para el almacenamiento masivo de datos.",
+      "Diseño de redes informáticas para interconectar múltiples sistemas."
+    ],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Conceptos fundamentales",
+    "Difficult": "Alta",
+    "Justification": "La computación es un campo amplio que abarca el estudio y la implementación de sistemas y métodos automáticos para procesar información. Esto incluye la creación de algoritmos, el desarrollo de hardware y software, y la gestión de datos en diversos entornos. La computación no se limita a la creación de redes o a la administración de datos, sino que busca optimizar todos los aspectos relacionados con el procesamiento automático de la información."
+  },
+  {
+    "Text": "¿Qué describe la evolución de la computación?",
+    "Options": [
+      "Progresos en la velocidad de procesamiento, miniaturización y eficiencia de los dispositivos.",
+      "Incremento únicamente en la capacidad de almacenamiento de las computadoras.",
+      "Reducción general de costos sin modificaciones en las capacidades de procesamiento.",
+      "Desarrollo de sistemas que eliminan completamente la necesidad de programación."
+    ],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Conceptos fundamentales",
+    "Difficult": "Media",
+    "Justification": "La evolución de la computación ha sido impulsada principalmente por avances en la velocidad de procesamiento, la miniaturización de los componentes y una mayor eficiencia energética. Estos avances han permitido la creación de dispositivos más poderosos y compactos, lo que ha transformado profundamente la tecnología de la información. El simple aumento en la capacidad de almacenamiento no describe por completo el impacto de estas innovaciones."
+  },
+  {
+    "Text": "¿Qué caracterizaba a las primeras computadoras?",
+    "Options": [
+      "Utilizaban válvulas de vacío para procesar y almacenar información.",
+      "Estaban compuestas exclusivamente por circuitos ópticos de alta velocidad.",
+      "Eran capaces de operar sin conexión física alguna.",
+      "Utilizaban discos ópticos como su principal medio de almacenamiento."
+    ],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Conceptos fundamentales",
+    "Difficult": "Media",
+    "Justification": "Las primeras computadoras eran sistemas enormes que utilizaban válvulas de vacío para realizar operaciones lógicas y almacenar información. Estas válvulas eran grandes y frágiles, lo que limitaba la eficiencia y la fiabilidad de las máquinas. A lo largo de las décadas, la tecnología mejoró y permitió la transición hacia componentes más pequeños y eficientes, como los transistores."
+  },
+  {
+    "Text": "¿Cuál es una clasificación correcta de los tipos de computadoras?",
+    "Options": [
+      "Supercomputadoras, minicomputadoras y microcomputadoras.",
+      "Dispositivos móviles, redes locales y superordenadores.",
+      "Sistemas digitales, analógicos y ópticos.",
+      "Estaciones de trabajo, discos duros y memorias RAM."
+    ],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Conceptos fundamentales",
+    "Difficult": "Media",
+    "Justification": "Las computadoras pueden clasificarse según su capacidad de procesamiento en supercomputadoras, minicomputadoras y microcomputadoras. Las supercomputadoras son extremadamente poderosas y se usan en aplicaciones como simulaciones científicas, mientras que las microcomputadoras son más accesibles y se utilizan en hogares y oficinas. Las minicomputadoras ocupan un espacio intermedio en términos de poder y aplicaciones."
+  },
+  {
+    "Text": "¿Qué caracteriza a los lenguajes de programación?",
+    "Options": [
+      "Permiten escribir algoritmos de forma que puedan ser interpretados y ejecutados por computadoras.",
+      "Facilitan únicamente la transmisión de datos entre computadoras en red.",
+      "Gestionan el almacenamiento físico de información en dispositivos electrónicos.",
+      "Organizan visualmente la estructura de hardware de una computadora."
+    ],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Conceptos fundamentales",
+    "Difficult": "Media",
+    "Justification": "Los lenguajes de programación son herramientas fundamentales en el desarrollo de software. Permiten que los programadores expresen algoritmos y estructuras de datos de manera comprensible para las computadoras. La principal característica de estos lenguajes es que transforman las instrucciones humanas en comandos que las máquinas pueden entender y ejecutar, lo cual es esencial para cualquier tipo de aplicación informática."
+  },
+  {
+    "Text": "¿Qué implica trabajar con algoritmos y lógica?",
+    "Options": [
+      "Diseñar soluciones ordenadas y estructuradas para resolver problemas computacionales.",
+      "Optimizar el rendimiento de hardware a nivel físico.",
+      "Desarrollar nuevos dispositivos de comunicación inalámbrica.",
+      "Construir interfaces gráficas para aplicaciones de escritorio."
+    ],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Conceptos fundamentales",
+    "Difficult": "Media",
+    "Justification": "Trabajar con algoritmos y lógica se centra en la creación de soluciones eficientes y sistemáticas para resolver problemas computacionales. Implica descomponer un problema en pasos ordenados y lógicos, lo que permite a los programadores encontrar la mejor manera de abordar una tarea de manera clara y optimizada. Este enfoque es crucial para desarrollar software que funcione correctamente y con el menor consumo de recursos posible."
+  },
+  {
+    "Text": "¿Qué son los paradigmas de programación?",
+    "Options": [
+      "Modelos que definen enfoques distintos para estructurar y construir programas.",
+      "Conjuntos de protocolos de comunicación entre diferentes dispositivos electrónicos.",
+      "Metodologías para almacenar y recuperar datos en bases de datos distribuidas.",
+      "Técnicas para diseñar interfaces gráficas interactivas para el usuario."
+    ],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Conceptos fundamentales",
+    "Difficult": "Alta",
+    "Justification": "Un paradigma de programación es una forma estructurada de abordar el diseño y la implementación de programas. Define el estilo o enfoque que un programador debe seguir para resolver problemas y desarrollar software. Existen diferentes paradigmas, como el imperativo, orientado a objetos, funcional y lógico, cada uno con sus propias ventajas y aplicaciones dependiendo del tipo de proyecto y el problema a resolver."
+  },
+  {
+    "Text": "¿Qué describe mejor el desarrollo de software?",
+    "Options": [
+      "Proceso que abarca desde el análisis de necesidades hasta el mantenimiento de programas informáticos.",
+      "Actividad de ensamblaje de componentes de hardware en un sistema funcional.",
+      "Construcción de redes inalámbricas para la transmisión de información.",
+      "Configuración y actualización de sistemas operativos ya existentes."
+    ],
+    "CorrectAnswerIndex": 0,
+    "Topic": "Conceptos fundamentales",
+    "Difficult": "Alta",
+    "Justification": "El desarrollo de software es un proceso integral que va más allá de la simple programación de una aplicación. Incluye desde la identificación de necesidades y la planificación hasta la implementación, pruebas y el mantenimiento a largo plazo. Este proceso busca crear soluciones que sean útiles, efectivas y eficientes, adaptándose a los cambios y manteniendo la funcionalidad del software a lo largo del tiempo."
+  }
+]
