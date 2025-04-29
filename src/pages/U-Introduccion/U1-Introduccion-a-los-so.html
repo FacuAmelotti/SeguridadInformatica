@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a los Sistemas Operativos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/template.css">
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        .security-note {
+            background-color: #f8f9fa;
+            border-left: 4px solid #4285f4;
+            padding: 10px 15px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        .important-concept {
+            font-weight: bold;
+            color: #1a73e8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="menu-toggle" class="menu-toggle">☰ Menú</button>
+        <!-- Menú lateral izquierdo -->
+        <aside class="menu" id="menu">
+            <h2>Introducción a la Informática III</h2>
+            <ul>
+                <li><a href="../../pages/general.html"><i class="fas fa-home"></i> General</a></li>
+                <li><a href="#p1">Introducción a los Sistemas Operativos</a></li>
+                <li><a id="btn-menu-Sect" href="#back-section">Sección Anterior</a></li>
+                <ul>
+                    <li><a href="#introduccion-os">¿Qué es un SO?</a></li>
+                    <li><a href="#arquitectura">Arquitectura de un SO</a></li>
+                    <li><a href="#funciones">Funciones Principales</a></li>
+                    <li><a href="#tipos-so">Tipos de SO</a></li>
+                    <li><a href="#ejemplos">Ejemplos de SO</a></li>
+                    <li><a href="#seguridad-base">Fundamentos de Seguridad</a></li>
+                </ul>
+                <li><a id="btn-menu-Sect" href="#next-section">Siguiente Sección</a></li>
+            </ul>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="content">
+            <!-- Navegación rápida -->
+            <section id="nextBack-section">
+                <i class="fas fa-arrow-left"></i><a id="back-section" href="./U1-Introduccion-software.html">Sección Anterior</a>
+            </section>
+
+            <!-- Introducción -->
+            <section id="introduccion-os">
+                <h2>📜 Introducción a los Sistemas Operativos</h2>
+                <p>Un <span class="important-concept">sistema operativo (SO)</span> es el software fundamental que actúa como intermediario entre el usuario, las aplicaciones y el hardware del computador. Es el componente de software más crítico en la jerarquía de un sistema informático.</p>
+                
+                <p>El SO administra y coordina los recursos hardware (CPU, memoria, dispositivos de entrada/salida) y proporciona servicios comunes que permiten la ejecución eficiente de aplicaciones de usuario. Sin un sistema operativo, el hardware sería una colección de circuitos electrónicos sin propósito definido.</p>
+                
+                <p>Los sistemas operativos modernos se caracterizan por su capacidad para ejecutar múltiples programas concurrentemente (multitarea), gestionar múltiples usuarios simultáneamente y proporcionar diferentes niveles de abstracción que simplifican la interacción con el hardware.</p>
+                
+                <div class="security-note">
+                    <strong>Relevancia para seguridad:</strong> El sistema operativo establece los fundamentos de seguridad de todo el sistema informático. Si el SO está comprometido, todas las aplicaciones y datos que gestiona también lo estarán.
+                </div>
+            </section>
+
+            <!-- Arquitectura del SO -->
+            <section id="arquitectura">
+                <h2 class="toggle-btn">🏗️ Arquitectura de un Sistema Operativo</h2>
+                <div>
+                    <div id="sub-panel">
+                        <h1>● Kernel (Núcleo)</h1>
+                        <p>El componente central del SO que tiene control completo sobre todo el sistema.</p>
+                        <ul>
+                            <li><span class="important-concept">Kernel monolítico:</span> Funciones integradas en un solo programa (Linux)</li>
+                            <li><span class="important-concept">Microkernel:</span> Núcleo mínimo, servicios como procesos separados (MINIX)</li>
+                            <li><span class="important-concept">Kernel híbrido:</span> Combina características de ambos (Windows, macOS)</li>
+                        </ul>
+                        <div class="security-note">
+                            El tipo de kernel afecta directamente la superficie de ataque y el aislamiento de seguridad del sistema.
+                        </div>
+                    </div>
+                    <div id="sub-panel">
+                        <h1>● Espacio de Usuario vs Espacio de Kernel</h1>
+                        <ul>
+                            <li><span class="important-concept">Espacio de kernel:</span> Modo privilegiado con acceso completo al hardware</li>
+                            <li><span class="important-concept">Espacio de usuario:</span> Modo restringido donde se ejecutan las aplicaciones</li>
+                            <li><span class="important-concept">System calls:</span> Interfaces que permiten a los programas solicitar servicios al kernel</li>
+                        </ul>
+                        <div class="security-note">
+                            La separación entre estos espacios es fundamental para el aislamiento de seguridad en el sistema.
+                        </div>
+                    </div>
+                    <div id="sub-panel">
+                        <h1>● Componentes Arquitectónicos</h1>
+                        <ul>
+                            <li><span class="important-concept">Shell:</span> Intérprete de comandos (CLI o GUI) para interactuar con el SO</li>
+                            <li><span class="important-concept">Controladores (Drivers):</span> Software que permite al SO comunicarse con hardware específico</li>
+                            <li><span class="important-concept">Servicios del sistema:</span> Procesos en segundo plano que realizan tareas esenciales</li>
+                            <li><span class="important-concept">Sistema de archivos:</span> Organización lógica para almacenar y acceder a datos</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Funciones principales -->
+            <section id="funciones">
+                <h2 class="toggle-btn">⚙️ Funciones Principales</h2>
+                <div>
+                    <div id="sub-panel">
+                        <h1>● Gestión de Procesos</h1>
+                        <p>Control del ciclo de vida de las aplicaciones en ejecución.</p>
+                        <ul>
+                            <li><span class="important-concept">Planificación:</span> Algoritmos que determinan qué proceso usa la CPU</li>
+                            <li><span class="important-concept">Sincronización:</span> Mecanismos para coordinar procesos (semáforos, mutex)</li>
+                            <li><span class="important-concept">Comunicación entre procesos (IPC):</span> Permite intercambio de datos</li>
+                        </ul>
+                        <div class="security-note">
+                            Vulnerabilidades en la gestión de procesos pueden permitir elevación de privilegios o ataques de denegación de servicio.
+                        </div>
+                    </div>
+                    <div id="sub-panel">
+                        <h1>● Gestión de Memoria</h1>
+                        <p>Administración del espacio de memoria física y virtual.</p>
+                        <ul>
+                            <li><span class="important-concept">Memoria virtual:</span> Abstracción que extiende RAM usando almacenamiento secundario</li>
+                            <li><span class="important-concept">Paginación y segmentación:</span> Técnicas de asignación de memoria</li>
+                            <li><span class="important-concept">Protección de memoria:</span> Previene que procesos accedan a memoria de otros</li>
+                        </ul>
+                        <div class="security-note">
+                            Fallos en la gestión de memoria pueden provocar desbordamientos de buffer, fugas de información sensible o ejecución de código arbitrario.
+                        </div>
+                    </div>
+                    <div id="sub-panel">
+                        <h1>● Gestión de Almacenamiento</h1>
+                        <p>Organización y acceso a datos persistentes.</p>
+                        <ul>
+                            <li><span class="important-concept">Sistemas de archivos:</span> NTFS, ext4, APFS, ZFS</li>
+                            <li><span class="important-concept">Control de acceso:</span> Permisos y propietarios de archivos</li>
+                            <li><span class="important-concept">Cifrado de disco:</span> Protege datos en reposo</li>
+                        </ul>
+                        <div class="security-note">
+                            Los sistemas de archivos implementan mecanismos de control de acceso cruciales para la protección de datos.
+                        </div>
+                    </div>
+                    <div id="sub-panel">
+                        <h1>● Gestión de E/S y Dispositivos</h1>
+                        <p>Control de periféricos y comunicaciones.</p>
+                        <ul>
+                            <li><span class="important-concept">Controladores de dispositivo:</span> Software para comunicación con hardware</li>
+                            <li><span class="important-concept">Spooling:</span> Gestión de colas de trabajos (impresión, etc.)</li>
+                            <li><span class="important-concept">Buffering:</span> Optimización de transferencias de datos</li>
+                        </ul>
+                        <div class="security-note">
+                            Los controladores mal implementados pueden dar acceso directo al hardware, comprometiendo todo el sistema.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tipos de SO -->
+            <section id="tipos-so">
+                <h2 class="toggle-btn">📁 Tipos de Sistemas Operativos</h2>
+                <div>
+                    <div id="sub-panel">
+                        <h1>● Por Modelo de Procesamiento</h1>
+                        <ul>
+                            <li><span class="important-concept">Monoproceso:</span> Un solo proceso a la vez (sistemas antiguos)</li>
+                            <li><span class="important-concept">Multiproceso:</span> Varios procesos simultáneos (todos los SO modernos)</li>
+                            <li><span class="important-concept">Multiprocesador:</span> Aprovecha varios núcleos/CPUs físicas</li>
+                        </ul>
+                    </div>
+                    <div id="sub-panel">
+                        <h1>● Por Modelo de Usuario</h1>
+                        <ul>
+                            <li><span class="important-concept">Monousuario:</span> Un solo usuario (DOS, Windows 9x)</li>
+                            <li><span class="important-concept">Multiusuario:</span> Varios usuarios concurrentes (Unix, Linux, Windows NT+)</li>
+                        </ul>
+                        <div class="security-note">
+                            El modelo multiusuario requiere aislamiento entre usuarios y gestión de privilegios, fundamentos de seguridad críticos.
+                        </div>
+                    </div>
+                    <div id="sub-panel">
+                        <h1>● Por Tiempo de Respuesta</h1>
+                        <ul>
+                            <li><span class="important-concept">Por lotes (Batch):</span> Procesan trabajos sin intervención (mainframes)</li>
+                            <li><span class="important-concept">Interactivos:</span> Respuesta inmediata a usuarios (escritorio)</li>
+                            <li><span class="important-concept">Tiempo real (RTOS):</span> Garantizan tiempos máximos de respuesta</li>
+                        </ul>
+                    </div>
+                    <div id="sub-panel">
+                        <h1>● Por Arquitectura</h1>
+                        <ul>
+                            <li><span class="important-concept">Distribuidos:</span> Funcionan en múltiples computadoras (clusters)</li>
+                            <li><span class="important-concept">Embedded/IoT:</span> Para dispositivos con recursos limitados</li>
+                            <li><span class="important-concept">Virtualizados:</span> Ejecutados sobre otro SO anfitrión</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ejemplos -->
+            <section id="ejemplos">
+                <h2 class="toggle-btn">💾 Ejemplos de Sistemas Operativos</h2>
+                <div>
+                    <div id="sub-panel">
+                        <h1>● Windows (Microsoft)</h1>
+                        <ul>
+                            <li>Kernel híbrido basado en NT</li>
+                            <li>Modelo de seguridad basado en tokens de acceso</li>
+                            <li>Versiones: Cliente (10/11) y Servidor (Server 2019/2022)</li>
+                        </ul>
+                        <div class="security-note">
+                            Implementa UAC (Control de Cuentas de Usuario), AppLocker y Windows Defender como capas de protección.
+                        </div>
+                    </div>
+                    <div id="sub-panel">
+                        <h1>● Linux (Código Abierto)</h1>
+                        <ul>
+                            <li>Kernel monolítico con módulos cargables</li>
+                            <li>Modelo de seguridad UNIX (usuarios, grupos, permisos)</li>
+                            <li>Distribuciones: Ubuntu, Fedora, Kali (seguridad)</li>
+                        </ul>
+                        <div class="security-note">
+                            Su naturaleza de código abierto permite auditorías de seguridad, pero también expone vulnerabilidades.
+                        </div>
+                    </div>
+                    <div id="sub-panel">
+                        <h1>● macOS (Apple)</h1>
+                        <ul>
+                            <li>Kernel XNU híbrido (Darwin, base UNIX)</li>
+                            <li>Implementa SIP (Protección de Integridad del Sistema)</li>
+                            <li>Integración vertical hardware-software</li>
+                        </ul>
+                        <div class="security-note">
+                            Incorpora Gatekeeper, sandboxing de aplicaciones y sistema de permisos granular.
+                        </div>
+                    </div>
+                    <div id="sub-panel">
+                        <h1>● Sistemas Móviles</h1>
+                        <ul>
+                            <li><span class="important-concept">Android:</span> Basado en kernel Linux, aislamiento por sandbox</li>
+                            <li><span class="important-concept">iOS:</span> Derivado de Darwin/BSD, modelo restrictivo de permisos</li>
+                        </ul>
+                        <div class="security-note">
+                            Ambos implementan modelos de permisos y aislamiento de aplicaciones más estrictos que sus contrapartes de escritorio.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Fundamentos de Seguridad -->
+            <section id="seguridad-base">
+                <h2 class="toggle-btn">🔒 Fundamentos de Seguridad en SO</h2>
+                <div>
+                    <div id="sub-panel">
+                        <h1>● Principios Fundamentales</h1>
+                        <ul>
+                            <li><span class="important-concept">Mínimo privilegio:</span> Operar solo con los permisos necesarios</li>
+                            <li><span class="important-concept">Defensa en profundidad:</span> Múltiples capas de protección</li>
+                            <li><span class="important-concept">Separación de privilegios:</span> División de responsabilidades</li>
+                        </ul>
+                    </div>
+                    <div id="sub-panel">
+                        <h1>● Mecanismos de Control de Acceso</h1>
+                        <ul>
+                            <li><span class="important-concept">DAC (Discrecional):</span> Propietario define permisos (UNIX)</li>
+                            <li><span class="important-concept">MAC (Obligatorio):</span> Sistema define reglas fijas (SELinux)</li>
+                            <li><span class="important-concept">RBAC (Basado en roles):</span> Permisos según función (Windows)</li>
+                        </ul>
+                    </div>
+                    <div id="sub-panel">
+                        <h1>● Técnicas de Aislamiento</h1>
+                        <ul>
+                            <li><span class="important-concept">Anillos de protección:</span> Separación hardware de privilegios</li>
+                            <li><span class="important-concept">Virtualización:</span> Aislamiento completo de entornos</li>
+                            <li><span class="important-concept">Contenedores:</span> Aislamiento ligero de procesos</li>
+                            <li><span class="important-concept">Sandboxing:</span> Ejecución restringida de aplicaciones</li>
+                        </ul>
+                    </div>
+                    <div id="sub-panel">
+                        <h1>● Vulnerabilidades Críticas</h1>
+                        <ul>
+                            <li><span class="important-concept">Errores de privilegios:</span> Elevaciones no autorizadas</li>
+                            <li><span class="important-concept">Race conditions:</span> Problemas de secuencia temporal</li>
+                            <li><span class="important-concept">Vulnerabilidades de kernel:</span> Afectan al núcleo del sistema</li>
+                            <li><span class="important-concept">Side-channel attacks:</span> Explotación de canales laterales</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navegación final -->
+            <section id="nextBack-section">
+                <a id="next-section" href="../U-base-de-datos/U-base-de-datos-Introduccion.html">Siguiente Sección</a><i class="fas fa-arrow-right"></i>
+            </section>
+        </main>
+    </div>
+
+    <!-- Overlay para imágenes ampliadas -->
+    <div class="overlay" id="overlay">
+        <button class="close-btn" onclick="cerrarImagen()">X</button>
+        <img id="imagenAmpliada" src="" alt="Imagen Ampliada">
+    </div>
+
+    <!-- Scripts -->
+    <script src="../../js/menuDesplegable.js"></script>
+    <script src="../../js/divInfoDesplegable.js"></script>
+    <script src="../../js/ampliarImg.js"></script>
+</body>
+</html>
